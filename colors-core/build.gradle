@@ -9,6 +9,7 @@ kotlin {
     targets {
         jvm()
         js()
+        ios()
     }
     sourceSets {
         commonMain {
@@ -24,6 +25,11 @@ kotlin {
         jsMain {
             dependencies {
                 implementation "org.jetbrains.kotlin:kotlin-stdlib-js"
+            }
+        }
+        iosMain {
+            dependencies {
+                implementation "org.jetbrains.kotlin:kotlin-stdlib-common"
             }
         }
     }
