@@ -40,3 +40,13 @@ implementation "com.chrynan.colors:colors-core:$VERSION"
 ```groovy
 implementation "com.chrynan.colors:colors-core:$VERSION"
 ```
+
+**Kotlin iOS ARM64:**
+```groovy
+implementation "com.chryan.colors:colors-core-iosarm64:$VERSION"
+```
+
+**Kotlin iOS x64:**
+```groovy
+implementation "com.chrynan.colors:colors-core-iosx64:$VERSION"
+```
