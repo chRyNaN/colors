@@ -51,7 +51,7 @@ subprojects {
     }
 
     bintrayUpload.doFirst {
-        publishing.publications.withType(MavenPublication).forEach({ publication ->
+        publications = publishing.publications.collect { publication ->
             File moduleFile = new File(project.buildDir, "publications/${publication.name}/module.json")
 
             if (moduleFile.exists()) {
@@ -61,7 +61,9 @@ subprojects {
                     }
                 })
             }
-        })
+
+            publication.name
+        }
     }
 
     bintrayUpload.dependsOn publishToMavenLocal
