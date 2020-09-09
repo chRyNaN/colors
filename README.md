@@ -33,12 +33,12 @@ implementation "com.chrynan.colors:colors-core:$VERSION"
 
 **Kotlin JVM:**
 ```groovy
-implementation "com.chrynan.colors:colors-core:$VERSION"
+implementation "com.chrynan.colors:colors-core-jvm:$VERSION"
 ```
 
 **Kotlin JS:**
 ```groovy
-implementation "com.chrynan.colors:colors-core:$VERSION"
+implementation "com.chrynan.colors:colors-core-js:$VERSION"
 ```
 
 **Kotlin iOS ARM64:**
