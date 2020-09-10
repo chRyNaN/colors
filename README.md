@@ -43,10 +43,10 @@ implementation "com.chrynan.colors:colors-core-js:$VERSION"
 
 **Kotlin iOS ARM64:**
 ```groovy
-implementation "com.chryan.colors:colors-core-iosarm64:$VERSION"
+implementation "com.chryan.colors:colors-core-ios-arm64:$VERSION"
 ```
 
 **Kotlin iOS x64:**
 ```groovy
-implementation "com.chrynan.colors:colors-core-iosx64:$VERSION"
+implementation "com.chrynan.colors:colors-core-ios-x64:$VERSION"
 ```

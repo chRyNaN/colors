@@ -15,6 +15,8 @@ kotlin {
         commonMain {
             dependencies {
                 implementation "org.jetbrains.kotlin:kotlin-stdlib-common"
+
+                implementation project(":colors-core")
             }
         }
     }
@@ -27,22 +29,22 @@ configurations {
 publishing {
     publications {
         kotlinMultiplatform {
-            artifactId = "colors-core"
+            artifactId = "colors-extension"
         }
         jvm {
-            artifactId = "colors-core-jvm"
+            artifactId = "colors-extension-jvm"
         }
         js {
-            artifactId = "colors-core-js"
+            artifactId = "colors-extension-js"
         }
         iosArm64 {
-            artifactId = "colors-core-ios-arm64"
+            artifactId = "colors-extension-ios-arm64"
         }
         iosX64 {
-            artifactId = "colors-core-ios-x64"
+            artifactId = "colors-extension-ios-x64"
         }
         metadata {
-            artifactId = "colors-core-metadata"
+            artifactId = "colors-extension-metadata"
         }
     }
 }
