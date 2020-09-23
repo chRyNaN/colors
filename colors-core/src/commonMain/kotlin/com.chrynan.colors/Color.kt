@@ -15,7 +15,7 @@ interface Color {
         const val MAX_ALPHA = 255
         const val MIN_FRACTIONAL_ALPHA = 0f
         const val MAX_FRACTIONAL_ALPHA = 1f
-        const val OPAQUE_ALPHA_OPACITY = MAX_ALPHA
+        const val OPAQUE_ALPHA = MAX_ALPHA
         const val OPAQUE_FRACTIONAL_ALPHA = MAX_FRACTIONAL_ALPHA
         const val TRANSPARENT_ALPHA = MIN_ALPHA
         const val TRANSPARENT_FRACTIONAL_ALPHA = MIN_FRACTIONAL_ALPHA
