@@ -17,7 +17,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.chrynan.colors
+package com.chrynan.colors.space
 
 /**
  * The `Float16` class is a wrapper and a utility class to manipulate half-precision 16-bit

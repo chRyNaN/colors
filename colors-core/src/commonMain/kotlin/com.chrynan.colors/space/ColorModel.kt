@@ -17,7 +17,7 @@
  */
 @file:Suppress("unused")
 
-package com.chrynan.colors
+package com.chrynan.colors.space
 
 /**
  * A color model is required by a [ColorSpace] to describe the
