@@ -1,0 +1,51 @@
+import com.chrynan.colors.buildSrc.LibraryConstants
+
+apply plugin: "kotlin-multiplatform"
+
+group LibraryConstants.group
+version LibraryConstants.versionName
+
+kotlin {
+    targets {
+        jvm()
+        js()
+        ios()
+    }
+    sourceSets {
+        commonMain {
+            dependencies {
+                implementation "org.jetbrains.kotlin:kotlin-stdlib-common"
+
+                api project(":colors-core")
+                api project(":colors-extension")
+            }
+        }
+    }
+}
+
+configurations {
+    compileClasspath
+}
+
+publishing {
+    publications {
+        kotlinMultiplatform {
+            artifactId = "colors-theme"
+        }
+        jvm {
+            artifactId = "colors-theme-jvm"
+        }
+        js {
+            artifactId = "colors-theme-js"
+        }
+        iosArm64 {
+            artifactId = "colors-theme-ios-arm64"
+        }
+        iosX64 {
+            artifactId = "colors-theme-ios-x64"
+        }
+        metadata {
+            artifactId = "colors-theme-metadata"
+        }
+    }
+}

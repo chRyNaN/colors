@@ -5,7 +5,7 @@ package com.chrynan.colors
 /**
  * A representation of a Color. Certain properties may be available depending on the implementation. For instance, a
  * rgba color implementation contains an alpha property defining it's level of transparency. However, an rgb color
- * implementation would lack the alpha property.
+ * implementation would lack the alpha property but technically the value would be opaque.
  */
 interface Color {
 
@@ -20,6 +20,7 @@ interface Color {
         const val TRANSPARENT_ALPHA = MIN_ALPHA
         const val TRANSPARENT_FRACTIONAL_ALPHA = MIN_FRACTIONAL_ALPHA
 
+        val TRANSPARENT: Color = rgba(red = 0, green = 0, blue = 0, alpha = 0)
         val BLACK: Color = rgba(red = 0, green = 0, blue = 0, alpha = 255)
         val WHITE: Color = rgba(red = 255, green = 255, blue = 255, alpha = 255)
     }

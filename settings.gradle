@@ -2,5 +2,6 @@ rootProject.name = "colors"
 
 include ":colors-core"
 include ":colors-extension"
+include ":colors-theme"
 
 enableFeaturePreview("GRADLE_METADATA")
