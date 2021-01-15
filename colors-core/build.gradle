@@ -12,6 +12,12 @@ kotlin {
         ios()
     }
     sourceSets {
+        all {
+            languageSettings {
+                useExperimentalAnnotation("kotlin.RequiresOptIn")
+                languageSettings.enableLanguageFeature("InlineClasses")
+            }
+        }
         commonMain {
             dependencies {
                 implementation "org.jetbrains.kotlin:kotlin-stdlib-common"
@@ -22,6 +28,12 @@ kotlin {
 
 configurations {
     compileClasspath
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 }
 
 publishing {
