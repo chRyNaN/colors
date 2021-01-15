@@ -50,6 +50,7 @@ android {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 
+    implementation "androidx.compose.compiler:compiler:1.0.0-alpha10"
     implementation "androidx.compose.runtime:runtime:1.0.0-alpha10"
 
     api project(":colors-theme")

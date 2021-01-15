@@ -50,8 +50,5 @@ publishing {
         iosX64 {
             artifactId = "colors-theme-ios-x64"
         }
-        metadata {
-            artifactId = "colors-theme-metadata"
-        }
     }
 }

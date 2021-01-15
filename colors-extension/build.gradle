@@ -49,8 +49,5 @@ publishing {
         iosX64 {
             artifactId = "colors-extension-ios-x64"
         }
-        metadata {
-            artifactId = "colors-extension-metadata"
-        }
     }
 }

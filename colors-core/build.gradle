@@ -53,8 +53,5 @@ publishing {
         iosX64 {
             artifactId = "colors-core-ios-x64"
         }
-        metadata {
-            artifactId = "colors-core-metadata"
-        }
     }
 }
