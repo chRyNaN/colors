@@ -22,7 +22,7 @@ package com.chrynan.colors.space
 /**
  * A color model is required by a [ColorSpace] to describe the
  * way colors can be represented as tuples of numbers. A common color
- * model is the [RGB][Rgb] color model which defines a color
+ * model is the [RGB][RGB] color model which defines a color
  * as represented by a tuple of 3 numbers (red, green and blue).
  * The amount of components, [componentCount], range from 1 to 4.
  *
@@ -40,21 +40,21 @@ enum class ColorModel(
      * refer to the three additive primiaries: red, green
      * and blue.
      */
-    Rgb(componentCount = 3, typeName = "rgb"),
+    RGB(componentCount = 3, typeName = "rgb"),
 
     /**
      * The XYZ model is a color model with 3 components that
      * are used to model human color vision on a basic sensory
      * level.
      */
-    Xyz(componentCount = 3, typeName = "xyz"),
+    XYZ(componentCount = 3, typeName = "xyz"),
 
     /**
      * The Lab model is a color model with 3 components used
      * to describe a color space that is more perceptually
      * uniform than XYZ.
      */
-    Lab(componentCount = 3, typeName = "lab"),
+    LAB(componentCount = 3, typeName = "lab"),
 
     /**
      * The CMYK model is a color model with 4 components that
@@ -62,7 +62,7 @@ enum class ColorModel(
      * yellow and black (or key). CMYK is a subtractive color
      * model.
      */
-    Cmyk(componentCount = 4, typeName = "cmyk");
+    CMYK(componentCount = 4, typeName = "cmyk");
 
     companion object {
 

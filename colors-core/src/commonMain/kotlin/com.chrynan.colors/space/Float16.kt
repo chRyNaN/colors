@@ -87,7 +87,8 @@ package com.chrynan.colors.space
  *
  * This table shows that numbers higher than 1024 lose all fractional precision.
  */
-internal inline class Float16(@Suppress("MemberVisibilityCanBePrivate") val halfValue: Short) : Comparable<Float16> {
+internal inline class Float16(@Suppress("MemberVisibilityCanBePrivate") val halfValue: Short) :
+    Comparable<Float16> {
 
     /**
      * Constructs a newly allocated `Float16` object that represents the
@@ -426,7 +427,8 @@ internal inline class Float16(@Suppress("MemberVisibilityCanBePrivate") val half
      * returns [MinExponent] - 1.
      */
     val exponent: Int
-        get() = (halfValue.toInt().ushr(FP16_EXPONENT_SHIFT) and FP16_EXPONENT_MASK) - FP16_EXPONENT_BIAS
+        get() = (halfValue.toInt()
+            .ushr(FP16_EXPONENT_SHIFT) and FP16_EXPONENT_MASK) - FP16_EXPONENT_BIAS
 
     /**
      * The significand, or mantissa, used in the representation
