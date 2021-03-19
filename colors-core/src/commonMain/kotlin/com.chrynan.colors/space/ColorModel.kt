@@ -25,35 +25,36 @@ package com.chrynan.colors.space
  * model is the [RGB][Rgb] color model which defines a color
  * as represented by a tuple of 3 numbers (red, green and blue).
  * The amount of components, [componentCount], range from 1 to 4.
+ *
+ * @property [componentCount] The number of components for this color model.
+ * An integer between 1 and 4
  */
+@Suppress("MemberVisibilityCanBePrivate")
 enum class ColorModel(
-    /**
-     * Returns the number of components for this color model.
-     *
-     * @return An integer between 1 and 4
-     */
-    val componentCount: Int
+    val componentCount: Int,
+    val typeName: String
 ) {
+
     /**
      * The RGB model is a color model with 3 components that
      * refer to the three additive primiaries: red, green
      * and blue.
      */
-    Rgb(3),
+    Rgb(componentCount = 3, typeName = "rgb"),
 
     /**
      * The XYZ model is a color model with 3 components that
      * are used to model human color vision on a basic sensory
      * level.
      */
-    Xyz(3),
+    Xyz(componentCount = 3, typeName = "xyz"),
 
     /**
      * The Lab model is a color model with 3 components used
      * to describe a color space that is more perceptually
      * uniform than XYZ.
      */
-    Lab(3),
+    Lab(componentCount = 3, typeName = "lab"),
 
     /**
      * The CMYK model is a color model with 4 components that
@@ -61,5 +62,11 @@ enum class ColorModel(
      * yellow and black (or key). CMYK is a subtractive color
      * model.
      */
-    Cmyk(4)
+    Cmyk(componentCount = 4, typeName = "cmyk");
+
+    companion object {
+
+        fun getByTypeName(typeName: String, ignoreCase: Boolean = true): ColorModel? =
+            values().firstOrNull { it.typeName.equals(typeName, ignoreCase) }
+    }
 }
