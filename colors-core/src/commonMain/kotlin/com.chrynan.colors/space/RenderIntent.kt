@@ -26,6 +26,11 @@ package com.chrynan.colors.space
  * important when the source color space has a larger color gamut than the
  * destination color space.
  *
+ * A [RenderIntent] is used in the conversion process between different
+ * Color Spaces. It's the approach used when calculating new color values
+ * that within the new Color Space.
+ *
+ * @see [Render Intent Definition](http://colorwiki.com/wiki/Rendering_Intent)
  * @see ColorSpace.connect
  */
 enum class RenderIntent(val typeName: String) {
