@@ -3,11 +3,21 @@
 package com.chrynan.colors
 
 /**
- * A representation of a Color. Certain properties may be available depending on the implementation. For instance, a
- * rgba color implementation contains an alpha property defining it's level of transparency. However, an rgb color
- * implementation would lack the alpha property but technically the value would be opaque.
+ * A representation of a Color.
  */
 interface Color {
+
+    /**
+     * The [ColorInt] representation of this [Color] value.
+     */
+    val colorInt: ColorInt
+
+    /**
+     * A [String] CSS value representation of this [Color] value. For example: "#FFFFFF" or
+     * "rgba(255, 255, 255, 255)". This [String] value should be usable in CSS. For example:
+     * "background-color: ${color.cssValue}".
+     */
+    val cssValue: String
 
     companion object {
 
@@ -24,14 +34,4 @@ interface Color {
         val BLACK: Color = rgba(red = 0, green = 0, blue = 0, alpha = 255)
         val WHITE: Color = rgba(red = 255, green = 255, blue = 255, alpha = 255)
     }
-
-    /**
-     * The [ColorInt] representation of this [Color] value.
-     */
-    val colorInt: ColorInt
-
-    /**
-     * A CSS value representation of this [Color] value. For example: "#FFFFFF" or "rgba(255, 255, 255, 255)".
-     */
-    val cssValue: String
 }
