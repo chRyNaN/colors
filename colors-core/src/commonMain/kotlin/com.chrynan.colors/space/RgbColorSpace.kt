@@ -142,7 +142,7 @@ import kotlin.math.pow
  * To learn more about the white point adaptation process, refer to the
  * documentation of [Adaptation].
  */
-class Rgb
+class RgbColorSpace
 
 /**
  * Creates a new RGB color space using a specified set of primaries
@@ -234,7 +234,7 @@ internal constructor(
      * @return A transfer function that converts from linear space to "gamma space"
      *
      * @see eotf
-     * @see Rgb.transferParameters
+     * @see RgbColorSpace.transferParameters
      */
     val oetf: (Double) -> Double = { x -> oetfOrig(x).coerceIn(min.toDouble(), max.toDouble()) }
 
@@ -257,7 +257,7 @@ internal constructor(
      * @return A transfer function that converts from "gamma space" to linear space
      *
      * @see oetf
-     * @see Rgb.transferParameters
+     * @see RgbColorSpace.transferParameters
      */
     val eotf: (Double) -> Double = { x -> eotfOrig(x.coerceIn(min.toDouble(), max.toDouble())) }
 
@@ -703,7 +703,7 @@ internal constructor(
      * @param colorSpace The color space to create a copy of
      */
     internal constructor(
-        colorSpace: Rgb,
+        colorSpace: RgbColorSpace,
         transform: FloatArray,
         whitePoint: WhitePoint
     ) : this(
@@ -782,7 +782,7 @@ internal constructor(
      * applying this color space's electro-optical transfer function
      * to the supplied values.
      *
-     * Refer to the documentation of [Rgb] for
+     * Refer to the documentation of [RgbColorSpace] for
      * more information about transfer functions and their use for
      * encoding and decoding RGB values.
      *
@@ -803,7 +803,7 @@ internal constructor(
      * to the first 3 values of the supplied array. The result is
      * stored back in the input array.
      *
-     * Refer to the documentation of [Rgb] for
+     * Refer to the documentation of [RgbColorSpace] for
      * more information about transfer functions and their use for
      * encoding and decoding RGB values.
      *
@@ -827,7 +827,7 @@ internal constructor(
      * "gamma space". This is achieved by applying this color space's
      * opto-electronic transfer function to the supplied values.
      *
-     * Refer to the documentation of [Rgb] for
+     * Refer to the documentation of [RgbColorSpace] for
      * more information about transfer functions and their use for
      * encoding and decoding RGB values.
      *
@@ -848,7 +848,7 @@ internal constructor(
      * opto-electronic transfer function to the first 3 values of the
      * supplied array. The result is stored back in the input array.
      *
-     * Refer to the documentation of [Rgb] for
+     * Refer to the documentation of [RgbColorSpace] for
      * more information about transfer functions and their use for
      * encoding and decoding RGB values.
      *
@@ -887,7 +887,7 @@ internal constructor(
         if (other == null || this::class != other::class) return false
         if (!super.equals(other)) return false
 
-        val rgb = other as Rgb
+        val rgb = other as RgbColorSpace
 
         if (rgb.min.compareTo(min) != 0) return false
         if (rgb.max.compareTo(max) != 0) return false

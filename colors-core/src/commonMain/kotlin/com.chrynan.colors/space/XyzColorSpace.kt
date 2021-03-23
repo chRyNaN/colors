@@ -23,7 +23,7 @@ package com.chrynan.colors.space
 /**
  * Implementation of the CIE XYZ color space. Assumes the white point is D50.
  */
-class Xyz(
+class XyzColorSpace(
     name: String,
     id: Int
 ) : ColorSpace(

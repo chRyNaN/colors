@@ -31,10 +31,10 @@ object ColorSpaces {
         TransferParameters(2.2, 1 / 1.055, 0.055 / 1.055, 1 / 12.92, 0.04045)
 
     /**
-     * [RGB][Rgb] color space sRGB standardized as IEC 61966-2.1:1999.
+     * [RGB][RgbColorSpace] color space sRGB standardized as IEC 61966-2.1:1999.
      * [See details on sRGB color space](https://d.android.com/reference/android/graphics/ColorSpace.Named.html#SRGB)
      */
-    val SRGB = Rgb(
+    val SRGB = RgbColorSpace(
         name = "sRGB IEC61966-2.1",
         primaries = SRGB_PRIMARIES,
         whitePoint = Illuminant.D65,
@@ -43,10 +43,10 @@ object ColorSpaces {
     )
 
     /**
-     * [RGB][Rgb] color space sRGB standardized as IEC 61966-2.1:1999.
+     * [RGB][RgbColorSpace] color space sRGB standardized as IEC 61966-2.1:1999.
      * [See details on Linear sRGB color space](https://d.android.com/reference/android/graphics/ColorSpace.Named.html#LINEAR_SRGB)
      */
-    val LINEAR_SRGB = Rgb(
+    val LINEAR_SRGB = RgbColorSpace(
         name = "sRGB IEC61966-2.1 (Linear)",
         primaries = SRGB_PRIMARIES,
         whitePoint = Illuminant.D65,
@@ -57,10 +57,10 @@ object ColorSpaces {
     )
 
     /**
-     * [RGB][Rgb] color space scRGB-nl standardized as IEC 61966-2-2:2003.
+     * [RGB][RgbColorSpace] color space scRGB-nl standardized as IEC 61966-2-2:2003.
      * [See details on Extended sRGB color space](https://d.android.com/reference/android/graphics/ColorSpace.Named.html#EXTENDED_SRGB)
      */
-    val EXTENDED_SRGB = Rgb(
+    val EXTENDED_SRGB = RgbColorSpace(
         name = "scRGB-nl IEC 61966-2-2:2003",
         primaries = SRGB_PRIMARIES,
         whitePoint = Illuminant.D65,
@@ -92,10 +92,10 @@ object ColorSpaces {
     )
 
     /**
-     * [RGB][Rgb] color space scRGB standardized as IEC 61966-2-2:2003.
+     * [RGB][RgbColorSpace] color space scRGB standardized as IEC 61966-2-2:2003.
      * [See details on Linear Extended sRGB color space](https://d.android.com/reference/android/graphics/ColorSpace.Named.html#LINEAR_EXTENDED_SRGB)
      */
-    val LINEAR_EXTENDED_SRGB = Rgb(
+    val LINEAR_EXTENDED_SRGB = RgbColorSpace(
         name = "scRGB IEC 61966-2-2:2003",
         primaries = SRGB_PRIMARIES,
         whitePoint = Illuminant.D65,
@@ -106,10 +106,10 @@ object ColorSpaces {
     )
 
     /**
-     * [RGB][Rgb] color space BT.709 standardized as Rec. ITU-R BT.709-5.
+     * [RGB][RgbColorSpace] color space BT.709 standardized as Rec. ITU-R BT.709-5.
      * [See details on BT.709 color space](https://d.android.com/reference/android/graphics/ColorSpace.Named.html#BT_709)
      */
-    val BT_709 = Rgb(
+    val BT_709 = RgbColorSpace(
         name = "Rec. ITU-R BT.709-5",
         primaries = floatArrayOf(0.640f, 0.330f, 0.300f, 0.600f, 0.150f, 0.060f),
         whitePoint = Illuminant.D65,
@@ -118,10 +118,10 @@ object ColorSpaces {
     )
 
     /**
-     * [RGB][Rgb] color space BT.2020 standardized as Rec. ITU-R BT.2020-1.
+     * [RGB][RgbColorSpace] color space BT.2020 standardized as Rec. ITU-R BT.2020-1.
      * [See details on BT.2020 color space](https://d.android.com/reference/android/graphics/ColorSpace.Named.html#BT_2020)
      */
-    val BT_2020 = Rgb(
+    val BT_2020 = RgbColorSpace(
         name = "Rec. ITU-R BT.2020-1",
         primaries = floatArrayOf(0.708f, 0.292f, 0.170f, 0.797f, 0.131f, 0.046f),
         whitePoint = Illuminant.D65,
@@ -130,10 +130,10 @@ object ColorSpaces {
     )
 
     /**
-     * [RGB][Rgb] color space DCI-P3 standardized as SMPTE RP 431-2-2007.
+     * [RGB][RgbColorSpace] color space DCI-P3 standardized as SMPTE RP 431-2-2007.
      * [See details on DCI-P3 color space](https://d.android.com/reference/android/graphics/ColorSpace.Named.html#DCI_P3)
      */
-    val DCI_P3 = Rgb(
+    val DCI_P3 = RgbColorSpace(
         name = "SMPTE RP 431-2-2007 DCI (P3)",
         primaries = floatArrayOf(0.680f, 0.320f, 0.265f, 0.690f, 0.150f, 0.060f),
         whitePoint = WhitePoint(0.314f, 0.351f),
@@ -144,10 +144,10 @@ object ColorSpaces {
     )
 
     /**
-     * [RGB][Rgb] color space Display P3 based on SMPTE RP 431-2-2007 and IEC 61966-2.1:1999.
+     * [RGB][RgbColorSpace] color space Display P3 based on SMPTE RP 431-2-2007 and IEC 61966-2.1:1999.
      * [See details on Display P3 color space](https://d.android.com/reference/android/graphics/ColorSpace.Named.html#DISPLAY_P3)
      */
-    val DISPLAY_P3 = Rgb(
+    val DISPLAY_P3 = RgbColorSpace(
         name = "Display P3",
         primaries = floatArrayOf(0.680f, 0.320f, 0.265f, 0.690f, 0.150f, 0.060f),
         whitePoint = Illuminant.D65,
@@ -156,10 +156,10 @@ object ColorSpaces {
     )
 
     /**
-     * [RGB][Rgb] color space NTSC, 1953 standard.
+     * [RGB][RgbColorSpace] color space NTSC, 1953 standard.
      * [See details on NTSC 1953 color space](https://d.android.com/reference/android/graphics/ColorSpace.Named.html#NTSC_1953)
      */
-    val NTSC_1953 = Rgb(
+    val NTSC_1953 = RgbColorSpace(
         name = "NTSC (1953)",
         primaries = NTSC_1953_PRIMARIES,
         whitePoint = Illuminant.C,
@@ -168,10 +168,10 @@ object ColorSpaces {
     )
 
     /**
-     * [RGB][Rgb] color space SMPTE C.
+     * [RGB][RgbColorSpace] color space SMPTE C.
      * [See details on SMPTE C color space](https://d.android.com/reference/android/graphics/ColorSpace.Named.html#SMPTE_C)
      */
-    val SMPTE_C = Rgb(
+    val SMPTE_C = RgbColorSpace(
         name = "SMPTE-C RGB",
         primaries = floatArrayOf(0.630f, 0.340f, 0.310f, 0.595f, 0.155f, 0.070f),
         whitePoint = Illuminant.D65,
@@ -180,10 +180,10 @@ object ColorSpaces {
     )
 
     /**
-     * [RGB][Rgb] color space Adobe RGB (1998).
+     * [RGB][RgbColorSpace] color space Adobe RGB (1998).
      * [See details on Adobe RGB (1998) color space](https://d.android.com/reference/android/graphics/ColorSpace.Named.html#ADOBE_RGB)
      */
-    val ADOBE_RGB = Rgb(
+    val ADOBE_RGB = RgbColorSpace(
         name = "Adobe RGB (1998)",
         primaries = floatArrayOf(0.64f, 0.33f, 0.21f, 0.71f, 0.15f, 0.06f),
         whitePoint = Illuminant.D65,
@@ -194,10 +194,10 @@ object ColorSpaces {
     )
 
     /**
-     * [RGB][Rgb] color space ProPhoto RGB standardized as ROMM RGB ISO 22028-2:2013.
+     * [RGB][RgbColorSpace] color space ProPhoto RGB standardized as ROMM RGB ISO 22028-2:2013.
      * [See details on ProPhoto RGB color space](https://d.android.com/reference/android/graphics/ColorSpace.Named.html#PRO_PHOTO_RGB)
      */
-    val PRO_PHOTO_RGB = Rgb(
+    val PRO_PHOTO_RGB = RgbColorSpace(
         name = "ROMM RGB ISO 22028-2:2013",
         primaries = floatArrayOf(0.7347f, 0.2653f, 0.1596f, 0.8404f, 0.0366f, 0.0001f),
         whitePoint = Illuminant.D50,
@@ -206,10 +206,10 @@ object ColorSpaces {
     )
 
     /**
-     * [RGB][Rgb] color space ACES standardized as SMPTE ST 2065-1:2012.
+     * [RGB][RgbColorSpace] color space ACES standardized as SMPTE ST 2065-1:2012.
      * [See details on ACES color space](https://d.android.com/reference/android/graphics/ColorSpace.Named.html#ACES)
      */
-    val ACES = Rgb(
+    val ACES = RgbColorSpace(
         name = "SMPTE ST 2065-1:2012 ACES",
         primaries = floatArrayOf(0.73470f, 0.26530f, 0.0f, 1.0f, 0.00010f, -0.0770f),
         whitePoint = Illuminant.D60,
@@ -219,10 +219,10 @@ object ColorSpaces {
     )
 
     /**
-     * [RGB][Rgb] color space ACEScg standardized as Academy S-2014-004.
+     * [RGB][RgbColorSpace] color space ACEScg standardized as Academy S-2014-004.
      * [See details on ACEScg color space](https://d.android.com/reference/android/graphics/ColorSpace.Named.html#ACES_CG)
      */
-    val ACES_CG = Rgb(
+    val ACES_CG = RgbColorSpace(
         name = "Academy S-2014-004 ACEScg",
         primaries = floatArrayOf(0.713f, 0.293f, 0.165f, 0.830f, 0.128f, 0.044f),
         whitePoint = Illuminant.D60,
@@ -243,7 +243,7 @@ object ColorSpaces {
      * | Range                   | `[-2.0, 2.0]`         |
      * ```
      */
-    val CIE_XYZ: ColorSpace = Xyz(
+    val CIE_XYZ: ColorSpace = XyzColorSpace(
         name = "Generic XYZ",
         id = 14
     )
@@ -260,7 +260,7 @@ object ColorSpaces {
      * | Range                   | (L: `[0.0, 100.0]`, a: `[-128, 128]`, b: `[-128, 128]`) |
      * ```
      */
-    val CIE_LAB: ColorSpace = Lab(
+    val CIE_LAB: ColorSpace = LabColorSpace(
         name = "Generic L*a*b*",
         id = 15
     )
@@ -268,7 +268,7 @@ object ColorSpaces {
     /**
      * This identifies the 'None' color.
      */
-    val UNSPECIFIED = Rgb(
+    val UNSPECIFIED = RgbColorSpace(
         name = "None",
         primaries = SRGB_PRIMARIES,
         whitePoint = Illuminant.D65,
@@ -288,7 +288,7 @@ object ColorSpaces {
      * | Range                   | (L: `[0.0, 1.0]`, a: `[-2, 2]`, b: `[-2, 2]`)           |
      * ```
      */
-    val OK_LAB: ColorSpace = OkLab(
+    val OK_LAB: ColorSpace = OkLabColorSpace(
         name = "Oklab",
         id = 17
     )
@@ -337,7 +337,7 @@ object ColorSpaces {
     ): ColorSpace? {
         for (colorSpace in COLOR_SPACES_ARRAY) {
             if (colorSpace.model == ColorModel.RGB) {
-                val rgb = colorSpace.adapt(Illuminant.D50) as Rgb
+                val rgb = colorSpace.adapt(Illuminant.D50) as RgbColorSpace
                 if ((
                             compare(toXYZD50, rgb.transform) &&
                                     compare(function, rgb.transferParameters)

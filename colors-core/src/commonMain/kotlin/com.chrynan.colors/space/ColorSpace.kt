@@ -59,7 +59,7 @@ import kotlin.math.withSign
  * highly recommended to use the [connect] method to perform conversions
  * between color spaces. A color space can be
  * manually adapted to a specific white point using [adapt].
- * Please refer to the documentation of [RGB color spaces][Rgb] for more
+ * Please refer to the documentation of [RGB color spaces][RgbColorSpace] for more
  * information. Several common CIE standard illuminants are provided in this
  * class as reference (see [Illuminant.D65] or [Illuminant.D50]
  * for instance).
@@ -384,17 +384,16 @@ fun ColorSpace.connect(
     destination: ColorSpace = ColorSpaces.SRGB,
     intent: RenderIntent = RenderIntent.PERCEPTUAL
 ): Connector {
-    if (this === destination) {
-        return Connector.identity(this)
-    }
+    if (this === destination) return Connector.identity(this)
+
     return if (this.model === ColorModel.RGB && destination.model === ColorModel.RGB) {
         Connector.RgbConnector(
-            this as Rgb,
-            destination as Rgb,
-            intent
+            mSource = this as RgbColorSpace,
+            mDestination = destination as RgbColorSpace,
+            intent = intent
         )
     } else {
-        Connector(this, destination, intent)
+        Connector(source = this, destination = destination, intent = intent)
     }
 }
 
@@ -421,7 +420,7 @@ fun ColorSpace.adapt(
     adaptation: Adaptation = Adaptation.BRADFORD
 ): ColorSpace {
     if (this.model == ColorModel.RGB) {
-        val rgb = this as Rgb
+        val rgb = this as RgbColorSpace
         if (compare(rgb.whitePoint, whitePoint)) {
             return this
         }
@@ -436,22 +435,18 @@ fun ColorSpace.adapt(
             adaptationTransform,
             rgb.transform
         )
-        return Rgb(rgb, transform, whitePoint)
+        return RgbColorSpace(rgb, transform, whitePoint)
     }
     return this
 }
 
 // Reciprocal piecewise gamma response
-internal fun rcpResponse(x: Double, a: Double, b: Double, c: Double, d: Double, g: Double):
-        Double {
-    return if (x >= d * c) (x.pow(1.0 / g) - b) / a else x / c
-}
+internal fun rcpResponse(x: Double, a: Double, b: Double, c: Double, d: Double, g: Double): Double =
+    if (x >= d * c) (x.pow(1.0 / g) - b) / a else x / c
 
 // Piecewise gamma response
-internal fun response(x: Double, a: Double, b: Double, c: Double, d: Double, g: Double):
-        Double {
-    return if (x >= d) (a * x + b).pow(g) else c * x
-}
+internal fun response(x: Double, a: Double, b: Double, c: Double, d: Double, g: Double): Double =
+    if (x >= d) (a * x + b).pow(g) else c * x
 
 // Reciprocal piecewise gamma response
 internal fun rcpResponse(

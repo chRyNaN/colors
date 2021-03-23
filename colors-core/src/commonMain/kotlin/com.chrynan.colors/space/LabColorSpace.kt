@@ -26,7 +26,7 @@ import kotlin.math.pow
  * Implementation of the CIE L*a*b* color space. Its PCS is CIE XYZ
  * with a white point of D50.
  */
-class Lab(
+class LabColorSpace(
     name: String,
     id: Int
 ) : ColorSpace(

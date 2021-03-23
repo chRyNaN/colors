@@ -154,10 +154,17 @@ internal constructor(
      * Optimized connector for RGB->RGB conversions.
      */
     internal class RgbConnector internal constructor(
-        private val mSource: Rgb,
-        private val mDestination: Rgb,
+        private val mSource: RgbColorSpace,
+        private val mDestination: RgbColorSpace,
         intent: RenderIntent
-    ) : Connector(mSource, mDestination, intent, mSource, mDestination, null) {
+    ) : Connector(
+        source = mSource,
+        destination = mDestination,
+        renderIntent = intent,
+        transformSource = mSource,
+        transformDestination = mDestination,
+        transform = null
+    ) {
 
         private val mTransform: FloatArray
 
@@ -196,8 +203,8 @@ internal constructor(
          * @return An array of 9 floats containing the 3x3 matrix transform
          */
         private fun computeTransform(
-            source: Rgb,
-            destination: Rgb,
+            source: RgbColorSpace,
+            destination: RgbColorSpace,
             intent: RenderIntent
         ): FloatArray {
             if (compare(source.whitePoint, destination.whitePoint)) {
@@ -265,7 +272,7 @@ internal constructor(
             val dstRGB = destination.model == ColorModel.RGB
             if (srcRGB && dstRGB) return null
             if (srcRGB || dstRGB) {
-                val rgb = (if (srcRGB) source else destination) as Rgb
+                val rgb = (if (srcRGB) source else destination) as RgbColorSpace
                 val srcXYZ = if (srcRGB) rgb.whitePoint.toXyz() else Illuminant.D50Xyz
                 val dstXYZ = if (dstRGB) rgb.whitePoint.toXyz() else Illuminant.D50Xyz
 

@@ -21,7 +21,7 @@
 package com.chrynan.colors.space
 
 /**
- * Class for constructing white points used in [RGB][Rgb] color space. The value is
+ * Class for constructing white points used in [RGB][RgbColorSpace] color space. The value is
  * stored in the CIE xyY color space. The Y component of the white point is assumed
  * to be 1.
  *

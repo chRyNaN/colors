@@ -26,7 +26,7 @@ import kotlin.math.pow
  * Implementation of the OkLab color space. OkLab uses
  * a D65 white point.
  */
-class OkLab(
+class OkLabColorSpace(
     name: String,
     id: Int
 ) : ColorSpace(
