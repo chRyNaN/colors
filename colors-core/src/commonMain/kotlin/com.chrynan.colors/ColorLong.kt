@@ -5,7 +5,7 @@ package com.chrynan.colors
 import com.chrynan.colors.space.ColorModel
 
 /**
- * A typealias to an [Long] that is meant to represent a [Color] value in a [Long] form.
+ * An inline class wrapping a [Long] that is meant to represent a [Color] value in a [Long] form.
  * This is very similar to a [ColorInt] but allows for more precision. A common color model is the
  * [ColorModel.RGB] in which the components represent red, green and blue values.
  *
@@ -26,4 +26,4 @@ import com.chrynan.colors.space.ColorModel
  *
  * @see [Android Color Long Documentation](https://developer.android.com/reference/android/graphics/Color.html#color-longs)
  */
-typealias ColorLong = Long
+inline class ColorLong(val value: Long)

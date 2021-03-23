@@ -1,7 +1,7 @@
 package com.chrynan.colors
 
 /**
- * A typealias to an [Int] that is meant to represent a [Color] value in an [Int] form.
+ * An inline class wrapping an [Int] that is meant to represent a [Color] value in an [Int] form.
  * This [Int] should have all of the necessary color information encoded into it. The
  * [Int] should be a packed color value, in the SRGB Color Space, in the form `AARRGGBB`.
  * This is similar to the "ColorInt" native representation on the Android platform.
@@ -18,4 +18,4 @@ package com.chrynan.colors
  * [ColorInt]s are called "ARGB" colors.
  *
  */
-typealias ColorInt = Int
+inline class ColorInt(val value: Int)

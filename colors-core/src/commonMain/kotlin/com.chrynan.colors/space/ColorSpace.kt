@@ -440,6 +440,16 @@ fun ColorSpace.adapt(
     return this
 }
 
+fun ColorSpace.getComponentRange(componentIndex: Int): ClosedFloatingPointRange<Float> {
+    val min = getMinValue(componentIndex)
+    val max = getMaxValue(componentIndex)
+
+    return min..max
+}
+
+fun ColorSpace.coerceComponentInRange(componentIndex: Int, componentValue: Float): Float =
+    componentValue.coerceIn(getComponentRange(componentIndex))
+
 // Reciprocal piecewise gamma response
 internal fun rcpResponse(x: Double, a: Double, b: Double, c: Double, d: Double, g: Double): Double =
     if (x >= d * c) (x.pow(1.0 / g) - b) / a else x / c

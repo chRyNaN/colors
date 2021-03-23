@@ -1,78 +1,53 @@
-@file:Suppress("MemberVisibilityCanBePrivate")
-
 package com.chrynan.colors
 
-/**
- * A [Color] implementation for a RGBA Color (Red, Green, Blue, Alpha).
- */
-open class RgbaColor internal constructor(override val colorInt: ColorInt) : Color {
-
-    override val cssValue: String
-        get() = "rgba($red, $green, $blue, $alpha)"
-
-    /**
-     * A value between 0 and 255 representing the opacity value of this Color instance. This is similar to
-     * [fractionalAlpha] but is an [Int] value from 0 and 255 instead of a [Float] between 0.0 and 1.0. A value of 0
-     * is completely transparent. A value of 255 is completely opaque.
-     */
-    val alpha: Int
-        get() = (colorInt shr 24) and 0xff
-
-    /**
-     * A value between 0.0 and 1.0 representing the opacity value of this Color instance. This is similar to [alpha]
-     * but is a [Float] value from 0.0 and 1.0 instead of an [Int] value between 0 and 255. A value of 0.0 is
-     * completely transparent. A value of 1.0 is completely opaque.
-     */
-    val fractionalAlpha: Float
-        get() = alpha / 255f
-
-    /**
-     * An [Int] value between 0 and 255 representing the red value of this [Color].
-     */
-    val red: Int
-        get() = (colorInt shr 16) and 0xff
-
-    /**
-     * An [Int] value between 0 and 255 representing the green value of this [Color].
-     */
-    val green: Int
-        get() = (colorInt shr 8) and 0xff
-
-    /**
-     * An [Int] value between 0 and 255 representing the blue value of this [Color].
-     */
-    val blue: Int
-        get() = colorInt and 0xff
-
-    override fun hashCode(): Int = colorInt.hashCode()
-
-    override fun equals(other: Any?): Boolean {
-        if (other == null) return false
-
-        if (other !is RgbaColor) return false
-
-        return other.colorInt == colorInt
-    }
-
-    override fun toString(): String =
-        "RgbaColor(colorInt = $colorInt, red = $red, green = $green, blue = $blue, alpha = $alpha)"
-}
+import com.chrynan.colors.space.ColorSpace
+import com.chrynan.colors.space.ColorModel
+import com.chrynan.colors.space.coerceComponentInRange
 
 /**
- * Retrieves a [RgbaColor] from the provided color values.
- *
- * Note that the provided [Int] values for each color value will be coerced into the valid range of 0 to 255.
+ * A [Color] interface that represents a [Color] with red, green, and blue components.
  */
-fun rgba(red: Int, green: Int, blue: Int, alpha: Int = -0x1000000): RgbaColor {
-    val a = alpha.coerceInSRGBColorRange()
-    val r = red.coerceInSRGBColorRange()
-    val g = green.coerceInSRGBColorRange()
-    val b = blue.coerceInSRGBColorRange()
+interface RgbaColor : Color {
 
-    val colorInt = ((a and 0xff) shl 24) or
-            ((r and 0xff) shl 16) or
-            ((g and 0xff) shl 8) or
-            (b and 0xff)
+    /**
+     * This is the first component in a [Color] with a [ColorSpace] that has a [ColorModel.RGB]
+     * color model. This should be the same as calling [component1].
+     *
+     * Note: Refer to the [colorSpace] value to determine if a [Color] is really an RGB [Color].
+     */
+    val red: Float
+        get() = colorSpace.coerceComponentInRange(1, component1())
 
-    return RgbaColor(colorInt)
+    /**
+     * This is the second component in a [Color] with a [ColorSpace] that has a [ColorModel.RGB]
+     * color model. This should be the same as calling [component2].
+     *
+     * Note: Refer to the [colorSpace] value to determine if a [Color] is really an RGB [Color].
+     */
+    val green: Float
+        get() = colorSpace.coerceComponentInRange(2, component2())
+
+    /**
+     * This is the second component in a [Color] with a [ColorSpace] that has a [ColorModel.RGB]
+     * color model. This should be the same as calling [component2].
+     *
+     * Note: Refer to the [colorSpace] value to determine if a [Color] is really an RGB [Color].
+     */
+    val blue: Float
+        get() = colorSpace.coerceComponentInRange(3, component3())
+
+    /**
+     * Returns the relative luminance of this color.
+     *
+     * Based on the formula for relative luminance defined in WCAG 2.0,
+     * W3C Recommendation 11 December 2008.
+     *
+     * @return A value between 0 (darkest black) and 1 (lightest white)
+     *
+     * @throws IllegalArgumentException If the this color's color space
+     * does not use the [RGB][ColorModel.RGB] color model
+     */
+    fun luminance(): Float
+
+    companion object
 }

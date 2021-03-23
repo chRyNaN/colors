@@ -3,16 +3,15 @@
 package com.chrynan.colors.theme
 
 import com.chrynan.colors.Color
-import com.chrynan.colors.hex
 
 fun lightColors(
-    colorPrimary: Color = hex("#6200EE"),
-    colorPrimaryVariant: Color = hex("#3700B3"),
-    colorSecondary: Color = hex("#03DAC6"),
-    colorSecondaryVariant: Color = hex("#018786"),
+    colorPrimary: Color = Color("#6200EE"),
+    colorPrimaryVariant: Color = Color("#3700B3"),
+    colorSecondary: Color = Color("#03DAC6"),
+    colorSecondaryVariant: Color = Color("#018786"),
     colorBackground: Color = Color.WHITE,
     colorBackgroundSecondary: Color = Color.WHITE,
-    colorError: Color = hex("#B00020"),
+    colorError: Color = Color("#B00020"),
     colorOnPrimary: Color = Color.WHITE,
     colorOnSecondary: Color = Color.BLACK,
     colorOnBackground: Color = Color.BLACK,
@@ -43,13 +42,13 @@ fun lightColors(
 )
 
 fun darkColors(
-    colorPrimary: Color = hex("#BB86FC"),
-    colorPrimaryVariant: Color = hex("#3700B3"),
-    colorSecondary: Color = hex("#03DAC6"),
-    colorSecondaryVariant: Color = hex("#121212"),
-    colorBackground: Color = hex("#121212"),
-    colorBackgroundSecondary: Color = hex("#121212"),
-    colorError: Color = hex("#CF6679"),
+    colorPrimary: Color = Color("#BB86FC"),
+    colorPrimaryVariant: Color = Color("#3700B3"),
+    colorSecondary: Color = Color("#03DAC6"),
+    colorSecondaryVariant: Color = Color("#121212"),
+    colorBackground: Color = Color("#121212"),
+    colorBackgroundSecondary: Color = Color("#121212"),
+    colorError: Color = Color("#CF6679"),
     colorOnPrimary: Color = Color.BLACK,
     colorOnSecondary: Color = Color.BLACK,
     colorOnBackground: Color = Color.WHITE,

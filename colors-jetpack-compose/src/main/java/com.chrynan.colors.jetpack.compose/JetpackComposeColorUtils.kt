@@ -7,7 +7,6 @@ import androidx.compose.material.Shapes
 import androidx.compose.material.Typography
 import androidx.compose.runtime.Composable
 import com.chrynan.colors.Color
-import com.chrynan.colors.rgba
 import com.chrynan.colors.theme.Colors
 import com.chrynan.colors.theme.darkColors
 import com.chrynan.colors.theme.lightColors
@@ -16,7 +15,7 @@ fun Color.toJetpackComposeColor(): androidx.compose.ui.graphics.Color =
     androidx.compose.ui.graphics.Color(colorInt)
 
 fun androidx.compose.ui.graphics.Color.toMultiplatformColor(): Color =
-    rgba(red = red.toInt(), green = green.toInt(), blue = blue.toInt(), alpha = alpha.toInt())
+    Color(red = red.toInt(), green = green.toInt(), blue = blue.toInt(), alpha = alpha.toInt())
 
 fun Colors.toJetpackComposeColors(): androidx.compose.material.Colors =
     if (isLight) {
