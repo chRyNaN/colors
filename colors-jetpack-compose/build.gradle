@@ -60,7 +60,25 @@ dependencies {
 }
 
 publishing {
-    publications {
+    repositories {
+        maven {
+            url "https://repo.repsy.io/mvn/chrynan/public"
 
+            credentials {
+                username = project.findProperty("repsyUsername") ?: System.getenv("repsyUsername")
+                password = project.findProperty("repsyToken") ?: System.getenv("repsyToken")
+            }
+        }
+    }
+
+    publications {
+        android.libraryVariants.all { variant ->
+            "maven${variant.name.capitalize()}Aar"(MavenPublication) {
+                from components.findByName("android${variant.name.capitalize()}")
+                groupId LibraryConstants.group
+                artifactId "colors-jetpack-compose"
+                version "${LibraryConstants.versionName}-${variant.name}"
+            }
+        }
     }
 }
