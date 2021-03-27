@@ -1,0 +1,10 @@
+$dokka.format:gfm-v1
+$dokka.linkExtension:md
+$dokka.location:com.chrynan.colors.jetpack.compose////PointingToDeclaration/colors-jetpack-compose/com.chrynan.colors.jetpack.compose/index.md
+$dokka.location:com.chrynan.colors.jetpack.compose//MaterialTheme/#com.chrynan.colors.theme.Colors#androidx.compose.material.Typography#androidx.compose.material.Shapes#kotlin.Function0[kotlin.Unit]/PointingToDeclaration/colors-jetpack-compose/com.chrynan.colors.jetpack.compose/-material-theme.md
+$dokka.location:com.chrynan.colors.jetpack.compose//toJetpackComposeColor/com.chrynan.colors.Color#/PointingToDeclaration/colors-jetpack-compose/com.chrynan.colors.jetpack.compose/to-jetpack-compose-color.md
+$dokka.location:com.chrynan.colors.jetpack.compose//toJetpackComposeColors/com.chrynan.colors.theme.Colors#/PointingToDeclaration/colors-jetpack-compose/com.chrynan.colors.jetpack.compose/to-jetpack-compose-colors.md
+$dokka.location:com.chrynan.colors.jetpack.compose//toMultiplatformColor/androidx.compose.ui.graphics.Color#/PointingToDeclaration/colors-jetpack-compose/com.chrynan.colors.jetpack.compose/to-multiplatform-color.md
+$dokka.location:com.chrynan.colors.jetpack.compose//toMultiplatformColors/androidx.compose.material.Colors#/PointingToDeclaration/colors-jetpack-compose/com.chrynan.colors.jetpack.compose/to-multiplatform-colors.md
+com.chrynan.colors.jetpack.compose
+
