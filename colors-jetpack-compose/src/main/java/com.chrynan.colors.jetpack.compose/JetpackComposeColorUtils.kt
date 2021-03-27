@@ -12,14 +12,23 @@ import com.chrynan.colors.theme.Colors
 import com.chrynan.colors.theme.darkColors
 import com.chrynan.colors.theme.lightColors
 
+/**
+ * Converts this [Color] to a Jetpack Compose compatible [androidx.compose.ui.graphics.Color].
+ */
 @ExperimentalUnsignedTypes
 fun Color.toJetpackComposeColor(): androidx.compose.ui.graphics.Color =
     androidx.compose.ui.graphics.Color(colorLong.value.toULong())
 
+/**
+ * Converts this [androidx.compose.ui.graphics.Color] to a Kotlin Multiplatform compatible [Color].
+ */
 @ExperimentalUnsignedTypes
 fun androidx.compose.ui.graphics.Color.toMultiplatformColor(): Color =
     Color(colorLong = ColorLong(value = value))
 
+/**
+ * Converts this [Colors] value to a Jetpack Compose [androidx.compose.material.Colors] value.
+ */
 @ExperimentalUnsignedTypes
 fun Colors.toJetpackComposeColors(): androidx.compose.material.Colors =
     if (isLight) {
@@ -53,6 +62,9 @@ fun Colors.toJetpackComposeColors(): androidx.compose.material.Colors =
         )
     }
 
+/**
+ * Converts this [androidx.compose.material.Colors] value to a Kotlin Multiplatform [Colors] value.
+ */
 @ExperimentalUnsignedTypes
 fun androidx.compose.material.Colors.toMultiplatformColors(): Colors =
     if (isLight) {
@@ -87,6 +99,11 @@ fun androidx.compose.material.Colors.toMultiplatformColors(): Colors =
         )
     }
 
+/**
+ * A Composable function to create a [MaterialTheme] with the provided [Colors] class.
+ *
+ * @see [MaterialTheme]
+ */
 @Composable
 @ExperimentalUnsignedTypes
 fun MaterialTheme(
