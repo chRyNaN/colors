@@ -1,4 +1,4 @@
-@file:Suppress("FunctionName")
+@file:Suppress("FunctionName", "unused")
 
 package com.chrynan.colors
 
@@ -9,6 +9,17 @@ import com.chrynan.colors.space.Float16
 import kotlin.math.max
 import kotlin.math.min
 
+/**
+ * Creates a [Color] from the provided components and [colorSpace].
+ *
+ * Typically, the [component4] value is the [Color.alpha] value.
+ *
+ * Note that currently this only works with [ColorSpace]s that have a [ColorModel.componentCount]
+ * of 3.
+ *
+ * If you prefer to use more specific component names and get a more specific [Color] instance, use
+ * the other constructor functions, such as [RgbaColor], [RgbaColor], [LabColor], or [XyzColor].
+ */
 @ExperimentalUnsignedTypes
 fun Color(
     component1: Float,
@@ -36,90 +47,6 @@ fun Color(
         blue = component3,
         alpha = component4,
         colorSpace = colorSpace
-    )
-}
-
-/**
- * Create a [RgbaColor] by passing individual [red], [green], [blue], [alpha], and [colorSpace]
- * components. The default [color space][ColorSpace] is [SRGB][ColorSpaces.SRGB] and
- * the default [alpha] is `1.0` (opaque). [colorSpace] must have a [ColorSpace.componentCount] of
- * 3.
- */
-@ExperimentalUnsignedTypes
-fun RgbaColor(
-    red: Float,
-    green: Float,
-    blue: Float,
-    alpha: Float = Color.OPAQUE_ALPHA,
-    colorSpace: ColorSpace = ColorSpaces.SRGB
-): RgbaColor {
-    require(
-        red in colorSpace.getMinValue(0)..colorSpace.getMaxValue(0) &&
-                green in colorSpace.getMinValue(1)..colorSpace.getMaxValue(1) &&
-                blue in colorSpace.getMinValue(2)..colorSpace.getMaxValue(2) &&
-                alpha in Color.MIN_ALPHA..Color.MAX_ALPHA
-    ) {
-        "red = $red, green = $green, blue = $blue, alpha = $alpha outside the range for $colorSpace"
-    }
-
-    if (colorSpace.isSrgb) {
-        val argb = (((alpha * 255.0f + 0.5f).toInt() shl 24) or
-                ((red * 255.0f + 0.5f).toInt() shl 16) or
-                ((green * 255.0f + 0.5f).toInt() shl 8) or
-                (blue * 255.0f + 0.5f).toInt())
-
-        return BaseULongColor(value = (argb.toULong() and 0xffffffffUL) shl 32)
-    }
-
-    require(colorSpace.componentCount == 3) {
-        "Color only works with ColorSpaces with 3 components"
-    }
-
-    val id = colorSpace.id
-    require(id != ColorSpace.MIN_ID) {
-        "Unknown color space, please use a color space in ColorSpaces"
-    }
-
-    val r = Float16(red)
-    val g = Float16(green)
-    val b = Float16(blue)
-    val a = (max(0.0f, min(alpha, 1.0f)) * 1023.0f + 0.5f).toInt()
-
-    // Suppress sign extension
-    return BaseULongColor(
-        value = (((r.halfValue.toULong() and 0xffffUL) shl 48)
-                or ((g.halfValue.toULong() and 0xffffUL) shl 32)
-                or ((b.halfValue.toULong() and 0xffffUL) shl 16)
-                or ((a.toULong() and 0x3ffUL) shl 6)
-                or (id.toULong() and 0x3fUL))
-    )
-}
-
-/**
- * Retrieves a [RgbaColor] from the provided color values.
- *
- * Note that the provided values will be coerced into the SRGB Color Range.
- *
- * @see [RgbaColor]
- */
-@ExperimentalUnsignedTypes
-fun RgbaColor(
-    red: Int,
-    green: Int,
-    blue: Int,
-    alpha: Int = Color.OPAQUE_INT_OPACITY
-): RgbaColor {
-    val a = alpha.coerceInSRGBColorRange()
-    val r = red.coerceInSRGBColorRange()
-    val g = green.coerceInSRGBColorRange()
-    val b = blue.coerceInSRGBColorRange()
-
-    return RgbaColor(
-        red = r.toFloat(),
-        green = g.toFloat(),
-        blue = b.toFloat(),
-        alpha = a.toFloat(),
-        colorSpace = ColorSpaces.SRGB
     )
 }
 
@@ -213,3 +140,130 @@ fun Color(hexadecimalString: String): HexadecimalColor {
 
     return BaseULongColor(value = colorInt.toULong() shl 32, hexColorString = hexadecimalString)
 }
+
+/**
+ * Create a [RgbaColor] by passing individual [red], [green], [blue], [alpha], and [colorSpace]
+ * components. The default [color space][ColorSpace] is [SRGB][ColorSpaces.SRGB] and
+ * the default [alpha] is `1.0` (opaque). [colorSpace] must have a [ColorSpace.componentCount] of
+ * 3.
+ */
+@ExperimentalUnsignedTypes
+fun RgbaColor(
+    red: Float,
+    green: Float,
+    blue: Float,
+    alpha: Float = Color.OPAQUE_ALPHA,
+    colorSpace: ColorSpace = ColorSpaces.SRGB
+): RgbaColor {
+    require(
+        red in colorSpace.getMinValue(0)..colorSpace.getMaxValue(0) &&
+                green in colorSpace.getMinValue(1)..colorSpace.getMaxValue(1) &&
+                blue in colorSpace.getMinValue(2)..colorSpace.getMaxValue(2) &&
+                alpha in Color.MIN_ALPHA..Color.MAX_ALPHA
+    ) {
+        "red = $red, green = $green, blue = $blue, alpha = $alpha outside the range for $colorSpace"
+    }
+
+    if (colorSpace.isSrgb) {
+        val argb = (((alpha * 255.0f + 0.5f).toInt() shl 24) or
+                ((red * 255.0f + 0.5f).toInt() shl 16) or
+                ((green * 255.0f + 0.5f).toInt() shl 8) or
+                (blue * 255.0f + 0.5f).toInt())
+
+        return BaseULongColor(value = (argb.toULong() and 0xffffffffUL) shl 32)
+    }
+
+    require(colorSpace.componentCount == 3) {
+        "Color only works with ColorSpaces with 3 components"
+    }
+
+    val id = colorSpace.id
+    require(id != ColorSpace.MIN_ID) {
+        "Unknown color space, please use a color space in ColorSpaces"
+    }
+
+    val r = Float16(red)
+    val g = Float16(green)
+    val b = Float16(blue)
+    val a = (max(0.0f, min(alpha, 1.0f)) * 1023.0f + 0.5f).toInt()
+
+    // Suppress sign extension
+    return BaseULongColor(
+        value = (((r.halfValue.toULong() and 0xffffUL) shl 48)
+                or ((g.halfValue.toULong() and 0xffffUL) shl 32)
+                or ((b.halfValue.toULong() and 0xffffUL) shl 16)
+                or ((a.toULong() and 0x3ffUL) shl 6)
+                or (id.toULong() and 0x3fUL))
+    )
+}
+
+/**
+ * Retrieves a [RgbaColor] from the provided color values.
+ *
+ * Note that the provided values will be coerced into the SRGB Color Range.
+ *
+ * @see [RgbaColor]
+ */
+@ExperimentalUnsignedTypes
+fun RgbaColor(
+    red: Int,
+    green: Int,
+    blue: Int,
+    alpha: Int = Color.OPAQUE_INT_OPACITY,
+    colorSpace: ColorSpace = ColorSpaces.SRGB
+): RgbaColor {
+    val a = alpha.coerceInSRGBColorRange()
+    val r = red.coerceInSRGBColorRange()
+    val g = green.coerceInSRGBColorRange()
+    val b = blue.coerceInSRGBColorRange()
+
+    return RgbaColor(
+        red = r.toFloat(),
+        green = g.toFloat(),
+        blue = b.toFloat(),
+        alpha = a.toFloat(),
+        colorSpace = colorSpace
+    )
+}
+
+/**
+ * Creates a [LabColor] with the provided values.
+ *
+ * Note [colorSpace] must have a [ColorSpace.componentCount] of 3.
+ */
+@ExperimentalUnsignedTypes
+fun LabColor(
+    l: Float,
+    a: Float,
+    b: Float,
+    alpha: Float = Color.OPAQUE_ALPHA,
+    colorSpace: ColorSpace
+): LabColor =
+    Color(
+        component1 = l,
+        component2 = a,
+        component3 = b,
+        component4 = alpha,
+        colorSpace = colorSpace
+    ) as LabColor
+
+/**
+ * Creates an [XyzColor] with the provided values.
+ *
+ * Note [colorSpace] must have a [ColorSpace.componentCount] of 3.
+ */
+@ExperimentalUnsignedTypes
+fun XyzColor(
+    x: Float,
+    y: Float,
+    z: Float,
+    alpha: Float = Color.OPAQUE_ALPHA,
+    colorSpace: ColorSpace
+): XyzColor =
+    Color(
+        component1 = x,
+        component2 = y,
+        component3 = z,
+        component4 = alpha,
+        colorSpace = colorSpace
+    ) as XyzColor

@@ -8,11 +8,7 @@ import com.chrynan.colors.space.RgbColorSpace
 class BaseULongColor internal constructor(
     override val value: ULong,
     private val hexColorString: String? = null
-) : BaseColor,
-    RgbaColor,
-    LabColor,
-    XyzColor,
-    HexadecimalColor {
+) : BaseColor {
 
     override val cssValue: String
         get() = when {
