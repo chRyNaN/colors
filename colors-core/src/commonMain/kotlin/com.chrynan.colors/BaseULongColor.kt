@@ -4,7 +4,8 @@ import com.chrynan.colors.space.ColorModel
 import com.chrynan.colors.space.RgbColorSpace
 
 // TODO this should be updated to be a value class once they support multiple properties
-class BaseULongColor @ExperimentalUnsignedTypes internal constructor(
+@ExperimentalUnsignedTypes
+class BaseULongColor internal constructor(
     override val value: ULong,
     private val hexColorString: String? = null
 ) : BaseColor,

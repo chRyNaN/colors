@@ -27,12 +27,21 @@ fun Color(
         )
     }
 
-    TODO()
+    // For now we just delegate to the RgbaColor function since the CMYK Color Model is not
+    // supported. But in the future, this logic could be updated to support Color Models with four
+    // components.
+    return RgbaColor(
+        red = component1,
+        green = component2,
+        blue = component3,
+        alpha = component4,
+        colorSpace = colorSpace
+    )
 }
 
 /**
  * Create a [RgbaColor] by passing individual [red], [green], [blue], [alpha], and [colorSpace]
- * components. The default [color space][ColorSpace] is [SRGB][ColorSpaces.Srgb] and
+ * components. The default [color space][ColorSpace] is [SRGB][ColorSpaces.SRGB] and
  * the default [alpha] is `1.0` (opaque). [colorSpace] must have a [ColorSpace.componentCount] of
  * 3.
  */
@@ -151,13 +160,25 @@ fun Color(int: Int): RgbaColor = BaseULongColor(value = int.toULong() shl 32)
 fun Color(long: Long): RgbaColor = BaseULongColor(value = (long.toULong() and 0xffffffffUL) shl 32)
 
 /**
- * Creates a new [RgbaColor] instance from the provided [ColorLong] value.
- * The provided [colorLong] value should contain all of the [RgbaColor]
- * information encoded properly in it.
+ * Creates a new [Color] instance from the provided [ColorLong] value.
+ * The provided [colorLong] value should contain all of the [Color] information encoded properly in
+ * it.
  *
  * @see [ColorLong]
  */
-fun Color(colorLong: ColorLong): Color = TODO()
+@ExperimentalUnsignedTypes
+fun Color(colorLong: ColorLong): Color = BaseULongColor(value = colorLong.value.toULong())
+
+/**
+ * Creates a new [Color] instance from the provided [ULong] [colorULong] value.
+ * The provided [colorULong] value should contain all of the [Color] information encoded properly
+ * in it. The [colorULong] should be encoded like a [ColorLong] value.
+ *
+ * @see [Color]
+ * @see [ColorLong]
+ */
+@ExperimentalUnsignedTypes
+fun Color(colorULong: ULong): Color = BaseULongColor(value = colorULong)
 
 /**
  * Retrieves a [HexadecimalColor] from the provided [hexadecimalString]. The provided [hexadecimalString] must be in a
