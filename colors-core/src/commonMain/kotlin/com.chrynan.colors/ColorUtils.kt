@@ -24,43 +24,36 @@ fun Int.toColorInt(): ColorInt = ColorInt(value = this)
 fun Long.toColorLong(): ColorLong = ColorLong(value = this)
 
 /**
- * Converts this [Int] to an [BaseRgbaColor].
+ * Converts this [Int] to an [RgbaColor].
  *
  * Note that this [Int] is expected to be valid.
  */
 @ExperimentalUnsignedTypes
-fun Int.toColor(): BaseRgbaColor = Color(int = this)
+fun Int.toColor(): RgbaColor = Color(int = this)
 
 /**
- * Converts this [ColorInt] to an [BaseRgbaColor].
+ * Converts this [ColorInt] to an [RgbaColor].
  *
  * Note that this [ColorInt] is expected to be valid.
  */
 @ExperimentalUnsignedTypes
-fun ColorInt.toColor(): BaseRgbaColor = Color(colorInt = this)
+fun ColorInt.toColor(): RgbaColor = Color(colorInt = this)
 
 /**
- * Converts this [Long] to an [BaseRgbaColor].
+ * Converts this [Long] to an [RgbaColor].
  *
  * Note that this [Long] is expected to be valid.
  */
 @ExperimentalUnsignedTypes
-fun Long.toColor(): BaseRgbaColor = Color(long = this)
+fun Long.toColor(): RgbaColor = Color(long = this)
 
 /**
- * Converts this [ColorLong] to an [BaseRgbaColor].
+ * Converts this [ColorLong] to an [Color].
  *
  * Note that this [ColorLong] is expected to be valid.
  */
 @ExperimentalUnsignedTypes
 fun ColorLong.toColor(): Color = Color(colorLong = this)
-
-/**
- * Converts this [Color] into an [RgbaColor] performing any conversion
- * if necessary.
- */
-@ExperimentalUnsignedTypes
-fun Color.toRgbaColor(): BaseRgbaColor = Color(colorInt = this.colorInt)
 
 /**
  * Linear interpolate between two [Colors][Color], [start] and [stop] with [fraction] fraction
@@ -85,7 +78,7 @@ fun lerp(start: Color, stop: Color, fraction: Float): Color {
     val endA = endColor.component2()
     val endB = endColor.component2()
 
-    val interpolated = Color(
+    val interpolated = RgbaColor(
         alpha = lerp(startAlpha, endAlpha, fraction),
         red = lerp(startL, endL, fraction),
         green = lerp(startA, endA, fraction),
