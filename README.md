@@ -91,7 +91,7 @@ implementation "com.chrynan.colors:colors-jetpack-compose:$VERSION"
 
 ## Documentation
 
-More detailed documentation is available in the [docs](docs) folder.
+More detailed documentation is available in the [docs](docs) folder. The entry point to the documentation can be found [here](docs/index.md).
 
 ## License
 
