@@ -3,7 +3,7 @@ rootProject.name = "colors"
 include ":colors-core"
 include ":colors-extension"
 include ":colors-theme"
-include ":colors-serialization"
+// include ":colors-serialization"
 include ":colors-jetpack-compose"
 
 enableFeaturePreview("GRADLE_METADATA")
