@@ -4,6 +4,7 @@ package com.chrynan.colors.theme
 
 import com.chrynan.colors.Color
 
+@ExperimentalUnsignedTypes
 fun lightColors(
     colorPrimary: Color = Color("#6200EE"),
     colorPrimaryVariant: Color = Color("#3700B3"),
@@ -41,6 +42,7 @@ fun lightColors(
     isLight = true
 )
 
+@ExperimentalUnsignedTypes
 fun darkColors(
     colorPrimary: Color = Color("#BB86FC"),
     colorPrimaryVariant: Color = Color("#3700B3"),
