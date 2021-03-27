@@ -1,59 +1,100 @@
 # colors
 
-Kotlin Multiplatform Color Support.
+Kotlin Multi-platform Color Support. This allows using Colors in multi-platform presentation code like View Data classes and Mappers.
 
 ```kotlin
-val white = hex("#FFFFFF")
-val black = rgba(red = 0, green = 0, blue = 0, alpha = 255)
+val white = Color("#FFFFFF")
+val black = Color(red, green, blue, alpha)
 
-println("White: colorInt = ${white.colorInt}; cssValue = ${white.cssValue}")
-println("Black: colorInt = ${black.colorInt}; cssValue = ${black.cssValue}")
+println("White: colorLong = ${white.colorLong}; cssValue = ${white.cssValue}")
+println("Black: colorLong = ${black.colorLong}; cssValue = ${black.cssValue}")
 ```
 
-## Building the Library
+## Using the library
 
-The library is provided through [Bintray](https://bintray.com/chrynan/chrynan). Checkout the [releases page](https://github.com/chRyNaN/colors/releases) to get the latest version.
+To obtain a `Color` instance, use one of the constructor functions:
+
+```kotlin
+Color("#FFFFFF")
+Color(255, 255, 255, 255)
+Color(0xFFFFFFFF)
+// Or to obtain a specific Color type, like RgbaColor
+RgbaColor(255, 255, 255, 255)
+```
+
+Using properties from the `Color` interface:
+
+```kotlin
+// sRGB Color Int
+color.colorInt
+// Color components and ColorSpace encoded into a Long
+color.colorLong
+// CSS Value
+color.cssValue
+// ColorSpace
+color.colorSpace
+// Alpha value
+color.alpha
+// Specific Color components
+color.component1()
+// All Color Components - Example for an RGBA Color
+val (red, green, blue, alpha) = color
+// Color Components as a FloatArray
+color.components
+```
+
+## Building the library
+
+The library is provided through [Repsy.io](https://repsy.io). Checkout the [releases page](https://github.com/chRyNaN/colors/releases) to get the latest version.
 
 ### Repository
 
 ```groovy
 repositories {
-    maven {
-        url = uri("https://dl.bintray.com/chrynan/chrynan")
-    }
+    maven { url = "https://repo.repsy.io/mvn/chrynan/public" }
 }
 ```
 
 ### Dependencies
 
-**Kotlin Common:**
+**Core:**
+
 ```groovy
 implementation "com.chrynan.colors:colors-core:$VERSION"
 ```
 
-**Kotlin JVM:**
+**Extensions:**
+
 ```groovy
-implementation "com.chrynan.colors:colors-core-jvm:$VERSION"
+implementation "com.chrynan.colors:colors-extension:$VERSION"
 ```
 
-**Kotlin JS:**
+**Theme:**
+
 ```groovy
-implementation "com.chrynan.colors:colors-core-js:$VERSION"
+implementation "com.chrynan.colors:colors-theme:$VERSION"
 ```
 
-**Kotlin iOS ARM64:**
+**Serialization:**
+
 ```groovy
-implementation "com.chryan.colors:colors-core-ios-arm64:$VERSION"
+implementation "com.chrynan.colors:colors-serialization:$VERSION"
 ```
 
-**Kotlin iOS x64:**
+**Jetpack Compose:**
+
 ```groovy
-implementation "com.chrynan.colors:colors-core-ios-x64:$VERSION"
+implementation "com.chrynan.colors:colors-jetpack-compose:$VERSION"
 ```
+
+## Documentation
+
+More detailed documentation is available in the [docs](docs) folder.
 
 ## License
+
 ```
-Copyright 2020 chRyNaN
+Copyright 2021 chRyNaN
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
