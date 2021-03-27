@@ -9,11 +9,11 @@ group LibraryConstants.group
 version LibraryConstants.versionName
 
 android {
-    compileSdkVersion LibraryConstants.androidCompileSdkVersion
+    compileSdkVersion LibraryConstants.Android.compileSdkVersion
 
     defaultConfig {
-        minSdkVersion LibraryConstants.androidMinSdkVersion
-        targetSdkVersion LibraryConstants.androidTargetSdkVersion
+        minSdkVersion LibraryConstants.Android.minSdkVersion
+        targetSdkVersion LibraryConstants.Android.targetSdkVersion
         versionCode LibraryConstants.versionCode
         versionName LibraryConstants.versionName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
