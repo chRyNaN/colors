@@ -1,6 +1,7 @@
 # colors
 
-Kotlin Multi-platform Color Support. This allows using Colors in multi-platform presentation code like View Data classes and Mappers.
+Kotlin Multi-platform Color Support. This allows using Colors in multi-platform presentation code like View Data classes and Mappers. <br/>
+<img alt="GitHub tag (latest by date)" src="https://img.shields.io/github/v/tag/chRyNaN/colors">
 
 ```kotlin
 val white = Color("#FFFFFF")
@@ -45,7 +46,8 @@ color.components
 
 ## Building the library
 
-The library is provided through [Repsy.io](https://repsy.io). Checkout the [releases page](https://github.com/chRyNaN/colors/releases) to get the latest version.
+The library is provided through [Repsy.io](https://repsy.io). Checkout the [releases page](https://github.com/chRyNaN/colors/releases) to get the latest version. <br/>
+<img alt="GitHub tag (latest by date)" src="https://img.shields.io/github/v/tag/chRyNaN/colors">
 
 ### Repository
 
