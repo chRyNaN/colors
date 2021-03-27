@@ -27,3 +27,10 @@ import com.chrynan.colors.space.ColorModel
  * @see [Android Color Long Documentation](https://developer.android.com/reference/android/graphics/Color.html#color-longs)
  */
 inline class ColorLong(val value: Long)
+
+/**
+ * Creates a [ColorLong] instance with the provided [ULong] [value].
+ */
+// TODO make sure this logic is correct
+@ExperimentalUnsignedTypes
+fun ColorLong(value: ULong): ColorLong = ColorLong(value = value.toLong())

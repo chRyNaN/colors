@@ -7,16 +7,20 @@ import androidx.compose.material.Shapes
 import androidx.compose.material.Typography
 import androidx.compose.runtime.Composable
 import com.chrynan.colors.Color
+import com.chrynan.colors.ColorLong
 import com.chrynan.colors.theme.Colors
 import com.chrynan.colors.theme.darkColors
 import com.chrynan.colors.theme.lightColors
 
+@ExperimentalUnsignedTypes
 fun Color.toJetpackComposeColor(): androidx.compose.ui.graphics.Color =
-    androidx.compose.ui.graphics.Color(colorInt)
+    androidx.compose.ui.graphics.Color(colorLong.value.toULong())
 
+@ExperimentalUnsignedTypes
 fun androidx.compose.ui.graphics.Color.toMultiplatformColor(): Color =
-    Color(red = red.toInt(), green = green.toInt(), blue = blue.toInt(), alpha = alpha.toInt())
+    Color(colorLong = ColorLong(value = value))
 
+@ExperimentalUnsignedTypes
 fun Colors.toJetpackComposeColors(): androidx.compose.material.Colors =
     if (isLight) {
         androidx.compose.material.lightColors(
@@ -49,6 +53,7 @@ fun Colors.toJetpackComposeColors(): androidx.compose.material.Colors =
         )
     }
 
+@ExperimentalUnsignedTypes
 fun androidx.compose.material.Colors.toMultiplatformColors(): Colors =
     if (isLight) {
         lightColors(
@@ -83,6 +88,7 @@ fun androidx.compose.material.Colors.toMultiplatformColors(): Colors =
     }
 
 @Composable
+@ExperimentalUnsignedTypes
 fun MaterialTheme(
     colors: Colors,
     typography: Typography = MaterialTheme.typography,
