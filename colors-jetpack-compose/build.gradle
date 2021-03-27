@@ -2,7 +2,8 @@ import com.chrynan.colors.buildSrc.LibraryConstants
 
 apply plugin: "com.android.library"
 apply plugin: "kotlin-android"
-apply plugin: "digital.wup.android-maven-publish"
+apply plugin: "maven-publish"
+apply plugin: "org.jetbrains.dokka"
 
 group LibraryConstants.group
 version LibraryConstants.versionName
@@ -50,19 +51,16 @@ android {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 
-    implementation "androidx.compose.compiler:compiler:1.0.0-alpha10"
-    implementation "androidx.compose.runtime:runtime:1.0.0-alpha10"
-    implementation "androidx.compose.ui:ui:1.0.0-alpha10"
-    implementation "androidx.compose.material:material:1.0.0-alpha10"
+    implementation "androidx.compose.compiler:compiler:1.0.0-beta03"
+    implementation "androidx.compose.runtime:runtime:1.0.0-beta03"
+    implementation "androidx.compose.ui:ui:1.0.0-beta03"
+    implementation "androidx.compose.material:material:1.0.0-beta03"
 
     api project(":colors-theme")
 }
 
 publishing {
     publications {
-        MavenPub(MavenPublication) {
-            from(components.android)
-            artifactId "colors-jetpack-compose"
-        }
+
     }
 }

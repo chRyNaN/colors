@@ -1,6 +1,9 @@
 import com.chrynan.colors.buildSrc.LibraryConstants
 
 apply plugin: "kotlin-multiplatform"
+apply plugin: "maven-publish"
+apply plugin: "org.jetbrains.dokka"
+apply plugin: "com.chrynan.target.plugin"
 
 group LibraryConstants.group
 version LibraryConstants.versionName
@@ -33,21 +36,21 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
 }
 
 publishing {
-    publications {
-        kotlinMultiplatform {
-            artifactId = "colors-extension"
-        }
-        jvm {
-            artifactId = "colors-extension-jvm"
-        }
-        js {
-            artifactId = "colors-extension-js"
-        }
-        iosArm64 {
-            artifactId = "colors-extension-ios-arm64"
-        }
-        iosX64 {
-            artifactId = "colors-extension-ios-x64"
+    repositories {
+        maven {
+            url "https://repo.repsy.io/mvn/chrynan/public"
+
+            credentials {
+                username = project.findProperty("repsyUsername") ?: System.getenv("repsyUsername")
+                password = project.findProperty("repsyToken") ?: System.getenv("repsyToken")
+            }
         }
     }
+}
+
+// Target Information
+kotlinTargetDataGenerator {
+    generateJson = true
+    generateSvg = true
+    outputPath = "${projectDir.path}/targets"
 }
