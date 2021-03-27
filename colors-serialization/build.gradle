@@ -50,3 +50,12 @@ kotlinTargetDataGenerator {
     generateSvg = true
     outputPath = "${projectDir.path}/targets"
 }
+
+// Documentation
+tasks.named("dokkaGfm") {
+    dokkaSourceSets {
+        configureEach {
+            includes.from("Module.md")
+        }
+    }
+}
