@@ -224,9 +224,6 @@ val Color.Companion.LIGHT_SKY_BLUE by lazy { Color("#87CEFA") }
 val Color.Companion.LIGHT_SLATE_GRAY by lazy { Color("#778899") }
 
 @ExperimentalUnsignedTypes
-val Color.Companion.LIGHT_SLATE_GREY by lazy { Color("#778899") }
-
-@ExperimentalUnsignedTypes
 val Color.Companion.LIGHT_STEEL_BLUE by lazy { Color("#B0C4DE") }
 
 @ExperimentalUnsignedTypes
