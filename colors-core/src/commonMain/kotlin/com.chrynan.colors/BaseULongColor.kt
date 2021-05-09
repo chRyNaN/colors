@@ -58,6 +58,17 @@ class BaseULongColor internal constructor(
             .coerceIn(0.0f, 1.0f)
     }
 
+    override fun equals(other: Any?): Boolean {
+        if (other == null) return false
+        if (other !is Color) return false
+
+        if (other is BaseULongColor) return value == other.value
+
+        return colorLong == other.colorLong
+    }
+
+    override fun hashCode(): Int = value.hashCode()
+
     override fun toString(): String =
         "Color(colorLong = $colorLong, colorSpace = $colorSpace, component1 = ${component1()}, component2 = ${component2()}, component3 = ${component3()}, component4 = ${component4()})"
 }
