@@ -1,9 +1,9 @@
 import com.chrynan.colors.buildSrc.LibraryConstants
 
-apply plugin: "com.android.library"
+apply plugin: "com.android.application"
 apply plugin: "kotlin-android"
-apply plugin: "maven-publish"
-apply plugin: "org.jetbrains.dokka"
+apply plugin: "kotlin-kapt"
+apply plugin: "kotlinx-serialization"
 
 group LibraryConstants.group
 version LibraryConstants.versionName
@@ -12,7 +12,7 @@ android {
     compileSdkVersion LibraryConstants.Android.compileSdkVersion
 
     defaultConfig {
-        minSdkVersion LibraryConstants.Android.minSdkVersion
+        minSdkVersion 26
         targetSdkVersion LibraryConstants.Android.targetSdkVersion
         versionCode LibraryConstants.versionCode
         versionName LibraryConstants.versionName
@@ -48,46 +48,22 @@ android {
     }
 }
 
+configurations {
+    cleanedAnnotations
+    compile.exclude group: "org.jetbrains", module: "annotations"
+}
+
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+
+    implementation "androidx.appcompat:appcompat:1.2.0"
 
     implementation "androidx.compose.compiler:compiler:1.0.0-beta06"
     implementation "androidx.compose.runtime:runtime:1.0.0-beta06"
     implementation "androidx.compose.ui:ui:1.0.0-beta06"
     implementation "androidx.compose.material:material:1.0.0-beta06"
+    implementation "androidx.compose.ui:ui-tooling:1.0.0-beta06"
+    implementation "androidx.activity:activity-compose:1.3.0-alpha07"
 
-    api project(":colors-theme")
-}
-
-publishing {
-    repositories {
-        maven {
-            url "https://repo.repsy.io/mvn/chrynan/public"
-
-            credentials {
-                username = project.findProperty("repsyUsername") ?: System.getenv("repsyUsername")
-                password = project.findProperty("repsyToken") ?: System.getenv("repsyToken")
-            }
-        }
-    }
-
-    publications {
-        android.libraryVariants.all { variant ->
-            "maven${variant.name.capitalize()}Aar"(MavenPublication) {
-                from components.findByName("android${variant.name.capitalize()}")
-                groupId LibraryConstants.group
-                artifactId "colors-jetpack-compose"
-                version "${LibraryConstants.versionName}-${variant.name}"
-            }
-        }
-    }
-}
-
-// Documentation
-tasks.named("dokkaGfm") {
-    dokkaSourceSets {
-        configureEach {
-            includes.from("Module.md")
-        }
-    }
+    implementation project(":colors-jetpack-compose")
 }
