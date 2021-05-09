@@ -137,6 +137,23 @@ interface Color {
         renderIntent: RenderIntent = RenderIntent.PERCEPTUAL
     ): RgbaColor
 
+    /**
+     * Returns the relative luminance of this color.
+     *
+     * For [RgbaColor]s, this is based on the formula for relative luminance defined in WCAG 2.0,
+     * W3C Recommendation 11 December 2008. For [XyzColor]s, this should be the 'Y' component
+     * value.
+     *
+     * Note that if this color's color space's model is not [ColorModel.XYZ] or [ColorModel.RGB],
+     * then it is possible for the implementation to convert the color to one in a supported color
+     * space before calculating this value.
+     *
+     * @return A value between 0.0f (darkest black) and 1.0f (lightest white).
+     *
+     * @throws IllegalArgumentException If the this color's color space does not support luminance.
+     */
+    fun luminance(): Float
+
     companion object {
 
         const val MIN_INT_OPACITY = 0
