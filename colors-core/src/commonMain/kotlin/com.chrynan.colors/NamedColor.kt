@@ -6,11 +6,11 @@ package com.chrynan.colors
  * Represents a [Color] that has a [Set] of localized [names]. This could be useful to associate a
  * [String] name with a [Color].
  *
- * @property [names] The [Set] of [LocalizedName]s for this [NamedColor] instance.
+ * @property [names] The [Set] of [LocalizedText]s for this [NamedColor] instance.
  * @property [color] The [Color] instance this [NamedColor] represents.
  */
 data class NamedColor(
-    val names: Set<LocalizedName>,
+    val names: Set<LocalizedText>,
     val color: Color
 ) {
 
@@ -24,10 +24,10 @@ data class NamedColor(
         names.firstOrNull { it.languageCode == languageCode }?.value
 
     /**
-     * Retrieves a [Set] of [LocalizedName]s from the [names] value that match the provided
+     * Retrieves a [Set] of [LocalizedText]s from the [names] value that match the provided
      * [languageCode].
      */
-    fun namesForLanguageCode(languageCode: String): Set<LocalizedName> =
+    fun namesForLanguageCode(languageCode: String): Set<LocalizedText> =
         names.filter { it.languageCode == languageCode }.toSet()
 }
 
@@ -36,7 +36,7 @@ data class NamedColor(
  * defaults to a value of "en".
  */
 fun NamedColor(name: String, color: Color, languageCode: String = "en"): NamedColor {
-    val localizedName = LocalizedName(languageCode = languageCode, value = name)
+    val localizedName = LocalizedText(languageCode = languageCode, value = name)
 
     return NamedColor(names = setOf(localizedName), color = color)
 }
