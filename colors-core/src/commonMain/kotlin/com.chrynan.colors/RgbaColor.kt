@@ -6,6 +6,11 @@ import com.chrynan.colors.space.coerceComponentInRange
 
 /**
  * A [Color] interface that represents a [Color] with red, green, and blue components.
+ *
+ * **Note:** Do **not** perform an instance check (ex: `color is RgbaColor`) to determine if a
+ * [Color] instance is really a particular [Color] subtype. Instead refer to the [colorSpace]
+ * property. This is because different [Color] subtypes, such as [RgbaColor], can share the same
+ * class implementation.
  */
 interface RgbaColor : Color {
 

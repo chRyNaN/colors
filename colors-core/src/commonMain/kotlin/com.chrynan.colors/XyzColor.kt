@@ -7,8 +7,13 @@ import com.chrynan.colors.space.ColorSpace
 import com.chrynan.colors.space.coerceComponentInRange
 
 /**
- * A [Color] interface that represents a [Color] within the [ColorSpace] with a [ColorModel.XYZ]
+ * A [Color] interface that represents a [Color] within a [ColorSpace] with a [ColorModel.XYZ]
  * color model.
+ *
+ * **Note:** Do **not** perform an instance check (ex: `color is RgbaColor`) to determine if a
+ * [Color] instance is really a particular [Color] subtype. Instead refer to the [colorSpace]
+ * property. This is because different [Color] subtypes, such as [RgbaColor], can share the same
+ * class implementation.
  */
 interface XyzColor : Color {
 
