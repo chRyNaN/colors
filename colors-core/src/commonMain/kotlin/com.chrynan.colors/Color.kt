@@ -40,6 +40,10 @@ interface Color {
     /**
      * A value between 0.0 and 1.0 representing the opacity value of this Color instance. A value
      * of 0.0 is completely transparent. A value of 1.0 is completely opaque.
+     *
+     * Note that most [ColorSpaces] contain an alpha component. However, that component has a range
+     * within the range between [ColorSpace.getMinValue] and [ColorSpace.getMaxValue] for that
+     * component of the [ColorSpace]. Whereas, this value should be in the range of 0.0f to 1.0f.
      */
     val alpha: Float
 
