@@ -221,6 +221,18 @@ fun convertHslComponentsToColor(hsl: FloatArray): RgbaColor {
 }
 
 /**
+ * Retrieves a [Float], in the range of 0.0f to 1.0f, indicating the amount of contrast between
+ * this [Color] and the provided [other] [Color]. A value of 0.0f indicates the lowest contrast
+ * value, and a value of 1.0f indicates the highest contrast value.
+ *
+ * Note that this compares the [Color.luminance] values of the [Color]s.
+ *
+ * @see [Color.luminance]
+ */
+fun Color.contrast(other: Color): Float =
+    abs(luminance() - other.luminance()).coerceIn(0.0f, 1.0f)
+
+/**
  * Linearly interpolate between [start] and [stop] with [fraction] fraction between them.
  */
 internal fun lerp(start: Float, stop: Float, fraction: Float): Float =
