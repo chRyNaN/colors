@@ -71,7 +71,7 @@ internal class ColorHistogram(private val pixels: IntArray) {
         return result
     }
 
-    data class ColorBox(
+    internal data class ColorBox(
         val color: Int,
         val count: Int
     )

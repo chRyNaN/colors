@@ -37,7 +37,10 @@ class BaseULongColor internal constructor(
 
         // According to the following Wiki documentation, the Y in an XYZ Color Space is the
         // luminance: https://en.wikipedia.org/wiki/Relative_luminance
-        if (colorSpace.model == ColorModel.XYZ) return component2()
+        if (colorSpace.model == ColorModel.XYZ) return ((component2() + 2f) / 4f).coerceIn(
+            0.0f,
+            1.0f
+        )
 
         if (colorSpace.model !== ColorModel.RGB) {
             color = color.toRgbaColor()
