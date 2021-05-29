@@ -7,5 +7,3 @@ include ":colors-palette"
 // include ":colors-serialization"
 include ":colors-jetpack-compose"
 include ":sample-android"
-
-enableFeaturePreview("GRADLE_METADATA")
