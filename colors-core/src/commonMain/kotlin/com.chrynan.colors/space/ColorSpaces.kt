@@ -351,5 +351,5 @@ object ColorSpaces {
         return null
     }
 
-    internal inline fun getColorSpace(id: Int): ColorSpace = COLOR_SPACES_ARRAY[id]
+    fun getColorSpaceById(id: Int): ColorSpace = COLOR_SPACES_ARRAY[id]
 }

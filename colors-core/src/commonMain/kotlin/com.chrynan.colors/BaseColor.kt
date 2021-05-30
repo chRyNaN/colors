@@ -34,7 +34,7 @@ interface BaseColor : Color,
         get() = ColorLong(value = value.toLong())
 
     override val colorSpace: ColorSpace
-        get() = ColorSpaces.getColorSpace(colorSpaceBitsValue.toInt())
+        get() = ColorSpaces.getColorSpaceById(colorSpaceBitsValue.toInt())
 
     override val alpha: Float
         get() = if (isSrgb) {
@@ -59,7 +59,7 @@ interface BaseColor : Color,
      *
      * Note that some [ColorSpace]s don't explicitly provide [ColorSpace] bits,
      * such as sRGB, but this returned value should still be resolvable using
-     * the [ColorSpaces.getColorSpace] function for those [ColorSpaces].
+     * the [ColorSpaces.getColorSpaceById] function for those [ColorSpaces].
      */
     private val colorSpaceBitsValue: ULong
         get() = value and 0x3fUL
