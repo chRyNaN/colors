@@ -94,11 +94,6 @@ tasks.withType(org.gradle.jvm.tasks.Jar).all { duplicatesStrategy = DuplicatesSt
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
-
-    implementation "androidx.compose.compiler:compiler:1.0.0-beta07"
-    implementation "androidx.compose.runtime:runtime:1.0.0-beta07"
-    implementation "androidx.compose.ui:ui:1.0.0-beta07"
-    implementation "androidx.compose.material:material:1.0.0-beta07"
 }
 
 afterEvaluate {
