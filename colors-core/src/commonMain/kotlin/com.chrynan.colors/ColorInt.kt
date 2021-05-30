@@ -18,4 +18,7 @@ package com.chrynan.colors
  * [ColorInt]s are called "ARGB" colors.
  *
  */
-inline class ColorInt(val value: Int)
+inline class ColorInt(val value: Int) {
+
+    companion object
+}

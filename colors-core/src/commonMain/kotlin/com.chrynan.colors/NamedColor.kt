@@ -29,6 +29,8 @@ data class NamedColor(
      */
     fun namesForLanguageCode(languageCode: String): Set<LocalizedText> =
         names.filter { it.languageCode == languageCode }.toSet()
+
+    companion object
 }
 
 /**

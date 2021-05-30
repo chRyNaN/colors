@@ -11,4 +11,7 @@ package com.chrynan.colors
 data class LocalizedText(
     val languageCode: String = "en",
     val value: String
-)
+) {
+
+    companion object
+}
