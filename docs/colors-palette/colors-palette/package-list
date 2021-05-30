@@ -1,0 +1,31 @@
+$dokka.format:gfm-v1
+$dokka.linkExtension:md
+$dokka.location:com.chrynan.colors.palette////PointingToDeclaration/colors-palette/com.chrynan.colors.palette/index.md
+$dokka.location:com.chrynan.colors.palette//isEmpty/com.chrynan.colors.palette.Palette#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/is-empty.md
+$dokka.location:com.chrynan.colors.palette//isNotEmpty/com.chrynan.colors.palette.Palette#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/is-not-empty.md
+$dokka.location:com.chrynan.colors.palette//primarySwatch/com.chrynan.colors.palette.Palette#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/primary-swatch.md
+$dokka.location:com.chrynan.colors.palette//swatches/com.chrynan.colors.palette.Palette#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/swatches.md
+$dokka.location:com.chrynan.colors.palette/Palette.Companion///PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-palette/-companion/index.md
+$dokka.location:com.chrynan.colors.palette/Palette///PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-palette/index.md
+$dokka.location:com.chrynan.colors.palette/Palette/mutedDarkSwatch/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-palette/muted-dark-swatch.md
+$dokka.location:com.chrynan.colors.palette/Palette/mutedLightSwatch/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-palette/muted-light-swatch.md
+$dokka.location:com.chrynan.colors.palette/Palette/mutedSwatch/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-palette/muted-swatch.md
+$dokka.location:com.chrynan.colors.palette/Palette/vibrantDarkSwatch/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-palette/vibrant-dark-swatch.md
+$dokka.location:com.chrynan.colors.palette/Palette/vibrantLightSwatch/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-palette/vibrant-light-swatch.md
+$dokka.location:com.chrynan.colors.palette/Palette/vibrantSwatch/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-palette/vibrant-swatch.md
+$dokka.location:com.chrynan.colors.palette/SimplePalette///PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-simple-palette/index.md
+$dokka.location:com.chrynan.colors.palette/SimplePalette/mutedDarkSwatch/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-simple-palette/muted-dark-swatch.md
+$dokka.location:com.chrynan.colors.palette/SimplePalette/mutedLightSwatch/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-simple-palette/muted-light-swatch.md
+$dokka.location:com.chrynan.colors.palette/SimplePalette/mutedSwatch/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-simple-palette/muted-swatch.md
+$dokka.location:com.chrynan.colors.palette/SimplePalette/vibrantDarkSwatch/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-simple-palette/vibrant-dark-swatch.md
+$dokka.location:com.chrynan.colors.palette/SimplePalette/vibrantLightSwatch/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-simple-palette/vibrant-light-swatch.md
+$dokka.location:com.chrynan.colors.palette/SimplePalette/vibrantSwatch/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-simple-palette/vibrant-swatch.md
+$dokka.location:com.chrynan.colors.palette/Swatch.Companion///PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-swatch/-companion/index.md
+$dokka.location:com.chrynan.colors.palette/Swatch///PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-swatch/index.md
+$dokka.location:com.chrynan.colors.palette/Swatch/Swatch/#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#kotlin.Int?/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-swatch/-swatch.md
+$dokka.location:com.chrynan.colors.palette/Swatch/color/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-swatch/color.md
+$dokka.location:com.chrynan.colors.palette/Swatch/population/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-swatch/population.md
+$dokka.location:com.chrynan.colors.palette/Swatch/primaryOnColor/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-swatch/primary-on-color.md
+$dokka.location:com.chrynan.colors.palette/Swatch/secondaryOnColor/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-swatch/secondary-on-color.md
+com.chrynan.colors.palette
+

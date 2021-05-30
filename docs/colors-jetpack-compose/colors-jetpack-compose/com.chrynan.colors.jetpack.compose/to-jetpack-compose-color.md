@@ -3,7 +3,7 @@
 
 
 # toJetpackComposeColor  
-[androidJvm]  
+[common]  
 Content  
 @[ExperimentalUnsignedTypes](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-experimental-unsigned-types/index.html)()  
   

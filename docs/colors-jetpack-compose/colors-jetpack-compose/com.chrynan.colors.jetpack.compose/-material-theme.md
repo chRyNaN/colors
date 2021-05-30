@@ -3,7 +3,7 @@
 
 
 # MaterialTheme  
-[androidJvm]  
+[common]  
 Content  
 @Composable()  
 @[ExperimentalUnsignedTypes](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-experimental-unsigned-types/index.html)()  
@@ -18,7 +18,7 @@ A Composable function to create a MaterialTheme with the provided [Colors](../..
 
 ## See also  
   
-androidJvm  
+common  
   
 | | |
 |---|---|

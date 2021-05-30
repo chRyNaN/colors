@@ -74,7 +74,6 @@ $dokka.location:com.chrynan.colors.extension//LIGHT_SALMON/com.chrynan.colors.Co
 $dokka.location:com.chrynan.colors.extension//LIGHT_SEA_GREEN/com.chrynan.colors.Color.Companion#/PointingToDeclaration/colors-extension/com.chrynan.colors.extension/-l-i-g-h-t_-s-e-a_-g-r-e-e-n.md
 $dokka.location:com.chrynan.colors.extension//LIGHT_SKY_BLUE/com.chrynan.colors.Color.Companion#/PointingToDeclaration/colors-extension/com.chrynan.colors.extension/-l-i-g-h-t_-s-k-y_-b-l-u-e.md
 $dokka.location:com.chrynan.colors.extension//LIGHT_SLATE_GRAY/com.chrynan.colors.Color.Companion#/PointingToDeclaration/colors-extension/com.chrynan.colors.extension/-l-i-g-h-t_-s-l-a-t-e_-g-r-a-y.md
-$dokka.location:com.chrynan.colors.extension//LIGHT_SLATE_GREY/com.chrynan.colors.Color.Companion#/PointingToDeclaration/colors-extension/com.chrynan.colors.extension/-l-i-g-h-t_-s-l-a-t-e_-g-r-e-y.md
 $dokka.location:com.chrynan.colors.extension//LIGHT_STEEL_BLUE/com.chrynan.colors.Color.Companion#/PointingToDeclaration/colors-extension/com.chrynan.colors.extension/-l-i-g-h-t_-s-t-e-e-l_-b-l-u-e.md
 $dokka.location:com.chrynan.colors.extension//LIGHT_YELLOW/com.chrynan.colors.Color.Companion#/PointingToDeclaration/colors-extension/com.chrynan.colors.extension/-l-i-g-h-t_-y-e-l-l-o-w.md
 $dokka.location:com.chrynan.colors.extension//LIME/com.chrynan.colors.Color.Companion#/PointingToDeclaration/colors-extension/com.chrynan.colors.extension/-l-i-m-e.md
@@ -141,5 +140,6 @@ $dokka.location:com.chrynan.colors.extension//WHEAT/com.chrynan.colors.Color.Com
 $dokka.location:com.chrynan.colors.extension//WHITE_SMOKE/com.chrynan.colors.Color.Companion#/PointingToDeclaration/colors-extension/com.chrynan.colors.extension/-w-h-i-t-e_-s-m-o-k-e.md
 $dokka.location:com.chrynan.colors.extension//YELLOW/com.chrynan.colors.Color.Companion#/PointingToDeclaration/colors-extension/com.chrynan.colors.extension/-y-e-l-l-o-w.md
 $dokka.location:com.chrynan.colors.extension//YELLOW_GREEN/com.chrynan.colors.Color.Companion#/PointingToDeclaration/colors-extension/com.chrynan.colors.extension/-y-e-l-l-o-w_-g-r-e-e-n.md
+$dokka.location:com.chrynan.colors.extension//namedColors/com.chrynan.colors.Color.Companion#/PointingToDeclaration/colors-extension/com.chrynan.colors.extension/named-colors.md
 com.chrynan.colors.extension
 

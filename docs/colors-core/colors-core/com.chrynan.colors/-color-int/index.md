@@ -31,6 +31,13 @@ The components in the above table are listed in encoding order, which is why [Co
 | <a name="com.chrynan.colors/ColorInt/ColorInt/#kotlin.Int/PointingToDeclaration/"></a>[ColorInt](-color-int.md)| <a name="com.chrynan.colors/ColorInt/ColorInt/#kotlin.Int/PointingToDeclaration/"></a> [common] fun [ColorInt](-color-int.md)(value: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html))   <br>|
 
 
+## Types  
+  
+|  Name |  Summary | 
+|---|---|
+| <a name="com.chrynan.colors/ColorInt.Companion///PointingToDeclaration/"></a>[Companion](-companion/index.md)| <a name="com.chrynan.colors/ColorInt.Companion///PointingToDeclaration/"></a>[common]  <br>Content  <br>object [Companion](-companion/index.md)  <br><br><br>|
+
+
 ## Properties  
   
 |  Name |  Summary | 

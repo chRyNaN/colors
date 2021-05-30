@@ -47,6 +47,13 @@ common
 | <a name="com.chrynan.colors/ColorLong/ColorLong/#kotlin.Long/PointingToDeclaration/"></a>[ColorLong](-color-long.md)| <a name="com.chrynan.colors/ColorLong/ColorLong/#kotlin.Long/PointingToDeclaration/"></a> [common] fun [ColorLong](-color-long.md)(value: [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html))   <br>|
 
 
+## Types  
+  
+|  Name |  Summary | 
+|---|---|
+| <a name="com.chrynan.colors/ColorLong.Companion///PointingToDeclaration/"></a>[Companion](-companion/index.md)| <a name="com.chrynan.colors/ColorLong.Companion///PointingToDeclaration/"></a>[common]  <br>Content  <br>object [Companion](-companion/index.md)  <br><br><br>|
+
+
 ## Properties  
   
 |  Name |  Summary | 

@@ -10,6 +10,7 @@
   
 |  Name |  Summary | 
 |---|---|
+| <a name="com.chrynan.colors.space/ColorSpaces/getColorSpaceById/#kotlin.Int/PointingToDeclaration/"></a>[getColorSpaceById](get-color-space-by-id.md)| <a name="com.chrynan.colors.space/ColorSpaces/getColorSpaceById/#kotlin.Int/PointingToDeclaration/"></a>[common]  <br>Content  <br>fun [getColorSpaceById](get-color-space-by-id.md)(id: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)): [ColorSpace](../-color-space/index.md)  <br><br><br>|
 | <a name="com.chrynan.colors.space/ColorSpaces/match/#kotlin.FloatArray#com.chrynan.colors.space.TransferParameters/PointingToDeclaration/"></a>[match](match.md)| <a name="com.chrynan.colors.space/ColorSpaces/match/#kotlin.FloatArray#com.chrynan.colors.space.TransferParameters/PointingToDeclaration/"></a>[common]  <br>Content  <br>fun [match](match.md)(toXYZD50: [FloatArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html), function: [TransferParameters](../-transfer-parameters/index.md)): [ColorSpace](../-color-space/index.md)?  <br>More info  <br>Returns a [ColorSpaces](index.md) instance of [ColorSpace](../-color-space/index.md) that matches the specified RGB to CIE XYZ transform and transfer functions.  <br><br><br>|
 
 
