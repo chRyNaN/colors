@@ -11,15 +11,16 @@ class BaseULongColor internal constructor(
 ) : BaseColor {
 
     override val cssValue: String
-        get() = when {
-            hexColorString != null -> hexString
-            colorSpace.model == ColorModel.RGB -> "rgba($red, $green, $blue, $alpha)"
-            else -> {
-                val rgbaColor = toRgbaColor()
+        get() =
+            when {
+                hexColorString != null -> hexString
+                colorSpace.model == ColorModel.RGB -> "rgba($redInt, $greenInt, $blueInt, $alphaInt)"
+                else -> {
+                    val rgbaColor = toRgbaColor()
 
-                "rgba(${rgbaColor.red}, ${rgbaColor.green}, ${rgbaColor.blue}, ${rgbaColor.alpha})"
+                    "rgba(${rgbaColor.redInt}, ${rgbaColor.greenInt}, ${rgbaColor.blueInt}, ${rgbaColor.alphaInt})"
+                }
             }
-        }
 
     override val hexString: String
         get() = if (hexColorString != null) {

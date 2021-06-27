@@ -136,7 +136,7 @@ fun Color(hexadecimalString: String): HexadecimalColor {
 
     return BaseULongColor(
         value = (colorInt.toULong() and 0xffffffffUL) shl 32,
-        hexColorString = hexadecimalString
+        hexColorString = formattedHexString
     )
 }
 

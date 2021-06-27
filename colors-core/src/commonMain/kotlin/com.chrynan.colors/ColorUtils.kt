@@ -11,12 +11,63 @@ import kotlin.math.min
 import kotlin.math.round
 
 /**
+ * Retrieves the SRGB Color [Int] value for this color component. This returns a color [Int] value
+ * between 0 and 255.
+ */
+val RgbaColor.redInt: Int
+    get() =
+        coerceInRange(
+            value = red,
+            newMin = 0f,
+            newMax = 255f,
+            oldMin = colorSpace.getMinValue(0),
+            oldMax = colorSpace.getMaxValue(0)
+        ).toInt()
+            .coerceInSRGBColorRange()
+
+/**
+ * Retrieves the SRGB Color [Int] value for this color component. This returns a color [Int] value
+ * between 0 and 255.
+ */
+val RgbaColor.greenInt: Int
+    get() =
+        coerceInRange(
+            value = green,
+            newMin = 0f,
+            newMax = 255f,
+            oldMin = colorSpace.getMinValue(1),
+            oldMax = colorSpace.getMaxValue(1)
+        ).toInt()
+            .coerceInSRGBColorRange()
+
+/**
+ * Retrieves the SRGB Color [Int] value for this color component. This returns a color [Int] value
+ * between 0 and 255.
+ */
+val RgbaColor.blueInt: Int
+    get() =
+        coerceInRange(
+            value = blue,
+            newMin = 0f,
+            newMax = 255f,
+            oldMin = colorSpace.getMinValue(2),
+            oldMax = colorSpace.getMaxValue(2)
+        ).toInt()
+            .coerceInSRGBColorRange()
+
+/**
  * Retrieves the [Int] opacity value for this [Color]. This is similar to the
  * [Color.alpha] value but is an [Int] in the range of 0 to 255, instead of a
  * [Float] in the range of 0 to 1.
  */
-val Color.opacityInt: Int
-    get() = (255f * alpha).toInt().coerceIn(Color.MIN_INT_OPACITY, Color.MAX_INT_OPACITY)
+val Color.alphaInt: Int
+    get() = coerceInRange(
+        value = alpha,
+        newMin = 0f,
+        newMax = 255f,
+        oldMin = colorSpace.getMinValue(3),
+        oldMax = colorSpace.getMaxValue(3)
+    ).toInt().coerceInSRGBColorRange()
 
 /**
  * Retrieves the Hue, or H, value from the HSL Color Space for this [RgbaColor].
