@@ -247,3 +247,16 @@ internal fun Int.coerceInSRGBColorRange(): Int = this.coerceIn(0, 255)
  * Coerces this [Float] value within the SRGB Color Range of 0f to 255f.
  */
 internal fun Float.coerceInSRGBColorRange(): Float = this.coerceIn(0f, 255f)
+
+internal fun coerceInRange(
+    value: Float,
+    newMin: Float,
+    newMax: Float,
+    oldMin: Float,
+    oldMax: Float
+): Float {
+    val newRange = newMax - newMin
+    val oldRange = oldMax - oldMin
+
+    return ((((value - oldMin) * newRange) / oldRange) + newMin).coerceIn(newMin, newMax)
+}

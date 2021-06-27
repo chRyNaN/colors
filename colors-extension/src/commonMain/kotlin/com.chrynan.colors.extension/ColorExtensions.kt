@@ -176,7 +176,7 @@ val Color.Companion.INDIGO by lazy { Color("#4B0082") }
 val Color.Companion.IVORY by lazy { Color("#FFFFF0") }
 
 @ExperimentalUnsignedTypes
-val Color.Companion.KHAKI by lazy { Color("#FOE68C") }
+val Color.Companion.KHAKI by lazy { Color("#F0E68C") }
 
 @ExperimentalUnsignedTypes
 val Color.Companion.LAVENDER by lazy { Color("#E6E6FA") }

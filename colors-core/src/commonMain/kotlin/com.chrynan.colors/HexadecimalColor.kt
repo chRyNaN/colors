@@ -24,8 +24,10 @@ interface HexadecimalColor : Color {
         const val HEX_CHAR_LOCATION = 0
         const val LENGTH_WITHOUT_ALPHA = 7
         const val LENGTH_WITH_ALPHA = 9
-        private const val REGEX_PATTERN = "^#?[0-9A-Fa-f]+\$"
+        private const val REGEX_PATTERN = "^#?[0-9A-Fa-f]+"
+        private const val RGB_REGEX_PATTERN = "^#?(?:[0-9a-fA-F]{3}){1,2}\$"
+        private const val ARGB_REGEX_PATTERN = "^#(?:[0-9a-fA-F]{3,4}){1,2}\$"
 
-        val REGEX = Regex(REGEX_PATTERN)
+        val REGEX = Regex(RGB_REGEX_PATTERN)
     }
 }

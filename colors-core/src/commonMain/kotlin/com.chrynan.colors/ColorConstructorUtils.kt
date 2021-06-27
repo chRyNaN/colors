@@ -9,6 +9,7 @@ import com.chrynan.colors.space.Float16
 import kotlin.math.max
 import kotlin.math.min
 
+
 /**
  * Creates a [Color] from the provided components and [colorSpace].
  *
@@ -116,29 +117,27 @@ fun Color(colorULong: ULong): Color = BaseULongColor(value = colorULong)
  */
 @ExperimentalUnsignedTypes
 fun Color(hexadecimalString: String): HexadecimalColor {
-    require(HexadecimalColor.REGEX.matches(hexadecimalString))
-    require(hexadecimalString.length in HexadecimalColor.LENGTH_WITHOUT_ALPHA..HexadecimalColor.LENGTH_WITH_ALPHA) {
-        "Unexpected hexadecimal string format."
+    var formattedHexString = hexadecimalString.trim()
+        .removePrefix("${HexadecimalColor.HEX_CHAR}")
+        .lowercase()
+
+    if (formattedHexString.length == 3) {
+        // Shorthand hex value was used so expand it
+        val chars = formattedHexString.toCharArray()
+        formattedHexString = "${chars[0]}${chars[0]}${chars[1]}${chars[1]}${chars[2]}${chars[2]}"
     }
 
-    val hexStringInt =
-        if (hexadecimalString[HexadecimalColor.HEX_CHAR_LOCATION] == HexadecimalColor.HEX_CHAR) {
-            hexadecimalString.subSequence(
-                startIndex = 1,
-                endIndex = hexadecimalString.length
-            ).toString()
-        } else {
-            hexadecimalString
-        }
+    var colorInt = formattedHexString.toLong(radix = HexadecimalColor.BIT_COUNT).toInt()
 
-    var colorInt = hexStringInt.toInt(radix = HexadecimalColor.BIT_COUNT)
-
-    if (hexadecimalString.length == HexadecimalColor.LENGTH_WITHOUT_ALPHA) {
-        // Set the alpha value
+    if (formattedHexString.length == 6) {
+        // Add the alpha channel
         colorInt = colorInt or -0x1000000
     }
 
-    return BaseULongColor(value = colorInt.toULong() shl 32, hexColorString = hexadecimalString)
+    return BaseULongColor(
+        value = (colorInt.toULong() and 0xffffffffUL) shl 32,
+        hexColorString = hexadecimalString
+    )
 }
 
 /**
@@ -217,11 +216,40 @@ fun RgbaColor(
     val g = green.coerceInSRGBColorRange()
     val b = blue.coerceInSRGBColorRange()
 
+    val newR = coerceInRange(
+        value = r.toFloat(),
+        newMin = colorSpace.getMinValue(0),
+        newMax = colorSpace.getMaxValue(0),
+        oldMin = 0f,
+        oldMax = 255f
+    )
+    val newG = coerceInRange(
+        value = g.toFloat(),
+        newMin = colorSpace.getMinValue(1),
+        newMax = colorSpace.getMaxValue(1),
+        oldMin = 0f,
+        oldMax = 255f
+    )
+    val newB = coerceInRange(
+        value = b.toFloat(),
+        newMin = colorSpace.getMinValue(2),
+        newMax = colorSpace.getMaxValue(2),
+        oldMin = 0f,
+        oldMax = 255f
+    )
+    val newA = coerceInRange(
+        value = a.toFloat(),
+        newMin = colorSpace.getMinValue(3),
+        newMax = colorSpace.getMaxValue(3),
+        oldMin = 0f,
+        oldMax = 255f
+    )
+
     return RgbaColor(
-        red = r.toFloat(),
-        green = g.toFloat(),
-        blue = b.toFloat(),
-        alpha = a.toFloat(),
+        red = newR,
+        green = newG,
+        blue = newB,
+        alpha = newA,
         colorSpace = colorSpace
     )
 }

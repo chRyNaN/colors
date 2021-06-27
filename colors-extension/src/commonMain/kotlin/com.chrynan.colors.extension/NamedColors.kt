@@ -98,7 +98,7 @@ val Color.Companion.namedColors: Set<NamedColor>
         NamedColor(name = "Medium Sea Green", color = Color.MEDIUM_SEA_GREEN),
         NamedColor(name = "Medium Slate Blue", color = Color.MEDIUM_SLATE_BLUE),
         NamedColor(name = "Medium Spring Green", color = Color.MEDIUM_SPRING_GREEN),
-        NamedColor(name = "AMedium Turquoise", color = Color.MEDIUM_TURQUOISE),
+        NamedColor(name = "Medium Turquoise", color = Color.MEDIUM_TURQUOISE),
         NamedColor(name = "Medium Violet Red", color = Color.MEDIUM_VIOLET_RED),
         NamedColor(name = "Medium Blue", color = Color.MIDNIGHT_BLUE),
         NamedColor(name = "Mint Cream", color = Color.MINT_CREAM),

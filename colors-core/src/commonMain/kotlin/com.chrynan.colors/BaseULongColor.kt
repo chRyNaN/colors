@@ -21,8 +21,8 @@ class BaseULongColor internal constructor(
             }
         }
 
-    override val hexString: String =
-        if (hexColorString != null) {
+    override val hexString: String
+        get() = if (hexColorString != null) {
             if (hexColorString.startsWith(HexadecimalColor.HEX_CHAR)) hexColorString else "${HexadecimalColor.HEX_CHAR}$hexColorString"
         } else {
             throw error("No Hexadecimal String value provided for this Color.")
