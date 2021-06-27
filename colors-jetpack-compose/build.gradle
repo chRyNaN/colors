@@ -38,8 +38,6 @@ android {
     defaultConfig {
         minSdkVersion LibraryConstants.Android.minSdkVersion
         targetSdkVersion LibraryConstants.Android.targetSdkVersion
-        versionCode LibraryConstants.versionCode
-        versionName LibraryConstants.versionName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -68,7 +66,6 @@ android {
 
     composeOptions {
         kotlinCompilerExtensionVersion "1.0.0-beta02"
-        kotlinCompilerVersion "1.4.31"
     }
 
     configurations {
