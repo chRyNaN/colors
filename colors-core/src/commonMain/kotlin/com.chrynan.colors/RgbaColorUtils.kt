@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package com.chrynan.colors
 
 import com.chrynan.colors.space.ColorModel
@@ -190,4 +192,49 @@ fun convertHslComponentsToColor(hsl: FloatArray): RgbaColor {
     b = max(0f, min(255f, b))
 
     return RgbaColor(red = r, green = g, blue = b)
+}
+
+/**
+ * Converts this [RgbaColor] to a Hexadecimal [String] representation. For example, the Color
+ * White, RgbaColor(red = 255, green = 255, blue = 255, alpha = 255), would return a [String]
+ * representation similar to the following: '#FFFFFF'.
+ *
+ * @param [includePrefix] Whether to include the Hexadecimal prefix character, '#', in the output.
+ *
+ * @param [uppercase] Whether all of the letters in the output should be uppercase.
+ *
+ * @param [alwaysIncludeAlpha] Whether to include the alpha component even when the color is
+ * completely opaque.
+ */
+fun RgbaColor.toHexString(
+    includePrefix: Boolean = true,
+    uppercase: Boolean = true,
+    alwaysIncludeAlpha: Boolean = false
+): String {
+    val alphaHexString = componentToHexString(alphaInt)
+    val redHexString = componentToHexString(redInt)
+    val greenHexString = componentToHexString(greenInt)
+    val blueHexString = componentToHexString(blueInt)
+
+    val result = buildString {
+        if (includePrefix) {
+            append('#')
+        }
+
+        if (alwaysIncludeAlpha || alphaInt != 255) {
+            append(alphaHexString)
+        }
+
+        append(redHexString)
+        append(greenHexString)
+        append(blueHexString)
+    }
+
+    return if (uppercase) result.uppercase() else result.lowercase()
+}
+
+private fun componentToHexString(component: Int): String {
+    val hex = component.toString(16)
+
+    return if (hex.length == 1) "0$hex" else hex
 }
