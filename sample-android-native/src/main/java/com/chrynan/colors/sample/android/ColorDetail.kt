@@ -1,23 +1,17 @@
 package com.chrynan.colors.sample.android
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyListScope
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.chrynan.colors.Color
-import com.chrynan.colors.NamedColor
-import com.chrynan.colors.contrast
+import com.chrynan.colors.*
 import com.chrynan.colors.jetpack.compose.toJetpackComposeColor
+import com.chrynan.colors.space.ColorModel
 
 @Composable
 @OptIn(ExperimentalUnsignedTypes::class)
@@ -39,48 +33,72 @@ fun ColorDetail(namedColor: NamedColor) {
         CollapsingToolbarLayout(toolbar = {
             Box(modifier = Modifier.height(240.dp).fillMaxWidth())
         }) {
-            contentRow(header = "Name", headerTextColor = secondaryTextColor) {
-                Text(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .wrapContentHeight(),
-                    text = namedColor.name() ?: "",
-                    fontSize = 24.sp,
-                    color = textColor.toJetpackComposeColor()
+            val color = namedColor.color
+
+            ContentRow(header = "Name", headerTextColor = secondaryTextColor) {
+                TextContent(text = namedColor.name() ?: "", textColor = textColor)
+            }
+
+            ContentRow(header = "CSS Value", headerTextColor = secondaryTextColor) {
+                TextContent(text = color.cssValue, textColor = textColor)
+            }
+
+            ContentRow(header = "Color Int", headerTextColor = secondaryTextColor) {
+                TextContent(
+                    text = color.colorInt.value.toString(),
+                    textColor = textColor
                 )
             }
 
-            contentRow(header = "CSS Value", headerTextColor = secondaryTextColor) {
-                Text(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .wrapContentHeight(),
-                    text = namedColor.color.cssValue,
-                    fontSize = 24.sp,
-                    color = textColor.toJetpackComposeColor()
+            ContentRow(header = "Color Long", headerTextColor = secondaryTextColor) {
+                TextContent(
+                    text = color.colorLong.value.toString(),
+                    textColor = textColor
                 )
             }
 
-            contentRow(header = "Color Int", headerTextColor = secondaryTextColor) {
-                Text(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .wrapContentHeight(),
-                    text = namedColor.color.colorInt.value.toString(),
-                    fontSize = 24.sp,
-                    color = textColor.toJetpackComposeColor()
+            (0 until 4).forEach { index ->
+                ComponentRow(
+                    color = color,
+                    headerTextColor = secondaryTextColor,
+                    textColor = textColor,
+                    componentIndex = index
                 )
             }
 
-            contentRow(header = "Color Long", headerTextColor = secondaryTextColor) {
-                Text(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .wrapContentHeight(),
-                    text = namedColor.color.colorLong.value.toString(),
-                    fontSize = 24.sp,
-                    color = textColor.toJetpackComposeColor()
-                )
+            if (namedColor.color.colorSpace.model == ColorModel.RGB && color is RgbaColor) {
+                (0 until 4).forEach { index ->
+                    ComponentRowRgbaColor(
+                        color = color,
+                        headerTextColor = secondaryTextColor,
+                        textColor = textColor,
+                        componentIndex = index
+                    )
+                }
+
+                ContentRow(header = "Hue", headerTextColor = secondaryTextColor) {
+                    TextContent(text = color.hue.toString(), textColor = textColor)
+                }
+
+                ContentRow(header = "Saturation", headerTextColor = secondaryTextColor) {
+                    TextContent(text = color.saturation.toString(), textColor = textColor)
+                }
+
+                ContentRow(header = "Lightness", headerTextColor = secondaryTextColor) {
+                    TextContent(text = color.lightness.toString(), textColor = textColor)
+                }
+            }
+
+            ContentRow(header = "Luminance", headerTextColor = secondaryTextColor) {
+                TextContent(text = color.luminance().toString(), textColor = textColor)
+            }
+
+            ContentRow(header = "Color Model", headerTextColor = secondaryTextColor) {
+                TextContent(text = color.colorSpace.model.toString(), textColor = textColor)
+            }
+
+            ContentRow(header = "Color Space", headerTextColor = secondaryTextColor) {
+                TextContent(text = color.colorSpace.toString(), textColor = textColor)
             }
 
             item {
@@ -92,7 +110,7 @@ fun ColorDetail(namedColor: NamedColor) {
 
 @OptIn(ExperimentalUnsignedTypes::class)
 @Composable
-fun header(text: String, color: Color) {
+fun Header(text: String, color: Color) {
     Text(
         text = text,
         fontSize = 14.sp,
@@ -101,15 +119,118 @@ fun header(text: String, color: Color) {
     )
 }
 
-fun LazyListScope.contentRow(
+@Suppress("FunctionName")
+fun LazyListScope.ContentRow(
     header: String,
     headerTextColor: Color,
     content: @Composable () -> Unit
 ) {
     item {
         Column(modifier = Modifier.padding(top = 16.dp)) {
-            header(text = header, color = headerTextColor)
+            Header(text = header, color = headerTextColor)
             content()
         }
+    }
+}
+
+@OptIn(ExperimentalUnsignedTypes::class)
+@Composable
+private fun TextContent(
+    text: String,
+    textColor: Color
+) {
+    Text(
+        modifier = Modifier
+            .fillMaxWidth()
+            .wrapContentHeight(),
+        text = text,
+        fontSize = 24.sp,
+        color = textColor.toJetpackComposeColor()
+    )
+}
+
+@Suppress("FunctionName")
+private fun LazyListScope.ComponentRow(
+    color: Color,
+    componentIndex: Int,
+    headerTextColor: Color,
+    textColor: Color
+) {
+    var headerText = when (componentIndex) {
+        0 -> "Component One"
+        1 -> "Component Two"
+        2 -> "Component Three"
+        3 -> "Component Four"
+        else -> throw IllegalStateException("Invalid Component index = $componentIndex")
+    }
+
+    if (color.colorSpace.model == ColorModel.RGB) {
+        val additionalText = when (componentIndex) {
+            0 -> " (Red)"
+            1 -> " (Green)"
+            2 -> " (Blue)"
+            3 -> " (Alpha)"
+            else -> throw IllegalStateException("Invalid Component index = $componentIndex")
+        }
+
+        headerText += additionalText
+    }
+
+    val componentValue = when (componentIndex) {
+        0 -> color.component1()
+        1 -> color.component2()
+        2 -> color.component3()
+        3 -> color.component4()
+        else -> throw IllegalStateException("Invalid Component index = $componentIndex")
+    }
+
+    ContentRow(header = headerText, headerTextColor = headerTextColor) {
+        TextContent(
+            text = componentValue.toString(),
+            textColor = textColor
+        )
+    }
+}
+
+@Suppress("FunctionName")
+private fun LazyListScope.ComponentRowRgbaColor(
+    color: RgbaColor,
+    componentIndex: Int,
+    headerTextColor: Color,
+    textColor: Color
+) {
+    var headerText = when (componentIndex) {
+        0 -> "Component One Int"
+        1 -> "Component Two Int"
+        2 -> "Component Three Int"
+        3 -> "Component Four Int"
+        else -> throw IllegalStateException("Invalid Component index = $componentIndex")
+    }
+
+    if (color.colorSpace.model == ColorModel.RGB) {
+        val additionalText = when (componentIndex) {
+            0 -> " (Red)"
+            1 -> " (Green)"
+            2 -> " (Blue)"
+            3 -> " (Alpha)"
+            else -> throw IllegalStateException("Invalid Component index = $componentIndex")
+        }
+
+        headerText += additionalText
+    }
+
+    val componentValue = when (componentIndex) {
+        0 -> color.redInt
+        1 -> color.greenInt
+        2 -> color.blueInt
+        3 -> color.alphaInt
+        else -> throw IllegalStateException("Invalid Component index = $componentIndex")
+    }
+
+    ContentRow(header = headerText, headerTextColor = headerTextColor) {
+        TextContent(
+            text = componentValue.toString(),
+            textColor = textColor
+        )
     }
 }
