@@ -93,6 +93,10 @@ implementation "com.chrynan.colors:colors-jetpack-compose:$VERSION"
 
 More detailed documentation is available in the [docs](docs) folder. The entry point to the documentation can be found [here](docs/index.md).
 
+## Sample
+
+Checkout the [Android Sample Project](sample-android-native) for an example of using the library.
+
 ## License
 
 ```
