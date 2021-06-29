@@ -101,15 +101,14 @@ sealed interface BaseColor : Color {
     override fun convert(colorSpace: ColorSpace, renderIntent: RenderIntent): Color {
         if (colorSpace == this.colorSpace) return this
 
-        val connector = this.colorSpace.connect(colorSpace)
-        val color = components
-        connector.transform(color)
+        val connector = this.colorSpace.connect(colorSpace, renderIntent)
+        val result = connector.transform(components)
 
-        return RgbaColor(
-            red = color[0],
-            green = color[1],
-            blue = color[2],
-            alpha = color[3],
+        return Color(
+            component1 = result[0],
+            component2 = result[1],
+            component3 = result[2],
+            component4 = result[3],
             colorSpace = colorSpace
         )
     }
