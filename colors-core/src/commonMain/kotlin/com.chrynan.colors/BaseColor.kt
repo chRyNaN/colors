@@ -133,20 +133,18 @@ sealed interface BaseColor : Color {
     ): RgbaColor {
         if (colorSpace.model == ColorModel.RGB && colorSpace == destinationColorSpace && this is RgbaColor) return this
 
-        val color = components
-
         // The transformation saturates the output
-        colorSpace.connect(
+        val color = colorSpace.connect(
             destination = destinationColorSpace,
             intent = renderIntent
-        ).transform(color)
+        ).transform(components)
 
         val colorInt = (color[3] * 255.0f + 0.5f).toInt() shl 24 or
                 ((color[0] * 255.0f + 0.5f).toInt() shl 16) or
                 ((color[1] * 255.0f + 0.5f).toInt() shl 8) or
                 (color[2] * 255.0f + 0.5f).toInt()
 
-        return BaseRgbaColor(value = colorInt.toULong() shl 32)
+        return Color(int = colorInt)
     }
 
     override fun luminance(): Float {
