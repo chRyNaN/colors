@@ -27,7 +27,7 @@ sealed interface BaseColor : Color {
         }
 
     override val colorLong: ColorLong
-        get() = ColorLong(value = value.toLong())
+        get() = ColorLong(value = value.toLong() shr 32)
 
     override val colorSpace: ColorSpace
         get() = ColorSpaces.getColorSpaceById(colorSpaceBitsValue.toInt())
