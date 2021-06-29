@@ -13,7 +13,7 @@ This is the first component in a [Color](../-color/index.md) with a [ColorSpace]
 
 
 
-Note: Refer to the [colorSpace](index.md#%5Bcom.chrynan.colors%2FLabColor%2FcolorSpace%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F1235785652) value to determine if a [Color](../-color/index.md) is really a LAB [Color](../-color/index.md).
+Note: Refer to the [colorSpace](index.md#%5Bcom.chrynan.colors%2FLabColor%2FcolorSpace%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-144979981) value to determine if a [Color](../-color/index.md) is really a LAB [Color](../-color/index.md).
 
   
 

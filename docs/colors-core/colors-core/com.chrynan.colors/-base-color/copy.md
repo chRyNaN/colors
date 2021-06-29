@@ -5,7 +5,7 @@
 # copy  
 [common]  
 Content  
-open override fun [copy](copy.md)(component1: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html), component2: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html), component3: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html), component4: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html), alpha: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)): [Color](../-color/index.md)  
+open override fun [copy](copy.md)(component1: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html), component2: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html), component3: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html), component4: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)): [Color](../-color/index.md)  
 More info  
 
 
