@@ -117,13 +117,12 @@ sealed interface BaseColor : Color {
         component1: Float,
         component2: Float,
         component3: Float,
-        component4: Float,
-        alpha: Float
-    ): Color = RgbaColor(
-        red = component1,
-        green = component2,
-        blue = component3,
-        alpha = component4,
+        component4: Float
+    ): Color = Color(
+        component1 = component1,
+        component2 = component2,
+        component3 = component3,
+        component4 = component4,
         colorSpace = this.colorSpace
     )
 

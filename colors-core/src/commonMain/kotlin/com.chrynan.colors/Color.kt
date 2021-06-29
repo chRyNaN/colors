@@ -121,8 +121,7 @@ interface Color {
         component1: Float = this.component1(),
         component2: Float = this.component2(),
         component3: Float = this.component3(),
-        component4: Float = this.component4(),
-        alpha: Float = this.alpha
+        component4: Float = this.component4()
     ): Color
 
     /**
