@@ -9,7 +9,6 @@ import com.chrynan.colors.space.Float16
 import kotlin.math.max
 import kotlin.math.min
 
-
 /**
  * Creates a [Color] from the provided components and [colorSpace].
  *
@@ -28,9 +27,33 @@ fun Color(
     component3: Float,
     component4: Float,
     colorSpace: ColorSpace
-): Color {
-    if (colorSpace.model == ColorModel.RGB) {
-        return RgbaColor(
+): Color =
+    when (colorSpace.model) {
+        ColorModel.RGB -> RgbaColor(
+            red = component1,
+            green = component2,
+            blue = component3,
+            alpha = component4,
+            colorSpace = colorSpace
+        )
+        ColorModel.XYZ -> XyzColor(
+            x = component1,
+            y = component2,
+            z = component3,
+            alpha = component4,
+            colorSpace = colorSpace
+        )
+        ColorModel.LAB -> LabColor(
+            l = component1,
+            a = component2,
+            b = component3,
+            alpha = component4,
+            colorSpace = colorSpace
+        )
+        // For now we just delegate to the RgbaColor function since the CMYK Color Model is not
+        // supported. But in the future, this logic could be updated to support Color Models with four
+        // components.
+        else -> RgbaColor(
             red = component1,
             green = component2,
             blue = component3,
@@ -38,18 +61,6 @@ fun Color(
             colorSpace = colorSpace
         )
     }
-
-    // For now we just delegate to the RgbaColor function since the CMYK Color Model is not
-    // supported. But in the future, this logic could be updated to support Color Models with four
-    // components.
-    return RgbaColor(
-        red = component1,
-        green = component2,
-        blue = component3,
-        alpha = component4,
-        colorSpace = colorSpace
-    )
-}
 
 /**
  * Creates a new [RgbaColor] instance from an ARGB [ColorInt].
@@ -59,7 +70,8 @@ fun Color(
  * @param [colorInt] The ARGB color int to create a [RgbaColor] from.
  */
 @ExperimentalUnsignedTypes
-fun Color(colorInt: ColorInt): RgbaColor = BaseULongColor(value = colorInt.value.toULong() shl 32)
+fun Color(colorInt: ColorInt): RgbaColor =
+    BaseRgbaColor(value = (colorInt.value.toULong() and 0xffffffffUL) shl 32)
 
 /**
  * Creates a new [RgbaColor] instance from an ARGB color [Int].
@@ -69,7 +81,7 @@ fun Color(colorInt: ColorInt): RgbaColor = BaseULongColor(value = colorInt.value
  * @param [int] The ARGB color int to create a [RgbaColor] from.
  */
 @ExperimentalUnsignedTypes
-fun Color(int: Int): RgbaColor = BaseULongColor(value = int.toULong() shl 32)
+fun Color(int: Int): RgbaColor = BaseRgbaColor(value = (int.toULong() and 0xffffffffUL) shl 32)
 
 /**
  * Creates a new [RgbaColor] instance from an ARGB color int.
@@ -85,7 +97,7 @@ fun Color(int: Int): RgbaColor = BaseULongColor(value = int.toULong() shl 32)
  * than one that does. This is more similar to the [RgbaColor] function.
  */
 @ExperimentalUnsignedTypes
-fun Color(long: Long): RgbaColor = BaseULongColor(value = (long.toULong() and 0xffffffffUL) shl 32)
+fun Color(long: Long): RgbaColor = BaseRgbaColor(value = (long.toULong() and 0xffffffffUL) shl 32)
 
 /**
  * Creates a new [Color] instance from the provided [ColorLong] value.
@@ -95,7 +107,8 @@ fun Color(long: Long): RgbaColor = BaseULongColor(value = (long.toULong() and 0x
  * @see [ColorLong]
  */
 @ExperimentalUnsignedTypes
-fun Color(colorLong: ColorLong): Color = BaseULongColor(value = colorLong.value.toULong())
+fun Color(colorLong: ColorLong): Color =
+    Color(colorULong = (colorLong.value.toULong() and 0xffffffffUL) shl 32)
 
 /**
  * Creates a new [Color] instance from the provided [ULong] [colorULong] value.
@@ -106,7 +119,40 @@ fun Color(colorLong: ColorLong): Color = BaseULongColor(value = colorLong.value.
  * @see [ColorLong]
  */
 @ExperimentalUnsignedTypes
-fun Color(colorULong: ULong): Color = BaseULongColor(value = colorULong)
+fun Color(colorULong: ULong): Color {
+    val colorSpace = ColorSpaces.getColorSpaceById((colorULong and 0x3fUL).toInt())
+    val component1 = if (colorSpace.isSrgb) {
+        ((colorULong shr 48) and 0xffUL).toFloat() / 255.0f
+    } else {
+        Float16(((colorULong shr 48) and 0xffffUL).toShort())
+            .toFloat()
+    }
+    val component2 = if (colorSpace.isSrgb) {
+        ((colorULong shr 40) and 0xffUL).toFloat() / 255.0f
+    } else {
+        Float16(((colorULong shr 32) and 0xffffUL).toShort())
+            .toFloat()
+    }
+    val component3 = if (colorSpace.isSrgb) {
+        ((colorULong shr 32) and 0xffUL).toFloat() / 255.0f
+    } else {
+        Float16(((colorULong shr 16) and 0xffffUL).toShort())
+            .toFloat()
+    }
+    val component4 = if (colorSpace.isSrgb) {
+        ((colorULong shr 56) and 0xffUL).toFloat() / 255.0f
+    } else {
+        ((colorULong shr 6) and 0x3ffUL).toFloat() / 1023.0f
+    }
+
+    return Color(
+        component1 = component1,
+        component2 = component2,
+        component3 = component3,
+        component4 = component4,
+        colorSpace = colorSpace
+    )
+}
 
 /**
  * Retrieves a [HexadecimalColor] from the provided [hexadecimalString]. The provided [hexadecimalString] must be in a
@@ -134,7 +180,7 @@ fun Color(hexadecimalString: String): HexadecimalColor {
         colorInt = colorInt or -0x1000000
     }
 
-    return BaseULongColor(
+    return BaseHexadecimalColor(
         value = (colorInt.toULong() and 0xffffffffUL) shl 32,
         hexColorString = formattedHexString
     )
@@ -169,7 +215,7 @@ fun RgbaColor(
                 ((green * 255.0f + 0.5f).toInt() shl 8) or
                 (blue * 255.0f + 0.5f).toInt())
 
-        return BaseULongColor(value = (argb.toULong() and 0xffffffffUL) shl 32)
+        return BaseRgbaColor(value = (argb.toULong() and 0xffffffffUL) shl 32)
     }
 
     require(colorSpace.componentCount == 3) {
@@ -177,6 +223,7 @@ fun RgbaColor(
     }
 
     val id = colorSpace.id
+
     require(id != ColorSpace.MIN_ID) {
         "Unknown color space, please use a color space in ColorSpaces"
     }
@@ -187,7 +234,7 @@ fun RgbaColor(
     val a = (max(0.0f, min(alpha, 1.0f)) * 1023.0f + 0.5f).toInt()
 
     // Suppress sign extension
-    return BaseULongColor(
+    return BaseRgbaColor(
         value = (((r.halfValue.toULong() and 0xffffUL) shl 48)
                 or ((g.halfValue.toULong() and 0xffffUL) shl 32)
                 or ((b.halfValue.toULong() and 0xffffUL) shl 16)
@@ -266,14 +313,39 @@ fun LabColor(
     b: Float,
     alpha: Float = Color.OPAQUE_ALPHA,
     colorSpace: ColorSpace
-): LabColor =
-    Color(
-        component1 = l,
-        component2 = a,
-        component3 = b,
-        component4 = alpha,
-        colorSpace = colorSpace
-    ) as LabColor
+): LabColor {
+    require(
+        l in colorSpace.getMinValue(0)..colorSpace.getMaxValue(0) &&
+                a in colorSpace.getMinValue(1)..colorSpace.getMaxValue(1) &&
+                b in colorSpace.getMinValue(2)..colorSpace.getMaxValue(2) &&
+                alpha in Color.MIN_ALPHA..Color.MAX_ALPHA
+    ) {
+        "l = $l, a = $a, b = $b, alpha = $alpha outside the range for $colorSpace"
+    }
+
+    require(colorSpace.componentCount == 3) {
+        "Color only works with ColorSpaces with 3 components"
+    }
+
+    val id = colorSpace.id
+
+    require(id != ColorSpace.MIN_ID) {
+        "Unknown color space, please use a color space in ColorSpaces"
+    }
+
+    val l16 = Float16(l)
+    val a16 = Float16(a)
+    val b16 = Float16(b)
+    val formattedAlpha = (max(0.0f, min(alpha, 1.0f)) * 1023.0f + 0.5f).toInt()
+
+    return BaseLabColor(
+        value = (((l16.halfValue.toULong() and 0xffffUL) shl 48)
+                or ((a16.halfValue.toULong() and 0xffffUL) shl 32)
+                or ((b16.halfValue.toULong() and 0xffffUL) shl 16)
+                or ((formattedAlpha.toULong() and 0x3ffUL) shl 6)
+                or (id.toULong() and 0x3fUL))
+    )
+}
 
 /**
  * Creates an [XyzColor] with the provided values.
@@ -287,11 +359,36 @@ fun XyzColor(
     z: Float,
     alpha: Float = Color.OPAQUE_ALPHA,
     colorSpace: ColorSpace
-): XyzColor =
-    Color(
-        component1 = x,
-        component2 = y,
-        component3 = z,
-        component4 = alpha,
-        colorSpace = colorSpace
-    ) as XyzColor
+): XyzColor {
+    require(
+        x in colorSpace.getMinValue(0)..colorSpace.getMaxValue(0) &&
+                y in colorSpace.getMinValue(1)..colorSpace.getMaxValue(1) &&
+                z in colorSpace.getMinValue(2)..colorSpace.getMaxValue(2) &&
+                alpha in Color.MIN_ALPHA..Color.MAX_ALPHA
+    ) {
+        "x = $x, y = $y, z = $z, alpha = $alpha outside the range for $colorSpace"
+    }
+
+    require(colorSpace.componentCount == 3) {
+        "Color only works with ColorSpaces with 3 components"
+    }
+
+    val id = colorSpace.id
+
+    require(id != ColorSpace.MIN_ID) {
+        "Unknown color space, please use a color space in ColorSpaces"
+    }
+
+    val x16 = Float16(x)
+    val y16 = Float16(y)
+    val z16 = Float16(z)
+    val a = (max(0.0f, min(alpha, 1.0f)) * 1023.0f + 0.5f).toInt()
+
+    return BaseXyzColor(
+        value = (((x16.halfValue.toULong() and 0xffffUL) shl 48)
+                or ((y16.halfValue.toULong() and 0xffffUL) shl 32)
+                or ((z16.halfValue.toULong() and 0xffffUL) shl 16)
+                or ((a.toULong() and 0x3ffUL) shl 6)
+                or (id.toULong() and 0x3fUL))
+    )
+}

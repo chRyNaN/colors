@@ -4,11 +4,7 @@ import com.chrynan.colors.space.*
 import com.chrynan.colors.space.Float16
 
 @ExperimentalUnsignedTypes
-interface BaseColor : Color,
-    RgbaColor,
-    LabColor,
-    XyzColor,
-    HexadecimalColor {
+sealed interface BaseColor : Color {
 
     val value: ULong
 
@@ -136,7 +132,7 @@ interface BaseColor : Color,
         destinationColorSpace: ColorSpace,
         renderIntent: RenderIntent
     ): RgbaColor {
-        if (colorSpace.model == ColorModel.RGB && colorSpace == destinationColorSpace) return this
+        if (colorSpace.model == ColorModel.RGB && colorSpace == destinationColorSpace && this is RgbaColor) return this
 
         val color = components
 
@@ -151,7 +147,7 @@ interface BaseColor : Color,
                 ((color[1] * 255.0f + 0.5f).toInt() shl 8) or
                 (color[2] * 255.0f + 0.5f).toInt()
 
-        return BaseULongColor(value = colorInt.toULong() shl 32)
+        return BaseRgbaColor(value = colorInt.toULong() shl 32)
     }
 
     override fun luminance(): Float {

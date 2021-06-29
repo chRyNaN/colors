@@ -19,6 +19,8 @@
  */
 package com.chrynan.colors.space
 
+import kotlin.jvm.JvmInline
+
 /**
  * The `Float16` class is a wrapper and a utility class to manipulate half-precision 16-bit
  * [IEEE 754](https://en.wikipedia.org/wiki/Half-precision_floating-point_format)
@@ -87,7 +89,8 @@ package com.chrynan.colors.space
  *
  * This table shows that numbers higher than 1024 lose all fractional precision.
  */
-internal inline class Float16(@Suppress("MemberVisibilityCanBePrivate") val halfValue: Short) :
+@JvmInline
+internal value class Float16(@Suppress("MemberVisibilityCanBePrivate") val halfValue: Short) :
     Comparable<Float16> {
 
     /**
