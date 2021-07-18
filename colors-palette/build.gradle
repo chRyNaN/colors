@@ -97,7 +97,7 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
                 groupId LibraryConstants.group
-                artifactId "colors-palette"
+                artifactId "colors-palette-android"
                 version LibraryConstants.versionName
             }
         }

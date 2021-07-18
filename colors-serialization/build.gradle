@@ -95,7 +95,7 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
                 groupId LibraryConstants.group
-                artifactId "colors-serialization"
+                artifactId "colors-serialization-android"
                 version LibraryConstants.versionName
             }
         }
