@@ -1,7 +1,6 @@
 package com.chrynan.colors.serialization
 
-import com.chrynan.colors.Color
-import com.chrynan.colors.RgbaColor
+import com.chrynan.colors.*
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.builtins.serializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -24,10 +23,10 @@ object ColorRgbaIntSerializer : KSerializer<Color> {
 
         val compositeEncoder = encoder.beginStructure(descriptor)
 
-        compositeEncoder.encodeIntElement(descriptor, 0, rgbaColor.red.toInt())
-        compositeEncoder.encodeIntElement(descriptor, 1, rgbaColor.green.toInt())
-        compositeEncoder.encodeIntElement(descriptor, 2, rgbaColor.blue.toInt())
-        compositeEncoder.encodeIntElement(descriptor, 3, rgbaColor.alpha.toInt())
+        compositeEncoder.encodeIntElement(descriptor, 0, rgbaColor.redInt)
+        compositeEncoder.encodeIntElement(descriptor, 1, rgbaColor.greenInt)
+        compositeEncoder.encodeIntElement(descriptor, 2, rgbaColor.blueInt)
+        compositeEncoder.encodeIntElement(descriptor, 3, rgbaColor.alphaInt)
 
         compositeEncoder.endStructure(descriptor)
     }
