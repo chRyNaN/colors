@@ -10,3 +10,19 @@ data class SimplePalette internal constructor(
     override val mutedDarkSwatch: Swatch? = null,
     override val mutedLightSwatch: Swatch? = null
 ) : Palette
+
+fun Palette(
+    vibrantSwatch: Swatch? = null,
+    vibrantDarkSwatch: Swatch? = null,
+    vibrantLightSwatch: Swatch? = null,
+    mutedSwatch: Swatch? = null,
+    mutedDarkSwatch: Swatch? = null,
+    mutedLightSwatch: Swatch? = null
+): Palette = SimplePalette(
+    vibrantSwatch = vibrantSwatch,
+    vibrantDarkSwatch = vibrantDarkSwatch,
+    vibrantLightSwatch = vibrantLightSwatch,
+    mutedSwatch = mutedSwatch,
+    mutedDarkSwatch = mutedDarkSwatch,
+    mutedLightSwatch = mutedLightSwatch
+)
