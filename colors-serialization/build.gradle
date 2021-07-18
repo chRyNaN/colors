@@ -12,7 +12,8 @@ version LibraryConstants.versionName
 
 kotlin {
     android {
-        publishLibraryVariants("release")
+        publishAllLibraryVariants()
+        publishLibraryVariantsGroupedByFlavor = true
     }
     targets {
         android()
