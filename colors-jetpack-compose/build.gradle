@@ -10,6 +10,9 @@ group LibraryConstants.group
 version LibraryConstants.versionName
 
 kotlin {
+    android {
+        publishLibraryVariants("release")
+    }
     targets {
         android()
         jvm()
@@ -103,15 +106,6 @@ afterEvaluate {
                     username = project.findProperty("repsyUsername") ?: System.getenv("repsyUsername")
                     password = project.findProperty("repsyToken") ?: System.getenv("repsyToken")
                 }
-            }
-        }
-
-        publications {
-            release(MavenPublication) {
-                from components.release
-                groupId LibraryConstants.group
-                artifactId "colors-jetpack-compose-android"
-                version LibraryConstants.versionName
             }
         }
     }
