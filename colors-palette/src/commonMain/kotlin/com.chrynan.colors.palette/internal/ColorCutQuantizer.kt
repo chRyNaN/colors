@@ -17,7 +17,7 @@ import com.chrynan.colors.palette.Swatch
  * colors.
  */
 @ExperimentalUnsignedTypes
-internal class ColorCutQuantizer() {
+internal class ColorCutQuantizer {
 
     private val vBoxComparator: Comparator<VBox> =
         Comparator { lhs, rhs -> rhs.volume - lhs.volume }

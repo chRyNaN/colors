@@ -2,6 +2,8 @@ package com.chrynan.colors.palette.internal
 
 import com.chrynan.colors.Color
 import com.chrynan.colors.contrast
+import com.chrynan.colors.palette.Swatch
+import com.chrynan.colors.toHslComponents
 
 private const val MIN_ALPHA_SEARCH_MAX_ITERATIONS = 10
 private const val MIN_ALPHA_SEARCH_PRECISION = 1
@@ -57,6 +59,8 @@ internal fun Color.getSecondaryOnColorInt(): Int {
         setAlphaComponent(blackColorInt.value, darkAlpha)
     }
 }
+
+internal fun Swatch.toHsl(): FloatArray = this.color.toRgbaColor().toHslComponents()
 
 /**
  * Calculates the minimum alpha value which can be applied to `foreground` so that would
