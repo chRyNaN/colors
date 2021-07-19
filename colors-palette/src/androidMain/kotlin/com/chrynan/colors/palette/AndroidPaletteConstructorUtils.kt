@@ -2,7 +2,10 @@
 
 package com.chrynan.colors.palette
 
+import android.content.Context
+import android.content.res.Resources
 import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.graphics.Rect
 import kotlin.math.ceil
 import kotlin.math.max
@@ -20,6 +23,35 @@ suspend fun Palette.Companion.generate(bitmap: Bitmap, maxColorCount: Int = 16):
 
     return Palette.generate(pixels = pixels, maxColorCount = maxColorCount)
 }
+
+@ExperimentalUnsignedTypes
+suspend fun Palette.Companion.generate(
+    resources: Resources,
+    resourceId: Int,
+    options: BitmapFactory.Options? = null,
+    maxColorCount: Int = 16
+): Palette {
+    val bitmap = if (options != null) {
+        BitmapFactory.decodeResource(resources, resourceId, options)
+    } else {
+        BitmapFactory.decodeResource(resources, resourceId)
+    }
+
+    return generate(bitmap = bitmap, maxColorCount = maxColorCount)
+}
+
+@ExperimentalUnsignedTypes
+suspend fun Palette.Companion.generate(
+    context: Context,
+    resourceId: Int,
+    options: BitmapFactory.Options? = null,
+    maxColorCount: Int = 16
+): Palette = generate(
+    resources = context.resources,
+    resourceId = resourceId,
+    options = options,
+    maxColorCount = maxColorCount
+)
 
 private fun getPixelsFromBitmap(bitmap: Bitmap, region: Rect? = null): IntArray {
     val bitmapWidth = bitmap.width
