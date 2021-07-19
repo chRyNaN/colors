@@ -12,8 +12,12 @@ import kotlin.math.max
 import kotlin.math.sqrt
 
 @ExperimentalUnsignedTypes
-suspend fun Palette.Companion.generate(bitmap: Bitmap, maxColorCount: Int = 16): Palette {
-    val scaledBitmap = scaleBitmapDown(bitmap = bitmap)
+suspend fun Palette.Companion.generate(
+    bitmap: Bitmap,
+    resizeArea: Int = 112 * 112,
+    maxColorCount: Int = 16
+): Palette {
+    val scaledBitmap = scaleBitmapDown(bitmap = bitmap, resizeArea = resizeArea)
 
     val pixels = getPixelsFromBitmap(bitmap = scaledBitmap)
 
@@ -29,6 +33,7 @@ suspend fun Palette.Companion.generate(
     resources: Resources,
     resourceId: Int,
     options: BitmapFactory.Options? = null,
+    resizeArea: Int = 112 * 112,
     maxColorCount: Int = 16
 ): Palette {
     val bitmap = if (options != null) {
@@ -37,7 +42,7 @@ suspend fun Palette.Companion.generate(
         BitmapFactory.decodeResource(resources, resourceId)
     }
 
-    return generate(bitmap = bitmap, maxColorCount = maxColorCount)
+    return generate(bitmap = bitmap, resizeArea = resizeArea, maxColorCount = maxColorCount)
 }
 
 @ExperimentalUnsignedTypes
@@ -45,11 +50,13 @@ suspend fun Palette.Companion.generate(
     context: Context,
     resourceId: Int,
     options: BitmapFactory.Options? = null,
+    resizeArea: Int = 112 * 112,
     maxColorCount: Int = 16
 ): Palette = generate(
     resources = context.resources,
     resourceId = resourceId,
     options = options,
+    resizeArea = resizeArea,
     maxColorCount = maxColorCount
 )
 
