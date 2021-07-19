@@ -191,7 +191,7 @@ fun convertHslComponentsToColor(hsl: FloatArray): RgbaColor {
     g = max(0f, min(255f, g))
     b = max(0f, min(255f, b))
 
-    return RgbaColor(red = r, green = g, blue = b)
+    return RgbaColor(red = r / 255f, green = g / 255f, blue = b / 255f)
 }
 
 /**
