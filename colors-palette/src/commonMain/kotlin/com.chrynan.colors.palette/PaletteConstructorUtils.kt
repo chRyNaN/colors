@@ -130,7 +130,7 @@ private fun generateScore(swatch: Swatch, target: Target, dominantSwatch: Swatch
     var saturationScore = 0f
     var luminanceScore = 0f
     var populationScore = 0f
-    val maxPopulation = if (dominantSwatch != null) (dominantSwatch.population ?: 0) else 1
+    val maxPopulation = if (dominantSwatch != null) (dominantSwatch.population ?: 1) else 1
 
     if (target.saturationWeight > 0) {
         saturationScore = (target.saturationWeight * (1f - abs(hsl[1] - target.targetSaturation)))
@@ -142,7 +142,7 @@ private fun generateScore(swatch: Swatch, target: Target, dominantSwatch: Swatch
 
     if (target.populationWeight > 0) {
         populationScore =
-            (target.populationWeight * (swatch.population!! / maxPopulation.toFloat()))
+            (target.populationWeight * ((swatch.population ?: 1) / maxPopulation.toFloat()))
     }
 
     return saturationScore + luminanceScore + populationScore

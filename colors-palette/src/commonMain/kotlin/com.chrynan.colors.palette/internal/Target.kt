@@ -88,15 +88,59 @@ data class HslTarget internal constructor(
     override val minimumLightness: Float = 0f,
     override val targetLightness: Float = 0.5f,
     override val maximumLightness: Float = 1f,
-    override val saturationWeight: Float = Target.DEFAULT_WEIGHT_SATURATION,
-    override val lightnessWeight: Float = Target.DEFAULT_WEIGHT_LUMA,
-    override val populationWeight: Float = Target.DEFAULT_WEIGHT_POPULATION,
+    private val weightSaturation: Float = Target.DEFAULT_WEIGHT_SATURATION,
+    private val weightLightness: Float = Target.DEFAULT_WEIGHT_LUMA,
+    private val weightPopulation: Float = Target.DEFAULT_WEIGHT_POPULATION,
     override val isExclusive: Boolean = true
 ) : Target {
+
+    override var saturationWeight: Float = weightSaturation
+        private set
+    override var lightnessWeight: Float = weightLightness
+        private set
+    override var populationWeight: Float = weightPopulation
+        private set
+
+    init {
+        val weights = getNormalizeWeights(
+            saturationWeight = saturationWeight,
+            lightnessWeight = lightnessWeight,
+            populationWeight = populationWeight
+        )
+
+        saturationWeight = weights.getOrNull(0) ?: saturationWeight
+        lightnessWeight = weights.getOrNull(1) ?: lightnessWeight
+        populationWeight = weights.getOrNull(2) ?: populationWeight
+    }
 
     override fun matchesSwatch(swatch: Swatch): Boolean {
         val hsl = swatch.toHsl()
 
         return hsl[1] in minimumSaturation..maximumSaturation && hsl[2] in minimumLightness..maximumLightness
+    }
+
+    private fun getNormalizeWeights(
+        saturationWeight: Float,
+        lightnessWeight: Float,
+        populationWeight: Float
+    ): FloatArray {
+        val weights = floatArrayOf(saturationWeight, lightnessWeight, populationWeight)
+        var sum = 0f
+
+        weights.forEach { weight ->
+            if (weight > 0) {
+                sum += weight
+            }
+        }
+
+        if (sum != 0f) {
+            weights.forEachIndexed { index, weight ->
+                if (weight > 0) {
+                    weights[index] = weight / sum
+                }
+            }
+        }
+
+        return weights
     }
 }
