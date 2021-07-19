@@ -28,14 +28,14 @@ fun PaletteScreen() {
 
     LaunchedEffect(paletteState) {
         paletteState.value =
-            Palette.generate(context = context, resourceId = R.drawable.palette_test_secondary)
+            Palette.generate(context = context, resourceId = R.drawable.palette_test_tertiary)
     }
 
     Column {
         LazyColumn {
             item {
                 Image(
-                    painter = painterResource(R.drawable.palette_test_secondary),
+                    painter = painterResource(R.drawable.palette_test_tertiary),
                     contentDescription = "Palette test image."
                 )
             }
