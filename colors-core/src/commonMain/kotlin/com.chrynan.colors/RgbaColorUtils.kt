@@ -97,9 +97,9 @@ fun RgbaColor.toHslComponents(): FloatArray {
     val rgbaColor = if (colorSpace.model == ColorModel.RGB) this else toRgbaColor()
 
     // Convert the color ranges from 0-255 to 0-1.
-    val rf = rgbaColor.component1() / 255f
-    val gf = rgbaColor.component2() / 255f
-    val bf = rgbaColor.component3() / 255f
+    val rf = rgbaColor.redInt / 255f
+    val gf = rgbaColor.greenInt / 255f
+    val bf = rgbaColor.blueInt / 255f
 
     val max: Float = max(rf, max(gf, bf))
     val min: Float = min(rf, min(gf, bf))
