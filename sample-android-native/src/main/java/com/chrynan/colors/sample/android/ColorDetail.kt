@@ -15,7 +15,7 @@ import com.chrynan.colors.space.ColorModel
 
 @Composable
 @OptIn(ExperimentalUnsignedTypes::class)
-fun ColorDetail(namedColor: NamedColor) {
+fun ColorDetailScreen(namedColor: NamedColor) {
     val textColor = if (namedColor.color.contrast(Color.WHITE) > 0.5f) {
         Color.WHITE
     } else {
