@@ -28,11 +28,7 @@ internal fun Color.getPrimaryOnColorInt(): Int {
 
     // If we reach here then we can not find title and body values which use the same
     // lightness, we need to use mismatched values
-    return if (lightAlpha != -1) {
-        setAlphaComponent(whiteColorInt.value, lightAlpha)
-    } else {
-        setAlphaComponent(blackColorInt.value, darkAlpha)
-    }
+    return setAlphaComponent(whiteColorInt.value, 255)
 }
 
 @ExperimentalUnsignedTypes
@@ -53,11 +49,7 @@ internal fun Color.getSecondaryOnColorInt(): Int {
 
     // If we reach here then we can not find title and body values which use the same
     // lightness, we need to use mismatched values
-    return if (lightAlpha != -1) {
-        setAlphaComponent(whiteColorInt.value, lightAlpha)
-    } else {
-        setAlphaComponent(blackColorInt.value, darkAlpha)
-    }
+    return setAlphaComponent(whiteColorInt.value, 255)
 }
 
 internal fun Swatch.toHsl(): FloatArray = this.color.toRgbaColor().toHslComponents()
@@ -117,7 +109,7 @@ private fun calculateMinimumAlpha(
  * Set the alpha component of `color` to be `alpha`.
  */
 private fun setAlphaComponent(color: Int, alpha: Int): Int {
-    if (alpha < 0 || alpha > 255) throw IllegalArgumentException("alpha must be between 0 and 255.")
+    if (alpha < 0 || alpha > 255) throw IllegalArgumentException("alpha must be between 0 and 255. alpha = $alpha; color = $color")
 
     return color and 0x00ffffff or (alpha shl 24)
 }

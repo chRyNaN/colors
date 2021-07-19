@@ -5,8 +5,8 @@ internal class MinHeap<ELEMENT>(
 ) : Collection<ELEMENT>,
     MutableCollection<ELEMENT> {
 
-    override var size = 0
-        private set
+    override val size: Int
+        get() = heap.size
 
     private val heap = ArrayList<ELEMENT>()
 
@@ -17,32 +17,24 @@ internal class MinHeap<ELEMENT>(
 
     override fun clear() {
         heap.clear()
-        size = 0
     }
 
-    override fun remove(element: ELEMENT): Boolean =
-        throw UnsupportedOperationException("remove(element) is not supported for min heap.")
+    override fun remove(element: ELEMENT): Boolean = heap.remove(element)
 
-    override fun removeAll(elements: Collection<ELEMENT>): Boolean =
-        throw UnsupportedOperationException("removeAll(elements) is not supported for min heap.")
+    override fun removeAll(elements: Collection<ELEMENT>): Boolean = heap.removeAll(elements)
 
-    override fun retainAll(elements: Collection<ELEMENT>): Boolean =
-        throw UnsupportedOperationException("retainAll(elements) is not supported for min heap.")
+    override fun retainAll(elements: Collection<ELEMENT>): Boolean = heap.retainAll(elements)
 
     override fun isEmpty(): Boolean = size == 0
 
-    override fun iterator(): MutableIterator<ELEMENT> =
-        throw UnsupportedOperationException("iterator for min heap not supported.")
+    override fun iterator(): MutableIterator<ELEMENT> = heap.iterator()
 
-    override fun contains(element: ELEMENT): Boolean =
-        throw UnsupportedOperationException("contains for min heap not supported.")
+    override fun contains(element: ELEMENT): Boolean = heap.contains(element)
 
-    override fun containsAll(elements: Collection<ELEMENT>): Boolean =
-        throw UnsupportedOperationException("containsAll for min heap not supported.")
+    override fun containsAll(elements: Collection<ELEMENT>): Boolean = heap.containsAll(elements)
 
     override fun add(element: ELEMENT): Boolean {
-        heap[size] = element
-        size++
+        heap.add(size, element)
         heapifyUp()
         return true
     }
@@ -56,7 +48,6 @@ internal class MinHeap<ELEMENT>(
         if (size == 0) throw NoSuchElementException()
         val element = heap[0]
         heap[0] = heap[size - 1]
-        size--
         heap.removeLastOrNull()
         heapifyDown()
         return element

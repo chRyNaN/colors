@@ -52,4 +52,5 @@ dependencies {
     implementation "androidx.compose.material:material-icons-extended:1.0.0-rc02"
 
     implementation project(":colors-jetpack-compose")
+    implementation project(":colors-palette")
 }
