@@ -1,5 +1,6 @@
 package com.chrynan.colors.sample.android
 
+import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -27,17 +28,19 @@ fun PaletteScreen() {
 
     LaunchedEffect(paletteState) {
         paletteState.value =
-            Palette.generate(context = context, resourceId = R.drawable.palette_test_default)
+            Palette.generate(context = context, resourceId = R.drawable.palette_test_secondary)
     }
 
     Column {
         LazyColumn {
             item {
                 Image(
-                    painter = painterResource(R.drawable.palette_test_default),
+                    painter = painterResource(R.drawable.palette_test_secondary),
                     contentDescription = "Palette test image."
                 )
             }
+
+            Log.d("Palette", "palette = ${paletteState.value}")
 
             if (paletteState.value != null) {
                 paletteState.value?.vibrantSwatch?.let { swatch ->
