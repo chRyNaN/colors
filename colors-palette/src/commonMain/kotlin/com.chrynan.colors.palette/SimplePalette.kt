@@ -3,6 +3,7 @@
 package com.chrynan.colors.palette
 
 data class SimplePalette internal constructor(
+    override val dominantSwatch: Swatch? = null,
     override val vibrantSwatch: Swatch? = null,
     override val vibrantDarkSwatch: Swatch? = null,
     override val vibrantLightSwatch: Swatch? = null,
@@ -12,6 +13,7 @@ data class SimplePalette internal constructor(
 ) : Palette
 
 fun Palette(
+    dominantSwatch: Swatch? = null,
     vibrantSwatch: Swatch? = null,
     vibrantDarkSwatch: Swatch? = null,
     vibrantLightSwatch: Swatch? = null,
@@ -19,6 +21,7 @@ fun Palette(
     mutedDarkSwatch: Swatch? = null,
     mutedLightSwatch: Swatch? = null
 ): Palette = SimplePalette(
+    dominantSwatch = dominantSwatch,
     vibrantSwatch = vibrantSwatch,
     vibrantDarkSwatch = vibrantDarkSwatch,
     vibrantLightSwatch = vibrantLightSwatch,

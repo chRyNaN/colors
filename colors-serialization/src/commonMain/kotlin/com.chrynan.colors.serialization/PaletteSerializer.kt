@@ -15,6 +15,7 @@ class PaletteSerializer(private val swatchSerializer: KSerializer<Swatch>) :
     KSerializer<Palette> {
 
     override val descriptor: SerialDescriptor = buildClassSerialDescriptor("Palette") {
+        element("dominantSwatch", swatchSerializer.descriptor.nullable)
         element("vibrantSwatch", swatchSerializer.descriptor.nullable)
         element("vibrantDarkSwatch", swatchSerializer.descriptor.nullable)
         element("vibrantLightSwatch", swatchSerializer.descriptor.nullable)
@@ -31,35 +32,41 @@ class PaletteSerializer(private val swatchSerializer: KSerializer<Swatch>) :
             descriptor,
             0,
             swatchSerializer.nullable,
-            value.vibrantSwatch
+            value.dominantSwatch
         )
         compositeEncoder.encodeNullableSerializableElement(
             descriptor,
             1,
             swatchSerializer.nullable,
-            value.vibrantDarkSwatch
+            value.vibrantSwatch
         )
         compositeEncoder.encodeNullableSerializableElement(
             descriptor,
             2,
             swatchSerializer.nullable,
-            value.vibrantLightSwatch
+            value.vibrantDarkSwatch
         )
         compositeEncoder.encodeNullableSerializableElement(
             descriptor,
             3,
             swatchSerializer.nullable,
-            value.mutedSwatch
+            value.vibrantLightSwatch
         )
         compositeEncoder.encodeNullableSerializableElement(
             descriptor,
             4,
             swatchSerializer.nullable,
-            value.mutedDarkSwatch
+            value.mutedSwatch
         )
         compositeEncoder.encodeNullableSerializableElement(
             descriptor,
             5,
+            swatchSerializer.nullable,
+            value.mutedDarkSwatch
+        )
+        compositeEncoder.encodeNullableSerializableElement(
+            descriptor,
+            6,
             swatchSerializer.nullable,
             value.mutedLightSwatch
         )
@@ -71,40 +78,46 @@ class PaletteSerializer(private val swatchSerializer: KSerializer<Swatch>) :
     override fun deserialize(decoder: Decoder): Palette {
         val compositeDecoder = decoder.beginStructure(descriptor)
 
-        val vibrantSwatch = compositeDecoder.decodeNullableSerializableElement(
+        val dominantSwatch = compositeDecoder.decodeNullableSerializableElement(
             descriptor,
             0,
             swatchSerializer.nullable
         )
-        val vibrantDarkSwatch = compositeDecoder.decodeNullableSerializableElement(
+        val vibrantSwatch = compositeDecoder.decodeNullableSerializableElement(
             descriptor,
             1,
             swatchSerializer.nullable
         )
-        val vibrantLightSwatch = compositeDecoder.decodeNullableSerializableElement(
+        val vibrantDarkSwatch = compositeDecoder.decodeNullableSerializableElement(
             descriptor,
             2,
             swatchSerializer.nullable
         )
-        val mutedSwatch = compositeDecoder.decodeNullableSerializableElement(
+        val vibrantLightSwatch = compositeDecoder.decodeNullableSerializableElement(
             descriptor,
             3,
             swatchSerializer.nullable
         )
-        val mutedDarkSwatch = compositeDecoder.decodeNullableSerializableElement(
+        val mutedSwatch = compositeDecoder.decodeNullableSerializableElement(
             descriptor,
             4,
             swatchSerializer.nullable
         )
-        val mutedLightSwatch = compositeDecoder.decodeNullableSerializableElement(
+        val mutedDarkSwatch = compositeDecoder.decodeNullableSerializableElement(
             descriptor,
             5,
+            swatchSerializer.nullable
+        )
+        val mutedLightSwatch = compositeDecoder.decodeNullableSerializableElement(
+            descriptor,
+            6,
             swatchSerializer.nullable
         )
 
         compositeDecoder.endStructure(descriptor)
 
         return Palette(
+            dominantSwatch = dominantSwatch,
             vibrantSwatch = vibrantSwatch,
             vibrantDarkSwatch = vibrantDarkSwatch,
             vibrantLightSwatch = vibrantLightSwatch,

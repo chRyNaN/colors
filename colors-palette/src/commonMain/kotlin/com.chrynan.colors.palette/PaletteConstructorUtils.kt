@@ -86,6 +86,7 @@ suspend fun Palette.Companion.generate(
     }
 
     return SimplePalette(
+        dominantSwatch = dominantSwatch,
         vibrantLightSwatch = lightVibrantSwatch,
         vibrantSwatch = vibrantSwatch,
         vibrantDarkSwatch = darkVibrantSwatch,

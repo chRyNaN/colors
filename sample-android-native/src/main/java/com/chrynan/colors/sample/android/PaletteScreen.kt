@@ -43,6 +43,11 @@ fun PaletteScreen() {
             Log.d("Palette", "palette = ${paletteState.value}")
 
             if (paletteState.value != null) {
+                paletteState.value?.dominantSwatch?.let { swatch ->
+                    item {
+                        SwatchLayout(swatch = swatch, title = "Dominant")
+                    }
+                }
                 paletteState.value?.vibrantSwatch?.let { swatch ->
                     item {
                         SwatchLayout(swatch = swatch, title = "Vibrant")

@@ -7,6 +7,7 @@ package com.chrynan.colors.palette
  */
 val Palette.swatches: List<Swatch?>
     get() = listOf(
+        dominantSwatch,
         vibrantSwatch,
         vibrantDarkSwatch,
         vibrantLightSwatch,

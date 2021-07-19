@@ -8,6 +8,8 @@ package com.chrynan.colors.palette
  */
 interface Palette {
 
+    val dominantSwatch: Swatch?
+
     val vibrantSwatch: Swatch?
 
     val vibrantDarkSwatch: Swatch?
