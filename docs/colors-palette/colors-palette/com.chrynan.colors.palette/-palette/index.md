@@ -21,6 +21,7 @@ A color [Palette](index.md) is a component that contains color [Swatch](../-swat
   
 |  Name |  Summary | 
 |---|---|
+| <a name="com.chrynan.colors.palette/Palette/dominantSwatch/#/PointingToDeclaration/"></a>[dominantSwatch](dominant-swatch.md)| <a name="com.chrynan.colors.palette/Palette/dominantSwatch/#/PointingToDeclaration/"></a> [common] abstract val [dominantSwatch](dominant-swatch.md): [Swatch](../-swatch/index.md)?   <br>|
 | <a name="com.chrynan.colors.palette/Palette/mutedDarkSwatch/#/PointingToDeclaration/"></a>[mutedDarkSwatch](muted-dark-swatch.md)| <a name="com.chrynan.colors.palette/Palette/mutedDarkSwatch/#/PointingToDeclaration/"></a> [common] abstract val [mutedDarkSwatch](muted-dark-swatch.md): [Swatch](../-swatch/index.md)?   <br>|
 | <a name="com.chrynan.colors.palette/Palette/mutedLightSwatch/#/PointingToDeclaration/"></a>[mutedLightSwatch](muted-light-swatch.md)| <a name="com.chrynan.colors.palette/Palette/mutedLightSwatch/#/PointingToDeclaration/"></a> [common] abstract val [mutedLightSwatch](muted-light-swatch.md): [Swatch](../-swatch/index.md)?   <br>|
 | <a name="com.chrynan.colors.palette/Palette/mutedSwatch/#/PointingToDeclaration/"></a>[mutedSwatch](muted-swatch.md)| <a name="com.chrynan.colors.palette/Palette/mutedSwatch/#/PointingToDeclaration/"></a> [common] abstract val [mutedSwatch](muted-swatch.md): [Swatch](../-swatch/index.md)?   <br>|

@@ -1,12 +1,50 @@
 $dokka.format:gfm-v1
 $dokka.linkExtension:md
+$dokka.location:com.chrynan.colors.palette.internal////PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/index.md
+$dokka.location:com.chrynan.colors.palette.internal/HslTarget///PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-hsl-target/index.md
+$dokka.location:com.chrynan.colors.palette.internal/HslTarget/isExclusive/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-hsl-target/is-exclusive.md
+$dokka.location:com.chrynan.colors.palette.internal/HslTarget/lightnessWeight/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-hsl-target/lightness-weight.md
+$dokka.location:com.chrynan.colors.palette.internal/HslTarget/matchesSwatch/#com.chrynan.colors.palette.Swatch/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-hsl-target/matches-swatch.md
+$dokka.location:com.chrynan.colors.palette.internal/HslTarget/maximumLightness/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-hsl-target/maximum-lightness.md
+$dokka.location:com.chrynan.colors.palette.internal/HslTarget/maximumSaturation/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-hsl-target/maximum-saturation.md
+$dokka.location:com.chrynan.colors.palette.internal/HslTarget/minimumLightness/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-hsl-target/minimum-lightness.md
+$dokka.location:com.chrynan.colors.palette.internal/HslTarget/minimumSaturation/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-hsl-target/minimum-saturation.md
+$dokka.location:com.chrynan.colors.palette.internal/HslTarget/populationWeight/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-hsl-target/population-weight.md
+$dokka.location:com.chrynan.colors.palette.internal/HslTarget/saturationWeight/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-hsl-target/saturation-weight.md
+$dokka.location:com.chrynan.colors.palette.internal/HslTarget/targetLightness/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-hsl-target/target-lightness.md
+$dokka.location:com.chrynan.colors.palette.internal/HslTarget/targetSaturation/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-hsl-target/target-saturation.md
+$dokka.location:com.chrynan.colors.palette.internal/Target.Companion///PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-target/-companion/index.md
+$dokka.location:com.chrynan.colors.palette.internal/Target.Companion/DARK_MUTED/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-target/-companion/-d-a-r-k_-m-u-t-e-d.md
+$dokka.location:com.chrynan.colors.palette.internal/Target.Companion/DARK_VIBRANT/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-target/-companion/-d-a-r-k_-v-i-b-r-a-n-t.md
+$dokka.location:com.chrynan.colors.palette.internal/Target.Companion/LIGHT_MUTED/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-target/-companion/-l-i-g-h-t_-m-u-t-e-d.md
+$dokka.location:com.chrynan.colors.palette.internal/Target.Companion/LIGHT_VIBRANT/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-target/-companion/-l-i-g-h-t_-v-i-b-r-a-n-t.md
+$dokka.location:com.chrynan.colors.palette.internal/Target.Companion/MUTED/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-target/-companion/-m-u-t-e-d.md
+$dokka.location:com.chrynan.colors.palette.internal/Target.Companion/VIBRANT/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-target/-companion/-v-i-b-r-a-n-t.md
+$dokka.location:com.chrynan.colors.palette.internal/Target///PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-target/index.md
+$dokka.location:com.chrynan.colors.palette.internal/Target/isExclusive/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-target/is-exclusive.md
+$dokka.location:com.chrynan.colors.palette.internal/Target/lightnessWeight/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-target/lightness-weight.md
+$dokka.location:com.chrynan.colors.palette.internal/Target/matchesSwatch/#com.chrynan.colors.palette.Swatch/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-target/matches-swatch.md
+$dokka.location:com.chrynan.colors.palette.internal/Target/maximumLightness/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-target/maximum-lightness.md
+$dokka.location:com.chrynan.colors.palette.internal/Target/maximumSaturation/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-target/maximum-saturation.md
+$dokka.location:com.chrynan.colors.palette.internal/Target/minimumLightness/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-target/minimum-lightness.md
+$dokka.location:com.chrynan.colors.palette.internal/Target/minimumSaturation/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-target/minimum-saturation.md
+$dokka.location:com.chrynan.colors.palette.internal/Target/populationWeight/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-target/population-weight.md
+$dokka.location:com.chrynan.colors.palette.internal/Target/saturationWeight/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-target/saturation-weight.md
+$dokka.location:com.chrynan.colors.palette.internal/Target/targetLightness/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-target/target-lightness.md
+$dokka.location:com.chrynan.colors.palette.internal/Target/targetSaturation/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette.internal/-target/target-saturation.md
 $dokka.location:com.chrynan.colors.palette////PointingToDeclaration/colors-palette/com.chrynan.colors.palette/index.md
+$dokka.location:com.chrynan.colors.palette//Palette/#com.chrynan.colors.palette.Swatch?#com.chrynan.colors.palette.Swatch?#com.chrynan.colors.palette.Swatch?#com.chrynan.colors.palette.Swatch?#com.chrynan.colors.palette.Swatch?#com.chrynan.colors.palette.Swatch?#com.chrynan.colors.palette.Swatch?/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-palette.md
+$dokka.location:com.chrynan.colors.palette//generate/com.chrynan.colors.palette.Palette.Companion#android.content.Context#kotlin.Int#android.graphics.BitmapFactory.Options?#kotlin.Int#kotlin.Int/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/generate.md
+$dokka.location:com.chrynan.colors.palette//generate/com.chrynan.colors.palette.Palette.Companion#android.content.res.Resources#kotlin.Int#android.graphics.BitmapFactory.Options?#kotlin.Int#kotlin.Int/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/generate.md
+$dokka.location:com.chrynan.colors.palette//generate/com.chrynan.colors.palette.Palette.Companion#android.graphics.Bitmap#kotlin.Int#kotlin.Int/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/generate.md
+$dokka.location:com.chrynan.colors.palette//generate/com.chrynan.colors.palette.Palette.Companion#kotlin.IntArray#kotlin.Int/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/generate.md
 $dokka.location:com.chrynan.colors.palette//isEmpty/com.chrynan.colors.palette.Palette#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/is-empty.md
 $dokka.location:com.chrynan.colors.palette//isNotEmpty/com.chrynan.colors.palette.Palette#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/is-not-empty.md
 $dokka.location:com.chrynan.colors.palette//primarySwatch/com.chrynan.colors.palette.Palette#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/primary-swatch.md
 $dokka.location:com.chrynan.colors.palette//swatches/com.chrynan.colors.palette.Palette#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/swatches.md
 $dokka.location:com.chrynan.colors.palette/Palette.Companion///PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-palette/-companion/index.md
 $dokka.location:com.chrynan.colors.palette/Palette///PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-palette/index.md
+$dokka.location:com.chrynan.colors.palette/Palette/dominantSwatch/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-palette/dominant-swatch.md
 $dokka.location:com.chrynan.colors.palette/Palette/mutedDarkSwatch/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-palette/muted-dark-swatch.md
 $dokka.location:com.chrynan.colors.palette/Palette/mutedLightSwatch/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-palette/muted-light-swatch.md
 $dokka.location:com.chrynan.colors.palette/Palette/mutedSwatch/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-palette/muted-swatch.md
@@ -14,6 +52,7 @@ $dokka.location:com.chrynan.colors.palette/Palette/vibrantDarkSwatch/#/PointingT
 $dokka.location:com.chrynan.colors.palette/Palette/vibrantLightSwatch/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-palette/vibrant-light-swatch.md
 $dokka.location:com.chrynan.colors.palette/Palette/vibrantSwatch/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-palette/vibrant-swatch.md
 $dokka.location:com.chrynan.colors.palette/SimplePalette///PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-simple-palette/index.md
+$dokka.location:com.chrynan.colors.palette/SimplePalette/dominantSwatch/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-simple-palette/dominant-swatch.md
 $dokka.location:com.chrynan.colors.palette/SimplePalette/mutedDarkSwatch/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-simple-palette/muted-dark-swatch.md
 $dokka.location:com.chrynan.colors.palette/SimplePalette/mutedLightSwatch/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-simple-palette/muted-light-swatch.md
 $dokka.location:com.chrynan.colors.palette/SimplePalette/mutedSwatch/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-simple-palette/muted-swatch.md
@@ -28,4 +67,5 @@ $dokka.location:com.chrynan.colors.palette/Swatch/population/#/PointingToDeclara
 $dokka.location:com.chrynan.colors.palette/Swatch/primaryOnColor/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-swatch/primary-on-color.md
 $dokka.location:com.chrynan.colors.palette/Swatch/secondaryOnColor/#/PointingToDeclaration/colors-palette/com.chrynan.colors.palette/-swatch/secondary-on-color.md
 com.chrynan.colors.palette
+com.chrynan.colors.palette.internal
 
