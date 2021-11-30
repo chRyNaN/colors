@@ -1,5 +1,7 @@
 package com.chrynan.colors
 
+import kotlin.jvm.JvmInline
+
 /**
  * An inline class wrapping an [Int] that is meant to represent a [Color] value in an [Int] form.
  * This [Int] should have all of the necessary color information encoded into it. The
@@ -18,7 +20,8 @@ package com.chrynan.colors
  * [ColorInt]s are called "ARGB" colors.
  *
  */
-inline class ColorInt(val value: Int) {
+@JvmInline
+value class ColorInt(val value: Int) {
 
     companion object
 }
