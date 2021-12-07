@@ -86,7 +86,7 @@ implementation "com.chrynan.colors:colors-serialization:$VERSION"
 **Jetpack Compose:**
 
 ```groovy
-implementation "com.chrynan.colors:colors-jetpack-compose:$VERSION"
+implementation "com.chrynan.colors:colors-compose:$VERSION"
 ```
 
 ## Documentation
