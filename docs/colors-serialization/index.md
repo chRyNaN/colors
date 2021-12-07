@@ -1,13 +1,9 @@
 //[colors-serialization](index.md)
 
+# colors-serialization
 
+## Packages
 
-# colors-serialization  
-
-
-## Packages  
-  
-|  Name | 
+| Name |
 |---|
-| <a name="com.chrynan.colors.serialization////PointingToDeclaration/"></a>[com.chrynan.colors.serialization](colors-serialization/com.chrynan.colors.serialization/index.md)|
-
+| [com.chrynan.colors.serialization](colors-serialization/com.chrynan.colors.serialization/index.md) |

@@ -1,11 +1,6 @@
 //[colors-core](../../../index.md)/[com.chrynan.colors.space](../index.md)/[RgbColorSpace](index.md)/[hashCode](hash-code.md)
 
+# hashCode
 
-
-# hashCode  
-[common]  
-Content  
-open override fun [hashCode](hash-code.md)(): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)  
-
-
-
+[common]\
+open override fun [hashCode](hash-code.md)(): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)

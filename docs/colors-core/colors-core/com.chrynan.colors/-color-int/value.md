@@ -1,11 +1,6 @@
 //[colors-core](../../../index.md)/[com.chrynan.colors](../index.md)/[ColorInt](index.md)/[value](value.md)
 
+# value
 
-
-# value  
-[common]  
-Content  
-val [value](value.md): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)  
-
-
-
+[common]\
+val [value](value.md): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)

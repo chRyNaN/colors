@@ -1,31 +1,28 @@
 //[colors-core](../../../../index.md)/[com.chrynan.colors](../../index.md)/[Color](../index.md)/[Companion](index.md)
 
+# Companion
 
+[common]\
+object [Companion](index.md)
 
-# Companion  
- [common] object [Companion](index.md)   
+## Properties
 
-
-## Properties  
-  
-|  Name |  Summary | 
+| Name | Summary |
 |---|---|
-| <a name="com.chrynan.colors/Color.Companion/BLACK/#/PointingToDeclaration/"></a>[BLACK](-b-l-a-c-k.md)| <a name="com.chrynan.colors/Color.Companion/BLACK/#/PointingToDeclaration/"></a> [common] @[ExperimentalUnsignedTypes](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-experimental-unsigned-types/index.html)()  <br>  <br>val [BLACK](-b-l-a-c-k.md): [Color](../index.md)   <br>|
-| <a name="com.chrynan.colors/Color.Companion/MAX_ALPHA/#/PointingToDeclaration/"></a>[MAX_ALPHA](-m-a-x_-a-l-p-h-a.md)| <a name="com.chrynan.colors/Color.Companion/MAX_ALPHA/#/PointingToDeclaration/"></a> [common] const val [MAX_ALPHA](-m-a-x_-a-l-p-h-a.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) = 1f   <br>|
-| <a name="com.chrynan.colors/Color.Companion/MAX_INT_OPACITY/#/PointingToDeclaration/"></a>[MAX_INT_OPACITY](-m-a-x_-i-n-t_-o-p-a-c-i-t-y.md)| <a name="com.chrynan.colors/Color.Companion/MAX_INT_OPACITY/#/PointingToDeclaration/"></a> [common] const val [MAX_INT_OPACITY](-m-a-x_-i-n-t_-o-p-a-c-i-t-y.md): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) = 255   <br>|
-| <a name="com.chrynan.colors/Color.Companion/MIN_ALPHA/#/PointingToDeclaration/"></a>[MIN_ALPHA](-m-i-n_-a-l-p-h-a.md)| <a name="com.chrynan.colors/Color.Companion/MIN_ALPHA/#/PointingToDeclaration/"></a> [common] const val [MIN_ALPHA](-m-i-n_-a-l-p-h-a.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) = 0f   <br>|
-| <a name="com.chrynan.colors/Color.Companion/MIN_INT_OPACITY/#/PointingToDeclaration/"></a>[MIN_INT_OPACITY](-m-i-n_-i-n-t_-o-p-a-c-i-t-y.md)| <a name="com.chrynan.colors/Color.Companion/MIN_INT_OPACITY/#/PointingToDeclaration/"></a> [common] const val [MIN_INT_OPACITY](-m-i-n_-i-n-t_-o-p-a-c-i-t-y.md): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) = 0   <br>|
-| <a name="com.chrynan.colors/Color.Companion/OPAQUE_ALPHA/#/PointingToDeclaration/"></a>[OPAQUE_ALPHA](-o-p-a-q-u-e_-a-l-p-h-a.md)| <a name="com.chrynan.colors/Color.Companion/OPAQUE_ALPHA/#/PointingToDeclaration/"></a> [common] const val [OPAQUE_ALPHA](-o-p-a-q-u-e_-a-l-p-h-a.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)   <br>|
-| <a name="com.chrynan.colors/Color.Companion/OPAQUE_INT_OPACITY/#/PointingToDeclaration/"></a>[OPAQUE_INT_OPACITY](-o-p-a-q-u-e_-i-n-t_-o-p-a-c-i-t-y.md)| <a name="com.chrynan.colors/Color.Companion/OPAQUE_INT_OPACITY/#/PointingToDeclaration/"></a> [common] const val [OPAQUE_INT_OPACITY](-o-p-a-q-u-e_-i-n-t_-o-p-a-c-i-t-y.md): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)   <br>|
-| <a name="com.chrynan.colors/Color.Companion/TRANSPARENT/#/PointingToDeclaration/"></a>[TRANSPARENT](-t-r-a-n-s-p-a-r-e-n-t.md)| <a name="com.chrynan.colors/Color.Companion/TRANSPARENT/#/PointingToDeclaration/"></a> [common] @[ExperimentalUnsignedTypes](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-experimental-unsigned-types/index.html)()  <br>  <br>val [TRANSPARENT](-t-r-a-n-s-p-a-r-e-n-t.md): [Color](../index.md)   <br>|
-| <a name="com.chrynan.colors/Color.Companion/TRANSPARENT_ALPHA/#/PointingToDeclaration/"></a>[TRANSPARENT_ALPHA](-t-r-a-n-s-p-a-r-e-n-t_-a-l-p-h-a.md)| <a name="com.chrynan.colors/Color.Companion/TRANSPARENT_ALPHA/#/PointingToDeclaration/"></a> [common] const val [TRANSPARENT_ALPHA](-t-r-a-n-s-p-a-r-e-n-t_-a-l-p-h-a.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)   <br>|
-| <a name="com.chrynan.colors/Color.Companion/TRANSPARENT_INT_OPACITY/#/PointingToDeclaration/"></a>[TRANSPARENT_INT_OPACITY](-t-r-a-n-s-p-a-r-e-n-t_-i-n-t_-o-p-a-c-i-t-y.md)| <a name="com.chrynan.colors/Color.Companion/TRANSPARENT_INT_OPACITY/#/PointingToDeclaration/"></a> [common] const val [TRANSPARENT_INT_OPACITY](-t-r-a-n-s-p-a-r-e-n-t_-i-n-t_-o-p-a-c-i-t-y.md): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)   <br>|
-| <a name="com.chrynan.colors/Color.Companion/WHITE/#/PointingToDeclaration/"></a>[WHITE](-w-h-i-t-e.md)| <a name="com.chrynan.colors/Color.Companion/WHITE/#/PointingToDeclaration/"></a> [common] @[ExperimentalUnsignedTypes](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-experimental-unsigned-types/index.html)()  <br>  <br>val [WHITE](-w-h-i-t-e.md): [Color](../index.md)   <br>|
+| [BLACK](-b-l-a-c-k.md) | [common]<br>val [BLACK](-b-l-a-c-k.md): [Color](../index.md) |
+| [MAX_ALPHA](-m-a-x_-a-l-p-h-a.md) | [common]<br>const val [MAX_ALPHA](-m-a-x_-a-l-p-h-a.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) = 1f |
+| [MAX_INT_OPACITY](-m-a-x_-i-n-t_-o-p-a-c-i-t-y.md) | [common]<br>const val [MAX_INT_OPACITY](-m-a-x_-i-n-t_-o-p-a-c-i-t-y.md): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) = 255 |
+| [MIN_ALPHA](-m-i-n_-a-l-p-h-a.md) | [common]<br>const val [MIN_ALPHA](-m-i-n_-a-l-p-h-a.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) = 0f |
+| [MIN_INT_OPACITY](-m-i-n_-i-n-t_-o-p-a-c-i-t-y.md) | [common]<br>const val [MIN_INT_OPACITY](-m-i-n_-i-n-t_-o-p-a-c-i-t-y.md): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) = 0 |
+| [OPAQUE_ALPHA](-o-p-a-q-u-e_-a-l-p-h-a.md) | [common]<br>const val [OPAQUE_ALPHA](-o-p-a-q-u-e_-a-l-p-h-a.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) |
+| [OPAQUE_INT_OPACITY](-o-p-a-q-u-e_-i-n-t_-o-p-a-c-i-t-y.md) | [common]<br>const val [OPAQUE_INT_OPACITY](-o-p-a-q-u-e_-i-n-t_-o-p-a-c-i-t-y.md): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
+| [TRANSPARENT](-t-r-a-n-s-p-a-r-e-n-t.md) | [common]<br>val [TRANSPARENT](-t-r-a-n-s-p-a-r-e-n-t.md): [Color](../index.md) |
+| [TRANSPARENT_ALPHA](-t-r-a-n-s-p-a-r-e-n-t_-a-l-p-h-a.md) | [common]<br>const val [TRANSPARENT_ALPHA](-t-r-a-n-s-p-a-r-e-n-t_-a-l-p-h-a.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) |
+| [TRANSPARENT_INT_OPACITY](-t-r-a-n-s-p-a-r-e-n-t_-i-n-t_-o-p-a-c-i-t-y.md) | [common]<br>const val [TRANSPARENT_INT_OPACITY](-t-r-a-n-s-p-a-r-e-n-t_-i-n-t_-o-p-a-c-i-t-y.md): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
+| [WHITE](-w-h-i-t-e.md) | [common]<br>val [WHITE](-w-h-i-t-e.md): [Color](../index.md) |
 
+## Extensions
 
-## Extensions  
-  
-|  Name |  Summary | 
+| Name | Summary |
 |---|---|
-| <a name="com.chrynan.colors//fromResource/com.chrynan.colors.Color.Companion#android.content.Context#kotlin.Int#android.content.res.Resources.Theme?/PointingToDeclaration/"></a>[fromResource](../../from-resource.md)| <a name="com.chrynan.colors//fromResource/com.chrynan.colors.Color.Companion#android.content.Context#kotlin.Int#android.content.res.Resources.Theme?/PointingToDeclaration/"></a>[android]  <br>Content  <br>@[ExperimentalUnsignedTypes](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-experimental-unsigned-types/index.html)()  <br>  <br>fun [Color.Companion](index.md#%5Bcom.chrynan.colors%2FColor.Companion%2F%2F%2FPointingToDeclaration%2F%5D%2FExtensions%2F-1178459663).[fromResource](../../from-resource.md)(context: [Context](https://developer.android.com/reference/kotlin/android/content/Context.html), id: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html), theme: [Resources.Theme](https://developer.android.com/reference/kotlin/android/content/res/Resources.Theme.html)? = null): [Color](../index.md#%5Bcom.chrynan.colors%2FColor%2F%2F%2FPointingToDeclaration%2F%5D%2FExtensions%2F-1178459663)  <br>More info  <br>Retrieves a [Color](../index.md#%5Bcom.chrynan.colors%2FColor%2F%2F%2FPointingToDeclaration%2F%5D%2FExtensions%2F-1178459663) from the provided resource [id](../../from-resource.md) and [theme](../../from-resource.md) using the provided [context](../../from-resource.md).  <br><br><br>|
-
+| [fromResource](../../from-resource.md) | [android]<br>fun [Color.Companion](index.md#-1554372637%2FExtensions%2F747183510).[fromResource](../../from-resource.md)(context: [Context](https://developer.android.com/reference/kotlin/android/content/Context.html), id: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html), theme: [Resources.Theme](https://developer.android.com/reference/kotlin/android/content/res/Resources.Theme.html)? = null): [Color](../index.md#-1744101215%2FExtensions%2F747183510)<br>Retrieves a [Color](../index.md#-1744101215%2FExtensions%2F747183510) from the provided resource [id](../../from-resource.md) and [theme](../../from-resource.md) using the provided [context](../../from-resource.md). |

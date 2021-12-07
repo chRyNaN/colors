@@ -1,17 +1,11 @@
 //[colors-core](../../../index.md)/[com.chrynan.colors.space](../index.md)/[ColorSpace](index.md)/[isSrgb](is-srgb.md)
 
+# isSrgb
 
-
-# isSrgb  
-[common]  
-Content  
-open val [isSrgb](is-srgb.md): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)  
-More info  
-
+[common]\
+open val [isSrgb](is-srgb.md): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
 
 Indicates whether this color space is the sRGB color space or equivalent to the sRGB color space.
-
-
 
 A color space is considered sRGB if it meets all the following conditions:
 
@@ -27,14 +21,6 @@ Its white point is within 1e-3 of the CIE standard illuminant [D65](../-illumina
 
 This method always returns true for [ColorSpaces.SRGB](../-color-spaces/-s-r-g-b.md).
 
-
-
-#### Return  
-
+#### Return
 
 True if this color space is the sRGB color space (or a close approximation), false otherwise
-
-  
-
-
-

@@ -1,45 +1,29 @@
 //[colors-core](../../../index.md)/[com.chrynan.colors.space](../index.md)/[ColorSpace](index.md)/[getMinValue](get-min-value.md)
 
+# getMinValue
 
-
-# getMinValue  
-[common]  
-Content  
-abstract fun [getMinValue](get-min-value.md)(component: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)  
-More info  
-
+[common]\
+abstract fun [getMinValue](get-min-value.md)(component: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)
 
 Returns the minimum valid value for the specified component of this color space's color model.
 
-
-
-#### Return  
-
+#### Return
 
 A floating point value less than [getMaxValue](get-max-value.md)
 
+## See also
 
+common
 
-## See also  
-  
-common  
-  
 | | |
 |---|---|
-| <a name="com.chrynan.colors.space/ColorSpace/getMinValue/#kotlin.Int/PointingToDeclaration/"></a>[com.chrynan.colors.space.ColorSpace](get-max-value.md)| <a name="com.chrynan.colors.space/ColorSpace/getMinValue/#kotlin.Int/PointingToDeclaration/"></a>|
-| <a name="com.chrynan.colors.space/ColorSpace/getMinValue/#kotlin.Int/PointingToDeclaration/"></a>[com.chrynan.colors.space.ColorModel](../-color-model/component-count.md)| <a name="com.chrynan.colors.space/ColorSpace/getMinValue/#kotlin.Int/PointingToDeclaration/"></a>|
-  
+| [com.chrynan.colors.space.ColorSpace](get-max-value.md) |  |
+| [com.chrynan.colors.space.ColorModel](../-color-model/component-count.md) |  |
 
+## Parameters
 
-## Parameters  
-  
-common  
-  
+common
+
 | | |
 |---|---|
-| <a name="com.chrynan.colors.space/ColorSpace/getMinValue/#kotlin.Int/PointingToDeclaration/"></a>component| <a name="com.chrynan.colors.space/ColorSpace/getMinValue/#kotlin.Int/PointingToDeclaration/"></a><br><br>The index of the component, from 0 to 3, inclusive.<br><br>|
-  
-  
-
-
-
+| component | The index of the component, from 0 to 3, inclusive. |

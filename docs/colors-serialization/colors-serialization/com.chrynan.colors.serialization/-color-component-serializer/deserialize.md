@@ -1,11 +1,6 @@
 //[colors-serialization](../../../index.md)/[com.chrynan.colors.serialization](../index.md)/[ColorComponentSerializer](index.md)/[deserialize](deserialize.md)
 
+# deserialize
 
-
-# deserialize  
-[common]  
-Content  
-open override fun [deserialize](deserialize.md)(decoder: Decoder): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md)  
-
-
-
+[common]\
+open override fun [deserialize](deserialize.md)(decoder: Decoder): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md)

@@ -1,11 +1,6 @@
 //[colors-serialization](../../../index.md)/[com.chrynan.colors.serialization](../index.md)/[PaletteSerializer](index.md)/[descriptor](descriptor.md)
 
+# descriptor
 
-
-# descriptor  
-[common]  
-Content  
-open override val [descriptor](descriptor.md): SerialDescriptor  
-
-
-
+[common]\
+open override val [descriptor](descriptor.md): SerialDescriptor

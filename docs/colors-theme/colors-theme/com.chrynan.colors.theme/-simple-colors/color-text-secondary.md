@@ -1,11 +1,6 @@
 //[colors-theme](../../../index.md)/[com.chrynan.colors.theme](../index.md)/[SimpleColors](index.md)/[colorTextSecondary](color-text-secondary.md)
 
+# colorTextSecondary
 
-
-# colorTextSecondary  
-[common]  
-Content  
-open override val [colorTextSecondary](color-text-secondary.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md)  
-
-
-
+[common]\
+open override val [colorTextSecondary](color-text-secondary.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md)

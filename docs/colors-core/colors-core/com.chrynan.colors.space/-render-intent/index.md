@@ -1,52 +1,42 @@
 //[colors-core](../../../index.md)/[com.chrynan.colors.space](../index.md)/[RenderIntent](index.md)
 
+# RenderIntent
 
-
-# RenderIntent  
- [common] enum [RenderIntent](index.md) : [Enum](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html)<[RenderIntent](index.md)> 
+[common]\
+enum [RenderIntent](index.md) : [Enum](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html)&lt;[RenderIntent](index.md)&gt; 
 
 A render intent determines how a [connector](../-connector/index.md) maps colors from one color space to another. The choice of mapping is important when the source color space has a larger color gamut than the destination color space.
 
-
-
 A [RenderIntent](index.md) is used in the conversion process between different Color Spaces. It's the approach used when calculating new color values that within the new Color Space.
 
-   
+## See also
 
+common
 
-## See also  
-  
-common  
-  
 | | |
 |---|---|
-| <a name="com.chrynan.colors.space/RenderIntent///PointingToDeclaration/"></a>| <a name="com.chrynan.colors.space/RenderIntent///PointingToDeclaration/"></a><br><br>[Render Intent Definition](http://colorwiki.com/wiki/Rendering_Intent)<br><br>|
-| <a name="com.chrynan.colors.space/RenderIntent///PointingToDeclaration/"></a>[ColorSpace.connect](../connect.md)| <a name="com.chrynan.colors.space/RenderIntent///PointingToDeclaration/"></a>|
-  
+|  | [Render Intent Definition](http://colorwiki.com/wiki/Rendering_Intent) |
+| [ColorSpace.connect](../connect.md) |  |
 
+## Entries
 
-## Entries  
-  
 | | |
 |---|---|
-| <a name="com.chrynan.colors.space/RenderIntent.PERCEPTUAL///PointingToDeclaration/"></a>[PERCEPTUAL](-p-e-r-c-e-p-t-u-a-l/index.md)| <a name="com.chrynan.colors.space/RenderIntent.PERCEPTUAL///PointingToDeclaration/"></a> [common] [PERCEPTUAL](-p-e-r-c-e-p-t-u-a-l/index.md)(typeName, "perceptual")  <br>Compresses the source gamut into the destination gamut.   <br>|
-| <a name="com.chrynan.colors.space/RenderIntent.RELATIVE///PointingToDeclaration/"></a>[RELATIVE](-r-e-l-a-t-i-v-e/index.md)| <a name="com.chrynan.colors.space/RenderIntent.RELATIVE///PointingToDeclaration/"></a> [common] [RELATIVE](-r-e-l-a-t-i-v-e/index.md)(typeName, "relative")  <br>Similar to the [ABSOLUTE](-a-b-s-o-l-u-t-e/index.md) render intent, this render intent matches the closest color in the destination gamut but makes adjustments for the destination white point.   <br>|
-| <a name="com.chrynan.colors.space/RenderIntent.SATURATION///PointingToDeclaration/"></a>[SATURATION](-s-a-t-u-r-a-t-i-o-n/index.md)| <a name="com.chrynan.colors.space/RenderIntent.SATURATION///PointingToDeclaration/"></a> [common] [SATURATION](-s-a-t-u-r-a-t-i-o-n/index.md)(typeName, "saturation")  <br>Attempts to maintain the relative saturation of colors from the source gamut to the destination gamut, to keep highly saturated colors as saturated as possible.   <br>|
-| <a name="com.chrynan.colors.space/RenderIntent.ABSOLUTE///PointingToDeclaration/"></a>[ABSOLUTE](-a-b-s-o-l-u-t-e/index.md)| <a name="com.chrynan.colors.space/RenderIntent.ABSOLUTE///PointingToDeclaration/"></a> [common] [ABSOLUTE](-a-b-s-o-l-u-t-e/index.md)(typeName, "absolute")  <br>Colors that are in the destination gamut are left unchanged.   <br>|
+| [ABSOLUTE](-a-b-s-o-l-u-t-e/index.md) | [common]<br>[ABSOLUTE](-a-b-s-o-l-u-t-e/index.md)(typeName, "absolute")<br>Colors that are in the destination gamut are left unchanged. Colors that fall outside of the destination gamut are mapped to the closest possible color within the gamut of the destination color space (they are clipped). |
+| [SATURATION](-s-a-t-u-r-a-t-i-o-n/index.md) | [common]<br>[SATURATION](-s-a-t-u-r-a-t-i-o-n/index.md)(typeName, "saturation")<br>Attempts to maintain the relative saturation of colors from the source gamut to the destination gamut, to keep highly saturated colors as saturated as possible. |
+| [RELATIVE](-r-e-l-a-t-i-v-e/index.md) | [common]<br>[RELATIVE](-r-e-l-a-t-i-v-e/index.md)(typeName, "relative")<br>Similar to the [ABSOLUTE](-a-b-s-o-l-u-t-e/index.md) render intent, this render intent matches the closest color in the destination gamut but makes adjustments for the destination white point. |
+| [PERCEPTUAL](-p-e-r-c-e-p-t-u-a-l/index.md) | [common]<br>[PERCEPTUAL](-p-e-r-c-e-p-t-u-a-l/index.md)(typeName, "perceptual")<br>Compresses the source gamut into the destination gamut. This render intent affects all colors, inside and outside of destination gamut. The goal of this render intent is to preserve the visual relationship between colors. |
 
+## Types
 
-## Types  
-  
-|  Name |  Summary | 
+| Name | Summary |
 |---|---|
-| <a name="com.chrynan.colors.space/RenderIntent.Companion///PointingToDeclaration/"></a>[Companion](-companion/index.md)| <a name="com.chrynan.colors.space/RenderIntent.Companion///PointingToDeclaration/"></a>[common]  <br>Content  <br>object [Companion](-companion/index.md)  <br><br><br>|
+| [Companion](-companion/index.md) | [common]<br>object [Companion](-companion/index.md) |
 
+## Properties
 
-## Properties  
-  
-|  Name |  Summary | 
+| Name | Summary |
 |---|---|
-| <a name="com.chrynan.colors.space/RenderIntent/name/#/PointingToDeclaration/"></a>[name](index.md#%5Bcom.chrynan.colors.space%2FRenderIntent%2Fname%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F1316981857)| <a name="com.chrynan.colors.space/RenderIntent/name/#/PointingToDeclaration/"></a> [common] val [name](index.md#%5Bcom.chrynan.colors.space%2FRenderIntent%2Fname%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F1316981857): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)   <br>|
-| <a name="com.chrynan.colors.space/RenderIntent/ordinal/#/PointingToDeclaration/"></a>[ordinal](index.md#%5Bcom.chrynan.colors.space%2FRenderIntent%2Fordinal%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F1316981857)| <a name="com.chrynan.colors.space/RenderIntent/ordinal/#/PointingToDeclaration/"></a> [common] val [ordinal](index.md#%5Bcom.chrynan.colors.space%2FRenderIntent%2Fordinal%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F1316981857): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)   <br>|
-| <a name="com.chrynan.colors.space/RenderIntent/typeName/#/PointingToDeclaration/"></a>[typeName](type-name.md)| <a name="com.chrynan.colors.space/RenderIntent/typeName/#/PointingToDeclaration/"></a> [common] val [typeName](type-name.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)   <br>|
-
+| [name](-p-e-r-c-e-p-t-u-a-l/index.md#-372974862%2FProperties%2F1346026436) | [common]<br>val [name](-p-e-r-c-e-p-t-u-a-l/index.md#-372974862%2FProperties%2F1346026436): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
+| [ordinal](-p-e-r-c-e-p-t-u-a-l/index.md#-739389684%2FProperties%2F1346026436) | [common]<br>val [ordinal](-p-e-r-c-e-p-t-u-a-l/index.md#-739389684%2FProperties%2F1346026436): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
+| [typeName](type-name.md) | [common]<br>val [typeName](type-name.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

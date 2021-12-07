@@ -1,13 +1,9 @@
 //[colors-extension](index.md)
 
+# colors-extension
 
+## Packages
 
-# colors-extension  
-
-
-## Packages  
-  
-|  Name | 
+| Name |
 |---|
-| <a name="com.chrynan.colors.extension////PointingToDeclaration/"></a>[com.chrynan.colors.extension](colors-extension/com.chrynan.colors.extension/index.md)|
-
+| [com.chrynan.colors.extension](colors-extension/com.chrynan.colors.extension/index.md) |

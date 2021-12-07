@@ -1,14 +1,10 @@
 //[colors-core](index.md)
 
+# colors-core
 
+## Packages
 
-# colors-core  
-
-
-## Packages  
-  
-|  Name | 
+| Name |
 |---|
-| <a name="com.chrynan.colors////PointingToDeclaration/"></a>[com.chrynan.colors](colors-core/com.chrynan.colors/index.md)|
-| <a name="com.chrynan.colors.space////PointingToDeclaration/"></a>[com.chrynan.colors.space](colors-core/com.chrynan.colors.space/index.md)|
-
+| [com.chrynan.colors](colors-core/com.chrynan.colors/index.md) |
+| [com.chrynan.colors.space](colors-core/com.chrynan.colors.space/index.md) |

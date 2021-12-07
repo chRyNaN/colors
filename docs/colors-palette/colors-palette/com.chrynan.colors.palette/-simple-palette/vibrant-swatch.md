@@ -1,11 +1,6 @@
 //[colors-palette](../../../index.md)/[com.chrynan.colors.palette](../index.md)/[SimplePalette](index.md)/[vibrantSwatch](vibrant-swatch.md)
 
+# vibrantSwatch
 
-
-# vibrantSwatch  
-[common]  
-Content  
-open override val [vibrantSwatch](vibrant-swatch.md): [Swatch](../-swatch/index.md)? = null  
-
-
-
+[common]\
+open override val [vibrantSwatch](vibrant-swatch.md): [Swatch](../-swatch/index.md)? = null

@@ -1,14 +1,12 @@
 //[colors-core](../../../../index.md)/[com.chrynan.colors](../../index.md)/[ColorInt](../index.md)/[Companion](index.md)
 
+# Companion
 
+[common]\
+object [Companion](index.md)
 
-# Companion  
- [common] object [Companion](index.md)   
+## Extensions
 
-
-## Extensions  
-  
-|  Name |  Summary | 
+| Name | Summary |
 |---|---|
-| <a name="com.chrynan.colors//fromResource/com.chrynan.colors.ColorInt.Companion#android.content.Context#kotlin.Int#android.content.res.Resources.Theme?/PointingToDeclaration/"></a>[fromResource](../../from-resource.md)| <a name="com.chrynan.colors//fromResource/com.chrynan.colors.ColorInt.Companion#android.content.Context#kotlin.Int#android.content.res.Resources.Theme?/PointingToDeclaration/"></a>[android]  <br>Content  <br>@[ExperimentalUnsignedTypes](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-experimental-unsigned-types/index.html)()  <br>  <br>fun [ColorInt.Companion](index.md#%5Bcom.chrynan.colors%2FColorInt.Companion%2F%2F%2FPointingToDeclaration%2F%5D%2FExtensions%2F-1178459663).[fromResource](../../from-resource.md)(context: [Context](https://developer.android.com/reference/kotlin/android/content/Context.html), id: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html), theme: [Resources.Theme](https://developer.android.com/reference/kotlin/android/content/res/Resources.Theme.html)? = null): [ColorInt](../index.md)  <br>More info  <br>Retrieves a [ColorInt](../index.md) from the provided resource [id](../../from-resource.md) and [theme](../../from-resource.md) using the provided [context](../../from-resource.md).  <br><br><br>|
-
+| [fromResource](../../from-resource.md) | [android]<br>fun [ColorInt.Companion](index.md#191916756%2FExtensions%2F747183510).[fromResource](../../from-resource.md)(context: [Context](https://developer.android.com/reference/kotlin/android/content/Context.html), id: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html), theme: [Resources.Theme](https://developer.android.com/reference/kotlin/android/content/res/Resources.Theme.html)? = null): [ColorInt](../../../../../colors-core/colors-core/com.chrynan.colors/-color-int/index.md)<br>Retrieves a [ColorInt](../../../../../colors-core/colors-core/com.chrynan.colors/-color-int/index.md) from the provided resource [id](../../from-resource.md) and [theme](../../from-resource.md) using the provided [context](../../from-resource.md). |

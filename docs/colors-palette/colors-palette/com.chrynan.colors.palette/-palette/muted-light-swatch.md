@@ -1,11 +1,6 @@
 //[colors-palette](../../../index.md)/[com.chrynan.colors.palette](../index.md)/[Palette](index.md)/[mutedLightSwatch](muted-light-swatch.md)
 
+# mutedLightSwatch
 
-
-# mutedLightSwatch  
-[common]  
-Content  
-abstract val [mutedLightSwatch](muted-light-swatch.md): [Swatch](../-swatch/index.md)?  
-
-
-
+[common]\
+abstract val [mutedLightSwatch](muted-light-swatch.md): [Swatch](../-swatch/index.md)?

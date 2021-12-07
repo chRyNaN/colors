@@ -1,53 +1,45 @@
 //[colors-core](../../../index.md)/[com.chrynan.colors](../index.md)/[ColorInt](index.md)
 
+# ColorInt
 
+[common]\
+@[JvmInline](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-inline/index.html)
 
-# ColorInt  
- [common] inline class [ColorInt](index.md)(**value**: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html))
+value class [ColorInt](index.md)(value: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html))
 
 An inline class wrapping an [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) that is meant to represent a [Color](../-color/index.md) value in an [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) form. This [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) should have all of the necessary color information encoded into it. The [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) should be a packed color value, in the SRGB Color Space, in the form AARRGGBB. This is similar to the "ColorInt" native representation on the Android platform.
 
+##  ColorInt Components:
 
-
-##  ColorInt Components:  
-  
-|  Component |  Name |  Size |  Range | 
+| Component | Name | Size | Range |
 |---|---|---|---|
-| <a name="com.chrynan.colors/ColorInt///PointingToDeclaration/"></a>A| <a name="com.chrynan.colors/ColorInt///PointingToDeclaration/"></a>Alpha| <a name="com.chrynan.colors/ColorInt///PointingToDeclaration/"></a>8 Bits| <a name="com.chrynan.colors/ColorInt///PointingToDeclaration/"></a>0...255|
-| <a name="com.chrynan.colors/ColorInt///PointingToDeclaration/"></a>R| <a name="com.chrynan.colors/ColorInt///PointingToDeclaration/"></a>Red| <a name="com.chrynan.colors/ColorInt///PointingToDeclaration/"></a>8 Bits| <a name="com.chrynan.colors/ColorInt///PointingToDeclaration/"></a>0...255|
-| <a name="com.chrynan.colors/ColorInt///PointingToDeclaration/"></a>G| <a name="com.chrynan.colors/ColorInt///PointingToDeclaration/"></a>Green| <a name="com.chrynan.colors/ColorInt///PointingToDeclaration/"></a>8 Bits| <a name="com.chrynan.colors/ColorInt///PointingToDeclaration/"></a>0...255|
-| <a name="com.chrynan.colors/ColorInt///PointingToDeclaration/"></a>B| <a name="com.chrynan.colors/ColorInt///PointingToDeclaration/"></a>Blue| <a name="com.chrynan.colors/ColorInt///PointingToDeclaration/"></a>8 Bits| <a name="com.chrynan.colors/ColorInt///PointingToDeclaration/"></a>0...255|
-
+| A | Alpha | 8 Bits | 0...255 |
+| R | Red | 8 Bits | 0...255 |
+| G | Green | 8 Bits | 0...255 |
+| B | Blue | 8 Bits | 0...255 |
 
 The components in the above table are listed in encoding order, which is why [ColorInt](index.md)s are called "ARGB" colors.
 
-   
+## Constructors
 
-
-## Constructors  
-  
 | | |
 |---|---|
-| <a name="com.chrynan.colors/ColorInt/ColorInt/#kotlin.Int/PointingToDeclaration/"></a>[ColorInt](-color-int.md)| <a name="com.chrynan.colors/ColorInt/ColorInt/#kotlin.Int/PointingToDeclaration/"></a> [common] fun [ColorInt](-color-int.md)(value: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html))   <br>|
+| [ColorInt](-color-int.md) | [common]<br>fun [ColorInt](-color-int.md)(value: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)) |
 
+## Types
 
-## Types  
-  
-|  Name |  Summary | 
+| Name | Summary |
 |---|---|
-| <a name="com.chrynan.colors/ColorInt.Companion///PointingToDeclaration/"></a>[Companion](-companion/index.md)| <a name="com.chrynan.colors/ColorInt.Companion///PointingToDeclaration/"></a>[common]  <br>Content  <br>object [Companion](-companion/index.md)  <br><br><br>|
+| [Companion](-companion/index.md) | [common]<br>object [Companion](-companion/index.md) |
 
+## Properties
 
-## Properties  
-  
-|  Name |  Summary | 
+| Name | Summary |
 |---|---|
-| <a name="com.chrynan.colors/ColorInt/value/#/PointingToDeclaration/"></a>[value](value.md)| <a name="com.chrynan.colors/ColorInt/value/#/PointingToDeclaration/"></a> [common] val [value](value.md): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)   <br>|
+| [value](value.md) | [common]<br>val [value](value.md): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
 
+## Extensions
 
-## Extensions  
-  
-|  Name |  Summary | 
+| Name | Summary |
 |---|---|
-| <a name="com.chrynan.colors//toColor/com.chrynan.colors.ColorInt#/PointingToDeclaration/"></a>[toColor](../to-color.md)| <a name="com.chrynan.colors//toColor/com.chrynan.colors.ColorInt#/PointingToDeclaration/"></a>[common]  <br>Content  <br>@[ExperimentalUnsignedTypes](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-experimental-unsigned-types/index.html)()  <br>  <br>fun [ColorInt](index.md).[toColor](../to-color.md)(): [RgbaColor](../-rgba-color/index.md)  <br>More info  <br>Converts this [ColorInt](index.md) to an [RgbaColor](../-rgba-color/index.md).  <br><br><br>|
-
+| [toColor](../to-color.md) | [common]<br>fun [ColorInt](index.md).[toColor](../to-color.md)(): [RgbaColor](../-rgba-color/index.md)<br>Converts this [ColorInt](index.md) to an [RgbaColor](../-rgba-color/index.md). |

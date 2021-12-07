@@ -1,84 +1,55 @@
 //[colors-core](../../../index.md)/[com.chrynan.colors.space](../index.md)/[Connector](index.md)/[transform](transform.md)
 
+# transform
 
-
-# transform  
-[common]  
-Content  
-fun [transform](transform.md)(componentOne: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html), componentTwo: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html), componentThree: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)): [FloatArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html)  
-More info  
-
+[common]\
+fun [transform](transform.md)(componentOne: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html), componentTwo: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html), componentThree: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)): [FloatArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html)
 
 Transforms the specified color from the source color space to a color in the destination color space. This convenience function assumes a source color model with 3 components (typically RGB). To transform from color models with more than 3 components, such as [CMYK](../-color-model/-c-m-y-k/index.md), use [transform](transform.md) instead.
 
-
-
-#### Return  
-
+#### Return
 
 A new array of 3 floats containing the specified color transformed from the source space to the destination space
 
+## See also
 
+common
 
-## See also  
-  
-common  
-  
 | | |
 |---|---|
-| <a name="com.chrynan.colors.space/Connector/transform/#kotlin.Float#kotlin.Float#kotlin.Float/PointingToDeclaration/"></a>[com.chrynan.colors.space.Connector](transform.md)| <a name="com.chrynan.colors.space/Connector/transform/#kotlin.Float#kotlin.Float#kotlin.Float/PointingToDeclaration/"></a>|
-  
+| [com.chrynan.colors.space.Connector](transform.md) |  |
 
+## Parameters
 
-## Parameters  
-  
-common  
-  
+common
+
 | | |
 |---|---|
-| <a name="com.chrynan.colors.space/Connector/transform/#kotlin.Float#kotlin.Float#kotlin.Float/PointingToDeclaration/"></a>componentOne| <a name="com.chrynan.colors.space/Connector/transform/#kotlin.Float#kotlin.Float#kotlin.Float/PointingToDeclaration/"></a><br><br>The first component in the [ColorModel](../-color-model/index.md). For [ColorModel.RGB](../-color-model/-r-g-b/index.md) this would be the red component of the color to transform<br><br>|
-| <a name="com.chrynan.colors.space/Connector/transform/#kotlin.Float#kotlin.Float#kotlin.Float/PointingToDeclaration/"></a>componentTwo| <a name="com.chrynan.colors.space/Connector/transform/#kotlin.Float#kotlin.Float#kotlin.Float/PointingToDeclaration/"></a><br><br>The second component in the [ColorModel](../-color-model/index.md). For [ColorModel.RGB](../-color-model/-r-g-b/index.md) this would be the green component of the color to transform<br><br>|
-| <a name="com.chrynan.colors.space/Connector/transform/#kotlin.Float#kotlin.Float#kotlin.Float/PointingToDeclaration/"></a>componentThree| <a name="com.chrynan.colors.space/Connector/transform/#kotlin.Float#kotlin.Float#kotlin.Float/PointingToDeclaration/"></a><br><br>The third component in the [ColorModel](../-color-model/index.md). For [ColorModel.RGB](../-color-model/-r-g-b/index.md) this would be the blue component of the color to transform<br><br>|
-  
-  
+| componentOne | The first component in the [ColorModel](../-color-model/index.md). For [ColorModel.RGB](../-color-model/-r-g-b/index.md) this would be the red component of the color to transform |
+| componentTwo | The second component in the [ColorModel](../-color-model/index.md). For [ColorModel.RGB](../-color-model/-r-g-b/index.md) this would be the green component of the color to transform |
+| componentThree | The third component in the [ColorModel](../-color-model/index.md). For [ColorModel.RGB](../-color-model/-r-g-b/index.md) this would be the blue component of the color to transform |
 
-
-[common]  
-Content  
-open fun [transform](transform.md)(v: [FloatArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html)): [FloatArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html)  
-More info  
-
+[common]\
+open fun [transform](transform.md)(v: [FloatArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html)): [FloatArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html)
 
 Transforms the specified color from the source color space to a color in the destination color space.
 
-
-
-#### Return  
-
+#### Return
 
 The [v](transform.md) array passed as a parameter, containing the specified color transformed from the source space to the destination space
 
+## See also
 
+common
 
-## See also  
-  
-common  
-  
 | | |
 |---|---|
-| <a name="com.chrynan.colors.space/Connector/transform/#kotlin.FloatArray/PointingToDeclaration/"></a>[com.chrynan.colors.space.Connector](transform.md)| <a name="com.chrynan.colors.space/Connector/transform/#kotlin.FloatArray/PointingToDeclaration/"></a>|
-  
+| [com.chrynan.colors.space.Connector](transform.md) |  |
 
+## Parameters
 
-## Parameters  
-  
-common  
-  
+common
+
 | | |
 |---|---|
-| <a name="com.chrynan.colors.space/Connector/transform/#kotlin.FloatArray/PointingToDeclaration/"></a>v| <a name="com.chrynan.colors.space/Connector/transform/#kotlin.FloatArray/PointingToDeclaration/"></a><br><br>A non-null array of 3 floats containing the value to transform and that will hold the result of the transform<br><br>|
-  
-  
-
-
-
+| v | A non-null array of 3 floats containing the value to transform and that will hold the result of the transform |
