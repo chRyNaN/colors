@@ -20,6 +20,10 @@ kotlin {
     targets {
         android()
         jvm()
+        js(IR) {
+            browser {
+            }
+        }
     }
     sourceSets {
         all {
@@ -31,8 +35,24 @@ kotlin {
                 api(project(":colors-theme"))
 
                 implementation(compose.runtime)
+            }
+        }
+        val androidMain by getting {
+            dependencies {
                 implementation(compose.ui)
                 implementation(compose.material)
+            }
+        }
+        val jvmMain by getting {
+            dependencies {
+                implementation(compose.ui)
+                implementation(compose.material)
+            }
+        }
+        val jsMain by getting {
+            dependencies {
+                implementation(compose.web.core)
+                implementation(compose.web.svg)
             }
         }
     }
