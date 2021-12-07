@@ -11,7 +11,6 @@ import kotlin.math.ceil
 import kotlin.math.max
 import kotlin.math.sqrt
 
-@ExperimentalUnsignedTypes
 suspend fun Palette.Companion.generate(
     bitmap: Bitmap,
     resizeArea: Int = 112 * 112,
@@ -28,7 +27,6 @@ suspend fun Palette.Companion.generate(
     return Palette.generate(pixels = pixels, maxColorCount = maxColorCount)
 }
 
-@ExperimentalUnsignedTypes
 suspend fun Palette.Companion.generate(
     resources: Resources,
     resourceId: Int,
@@ -45,7 +43,6 @@ suspend fun Palette.Companion.generate(
     return generate(bitmap = bitmap, resizeArea = resizeArea, maxColorCount = maxColorCount)
 }
 
-@ExperimentalUnsignedTypes
 suspend fun Palette.Companion.generate(
     context: Context,
     resourceId: Int,

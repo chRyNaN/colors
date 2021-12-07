@@ -135,7 +135,6 @@ class ColorsSerializer(private val colorSerializer: KSerializer<Color>) :
         compositeEncoder.endStructure(descriptor)
     }
 
-    @ExperimentalUnsignedTypes
     @ExperimentalSerializationApi
     override fun deserialize(decoder: Decoder): Colors {
         val compositeDecoder = decoder.beginStructure(descriptor)

@@ -20,7 +20,6 @@ import com.chrynan.colors.palette.Swatch
 import com.chrynan.colors.palette.generate
 
 @Composable
-@OptIn(ExperimentalUnsignedTypes::class)
 fun PaletteScreen() {
     val context = LocalContext.current
 

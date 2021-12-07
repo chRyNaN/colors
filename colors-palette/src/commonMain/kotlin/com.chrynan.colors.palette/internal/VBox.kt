@@ -10,7 +10,6 @@ import kotlin.math.round
  *
  * This code was adapted from the Android Open Source Palette library.
  */
-@ExperimentalUnsignedTypes
 internal class VBox(private var colorBoxes: List<ColorHistogram.ColorBox>) {
 
     val volume: Int

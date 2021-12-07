@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package com.chrynan.colors.serialization
 
 import com.chrynan.colors.Color
@@ -9,7 +11,6 @@ import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 
-@ExperimentalUnsignedTypes
 object HexadecimalColorWithoutPrefixSerializer : KSerializer<HexadecimalColor> {
 
     override val descriptor: SerialDescriptor =

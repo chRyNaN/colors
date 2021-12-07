@@ -14,7 +14,6 @@ import com.chrynan.colors.compose.toJetpackComposeColor
 import com.chrynan.colors.space.ColorModel
 
 @Composable
-@OptIn(ExperimentalUnsignedTypes::class)
 fun ColorDetailScreen(namedColor: NamedColor) {
     val textColor = if (namedColor.color.contrast(Color.WHITE) > 0.5f) {
         Color.WHITE
@@ -108,7 +107,6 @@ fun ColorDetailScreen(namedColor: NamedColor) {
     }
 }
 
-@OptIn(ExperimentalUnsignedTypes::class)
 @Composable
 fun Header(text: String, color: Color) {
     Text(
@@ -133,7 +131,6 @@ fun LazyListScope.ContentRow(
     }
 }
 
-@OptIn(ExperimentalUnsignedTypes::class)
 @Composable
 private fun TextContent(
     text: String,

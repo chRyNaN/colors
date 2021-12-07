@@ -3,7 +3,7 @@ package com.chrynan.colors
 import com.chrynan.colors.space.*
 import com.chrynan.colors.space.Float16
 
-@ExperimentalUnsignedTypes
+@OptIn(ExperimentalUnsignedTypes::class)
 sealed interface BaseColor : Color {
 
     val value: ULong

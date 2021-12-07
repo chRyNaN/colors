@@ -16,7 +16,6 @@ import com.chrynan.colors.palette.Swatch
  * This means that the color space is divided into distinct colors, rather than representative
  * colors.
  */
-@ExperimentalUnsignedTypes
 internal class ColorCutQuantizer {
 
     private val vBoxComparator: Comparator<VBox> =

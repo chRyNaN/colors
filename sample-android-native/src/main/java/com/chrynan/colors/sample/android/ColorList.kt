@@ -18,7 +18,6 @@ import com.chrynan.colors.extension.namedColors
 import com.chrynan.colors.compose.toJetpackComposeColor
 
 @Composable
-@OptIn(ExperimentalUnsignedTypes::class)
 fun ColorListScreen(onColorSelected: (NamedColor) -> Unit) {
     LazyColumn {
         items(items = Color.namedColors.toList(), key = { it.color.colorLong.value }) {

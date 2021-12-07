@@ -21,7 +21,6 @@ fun Long.toColorLong(): ColorLong = ColorLong(value = this)
  *
  * Note that this [Int] is expected to be valid.
  */
-@ExperimentalUnsignedTypes
 fun Int.toColor(): RgbaColor = Color(int = this)
 
 /**
@@ -29,7 +28,6 @@ fun Int.toColor(): RgbaColor = Color(int = this)
  *
  * Note that this [ColorInt] is expected to be valid.
  */
-@ExperimentalUnsignedTypes
 fun ColorInt.toColor(): RgbaColor = Color(colorInt = this)
 
 /**
@@ -37,7 +35,6 @@ fun ColorInt.toColor(): RgbaColor = Color(colorInt = this)
  *
  * Note that this [Long] is expected to be valid.
  */
-@ExperimentalUnsignedTypes
 fun Long.toColor(): RgbaColor = Color(long = this)
 
 /**
@@ -45,7 +42,6 @@ fun Long.toColor(): RgbaColor = Color(long = this)
  *
  * Note that this [ColorLong] is expected to be valid.
  */
-@ExperimentalUnsignedTypes
 fun ColorLong.toColor(): Color = Color(colorLong = this)
 
 /**
@@ -53,7 +49,6 @@ fun ColorLong.toColor(): Color = Color(colorLong = this)
  * between the two. The [ColorSpace] of the result is always the [ColorSpace][Color.colorSpace]
  * of [stop]. [fraction] should be between 0 and 1, inclusive.
  */
-@ExperimentalUnsignedTypes
 fun lerp(start: Color, stop: Color, fraction: Float): Color {
     require(fraction in 0f..1f) {
         "Provided fraction should be in between 0f and 1f."

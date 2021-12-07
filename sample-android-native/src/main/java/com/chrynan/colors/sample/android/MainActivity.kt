@@ -20,7 +20,6 @@ import com.chrynan.colors.NamedColor
 import com.chrynan.colors.extension.RED
 import com.chrynan.colors.compose.toJetpackComposeColor
 
-@ExperimentalUnsignedTypes
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -5,7 +5,6 @@ import com.chrynan.colors.palette.internal.Target
 import com.chrynan.colors.palette.internal.toHsl
 import kotlin.math.abs
 
-@ExperimentalUnsignedTypes
 @Suppress("unused", "RedundantSuspendModifier")
 suspend fun Palette.Companion.generate(
     pixels: IntArray,

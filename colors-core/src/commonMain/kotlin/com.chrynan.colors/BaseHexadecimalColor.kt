@@ -2,7 +2,7 @@ package com.chrynan.colors
 
 import com.chrynan.colors.space.ColorModel
 
-@ExperimentalUnsignedTypes // TODO this class should be a value class when it supports multiple properties
+// TODO this class should be a value class when it supports multiple properties
 internal class BaseHexadecimalColor(
     override val value: ULong,
     private val hexColorString: String

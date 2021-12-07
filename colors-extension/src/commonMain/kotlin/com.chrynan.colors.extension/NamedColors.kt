@@ -5,7 +5,6 @@ package com.chrynan.colors.extension
 import com.chrynan.colors.Color
 import com.chrynan.colors.NamedColor
 
-@ExperimentalUnsignedTypes
 val Color.Companion.namedColors: Set<NamedColor>
     get() = setOf(
         NamedColor(name = "Black", color = BLACK),

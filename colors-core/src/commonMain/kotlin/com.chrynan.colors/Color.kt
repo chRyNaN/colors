@@ -168,13 +168,10 @@ interface Color {
         const val TRANSPARENT_INT_OPACITY = MIN_INT_OPACITY
         const val TRANSPARENT_ALPHA = MIN_ALPHA
 
-        @ExperimentalUnsignedTypes
         val TRANSPARENT: Color = RgbaColor(red = 0, green = 0, blue = 0, alpha = 0)
 
-        @ExperimentalUnsignedTypes
         val BLACK: Color = RgbaColor(red = 0, green = 0, blue = 0, alpha = 255)
 
-        @ExperimentalUnsignedTypes
         val WHITE: Color = RgbaColor(red = 255, green = 255, blue = 255, alpha = 255)
     }
 }

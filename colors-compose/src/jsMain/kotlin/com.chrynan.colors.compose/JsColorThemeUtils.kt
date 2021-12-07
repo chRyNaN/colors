@@ -23,7 +23,6 @@ import com.chrynan.colors.theme.lightColors
  * }
  * ```
  */
-@ExperimentalUnsignedTypes
 val LocalColors: ProvidableCompositionLocal<Colors> = staticCompositionLocalOf {
     lightColors()
 }

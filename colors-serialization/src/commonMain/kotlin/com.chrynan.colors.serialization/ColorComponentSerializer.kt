@@ -10,7 +10,6 @@ import kotlinx.serialization.descriptors.buildClassSerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 
-@ExperimentalUnsignedTypes
 object ColorComponentSerializer : KSerializer<Color> {
 
     override val descriptor: SerialDescriptor

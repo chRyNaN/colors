@@ -10,7 +10,6 @@ import androidx.annotation.RequiresApi
 /**
  * Retrieves a [Color] from the provided resource [id] and [theme] using the provided [context].
  */
-@ExperimentalUnsignedTypes
 fun Color.Companion.fromResource(
     context: Context,
     id: Int,
@@ -24,7 +23,6 @@ fun Color.Companion.fromResource(
 /**
  * Retrieves a [ColorInt] from the provided resource [id] and [theme] using the provided [context].
  */
-@ExperimentalUnsignedTypes
 fun ColorInt.Companion.fromResource(
     context: Context,
     id: Int,
@@ -35,7 +33,6 @@ fun ColorInt.Companion.fromResource(
     return ColorInt(value = colorInt)
 }
 
-@ExperimentalUnsignedTypes
 @RequiresApi(Build.VERSION_CODES.O)
 fun android.graphics.Color.toMultiplatformColor(): Color {
     return Color(toArgb()) // TODO should probably use the components and colorspace to retain information and not convert

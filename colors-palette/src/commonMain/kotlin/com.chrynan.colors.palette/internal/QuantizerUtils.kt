@@ -26,7 +26,6 @@ internal fun quantizedBlue(color: Int): Int = color and QUANTIZE_WORD_MASK
 /**
  * Quantized a RGB888 value to have a word width of {@value #QUANTIZE_WORD_WIDTH}.
  */
-@ExperimentalUnsignedTypes
 internal fun quantizeFromRgb888(color: Int): Int {
     val rgbaColor = Color(color)
     val r: Int = modifyWordWidth(
@@ -49,7 +48,6 @@ internal fun quantizeFromRgb888(color: Int): Int {
 /**
  * Quantized RGB888 values to have a word width of {@value #QUANTIZE_WORD_WIDTH}.
  */
-@ExperimentalUnsignedTypes
 internal fun approximateToRgb888(r: Int, g: Int, b: Int): Int =
     RgbaColor(
         red = modifyWordWidth(r, QUANTIZE_WORD_WIDTH, 8),
@@ -57,7 +55,6 @@ internal fun approximateToRgb888(r: Int, g: Int, b: Int): Int =
         blue = modifyWordWidth(b, QUANTIZE_WORD_WIDTH, 8)
     ).colorInt.value
 
-@ExperimentalUnsignedTypes
 internal fun approximateToRgb888(color: Int): Int =
     approximateToRgb888(
         quantizedRed(color),

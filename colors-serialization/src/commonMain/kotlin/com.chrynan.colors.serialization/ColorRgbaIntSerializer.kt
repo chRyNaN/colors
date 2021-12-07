@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package com.chrynan.colors.serialization
 
 import com.chrynan.colors.*
@@ -8,7 +10,6 @@ import kotlinx.serialization.descriptors.buildClassSerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 
-@ExperimentalUnsignedTypes
 object ColorRgbaIntSerializer : KSerializer<Color> {
 
     override val descriptor: SerialDescriptor = buildClassSerialDescriptor("Color") {

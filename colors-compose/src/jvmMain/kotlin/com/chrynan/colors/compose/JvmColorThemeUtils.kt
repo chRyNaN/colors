@@ -13,7 +13,6 @@ import com.chrynan.colors.theme.lightColors
 /**
  * Converts this [Colors] value to a Jetpack Compose [androidx.compose.material.Colors] value.
  */
-@ExperimentalUnsignedTypes
 fun Colors.toJetpackComposeColors(): androidx.compose.material.Colors =
     if (isLight) {
         androidx.compose.material.lightColors(
@@ -49,7 +48,6 @@ fun Colors.toJetpackComposeColors(): androidx.compose.material.Colors =
 /**
  * Converts this [androidx.compose.material.Colors] value to a Kotlin Multiplatform [Colors] value.
  */
-@ExperimentalUnsignedTypes
 fun androidx.compose.material.Colors.toMultiplatformColors(): Colors =
     if (isLight) {
         lightColors(
@@ -89,7 +87,6 @@ fun androidx.compose.material.Colors.toMultiplatformColors(): Colors =
  * @see [MaterialTheme]
  */
 @Composable
-@ExperimentalUnsignedTypes
 fun MaterialTheme(
     colors: Colors,
     typography: Typography = MaterialTheme.typography,

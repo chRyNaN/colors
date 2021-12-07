@@ -2,7 +2,7 @@ package com.chrynan.colors
 
 import com.chrynan.colors.space.ColorModel
 
-@ExperimentalUnsignedTypes // TODO this should be a value class when IR compilation works
+// TODO this should be a value class when IR compilation works
 internal class BaseXyzColor(
     override val value: ULong
 ) : Color,

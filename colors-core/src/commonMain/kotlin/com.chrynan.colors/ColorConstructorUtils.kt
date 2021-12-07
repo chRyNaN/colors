@@ -20,7 +20,6 @@ import kotlin.math.min
  * If you prefer to use more specific component names and get a more specific [Color] instance, use
  * the other constructor functions, such as [RgbaColor], [RgbaColor], [LabColor], or [XyzColor].
  */
-@ExperimentalUnsignedTypes
 fun Color(
     component1: Float,
     component2: Float,
@@ -69,7 +68,6 @@ fun Color(
  *
  * @param [colorInt] The ARGB color int to create a [RgbaColor] from.
  */
-@ExperimentalUnsignedTypes
 fun Color(colorInt: ColorInt): RgbaColor =
     BaseRgbaColor(value = (colorInt.value.toULong() and 0xffffffffUL) shl 32)
 
@@ -80,7 +78,6 @@ fun Color(colorInt: ColorInt): RgbaColor =
  *
  * @param [int] The ARGB color int to create a [RgbaColor] from.
  */
-@ExperimentalUnsignedTypes
 fun Color(int: Int): RgbaColor = BaseRgbaColor(value = (int.toULong() and 0xffffffffUL) shl 32)
 
 /**
@@ -96,7 +93,6 @@ fun Color(int: Int): RgbaColor = BaseRgbaColor(value = (int.toULong() and 0xffff
  * Note that this function does not use a [ColorLong] and is different
  * than one that does. This is more similar to the [RgbaColor] function.
  */
-@ExperimentalUnsignedTypes
 fun Color(long: Long): RgbaColor = BaseRgbaColor(value = (long.toULong() and 0xffffffffUL) shl 32)
 
 /**
@@ -106,7 +102,6 @@ fun Color(long: Long): RgbaColor = BaseRgbaColor(value = (long.toULong() and 0xf
  *
  * @see [ColorLong]
  */
-@ExperimentalUnsignedTypes
 fun Color(colorLong: ColorLong): Color =
     Color(colorULong = (colorLong.value.toULong() and 0xffffffffUL) shl 32)
 
@@ -118,7 +113,6 @@ fun Color(colorLong: ColorLong): Color =
  * @see [Color]
  * @see [ColorLong]
  */
-@ExperimentalUnsignedTypes
 fun Color(colorULong: ULong): Color {
     val colorSpace = ColorSpaces.getColorSpaceById((colorULong and 0x3fUL).toInt())
     val component1 = if (colorSpace.isSrgb) {
@@ -161,7 +155,6 @@ fun Color(colorULong: ULong): Color {
  * @throws [IllegalArgumentException] if the provided [hexadecimalString] is not in a valid Hex Color
  * format.
  */
-@ExperimentalUnsignedTypes
 fun Color(hexadecimalString: String): HexadecimalColor {
     var formattedHexString = hexadecimalString.trim()
         .removePrefix("${HexadecimalColor.HEX_CHAR}")
@@ -192,7 +185,6 @@ fun Color(hexadecimalString: String): HexadecimalColor {
  * the default [alpha] is `1.0` (opaque). [colorSpace] must have a [ColorSpace.componentCount] of
  * 3.
  */
-@ExperimentalUnsignedTypes
 fun RgbaColor(
     red: Float,
     green: Float,
@@ -250,7 +242,6 @@ fun RgbaColor(
  *
  * @see [RgbaColor]
  */
-@ExperimentalUnsignedTypes
 fun RgbaColor(
     red: Int,
     green: Int,
@@ -306,7 +297,6 @@ fun RgbaColor(
  *
  * Note [colorSpace] must have a [ColorSpace.componentCount] of 3.
  */
-@ExperimentalUnsignedTypes
 fun LabColor(
     l: Float,
     a: Float,
@@ -352,7 +342,6 @@ fun LabColor(
  *
  * Note [colorSpace] must have a [ColorSpace.componentCount] of 3.
  */
-@ExperimentalUnsignedTypes
 fun XyzColor(
     x: Float,
     y: Float,

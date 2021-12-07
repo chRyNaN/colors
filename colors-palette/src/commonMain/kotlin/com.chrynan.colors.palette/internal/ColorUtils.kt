@@ -10,7 +10,6 @@ private const val MIN_ALPHA_SEARCH_PRECISION = 1
 private const val MIN_CONTRAST_PRIMARY_TEXT = 3.0f
 private const val MIN_CONTRAST_SECONDARY_TEXT = 4.5f
 
-@ExperimentalUnsignedTypes
 internal fun Color.getPrimaryOnColorInt(): Int {
     val whiteColorInt = Color.WHITE.colorInt
     val blackColorInt = Color.BLACK.colorInt
@@ -31,7 +30,6 @@ internal fun Color.getPrimaryOnColorInt(): Int {
     return setAlphaComponent(whiteColorInt.value, 255)
 }
 
-@ExperimentalUnsignedTypes
 internal fun Color.getSecondaryOnColorInt(): Int {
     val whiteColorInt = Color.WHITE.colorInt
     val blackColorInt = Color.BLACK.colorInt
@@ -64,7 +62,6 @@ internal fun Swatch.toHsl(): FloatArray = this.color.toRgbaColor().toHslComponen
  * @param minContrastRatio the minimum contrast ratio
  * @return the alpha value in the range 0-255, or -1 if no value could be calculated
  */
-@ExperimentalUnsignedTypes
 private fun calculateMinimumAlpha(
     foreground: Color,
     background: Color,
