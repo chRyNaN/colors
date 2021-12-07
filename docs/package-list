@@ -4,10 +4,12 @@ $dokka.location:com.chrynan.colors.compose////PointingToDeclaration/colors-comp
 $dokka.location:com.chrynan.colors.compose//LocalColors/#/PointingToDeclaration/colors-compose/colors-compose/com.chrynan.colors.compose/-local-colors.md
 $dokka.location:com.chrynan.colors.compose//MaterialTheme/#com.chrynan.colors.theme.Colors#androidx.compose.material.Typography#androidx.compose.material.Shapes#kotlin.Function0[kotlin.Unit]/PointingToDeclaration/colors-compose/colors-compose/com.chrynan.colors.compose/[jvm]-material-theme.md
 $dokka.location:com.chrynan.colors.compose//toCSSColorValue/Color#ColorSpace#RenderIntent/PointingToDeclaration/colors-compose/colors-compose/com.chrynan.colors.compose/to-c-s-s-color-value.md
-$dokka.location:com.chrynan.colors.compose//toJetpackComposeColor/com.chrynan.colors.Color#/PointingToDeclaration/colors-compose/colors-compose/com.chrynan.colors.compose/[jvm]to-jetpack-compose-color.md
+$dokka.location:com.chrynan.colors.compose//toComposeColor/com.chrynan.colors.Color#/PointingToDeclaration/colors-compose/colors-compose/com.chrynan.colors.compose/[jvm]to-compose-color.md
+$dokka.location:com.chrynan.colors.compose//toComposeMultiplatformColor/com.chrynan.colors.Color#/PointingToDeclaration/colors-compose/colors-compose/com.chrynan.colors.compose/to-compose-multiplatform-color.md
 $dokka.location:com.chrynan.colors.compose//toJetpackComposeColors/com.chrynan.colors.theme.Colors#/PointingToDeclaration/colors-compose/colors-compose/com.chrynan.colors.compose/[jvm]to-jetpack-compose-colors.md
 $dokka.location:com.chrynan.colors.compose//toMultiplatformColor/androidx.compose.ui.graphics.Color#/PointingToDeclaration/colors-compose/colors-compose/com.chrynan.colors.compose/[jvm]to-multiplatform-color.md
 $dokka.location:com.chrynan.colors.compose//toMultiplatformColors/androidx.compose.material.Colors#/PointingToDeclaration/colors-compose/colors-compose/com.chrynan.colors.compose/[jvm]to-multiplatform-colors.md
+$dokka.location:com.chrynan.colors.compose/ComposeMultiplatformColor///PointingToDeclaration/colors-compose/colors-compose/com.chrynan.colors.compose/-compose-multiplatform-color/index.md
 $dokka.location:com.chrynan.colors.extension////PointingToDeclaration/colors-extension/colors-extension/com.chrynan.colors.extension/index.md
 $dokka.location:com.chrynan.colors.extension//ALICE_BLUE/com.chrynan.colors.Color.Companion#/PointingToDeclaration/colors-extension/colors-extension/com.chrynan.colors.extension/-a-l-i-c-e_-b-l-u-e.md
 $dokka.location:com.chrynan.colors.extension//ANTIQUE_WHITE/com.chrynan.colors.Color.Companion#/PointingToDeclaration/colors-extension/colors-extension/com.chrynan.colors.extension/-a-n-t-i-q-u-e_-w-h-i-t-e.md
