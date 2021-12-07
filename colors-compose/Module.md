@@ -1,4 +1,4 @@
-# Module colors-jetpack-compose
+# Module colors-compose
 
 Interoperability utilities for Jetpack Compose.
 
