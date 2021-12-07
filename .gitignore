@@ -27,3 +27,6 @@ build/
 
 # Mac
 .DS_Store
+
+# Error logs
+**/*.log
