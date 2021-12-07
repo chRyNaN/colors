@@ -10,7 +10,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.chrynan.colors.*
-import com.chrynan.colors.jetpack.compose.toJetpackComposeColor
+import com.chrynan.colors.compose.toJetpackComposeColor
 import com.chrynan.colors.space.ColorModel
 
 @Composable

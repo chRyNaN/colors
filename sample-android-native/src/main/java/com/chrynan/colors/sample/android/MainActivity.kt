@@ -18,7 +18,7 @@ import androidx.navigation.compose.rememberNavController
 import com.chrynan.colors.Color
 import com.chrynan.colors.NamedColor
 import com.chrynan.colors.extension.RED
-import com.chrynan.colors.jetpack.compose.toJetpackComposeColor
+import com.chrynan.colors.compose.toJetpackComposeColor
 
 @ExperimentalUnsignedTypes
 class MainActivity : AppCompatActivity() {

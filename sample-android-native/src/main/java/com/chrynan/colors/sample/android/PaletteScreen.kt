@@ -14,7 +14,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.chrynan.colors.Color
-import com.chrynan.colors.jetpack.compose.toJetpackComposeColor
+import com.chrynan.colors.compose.toJetpackComposeColor
 import com.chrynan.colors.palette.Palette
 import com.chrynan.colors.palette.Swatch
 import com.chrynan.colors.palette.generate

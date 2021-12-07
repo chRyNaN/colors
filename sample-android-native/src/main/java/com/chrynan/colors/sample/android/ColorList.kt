@@ -15,7 +15,7 @@ import com.chrynan.colors.Color
 import com.chrynan.colors.NamedColor
 import com.chrynan.colors.contrast
 import com.chrynan.colors.extension.namedColors
-import com.chrynan.colors.jetpack.compose.toJetpackComposeColor
+import com.chrynan.colors.compose.toJetpackComposeColor
 
 @Composable
 @OptIn(ExperimentalUnsignedTypes::class)

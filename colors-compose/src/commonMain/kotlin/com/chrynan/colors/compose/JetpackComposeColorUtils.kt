@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package com.chrynan.colors.jetpack.compose
+package com.chrynan.colors.compose
 
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Shapes
