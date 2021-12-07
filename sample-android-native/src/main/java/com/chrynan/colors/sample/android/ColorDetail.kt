@@ -10,7 +10,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.chrynan.colors.*
-import com.chrynan.colors.compose.toJetpackComposeColor
+import com.chrynan.colors.compose.toComposeColor
 import com.chrynan.colors.space.ColorModel
 
 @Composable
@@ -24,7 +24,7 @@ fun ColorDetailScreen(namedColor: NamedColor) {
 
     Box(
         modifier = Modifier
-            .background(namedColor.color.toJetpackComposeColor())
+            .background(namedColor.color.toComposeColor())
             .padding(16.dp)
             .fillMaxWidth()
             .fillMaxHeight()
@@ -113,7 +113,7 @@ fun Header(text: String, color: Color) {
         text = text,
         fontSize = 14.sp,
         fontWeight = FontWeight.Bold,
-        color = color.toJetpackComposeColor()
+        color = color.toComposeColor()
     )
 }
 
@@ -142,7 +142,7 @@ private fun TextContent(
             .wrapContentHeight(),
         text = text,
         fontSize = 24.sp,
-        color = textColor.toJetpackComposeColor()
+        color = textColor.toComposeColor()
     )
 }
 

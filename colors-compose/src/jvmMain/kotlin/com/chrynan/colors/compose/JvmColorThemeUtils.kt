@@ -16,32 +16,32 @@ import com.chrynan.colors.theme.lightColors
 fun Colors.toJetpackComposeColors(): androidx.compose.material.Colors =
     if (isLight) {
         androidx.compose.material.lightColors(
-            primary = colorPrimary.toJetpackComposeColor(),
-            primaryVariant = colorPrimaryVariant.toJetpackComposeColor(),
-            secondary = colorSecondary.toJetpackComposeColor(),
-            secondaryVariant = colorSecondaryVariant.toJetpackComposeColor(),
-            background = colorBackgroundPrimary.toJetpackComposeColor(),
-            surface = colorBackgroundSecondary.toJetpackComposeColor(),
-            error = colorError.toJetpackComposeColor(),
-            onPrimary = colorOnPrimary.toJetpackComposeColor(),
-            onSecondary = colorOnSecondary.toJetpackComposeColor(),
-            onBackground = colorOnBackgroundPrimary.toJetpackComposeColor(),
-            onSurface = colorOnBackgroundSecondary.toJetpackComposeColor(),
-            onError = colorOnError.toJetpackComposeColor()
+            primary = colorPrimary.toComposeColor(),
+            primaryVariant = colorPrimaryVariant.toComposeColor(),
+            secondary = colorSecondary.toComposeColor(),
+            secondaryVariant = colorSecondaryVariant.toComposeColor(),
+            background = colorBackgroundPrimary.toComposeColor(),
+            surface = colorBackgroundSecondary.toComposeColor(),
+            error = colorError.toComposeColor(),
+            onPrimary = colorOnPrimary.toComposeColor(),
+            onSecondary = colorOnSecondary.toComposeColor(),
+            onBackground = colorOnBackgroundPrimary.toComposeColor(),
+            onSurface = colorOnBackgroundSecondary.toComposeColor(),
+            onError = colorOnError.toComposeColor()
         )
     } else {
         androidx.compose.material.darkColors(
-            primary = colorPrimary.toJetpackComposeColor(),
-            primaryVariant = colorPrimaryVariant.toJetpackComposeColor(),
-            secondary = colorSecondary.toJetpackComposeColor(),
-            background = colorBackgroundPrimary.toJetpackComposeColor(),
-            surface = colorBackgroundSecondary.toJetpackComposeColor(),
-            error = colorError.toJetpackComposeColor(),
-            onPrimary = colorOnPrimary.toJetpackComposeColor(),
-            onSecondary = colorOnSecondary.toJetpackComposeColor(),
-            onBackground = colorOnBackgroundPrimary.toJetpackComposeColor(),
-            onSurface = colorOnBackgroundSecondary.toJetpackComposeColor(),
-            onError = colorOnError.toJetpackComposeColor()
+            primary = colorPrimary.toComposeColor(),
+            primaryVariant = colorPrimaryVariant.toComposeColor(),
+            secondary = colorSecondary.toComposeColor(),
+            background = colorBackgroundPrimary.toComposeColor(),
+            surface = colorBackgroundSecondary.toComposeColor(),
+            error = colorError.toComposeColor(),
+            onPrimary = colorOnPrimary.toComposeColor(),
+            onSecondary = colorOnSecondary.toComposeColor(),
+            onBackground = colorOnBackgroundPrimary.toComposeColor(),
+            onSurface = colorOnBackgroundSecondary.toComposeColor(),
+            onError = colorOnError.toComposeColor()
         )
     }
 

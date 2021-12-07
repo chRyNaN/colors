@@ -15,7 +15,7 @@ import com.chrynan.colors.Color
 import com.chrynan.colors.NamedColor
 import com.chrynan.colors.contrast
 import com.chrynan.colors.extension.namedColors
-import com.chrynan.colors.compose.toJetpackComposeColor
+import com.chrynan.colors.compose.toComposeColor
 
 @Composable
 fun ColorListScreen(onColorSelected: (NamedColor) -> Unit) {
@@ -32,7 +32,7 @@ fun ColorListScreen(onColorSelected: (NamedColor) -> Unit) {
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(200.dp)
-                    .background(it.color.toJetpackComposeColor())
+                    .background(it.color.toComposeColor())
                     .clickable { onColorSelected.invoke(it) }
                     .padding(vertical = 16.dp)
             ) {
@@ -64,7 +64,7 @@ private fun TextContent(
             text = namedColor.name() ?: "",
             fontSize = 24.sp,
             textAlign = TextAlign.Center,
-            color = primaryTextColor.toJetpackComposeColor()
+            color = primaryTextColor.toComposeColor()
         )
         Text(
             modifier = Modifier
@@ -73,7 +73,7 @@ private fun TextContent(
             text = namedColor.color.cssValue,
             fontSize = 16.sp,
             textAlign = TextAlign.Center,
-            color = secondaryTextColor.toJetpackComposeColor()
+            color = secondaryTextColor.toComposeColor()
         )
     }
 }
