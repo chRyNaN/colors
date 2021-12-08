@@ -6,6 +6,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Shapes
 import androidx.compose.material.Typography
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.ReadOnlyComposable
 import com.chrynan.colors.theme.Colors
 import com.chrynan.colors.theme.darkColors
 import com.chrynan.colors.theme.lightColors
@@ -98,3 +99,7 @@ fun MaterialTheme(
     shapes = shapes,
     content = content
 )
+
+@Composable
+@ReadOnlyComposable
+internal actual fun internalIsSystemInDarkTheme(): Boolean = androidx.compose.foundation.isSystemInDarkTheme()
