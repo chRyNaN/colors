@@ -2,8 +2,7 @@
 
 package com.chrynan.colors.compose
 
-import com.chrynan.colors.Color
-import com.chrynan.colors.RgbaColor
+import com.chrynan.colors.*
 import com.chrynan.colors.space.ColorSpace
 import com.chrynan.colors.space.ColorSpaces
 import com.chrynan.colors.space.RenderIntent
@@ -26,5 +25,5 @@ fun Color.toCSSColorValue(
             renderIntent = renderIntent
         )
 
-    return rgba(r = rgbaColor.red, g = rgbaColor.green, b = rgbaColor.blue, a = rgbaColor.alpha)
+    return rgba(r = rgbaColor.redInt, g = rgbaColor.greenInt, b = rgbaColor.blueInt, a = rgbaColor.alphaInt)
 }
