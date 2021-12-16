@@ -77,3 +77,9 @@ fun darkColors(
     textError = textError,
     isLight = false
 )
+
+val Colors.surface: Color
+    get() = backgroundSecondary
+
+val Colors.onSurface: Color
+    get() = onBackgroundSecondary
