@@ -20,10 +20,6 @@ kotlin {
     targets {
         android()
         jvm()
-        js(IR) {
-            browser {
-            }
-        }
     }
     sourceSets {
         all {
@@ -47,12 +43,6 @@ kotlin {
             dependencies {
                 implementation(compose.ui)
                 implementation(compose.material)
-            }
-        }
-        val jsMain by getting {
-            dependencies {
-                implementation(compose.web.core)
-                implementation(compose.web.svg)
             }
         }
     }

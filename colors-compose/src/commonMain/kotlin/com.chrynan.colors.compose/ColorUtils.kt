@@ -8,11 +8,10 @@ import com.chrynan.colors.ColorLong
 /**
  * Converts this [Color] to a Jetpack Compose compatible [androidx.compose.ui.graphics.Color].
  */
-fun Color.toComposeColor(): androidx.compose.ui.graphics.Color =
-    androidx.compose.ui.graphics.Color(colorLong.value.toULong())
+fun Color.toComposeColor(): ComposeColor = ComposeColor(colorLong.value.toULong())
 
 /**
  * Converts this [androidx.compose.ui.graphics.Color] to a Kotlin Multiplatform compatible [Color].
  */
-fun androidx.compose.ui.graphics.Color.toMultiplatformColor(): Color =
+fun ComposeColor.toMultiplatformColor(): Color =
     Color(colorLong = ColorLong(value = value))
