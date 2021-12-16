@@ -4,37 +4,37 @@ import com.chrynan.colors.Color
 
 interface Colors {
 
-    val colorPrimary: Color
+    val primary: Color
 
-    val colorPrimaryVariant: Color
+    val primaryVariant: Color
 
-    val colorSecondary: Color
+    val secondary: Color
 
-    val colorSecondaryVariant: Color
+    val secondaryVariant: Color
 
-    val colorError: Color
+    val error: Color
 
-    val colorBackgroundPrimary: Color
+    val backgroundPrimary: Color
 
-    val colorBackgroundSecondary: Color
+    val backgroundSecondary: Color
 
-    val colorOnPrimary: Color
+    val onPrimary: Color
 
-    val colorOnSecondary: Color
+    val onSecondary: Color
 
-    val colorOnError: Color
+    val onError: Color
 
-    val colorOnBackgroundPrimary: Color
+    val onBackgroundPrimary: Color
 
-    val colorOnBackgroundSecondary: Color
+    val onBackgroundSecondary: Color
 
-    val colorTextPrimary: Color
+    val textPrimary: Color
 
-    val colorTextSecondary: Color
+    val textSecondary: Color
 
-    val colorTextTertiary: Color
+    val textTertiary: Color
 
-    val colorTextError: Color
+    val textError: Color
 
     val isLight: Boolean
 

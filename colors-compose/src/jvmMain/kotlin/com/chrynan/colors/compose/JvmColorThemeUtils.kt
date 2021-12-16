@@ -17,32 +17,32 @@ import com.chrynan.colors.theme.lightColors
 fun Colors.toJetpackComposeColors(): androidx.compose.material.Colors =
     if (isLight) {
         androidx.compose.material.lightColors(
-            primary = colorPrimary.toComposeColor(),
-            primaryVariant = colorPrimaryVariant.toComposeColor(),
-            secondary = colorSecondary.toComposeColor(),
-            secondaryVariant = colorSecondaryVariant.toComposeColor(),
-            background = colorBackgroundPrimary.toComposeColor(),
-            surface = colorBackgroundSecondary.toComposeColor(),
-            error = colorError.toComposeColor(),
-            onPrimary = colorOnPrimary.toComposeColor(),
-            onSecondary = colorOnSecondary.toComposeColor(),
-            onBackground = colorOnBackgroundPrimary.toComposeColor(),
-            onSurface = colorOnBackgroundSecondary.toComposeColor(),
-            onError = colorOnError.toComposeColor()
+            primary = primary.toComposeColor(),
+            primaryVariant = primaryVariant.toComposeColor(),
+            secondary = secondary.toComposeColor(),
+            secondaryVariant = secondaryVariant.toComposeColor(),
+            background = backgroundPrimary.toComposeColor(),
+            surface = backgroundSecondary.toComposeColor(),
+            error = error.toComposeColor(),
+            onPrimary = onPrimary.toComposeColor(),
+            onSecondary = onSecondary.toComposeColor(),
+            onBackground = onBackgroundPrimary.toComposeColor(),
+            onSurface = onBackgroundSecondary.toComposeColor(),
+            onError = onError.toComposeColor()
         )
     } else {
         androidx.compose.material.darkColors(
-            primary = colorPrimary.toComposeColor(),
-            primaryVariant = colorPrimaryVariant.toComposeColor(),
-            secondary = colorSecondary.toComposeColor(),
-            background = colorBackgroundPrimary.toComposeColor(),
-            surface = colorBackgroundSecondary.toComposeColor(),
-            error = colorError.toComposeColor(),
-            onPrimary = colorOnPrimary.toComposeColor(),
-            onSecondary = colorOnSecondary.toComposeColor(),
-            onBackground = colorOnBackgroundPrimary.toComposeColor(),
-            onSurface = colorOnBackgroundSecondary.toComposeColor(),
-            onError = colorOnError.toComposeColor()
+            primary = primary.toComposeColor(),
+            primaryVariant = primaryVariant.toComposeColor(),
+            secondary = secondary.toComposeColor(),
+            background = backgroundPrimary.toComposeColor(),
+            surface = backgroundSecondary.toComposeColor(),
+            error = error.toComposeColor(),
+            onPrimary = onPrimary.toComposeColor(),
+            onSecondary = onSecondary.toComposeColor(),
+            onBackground = onBackgroundPrimary.toComposeColor(),
+            onSurface = onBackgroundSecondary.toComposeColor(),
+            onError = onError.toComposeColor()
         )
     }
 
@@ -52,33 +52,33 @@ fun Colors.toJetpackComposeColors(): androidx.compose.material.Colors =
 fun androidx.compose.material.Colors.toMultiplatformColors(): Colors =
     if (isLight) {
         lightColors(
-            colorPrimary = primary.toMultiplatformColor(),
-            colorPrimaryVariant = primaryVariant.toMultiplatformColor(),
-            colorSecondary = secondary.toMultiplatformColor(),
-            colorSecondaryVariant = secondaryVariant.toMultiplatformColor(),
-            colorBackground = background.toMultiplatformColor(),
-            colorBackgroundSecondary = surface.toMultiplatformColor(),
-            colorError = error.toMultiplatformColor(),
-            colorOnPrimary = onPrimary.toMultiplatformColor(),
-            colorOnSecondary = onSecondary.toMultiplatformColor(),
-            colorOnBackground = onBackground.toMultiplatformColor(),
-            colorOnBackgroundSecondary = onSurface.toMultiplatformColor(),
-            colorOnError = onError.toMultiplatformColor()
+            primary = primary.toMultiplatformColor(),
+            primaryVariant = primaryVariant.toMultiplatformColor(),
+            secondary = secondary.toMultiplatformColor(),
+            secondaryVariant = secondaryVariant.toMultiplatformColor(),
+            background = background.toMultiplatformColor(),
+            backgroundSecondary = surface.toMultiplatformColor(),
+            error = error.toMultiplatformColor(),
+            onPrimary = onPrimary.toMultiplatformColor(),
+            onSecondary = onSecondary.toMultiplatformColor(),
+            onBackground = onBackground.toMultiplatformColor(),
+            onBackgroundSecondary = onSurface.toMultiplatformColor(),
+            onError = onError.toMultiplatformColor()
         )
     } else {
         darkColors(
-            colorPrimary = primary.toMultiplatformColor(),
-            colorPrimaryVariant = primaryVariant.toMultiplatformColor(),
-            colorSecondary = secondary.toMultiplatformColor(),
-            colorSecondaryVariant = secondaryVariant.toMultiplatformColor(),
-            colorBackground = background.toMultiplatformColor(),
-            colorBackgroundSecondary = surface.toMultiplatformColor(),
-            colorError = error.toMultiplatformColor(),
-            colorOnPrimary = onPrimary.toMultiplatformColor(),
-            colorOnSecondary = onSecondary.toMultiplatformColor(),
-            colorOnBackground = onBackground.toMultiplatformColor(),
-            colorOnBackgroundSecondary = onSurface.toMultiplatformColor(),
-            colorOnError = onError.toMultiplatformColor()
+            primary = primary.toMultiplatformColor(),
+            primaryVariant = primaryVariant.toMultiplatformColor(),
+            secondary = secondary.toMultiplatformColor(),
+            secondaryVariant = secondaryVariant.toMultiplatformColor(),
+            background = background.toMultiplatformColor(),
+            backgroundSecondary = surface.toMultiplatformColor(),
+            error = error.toMultiplatformColor(),
+            onPrimary = onPrimary.toMultiplatformColor(),
+            onSecondary = onSecondary.toMultiplatformColor(),
+            onBackground = onBackground.toMultiplatformColor(),
+            onBackgroundSecondary = onSurface.toMultiplatformColor(),
+            onError = onError.toMultiplatformColor()
         )
     }
 

@@ -43,92 +43,92 @@ class ColorsSerializer(private val colorSerializer: KSerializer<Color>) :
             descriptor,
             0,
             colorSerializer,
-            value.colorPrimary
+            value.primary
         )
         compositeEncoder.encodeSerializableElement(
             descriptor,
             1,
             colorSerializer,
-            value.colorPrimaryVariant
+            value.primaryVariant
         )
         compositeEncoder.encodeSerializableElement(
             descriptor,
             2,
             colorSerializer,
-            value.colorSecondary
+            value.secondary
         )
         compositeEncoder.encodeSerializableElement(
             descriptor,
             3,
             colorSerializer,
-            value.colorSecondaryVariant
+            value.secondaryVariant
         )
-        compositeEncoder.encodeSerializableElement(descriptor, 4, colorSerializer, value.colorError)
+        compositeEncoder.encodeSerializableElement(descriptor, 4, colorSerializer, value.error)
         compositeEncoder.encodeSerializableElement(
             descriptor,
             5,
             colorSerializer,
-            value.colorBackgroundPrimary
+            value.backgroundPrimary
         )
         compositeEncoder.encodeSerializableElement(
             descriptor,
             6,
             colorSerializer,
-            value.colorBackgroundSecondary
+            value.backgroundSecondary
         )
         compositeEncoder.encodeSerializableElement(
             descriptor,
             7,
             colorSerializer,
-            value.colorOnPrimary
+            value.onPrimary
         )
         compositeEncoder.encodeSerializableElement(
             descriptor,
             8,
             colorSerializer,
-            value.colorOnSecondary
+            value.onSecondary
         )
         compositeEncoder.encodeSerializableElement(
             descriptor,
             9,
             colorSerializer,
-            value.colorOnError
+            value.onError
         )
         compositeEncoder.encodeSerializableElement(
             descriptor,
             10,
             colorSerializer,
-            value.colorOnBackgroundPrimary
+            value.onBackgroundPrimary
         )
         compositeEncoder.encodeSerializableElement(
             descriptor,
             11,
             colorSerializer,
-            value.colorOnBackgroundSecondary
+            value.onBackgroundSecondary
         )
         compositeEncoder.encodeSerializableElement(
             descriptor,
             12,
             colorSerializer,
-            value.colorTextPrimary
+            value.textPrimary
         )
         compositeEncoder.encodeSerializableElement(
             descriptor,
             13,
             colorSerializer,
-            value.colorTextSecondary
+            value.textSecondary
         )
         compositeEncoder.encodeSerializableElement(
             descriptor,
             14,
             colorSerializer,
-            value.colorTextTertiary
+            value.textTertiary
         )
         compositeEncoder.encodeSerializableElement(
             descriptor,
             15,
             colorSerializer,
-            value.colorTextError
+            value.textError
         )
         compositeEncoder.encodeBooleanElement(descriptor, 16, value.isLight)
 
@@ -176,41 +176,41 @@ class ColorsSerializer(private val colorSerializer: KSerializer<Color>) :
 
         return if (isLight) {
             lightColors(
-                colorPrimary = colorPrimary,
-                colorPrimaryVariant = colorPrimaryVariant,
-                colorSecondary = colorSecondary,
-                colorSecondaryVariant = colorSecondaryVariant,
-                colorBackground = colorBackgroundPrimary,
-                colorBackgroundSecondary = colorBackgroundSecondary,
-                colorError = colorError,
-                colorOnPrimary = colorOnPrimary,
-                colorOnSecondary = colorOnSecondary,
-                colorOnBackground = colorOnBackgroundPrimary,
-                colorOnBackgroundSecondary = colorOnBackgroundSecondary,
-                colorOnError = colorOnError,
-                colorTextPrimary = colorTextPrimary,
-                colorTextSecondary = colorTextSecondary,
-                colorTextTertiary = colorTextTertiary,
-                colorTextError = colorTextError
+                primary = colorPrimary,
+                primaryVariant = colorPrimaryVariant,
+                secondary = colorSecondary,
+                secondaryVariant = colorSecondaryVariant,
+                background = colorBackgroundPrimary,
+                backgroundSecondary = colorBackgroundSecondary,
+                error = colorError,
+                onPrimary = colorOnPrimary,
+                onSecondary = colorOnSecondary,
+                onBackground = colorOnBackgroundPrimary,
+                onBackgroundSecondary = colorOnBackgroundSecondary,
+                onError = colorOnError,
+                textPrimary = colorTextPrimary,
+                textSecondary = colorTextSecondary,
+                textTertiary = colorTextTertiary,
+                textError = colorTextError
             )
         } else {
             darkColors(
-                colorPrimary = colorPrimary,
-                colorPrimaryVariant = colorPrimaryVariant,
-                colorSecondary = colorSecondary,
-                colorSecondaryVariant = colorSecondaryVariant,
-                colorBackground = colorBackgroundPrimary,
-                colorBackgroundSecondary = colorBackgroundSecondary,
-                colorError = colorError,
-                colorOnPrimary = colorOnPrimary,
-                colorOnSecondary = colorOnSecondary,
-                colorOnBackground = colorOnBackgroundPrimary,
-                colorOnBackgroundSecondary = colorOnBackgroundSecondary,
-                colorOnError = colorOnError,
-                colorTextPrimary = colorTextPrimary,
-                colorTextSecondary = colorTextSecondary,
-                colorTextTertiary = colorTextTertiary,
-                colorTextError = colorTextError
+                primary = colorPrimary,
+                primaryVariant = colorPrimaryVariant,
+                secondary = colorSecondary,
+                secondaryVariant = colorSecondaryVariant,
+                background = colorBackgroundPrimary,
+                backgroundSecondary = colorBackgroundSecondary,
+                error = colorError,
+                onPrimary = colorOnPrimary,
+                onSecondary = colorOnSecondary,
+                onBackground = colorOnBackgroundPrimary,
+                onBackgroundSecondary = colorOnBackgroundSecondary,
+                onError = colorOnError,
+                textPrimary = colorTextPrimary,
+                textSecondary = colorTextSecondary,
+                textTertiary = colorTextTertiary,
+                textError = colorTextError
             )
         }
     }
