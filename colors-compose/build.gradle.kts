@@ -31,16 +31,6 @@ kotlin {
                 api(project(":colors-theme"))
 
                 implementation(compose.runtime)
-            }
-        }
-        val androidMain by getting {
-            dependencies {
-                implementation(compose.ui)
-                implementation(compose.material)
-            }
-        }
-        val jvmMain by getting {
-            dependencies {
                 implementation(compose.ui)
                 implementation(compose.material)
             }
