@@ -11,16 +11,16 @@ private const val MIN_CONTRAST_PRIMARY_TEXT = 3.0f
 private const val MIN_CONTRAST_SECONDARY_TEXT = 4.5f
 
 internal fun Color.getPrimaryOnColorInt(): Int {
-    val whiteColorInt = Color.WHITE.colorInt
-    val blackColorInt = Color.BLACK.colorInt
+    val whiteColorInt = Color.White.colorInt
+    val blackColorInt = Color.Black.colorInt
 
     // First check white, as most colors will be dark
-    val lightAlpha = calculateMinimumAlpha(Color.WHITE, this, MIN_CONTRAST_PRIMARY_TEXT)
+    val lightAlpha = calculateMinimumAlpha(Color.White, this, MIN_CONTRAST_PRIMARY_TEXT)
 
     // If we found valid light values, use them and return
     if (lightAlpha != -1) return setAlphaComponent(whiteColorInt.value, lightAlpha)
 
-    val darkAlpha = calculateMinimumAlpha(Color.BLACK, this, MIN_CONTRAST_PRIMARY_TEXT)
+    val darkAlpha = calculateMinimumAlpha(Color.Black, this, MIN_CONTRAST_PRIMARY_TEXT)
 
     // If we found valid dark values, use them and return
     if (darkAlpha != -1) return setAlphaComponent(blackColorInt.value, darkAlpha)
@@ -31,16 +31,16 @@ internal fun Color.getPrimaryOnColorInt(): Int {
 }
 
 internal fun Color.getSecondaryOnColorInt(): Int {
-    val whiteColorInt = Color.WHITE.colorInt
-    val blackColorInt = Color.BLACK.colorInt
+    val whiteColorInt = Color.White.colorInt
+    val blackColorInt = Color.Black.colorInt
 
     // First check white, as most colors will be dark
-    val lightAlpha = calculateMinimumAlpha(Color.WHITE, this, MIN_CONTRAST_SECONDARY_TEXT)
+    val lightAlpha = calculateMinimumAlpha(Color.White, this, MIN_CONTRAST_SECONDARY_TEXT)
 
     // If we found valid light values, use them and return
     if (lightAlpha != -1) return setAlphaComponent(whiteColorInt.value, lightAlpha)
 
-    val darkAlpha = calculateMinimumAlpha(Color.BLACK, this, MIN_CONTRAST_SECONDARY_TEXT)
+    val darkAlpha = calculateMinimumAlpha(Color.Black, this, MIN_CONTRAST_SECONDARY_TEXT)
 
     // If we found valid dark values, use them and return
     if (darkAlpha != -1) return setAlphaComponent(blackColorInt.value, darkAlpha)

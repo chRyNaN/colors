@@ -21,10 +21,10 @@ import com.chrynan.colors.compose.toComposeColor
 fun ColorListScreen(onColorSelected: (NamedColor) -> Unit) {
     LazyColumn {
         items(items = Color.namedColors.toList(), key = { it.color.colorLong.value }) {
-            val textColor = if (it.color.contrast(Color.WHITE) > 0.5f) {
-                Color.WHITE
+            val textColor = if (it.color.contrast(Color.White) > 0.5f) {
+                Color.White
             } else {
-                Color.BLACK
+                Color.Black
             }
             val secondaryTextColor = textColor.copy(component4 = textColor.alpha / 2)
 

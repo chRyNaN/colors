@@ -17,7 +17,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.chrynan.colors.Color
 import com.chrynan.colors.NamedColor
-import com.chrynan.colors.extension.RED
+import com.chrynan.colors.extension.Red
 import com.chrynan.colors.compose.toComposeColor
 
 class MainActivity : AppCompatActivity() {
@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
                     text = "Colors",
                     textAlign = TextAlign.Start,
                     fontSize = 24.sp,
-                    color = Color.WHITE.toComposeColor()
+                    color = Color.White.toComposeColor()
                 )
             }
         }
@@ -63,8 +63,8 @@ class MainActivity : AppCompatActivity() {
             listOf(Screens.Colors, Screens.Palette).forEach {
                 BottomNavigationItem(
                     selected = currentRoute == it.route,
-                    selectedContentColor = Color.RED.toComposeColor(),
-                    unselectedContentColor = Color.WHITE.toComposeColor(),
+                    selectedContentColor = Color.Red.toComposeColor(),
+                    unselectedContentColor = Color.White.toComposeColor(),
                     icon = {
                         Icon(it.icon, contentDescription = "")
                     },

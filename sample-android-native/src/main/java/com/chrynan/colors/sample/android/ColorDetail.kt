@@ -15,10 +15,10 @@ import com.chrynan.colors.space.ColorModel
 
 @Composable
 fun ColorDetailScreen(namedColor: NamedColor) {
-    val textColor = if (namedColor.color.contrast(Color.WHITE) > 0.5f) {
-        Color.WHITE
+    val textColor = if (namedColor.color.contrast(Color.White) > 0.5f) {
+        Color.White
     } else {
-        Color.BLACK
+        Color.Black
     }
     val secondaryTextColor = textColor.copy(component4 = textColor.alpha / 2)
 
