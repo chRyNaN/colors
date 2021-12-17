@@ -125,6 +125,14 @@ interface Color {
     ): Color
 
     /**
+     * Copies the existing color, changing only the provided values. The [ColorSpace][colorSpace]
+     * of the returned [Color] is the same as this [colorSpace].
+     */
+    fun copy(
+        alpha: Float = this.alpha
+    ): Color
+
+    /**
      * Converts this [Color] instance into a [RgbaColor]. If this [Color] instance is already an
      * [RgbaColor], then it should simply be returned.
      *

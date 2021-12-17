@@ -126,6 +126,15 @@ sealed interface BaseColor : Color {
         colorSpace = this.colorSpace
     )
 
+    override fun copy(alpha: Float): Color =
+        Color(
+            component1 = component1(),
+            component2 = component2(),
+            component3 = component3(),
+            component4 = alpha,
+            colorSpace = this.colorSpace
+        )
+
     override fun toRgbaColor(
         destinationColorSpace: ColorSpace,
         renderIntent: RenderIntent
