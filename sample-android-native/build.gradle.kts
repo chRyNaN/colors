@@ -57,11 +57,14 @@ dependencies {
     implementation(compose.ui)
     implementation(compose.material)
 
-    implementation("androidx.compose.compiler:compiler:1.1.0-beta04")
-    implementation("androidx.compose.ui:ui-tooling:1.1.0-beta04")
+    implementation("androidx.compose.compiler:compiler:1.1.0-rc02")
+    implementation("androidx.compose.ui:ui-tooling:1.1.0-rc01")
     implementation("androidx.activity:activity-compose:1.4.0")
-    implementation("androidx.navigation:navigation-compose:2.4.0-beta02")
-    implementation("androidx.compose.material:material-icons-extended:1.1.0-beta04")
+    implementation("androidx.navigation:navigation-compose:2.4.0-rc01")
+    implementation("androidx.compose.material:material-icons-extended:1.1.0-rc01")
+
+    implementation("com.chrynan.presentation:presentation-compose:0.6.0")
+    implementation("com.chrynan.navigation:navigation-compose:0.1.0")
 
     implementation(project(":colors-compose"))
     implementation(project(":colors-palette"))
