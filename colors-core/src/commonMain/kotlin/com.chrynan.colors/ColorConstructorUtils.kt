@@ -180,6 +180,21 @@ fun Color(hexadecimalString: String): HexadecimalColor {
 }
 
 /**
+ * Retrieves a [RgbaColor] from the provided color values.
+ *
+ * Note that the provided values will be coerced into the SRGB Color Range.
+ *
+ * @see [RgbaColor]
+ */
+fun Color(
+    red: Int,
+    green: Int,
+    blue: Int,
+    alpha: Int = Color.OPAQUE_INT_OPACITY,
+    colorSpace: ColorSpace = ColorSpaces.SRGB
+): RgbaColor = RgbaColor(red = red, green = green, blue = blue, alpha = alpha, colorSpace = colorSpace)
+
+/**
  * Create a [RgbaColor] by passing individual [red], [green], [blue], [alpha], and [colorSpace]
  * components. The default [color space][ColorSpace] is [SRGB][ColorSpaces.SRGB] and
  * the default [alpha] is `1.0` (opaque). [colorSpace] must have a [ColorSpace.componentCount] of
