@@ -13,7 +13,9 @@ interface RgbaColor : Color {
      * This is the first component in a [Color] with a [ColorSpace] that has a [ColorModel.RGB]
      * color model. This should be the same as calling [component1].
      *
-     * Note: Refer to the [colorSpace] value to determine if a [Color] is really an RGB [Color].
+     * *Note:* this value should be in the range defined by the [ColorSpace] and is different from the [redInt] value.
+     *
+     * @see [redInt]
      */
     val red: Float
         get() = colorSpace.coerceComponentInRange(1, component1())
@@ -22,7 +24,9 @@ interface RgbaColor : Color {
      * This is the second component in a [Color] with a [ColorSpace] that has a [ColorModel.RGB]
      * color model. This should be the same as calling [component2].
      *
-     * Note: Refer to the [colorSpace] value to determine if a [Color] is really an RGB [Color].
+     * *Note:* this value should be in the range defined by the [ColorSpace] and is different from the [greenInt] value.
+     *
+     * @see [greenInt]
      */
     val green: Float
         get() = colorSpace.coerceComponentInRange(2, component2())
@@ -31,7 +35,9 @@ interface RgbaColor : Color {
      * This is the second component in a [Color] with a [ColorSpace] that has a [ColorModel.RGB]
      * color model. This should be the same as calling [component2].
      *
-     * Note: Refer to the [colorSpace] value to determine if a [Color] is really an RGB [Color].
+     * *Note:* this value should be in the range defined by the [ColorSpace] and is different from the [blueInt] value.
+     *
+     * @see [blueInt]
      */
     val blue: Float
         get() = colorSpace.coerceComponentInRange(3, component3())

@@ -11,6 +11,8 @@ import kotlin.math.round
 /**
  * Retrieves the SRGB Color [Int] value for this color component. This returns a color [Int] value
  * between 0 and 255.
+ *
+ * @see [RgbaColor.red]
  */
 val RgbaColor.redInt: Int
     get() =
@@ -26,6 +28,8 @@ val RgbaColor.redInt: Int
 /**
  * Retrieves the SRGB Color [Int] value for this color component. This returns a color [Int] value
  * between 0 and 255.
+ *
+ * @see [RgbaColor.green]
  */
 val RgbaColor.greenInt: Int
     get() =
@@ -41,6 +45,8 @@ val RgbaColor.greenInt: Int
 /**
  * Retrieves the SRGB Color [Int] value for this color component. This returns a color [Int] value
  * between 0 and 255.
+ *
+ * @see [RgbaColor.blue]
  */
 val RgbaColor.blueInt: Int
     get() =
@@ -57,6 +63,8 @@ val RgbaColor.blueInt: Int
  * Retrieves the [Int] opacity value for this [Color]. This is similar to the
  * [Color.alpha] value but is an [Int] in the range of 0 to 255, instead of a
  * [Float] in the range of 0 to 1.
+ *
+ * @see [Color.alpha]
  */
 val RgbaColor.alphaInt: Int
     get() = coerceInRange(
