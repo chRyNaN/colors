@@ -1,7 +1,10 @@
+@file:OptIn(ExperimentalNavigationApi::class)
+
 package com.chrynan.colors.sample.android
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
@@ -11,14 +14,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.*
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
-import androidx.navigation.compose.rememberNavController
 import com.chrynan.colors.Color
 import com.chrynan.colors.NamedColor
 import com.chrynan.colors.extension.Red
 import com.chrynan.colors.compose.toComposeColor
+import com.chrynan.navigation.compose.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,14 +26,40 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            val navController = rememberNavController()
+            var goToDetails: ((namedColor: NamedColor) -> Unit)? = null
+
+            val navigator = rememberNavigatorByKey<Screen>(Screen.ColorList) { key ->
+                when (key) {
+                    Screen.ColorList -> {
+                        ColorListScreen(onColorSelected = {
+                            goToDetails?.invoke(it)
+                        })
+                    }
+                    is Screen.ColorDetail -> {
+                        ColorDetailScreen(namedColor = key.namedColor)
+                    }
+                    Screen.Palette -> {
+                        PaletteScreen()
+                    }
+                }
+            }
+
+            goToDetails = { navigator.goTo(Screen.ColorDetail(namedColor = it)) }
+
+            BackHandler {
+                navigator.goBack()
+            }
 
             Scaffold(
                 bottomBar = {
-                    BottomBar(navController)
+                    BottomBar(navigator)
                 }
             ) {
-                MainContent(navController)
+                Column {
+                    Toolbar()
+
+                    NavContainer(navigator)
+                }
             }
         }
     }
@@ -56,13 +82,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     @Composable
-    private fun BottomBar(navController: NavController) {
-        val currentRoute = navController.currentBackStackEntry?.destination?.route
+    private fun BottomBar(navigator: ComposeNavigatorByKey<Screen>) {
+        val currentRoute = navigator.currentKey
 
         BottomNavigation {
-            listOf(Screens.Colors, Screens.Palette).forEach {
+            listOf(Screen.ColorList, Screen.Palette).forEach {
                 BottomNavigationItem(
-                    selected = currentRoute == it.route,
+                    selected = currentRoute == it,
                     selectedContentColor = Color.Red.toComposeColor(),
                     unselectedContentColor = Color.White.toComposeColor(),
                     icon = {
@@ -72,66 +98,10 @@ class MainActivity : AppCompatActivity() {
                         Text(stringResource(it.title))
                     },
                     onClick = {
-                        navController.navigate(it.route)
+                        navigator.goTo(it)
                     }
                 )
             }
         }
-    }
-
-    @Composable
-    private fun MainContent(navController: NavHostController) {
-        NavHost(navController = navController, startDestination = Screens.Colors.route) {
-            navigation(startDestination = Screens.Colors.List.route, route = Screens.Colors.route) {
-                composable(Screens.Colors.List.route) {
-                    ColorListScreen(onColorSelected = {
-                        navController.navigateToColorDetail(namedColor = it)
-                    })
-                }
-                composable(
-                    "${Screens.Colors.Detail.route}/{colorName}/{colorInt}?colorHex={colorHex}",
-                    arguments = listOf(
-                        navArgument("colorName") { type = NavType.StringType },
-                        navArgument("colorInt") { type = NavType.IntType },
-                        navArgument("colorHex") { type = NavType.StringType })
-                ) { backStackEntry ->
-                    val namedColor = backStackEntry.getNamedColorArgument()
-
-                    ColorDetailScreen(namedColor = namedColor)
-                }
-            }
-            composable(Screens.Palette.route) {
-                PaletteScreen()
-            }
-        }
-    }
-
-    private fun NavController.navigateToColorDetail(namedColor: NamedColor) {
-        val cssValue = namedColor.color.cssValue
-
-        val path = if (cssValue.startsWith('#')) {
-            "${Screens.Colors.Detail.route}/${namedColor.name()}/${namedColor.color.colorInt.value}?colorHex=${
-                cssValue.substring(
-                    startIndex = 1
-                )
-            }"
-        } else {
-            "${Screens.Colors.Detail.route}/${namedColor.name()}/${namedColor.color.colorInt.value}"
-        }
-
-        navigate(path)
-    }
-
-    private fun NavBackStackEntry.getNamedColorArgument(): NamedColor {
-        val colorName = arguments?.getString("colorName")!!
-        val colorInt = arguments?.getInt("colorInt")!!
-        val colorHex = arguments?.getString("colorHex")
-
-        val color = colorHex?.let { Color("#$it") } ?: Color(colorInt)
-
-        return NamedColor(
-            name = colorName,
-            color = color
-        )
     }
 }

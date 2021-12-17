@@ -60,7 +60,6 @@ dependencies {
     implementation("androidx.compose.compiler:compiler:1.1.0-rc02")
     implementation("androidx.compose.ui:ui-tooling:1.1.0-rc01")
     implementation("androidx.activity:activity-compose:1.4.0")
-    implementation("androidx.navigation:navigation-compose:2.4.0-rc01")
     implementation("androidx.compose.material:material-icons-extended:1.1.0-rc01")
 
     implementation("com.chrynan.presentation:presentation-compose:0.6.0")
