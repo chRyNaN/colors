@@ -7,8 +7,8 @@ import androidx.compose.runtime.ProvidableCompositionLocal
 import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.staticCompositionLocalOf
 import com.chrynan.colors.theme.Colors
+import com.chrynan.colors.theme.LightDarkColorTheme
 import com.chrynan.colors.theme.lightColors
-import kotlinx.browser.window
 
 /**
  * A [ProvidableCompositionLocal] of the [Colors] interface.
@@ -30,6 +30,15 @@ val LocalColors: ProvidableCompositionLocal<Colors> = staticCompositionLocalOf {
 }
 
 /**
+ * Obtains the appropriate [Colors] instance of this [LightDarkColorTheme] depending on the result
+ * of the [isSystemInDarkTheme] function. If [isSystemInDarkTheme] returns true, then the
+ * [LightDarkColorTheme.dark] [Colors] will be returned. Otherwise, the [LightDarkColorTheme.light]
+ * [Colors] will be returned.
+ */
+@Composable
+fun LightDarkColorTheme.systemBasedColors(): Colors = if (isSystemInDarkTheme()) dark else light
+
+/**
  * Determines whether the current system theme is set to dark mode.
  */
 @Composable
@@ -38,5 +47,4 @@ fun isSystemInDarkTheme(): Boolean = internalIsSystemInDarkTheme()
 
 @Composable
 @ReadOnlyComposable
-internal fun internalIsSystemInDarkTheme(): Boolean =
-    window.matchMedia("(prefers-color-scheme: dark)").matches
+internal expect fun internalIsSystemInDarkTheme(): Boolean

@@ -21,13 +21,14 @@ kotlin {
         }
         val commonMain by getting {
             dependencies {
+                implementation(compose.runtime)
+
                 implementation(project(":colors-core"))
                 implementation(project(":colors-theme"))
             }
         }
         val jsMain by getting {
             dependencies {
-                implementation(compose.runtime)
                 implementation(compose.web.core)
             }
         }

@@ -7,14 +7,12 @@ import androidx.compose.material.Shapes
 import androidx.compose.material.Typography
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.ReadOnlyComposable
-import com.chrynan.colors.theme.Colors
-import com.chrynan.colors.theme.darkColors
-import com.chrynan.colors.theme.lightColors
+import com.chrynan.colors.theme.*
 
 /**
  * Converts this [Colors] value to a Jetpack Compose [androidx.compose.material.Colors] value.
  */
-fun Colors.toJetpackComposeColors(): androidx.compose.material.Colors =
+fun Colors.toComposeColors(): androidx.compose.material.Colors =
     if (isLight) {
         androidx.compose.material.lightColors(
             primary = primary.toComposeColor(),
@@ -83,6 +81,23 @@ fun androidx.compose.material.Colors.toMultiplatformColors(): Colors =
     }
 
 /**
+ * Obtains the appropriate [Colors] instance of this [LightDarkColorTheme] depending on the result
+ * of the [isSystemInDarkTheme] function. If [isSystemInDarkTheme] returns true, then the
+ * [LightDarkColorTheme.dark] [Colors] will be returned. Otherwise, the [LightDarkColorTheme.light]
+ * [Colors] will be returned.
+ */
+@Composable
+fun LightDarkColorTheme.systemBasedColors(): Colors = if (isSystemInDarkTheme()) dark else light
+
+@Composable
+@ReadOnlyComposable
+fun isSystemInDarkTheme(): Boolean = internalIsSystemInDarkTheme()
+
+@Composable
+@ReadOnlyComposable
+internal fun internalIsSystemInDarkTheme(): Boolean = androidx.compose.foundation.isSystemInDarkTheme()
+
+/**
  * A Composable function to create a [MaterialTheme] with the provided [Colors] class.
  *
  * @see [MaterialTheme]
@@ -94,16 +109,44 @@ fun MaterialTheme(
     shapes: Shapes = MaterialTheme.shapes,
     content: @Composable () -> Unit
 ) = MaterialTheme(
-    colors = colors.toJetpackComposeColors(),
+    colors = colors.toComposeColors(),
     typography = typography,
     shapes = shapes,
     content = content
 )
 
+/**
+ * A Composable function to create a [MaterialTheme] with the provided [Colors] class.
+ *
+ * @see [MaterialTheme]
+ */
 @Composable
-@ReadOnlyComposable
-fun isSystemInDarkTheme(): Boolean = internalIsSystemInDarkTheme()
+fun MaterialTheme(
+    colorTheme: ColorTheme,
+    typography: Typography = MaterialTheme.typography,
+    shapes: Shapes = MaterialTheme.shapes,
+    content: @Composable () -> Unit
+) = MaterialTheme(
+    colors = colorTheme.colors().toComposeColors(),
+    typography = typography,
+    shapes = shapes,
+    content = content
+)
 
+/**
+ * A Composable function to create a [MaterialTheme] with the provided [Colors] class.
+ *
+ * @see [MaterialTheme]
+ */
 @Composable
-@ReadOnlyComposable
-internal fun internalIsSystemInDarkTheme(): Boolean = androidx.compose.foundation.isSystemInDarkTheme()
+fun MaterialTheme(
+    colorTheme: LightDarkColorTheme,
+    typography: Typography = MaterialTheme.typography,
+    shapes: Shapes = MaterialTheme.shapes,
+    content: @Composable () -> Unit
+) = MaterialTheme(
+    colors = colorTheme.systemBasedColors().toComposeColors(),
+    typography = typography,
+    shapes = shapes,
+    content = content
+)

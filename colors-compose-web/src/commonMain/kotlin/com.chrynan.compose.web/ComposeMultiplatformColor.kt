@@ -2,6 +2,6 @@ package com.chrynan.compose.web
 
 import com.chrynan.colors.Color
 
-expect class ComposeMultiplatformColor
+expect class ComposeColor
 
-expect fun Color.toComposeMultiplatformColor(): ComposeMultiplatformColor
+expect fun Color.toComposeColor(): ComposeColor
