@@ -15,7 +15,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.chrynan.colors.Color
-import com.chrynan.colors.NamedColor
 import com.chrynan.colors.extension.Red
 import com.chrynan.colors.compose.toComposeColor
 import com.chrynan.navigation.compose.*
@@ -26,13 +25,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            var goToDetails: ((namedColor: NamedColor) -> Unit)? = null
-
-            val navigator = rememberNavigatorByKey<Screen>(Screen.ColorList) { key ->
+            val navigator = rememberNavigatorByIntent<Screen>(Screen.ColorList) { key ->
                 when (key) {
                     Screen.ColorList -> {
                         ColorListScreen(onColorSelected = {
-                            goToDetails?.invoke(it)
+                            navigator.goTo(Screen.ColorDetail(namedColor = it))
                         })
                     }
                     is Screen.ColorDetail -> {
@@ -43,8 +40,6 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
-
-            goToDetails = { navigator.goTo(Screen.ColorDetail(namedColor = it)) }
 
             BackHandler {
                 navigator.goBack()
