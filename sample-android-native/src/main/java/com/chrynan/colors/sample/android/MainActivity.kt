@@ -9,6 +9,8 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
@@ -18,6 +20,7 @@ import com.chrynan.colors.Color
 import com.chrynan.colors.extension.Red
 import com.chrynan.colors.compose.toComposeColor
 import com.chrynan.navigation.compose.*
+import com.chrynan.presentation.compose.layout.unaryPlus
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             val navigator = rememberNavigatorByIntent<Screen>(Screen.ColorList) { key ->
                 when (key) {
                     Screen.ColorList -> {
-                        ColorListScreen(onColorSelected = {
+                        +ColorListScreen(onColorSelected = {
                             navigator.goTo(Screen.ColorDetail(namedColor = it))
                         })
                     }
@@ -78,12 +81,12 @@ class MainActivity : AppCompatActivity() {
 
     @Composable
     private fun BottomBar(navigator: ComposeNavigatorByKey<Screen>) {
-        val currentRoute = navigator.currentKey
+        val currentKey by navigator.keyChanges.collectAsState(initial = navigator.currentKey)
 
         BottomNavigation {
             listOf(Screen.ColorList, Screen.Palette).forEach {
                 BottomNavigationItem(
-                    selected = currentRoute == it,
+                    selected = currentKey == it,
                     selectedContentColor = Color.Red.toComposeColor(),
                     unselectedContentColor = Color.White.toComposeColor(),
                     icon = {
