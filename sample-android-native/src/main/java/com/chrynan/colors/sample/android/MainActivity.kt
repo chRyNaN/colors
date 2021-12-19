@@ -19,6 +19,8 @@ import androidx.compose.ui.unit.sp
 import com.chrynan.colors.Color
 import com.chrynan.colors.extension.Red
 import com.chrynan.colors.compose.toComposeColor
+import com.chrynan.colors.sample.android.screen.ColorDetailScreen
+import com.chrynan.colors.sample.android.screen.ColorListScreen
 import com.chrynan.navigation.compose.*
 import com.chrynan.presentation.compose.layout.unaryPlus
 
@@ -36,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                         })
                     }
                     is Screen.ColorDetail -> {
-                        ColorDetailScreen(namedColor = key.namedColor)
+                        +ColorDetailScreen(namedColor = key.namedColor)
                     }
                     Screen.Palette -> {
                         PaletteScreen()

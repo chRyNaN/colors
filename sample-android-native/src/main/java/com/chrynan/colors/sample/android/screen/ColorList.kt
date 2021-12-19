@@ -1,4 +1,4 @@
-package com.chrynan.colors.sample.android
+package com.chrynan.colors.sample.android.screen
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.background

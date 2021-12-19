@@ -1,4 +1,4 @@
-package com.chrynan.colors.sample.android
+package com.chrynan.colors.sample.android.composable
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -10,6 +10,7 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.composed
 import androidx.compose.ui.graphics.graphicsLayer
 
 @Composable
@@ -37,12 +38,11 @@ fun CollapsingToolbarLayout(
     }
 }
 
-@Composable
-private fun Modifier.collapsingToolbar(lazyListState: LazyListState): Modifier {
+private fun Modifier.collapsingToolbar(lazyListState: LazyListState): Modifier = composed {
     var scrolledY = remember { 0f }
     var previousOffset = remember { 0 }
 
-    return graphicsLayer {
+    graphicsLayer {
         scrolledY += lazyListState.firstVisibleItemScrollOffset - previousOffset
         translationY = scrolledY * 0.5f
         previousOffset = lazyListState.firstVisibleItemScrollOffset
