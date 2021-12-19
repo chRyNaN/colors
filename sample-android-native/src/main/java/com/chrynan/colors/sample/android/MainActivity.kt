@@ -19,8 +19,10 @@ import androidx.compose.ui.unit.sp
 import com.chrynan.colors.Color
 import com.chrynan.colors.extension.Red
 import com.chrynan.colors.compose.toComposeColor
+import com.chrynan.colors.sample.android.navigation.ScreenIntent
 import com.chrynan.colors.sample.android.screen.ColorDetailScreen
 import com.chrynan.colors.sample.android.screen.ColorListScreen
+import com.chrynan.colors.sample.android.screen.PaletteScreen
 import com.chrynan.navigation.compose.*
 import com.chrynan.presentation.compose.layout.unaryPlus
 
@@ -30,17 +32,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            val navigator = rememberNavigatorByIntent<Screen>(Screen.ColorList) { key ->
+            val navigator = rememberNavigatorByIntent<ScreenIntent>(ScreenIntent.ColorList) { key ->
                 when (key) {
-                    Screen.ColorList -> {
+                    ScreenIntent.ColorList -> {
                         +ColorListScreen(onColorSelected = {
-                            navigator.goTo(Screen.ColorDetail(namedColor = it))
+                            navigator.goTo(ScreenIntent.ColorDetail(namedColor = it))
                         })
                     }
-                    is Screen.ColorDetail -> {
+                    is ScreenIntent.ColorDetail -> {
                         +ColorDetailScreen(namedColor = key.namedColor)
                     }
-                    Screen.Palette -> {
+                    ScreenIntent.Palette -> {
                         PaletteScreen()
                     }
                 }
@@ -82,11 +84,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     @Composable
-    private fun BottomBar(navigator: ComposeNavigatorByKey<Screen>) {
+    private fun BottomBar(navigator: ComposeNavigatorByKey<ScreenIntent>) {
         val currentKey by navigator.keyChanges.collectAsState(initial = navigator.currentKey)
 
         BottomNavigation {
-            listOf(Screen.ColorList, Screen.Palette).forEach {
+            listOf(ScreenIntent.ColorList, ScreenIntent.Palette).forEach {
                 BottomNavigationItem(
                     selected = currentKey == it,
                     selectedContentColor = Color.Red.toComposeColor(),

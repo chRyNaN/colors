@@ -1,4 +1,4 @@
-package com.chrynan.colors.sample.android
+package com.chrynan.colors.sample.android.screen
 
 import android.util.Log
 import androidx.compose.foundation.Image
@@ -18,6 +18,7 @@ import com.chrynan.colors.compose.toComposeColor
 import com.chrynan.colors.palette.Palette
 import com.chrynan.colors.palette.Swatch
 import com.chrynan.colors.palette.generate
+import com.chrynan.colors.sample.android.R
 
 @Composable
 fun PaletteScreen() {
