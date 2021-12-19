@@ -5,7 +5,7 @@ import com.chrynan.colors.space.ColorModel
 // TODO this class should be a value class when it supports multiple properties
 internal class BaseHexadecimalColor(
     override val value: ULong,
-    private val hexColorString: String
+    hexColorString: String
 ) : Color,
     BaseColor,
     RgbaColor,
@@ -20,11 +20,11 @@ internal class BaseHexadecimalColor(
     override val cssValue: String
         get() = hexString
 
-    override val hexString: String
-        get() = if (hexColorString.startsWith(HexadecimalColor.HEX_CHAR)) hexColorString else "${HexadecimalColor.HEX_CHAR}$hexColorString"
+    override val hexString: String =
+        if (hexColorString.startsWith(HexadecimalColor.HEX_CHAR)) hexColorString else "${HexadecimalColor.HEX_CHAR}$hexColorString"
 
-    override val hexStringWithoutPrefix: String
-        get() = hexString.substring(1)
+    override val hexStringWithoutPrefix: String =
+        hexString.removePrefix("${HexadecimalColor.HEX_CHAR}")
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true

@@ -21,5 +21,5 @@ object HexadecimalColorWithoutPrefixSerializer : KSerializer<HexadecimalColor> {
     }
 
     override fun deserialize(decoder: Decoder): HexadecimalColor =
-        Color(hexadecimalString = decoder.decodeString())
+        Color(hex = decoder.decodeString())
 }

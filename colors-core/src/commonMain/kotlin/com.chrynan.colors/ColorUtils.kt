@@ -2,9 +2,14 @@
 
 package com.chrynan.colors
 
+import android.R.attr
 import com.chrynan.colors.space.ColorSpace
 import com.chrynan.colors.space.ColorSpaces
 import kotlin.math.abs
+import android.R.attr.digits
+import com.chrynan.colors.space.RenderIntent
+import java.lang.StringBuilder
+
 
 /**
  * Creates a [ColorInt] from this [Int] value.
@@ -88,6 +93,44 @@ fun lerp(start: Color, stop: Color, fraction: Float): Color {
  */
 fun Color.contrast(other: Color): Float =
     abs(luminance() - other.luminance()).coerceIn(0.0f, 1.0f)
+
+/**
+ * Converts this [Color] to a Hexadecimal [String] representation. For example, the Color
+ * White, RgbaColor(red = 255, green = 255, blue = 255, alpha = 255), would return a [String]
+ * representation similar to the following: '#FFFFFF'.
+ *
+ * **Note:** This function will convert this [Color] to an [RgbaColor] if it is not one already.
+ *
+ * @param [includePrefix] Whether to include the Hexadecimal prefix character, '#', in the output.
+ *
+ * @param [uppercase] Whether all of the letters in the output should be uppercase.
+ *
+ * @param [alwaysIncludeAlpha] Whether to include the alpha component even when the color is
+ * completely opaque.
+ *
+ * @param [destinationColorSpace] The [ColorSpace] used if this color is not an [RgbaColor] and has
+ * to be converted with the [Color.toRgbaColor] function.
+ *
+ * @param [renderIntent] The [RenderIntent] used if this color is not an [RgbaColor] and has to be
+ * converted with the [Color.toRgbaColor] function.
+ *
+ * @see [Color.toRgbaColor]
+ * @see [RgbaColor.toHexString]
+ */
+fun Color.toHexString(
+    includePrefix: Boolean = true,
+    uppercase: Boolean = true,
+    alwaysIncludeAlpha: Boolean = false,
+    destinationColorSpace: ColorSpace = ColorSpaces.SRGB,
+    renderIntent: RenderIntent = RenderIntent.PERCEPTUAL
+): String = toRgbaColor(
+    destinationColorSpace = destinationColorSpace,
+    renderIntent = renderIntent
+).toHexString(
+    includePrefix = includePrefix,
+    uppercase = uppercase,
+    alwaysIncludeAlpha = alwaysIncludeAlpha
+)
 
 /**
  * Linearly interpolate between [start] and [stop] with [fraction] fraction between them.

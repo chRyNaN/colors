@@ -218,6 +218,22 @@ fun RgbaColor.toHexString(
     uppercase: Boolean = true,
     alwaysIncludeAlpha: Boolean = false
 ): String {
+    if (this is HexadecimalColor) {
+        return if (includePrefix) {
+            if (uppercase) {
+                hexString.uppercase()
+            } else {
+                hexString
+            }
+        } else {
+            if (uppercase) {
+                hexStringWithoutPrefix.uppercase()
+            } else {
+                hexStringWithoutPrefix
+            }
+        }
+    }
+
     val alphaHexString = componentToHexString(alphaInt)
     val redHexString = componentToHexString(redInt)
     val greenHexString = componentToHexString(greenInt)

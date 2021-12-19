@@ -5,7 +5,8 @@ package com.chrynan.colors
 /**
  * A [Color] interface that represents a [Color] with a hexadecimal [String] value representation.
  */
-interface HexadecimalColor : Color {
+interface HexadecimalColor : Color,
+    RgbaColor {
 
     /**
      * The hexadecimal [String] value of this [Color] including the '#' character prefix.

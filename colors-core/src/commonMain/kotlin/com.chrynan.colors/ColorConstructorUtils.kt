@@ -149,14 +149,14 @@ fun Color(colorULong: ULong): Color {
 }
 
 /**
- * Retrieves a [HexadecimalColor] from the provided [hexadecimalString]. The provided [hexadecimalString] must be in a
+ * Retrieves a [HexadecimalColor] from the provided [hex]. The provided [hex] must be in a
  * valid Hex Color format, with or without the preceeding '#' character.
  *
- * @throws [IllegalArgumentException] if the provided [hexadecimalString] is not in a valid Hex Color
+ * @throws [IllegalArgumentException] if the provided [hex] is not in a valid Hex Color
  * format.
  */
-fun Color(hexadecimalString: String): HexadecimalColor {
-    var formattedHexString = hexadecimalString.trim()
+fun Color(hex: String): HexadecimalColor {
+    var formattedHexString = hex.trim()
         .removePrefix("${HexadecimalColor.HEX_CHAR}")
         .lowercase()
 
