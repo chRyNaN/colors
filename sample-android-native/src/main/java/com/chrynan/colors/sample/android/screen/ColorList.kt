@@ -9,6 +9,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -41,7 +42,7 @@ class ColorListScreen(private val onColorSelected: (NamedColor) -> Unit) :
     @Composable
     override fun OnLayout(state: ColorListState) {
         when (state) {
-            is ColorListState.Loading -> CircularProgressIndicator()
+            is ColorListState.Loading -> renderLoading()
             is ColorListState.DisplayingColors -> renderColors(state = state)
             is ColorListState.DisplayingError -> Text(state.message)
         }
@@ -51,6 +52,14 @@ class ColorListScreen(private val onColorSelected: (NamedColor) -> Unit) :
         super.onBind()
 
         intent(ColorListIntent.Load)
+    }
+
+    @SuppressLint("ComposableNaming")
+    @Composable
+    private fun renderLoading() {
+        Box(modifier = Modifier.fillMaxSize()) {
+            CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
+        }
     }
 
     @SuppressLint("ComposableNaming")
