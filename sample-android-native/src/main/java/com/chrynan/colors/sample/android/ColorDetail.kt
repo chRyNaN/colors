@@ -3,6 +3,7 @@ package com.chrynan.colors.sample.android
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyListScope
+import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -121,12 +122,20 @@ fun Header(text: String, color: Color) {
 fun LazyListScope.ContentRow(
     header: String,
     headerTextColor: Color,
+    isContentSelectable: Boolean = true,
     content: @Composable () -> Unit
 ) {
     item {
         Column(modifier = Modifier.padding(top = 16.dp)) {
             Header(text = header, color = headerTextColor)
-            content()
+
+            if (isContentSelectable) {
+                SelectionContainer {
+                    content()
+                }
+            } else {
+                content()
+            }
         }
     }
 }
