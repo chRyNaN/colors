@@ -9,7 +9,6 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -85,7 +84,7 @@ class MainActivity : AppCompatActivity() {
 
     @Composable
     private fun BottomBar(navigator: ComposeNavigatorByKey<ScreenIntent>) {
-        val currentKey by navigator.keyChanges.collectAsState(initial = navigator.currentKey)
+        val currentKey by navigator.currentKeyAsState()
 
         BottomNavigation {
             listOf(ScreenIntent.ColorList, ScreenIntent.Palette).forEach {

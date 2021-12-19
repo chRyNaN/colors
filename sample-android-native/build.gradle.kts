@@ -63,7 +63,7 @@ dependencies {
     implementation("androidx.compose.material:material-icons-extended:1.1.0-rc01")
 
     implementation("com.chrynan.presentation:presentation-compose:0.6.0")
-    implementation("com.chrynan.navigation:navigation-compose:0.2.0")
+    implementation("com.chrynan.navigation:navigation-compose:0.2.2")
 
     implementation(project(":colors-compose"))
     implementation(project(":colors-palette"))
