@@ -22,7 +22,7 @@ internal class BaseRgbaColor(
         if (this === other) return true
         if (other == null || this::class != other::class) return false
 
-        other as BaseHexadecimalColor
+        other as BaseRgbaColor
 
         if (value != other.value) return false
 

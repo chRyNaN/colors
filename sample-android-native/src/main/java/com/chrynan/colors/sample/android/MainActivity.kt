@@ -10,11 +10,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.chrynan.colors.Color
 import com.chrynan.colors.extension.Red
 import com.chrynan.colors.compose.toComposeColor
@@ -57,27 +53,8 @@ class MainActivity : AppCompatActivity() {
                 }
             ) {
                 Column {
-                    Toolbar()
-
                     NavContainer(navigator)
                 }
-            }
-        }
-    }
-
-    @Composable
-    private fun Toolbar() {
-        TopAppBar {
-            Box(modifier = Modifier.padding(8.dp)) {
-                Text(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .wrapContentHeight(),
-                    text = "Colors",
-                    textAlign = TextAlign.Start,
-                    fontSize = 24.sp,
-                    color = Color.White.toComposeColor()
-                )
             }
         }
     }

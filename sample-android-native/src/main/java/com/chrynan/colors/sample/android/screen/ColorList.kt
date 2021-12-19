@@ -6,14 +6,19 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.Text
+import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.runtime.getValue
 import com.chrynan.colors.Color
 import com.chrynan.colors.NamedColor
 import com.chrynan.colors.contrast
@@ -65,29 +70,71 @@ class ColorListScreen(private val onColorSelected: (NamedColor) -> Unit) :
     @SuppressLint("ComposableNaming")
     @Composable
     private fun renderColors(state: ColorListState.DisplayingColors) {
-        LazyColumn {
-            items(items = state.colors, key = { it.color.colorLong.value }) {
-                val textColor = if (it.color.contrast(Color.White) > 0.5f) {
-                    Color.White
-                } else {
-                    Color.Black
-                }
-                val secondaryTextColor = textColor.copy(component4 = textColor.alpha / 2)
+        val listState = rememberLazyListState()
 
-                Box(
+        val toolbarColorName by remember {
+            derivedStateOf {
+                state.colors[listState.firstVisibleItemIndex].name()
+            }
+        }
+
+        val toolbarBackgroundColor by remember {
+            derivedStateOf {
+                state.colors[listState.firstVisibleItemIndex].color.getContentColor()
+            }
+        }
+
+        Box {
+            LazyColumn(state = listState) {
+                items(items = state.colors, key = { it.color.colorLong.value }) {
+                    val contentColor = it.color.getContentColor()
+                    val textColor = contentColor.getTextColor()
+                    val secondaryTextColor = textColor.getSecondaryTextColor()
+
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(200.dp)
+                            .background(contentColor.toComposeColor())
+                            .clickable { onColorSelected.invoke(it) }
+                            .padding(vertical = 16.dp)
+                    ) {
+                        TextContent(
+                            namedColor = it,
+                            primaryTextColor = textColor,
+                            secondaryTextColor = secondaryTextColor
+                        )
+                    }
+                }
+            }
+
+            Toolbar(
+                titleText = toolbarColorName ?: "Colors",
+                backgroundColor = toolbarBackgroundColor,
+                textColor = toolbarBackgroundColor.getTextColor()
+            )
+        }
+    }
+
+    @Composable
+    private fun Toolbar(
+        titleText: String = "Colors",
+        backgroundColor: Color,
+        textColor: Color
+    ) {
+        TopAppBar(
+            backgroundColor = backgroundColor.toComposeColor()
+        ) {
+            Box(modifier = Modifier.padding(8.dp)) {
+                Text(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(200.dp)
-                        .background(it.color.toComposeColor())
-                        .clickable { onColorSelected.invoke(it) }
-                        .padding(vertical = 16.dp)
-                ) {
-                    TextContent(
-                        namedColor = it,
-                        primaryTextColor = textColor,
-                        secondaryTextColor = secondaryTextColor
-                    )
-                }
+                        .wrapContentHeight(),
+                    text = titleText,
+                    textAlign = TextAlign.Start,
+                    fontSize = 24.sp,
+                    color = textColor.toComposeColor()
+                )
             }
         }
     }
@@ -123,4 +170,15 @@ class ColorListScreen(private val onColorSelected: (NamedColor) -> Unit) :
             )
         }
     }
+
+    private fun Color.getContentColor(): Color = if (this.alpha == 0f) Color.White else this
+
+    private fun Color.getTextColor(): Color =
+        if (contrast(Color.White) > 0.5f) {
+            Color.White
+        } else {
+            Color.Black
+        }
+
+    private fun Color.getSecondaryTextColor(): Color = copy(component4 = alpha / 2)
 }
