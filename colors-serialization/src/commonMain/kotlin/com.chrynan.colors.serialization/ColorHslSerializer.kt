@@ -42,6 +42,6 @@ object ColorHslSerializer : KSerializer<Color> {
 
         compositeDecoder.endStructure(descriptor)
 
-        return convertHslComponentsToColor(floatArrayOf(hue, saturation, lightness))
+        return floatArrayOf(hue, saturation, lightness).convertHslComponentsToColor()
     }
 }

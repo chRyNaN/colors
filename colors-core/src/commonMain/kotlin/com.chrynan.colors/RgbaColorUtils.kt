@@ -143,7 +143,9 @@ fun RgbaColor.toHslComponents(): FloatArray {
  *
  * Note that an exception is thrown if the provided [FloatArray] size is not 3.
  */
-fun convertHslComponentsToColor(hsl: FloatArray): RgbaColor {
+fun FloatArray.convertHslComponentsToColor(): RgbaColor {
+    val hsl = this
+
     require(hsl.size == 3) {
         "There must be exactly three components for an HSL component FloatArray to be converted into a Color."
     }

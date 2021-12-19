@@ -2,14 +2,10 @@
 
 package com.chrynan.colors
 
-import android.R.attr
 import com.chrynan.colors.space.ColorSpace
 import com.chrynan.colors.space.ColorSpaces
 import kotlin.math.abs
-import android.R.attr.digits
 import com.chrynan.colors.space.RenderIntent
-import java.lang.StringBuilder
-
 
 /**
  * Creates a [ColorInt] from this [Int] value.
