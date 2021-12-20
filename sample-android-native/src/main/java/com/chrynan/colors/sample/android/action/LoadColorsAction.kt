@@ -19,7 +19,7 @@ class LoadColorsAction : Action<ColorListIntent.Load, ColorListState, ColorListC
             emit(ColorListChange.StartedLoading)
 
             try {
-                val colors = Color.namedColors.toList()
+                val colors = Color.namedColors.toList().sortedBy { it.name() }
 
                 emit(ColorListChange.Loaded(colors = colors))
             } catch (e: Exception) {

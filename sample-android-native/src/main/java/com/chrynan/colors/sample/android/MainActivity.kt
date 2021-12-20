@@ -18,6 +18,7 @@ import com.chrynan.colors.sample.android.navigation.ScreenIntent
 import com.chrynan.colors.sample.android.screen.ColorDetailScreen
 import com.chrynan.colors.sample.android.screen.ColorListScreen
 import com.chrynan.colors.sample.android.screen.PaletteScreen
+import com.chrynan.colors.sample.android.screen.RandomColorScreen
 import com.chrynan.navigation.compose.*
 import com.chrynan.presentation.compose.layout.unaryPlus
 
@@ -39,6 +40,9 @@ class MainActivity : AppCompatActivity() {
                     }
                     ScreenIntent.Palette -> {
                         PaletteScreen()
+                    }
+                    ScreenIntent.RandomColor -> {
+                        +RandomColorScreen()
                     }
                 }
             }
@@ -64,7 +68,7 @@ class MainActivity : AppCompatActivity() {
         val currentKey by navigator.currentKeyAsState()
 
         BottomNavigation {
-            listOf(ScreenIntent.ColorList, ScreenIntent.Palette).forEach {
+            listOf(ScreenIntent.ColorList, ScreenIntent.RandomColor, ScreenIntent.Palette).forEach {
                 BottomNavigationItem(
                     selected = currentKey == it,
                     selectedContentColor = Color.Red.toComposeColor(),

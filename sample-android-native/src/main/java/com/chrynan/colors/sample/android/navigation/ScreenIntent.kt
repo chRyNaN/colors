@@ -5,6 +5,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Colorize
 import androidx.compose.material.icons.filled.List
 import androidx.compose.material.icons.filled.Palette
+import androidx.compose.material.icons.filled.Shuffle
 import androidx.compose.ui.graphics.vector.ImageVector
 import com.chrynan.colors.NamedColor
 import com.chrynan.colors.sample.android.R
@@ -28,5 +29,10 @@ sealed class ScreenIntent(
     object Palette : ScreenIntent(
         title = R.string.screen_name_palette,
         icon = Icons.Filled.Palette
+    )
+
+    object RandomColor : ScreenIntent(
+        title = R.string.screen_name_random_color,
+        icon = Icons.Filled.Shuffle
     )
 }

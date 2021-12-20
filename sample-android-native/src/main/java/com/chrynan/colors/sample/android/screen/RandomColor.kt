@@ -5,7 +5,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.text.selection.SelectionContainer
-import androidx.compose.material.CircularProgressIndicator
+import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -15,62 +15,51 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.chrynan.colors.*
 import com.chrynan.colors.compose.toComposeColor
+import com.chrynan.colors.sample.android.action.GetRandomColorAction
 import com.chrynan.colors.sample.android.composable.CollapsingToolbarLayout
-import com.chrynan.colors.sample.android.action.LoadColorDetailAction
-import com.chrynan.colors.sample.android.presenter.ColorDetailPresenter
-import com.chrynan.colors.sample.android.reducer.ColorDetailReducer
-import com.chrynan.colors.sample.android.state.ColorDetailChange
-import com.chrynan.colors.sample.android.state.ColorDetailIntent
-import com.chrynan.colors.sample.android.state.ColorDetailState
+import com.chrynan.colors.sample.android.presenter.RandomColorPresenter
+import com.chrynan.colors.sample.android.reducer.RandomColorReducer
+import com.chrynan.colors.sample.android.state.RandomColorChange
+import com.chrynan.colors.sample.android.state.RandomColorIntent
+import com.chrynan.colors.sample.android.state.RandomColorState
 import com.chrynan.colors.space.ColorModel
 import com.chrynan.presentation.PresenterFactory
 import com.chrynan.presentation.compose.layout.Layout
 
-class ColorDetailScreen(private val namedColor: NamedColor) :
-    Layout<ColorDetailIntent, ColorDetailState, ColorDetailChange>() {
+class RandomColorScreen : Layout<RandomColorIntent, RandomColorState, RandomColorChange>() {
 
-    override val presenterFactory: PresenterFactory<ColorDetailIntent, ColorDetailState, ColorDetailChange> =
+    override val presenterFactory: PresenterFactory<RandomColorIntent, RandomColorState, RandomColorChange> =
         PresenterFactory { view ->
-            ColorDetailPresenter(
+            RandomColorPresenter(
                 view = view,
-                reducer = ColorDetailReducer(),
-                loadDetail = LoadColorDetailAction()
+                reducer = RandomColorReducer(),
+                getRandomColor = GetRandomColorAction()
             )
         }
 
     @Composable
-    override fun OnLayout(state: ColorDetailState) {
+    override fun OnLayout(state: RandomColorState) {
         when (state) {
-            is ColorDetailState.Loading -> renderLoading()
-            is ColorDetailState.DisplayingColor -> renderDisplayingColor(state = state)
-            is ColorDetailState.DisplayingError -> Text(state.message)
+            is RandomColorState.DisplayingColor -> renderColor(state)
+            is RandomColorState.DisplayingError -> Text(state.message)
         }
     }
 
     override fun onBind() {
         super.onBind()
 
-        intent(ColorDetailIntent.Load(namedColor = namedColor))
+        intent(RandomColorIntent.GetRandomColor)
     }
 
     @SuppressLint("ComposableNaming")
     @Composable
-    private fun renderLoading() {
-        Box(modifier = Modifier.fillMaxSize()) {
-            CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
-        }
-    }
-
-    @SuppressLint("ComposableNaming")
-    @Composable
-    fun renderDisplayingColor(state: ColorDetailState.DisplayingColor) {
-        val namedColor = state.namedColor
+    private fun renderColor(state: RandomColorState.DisplayingColor) {
         val textColor = state.textColor
         val secondaryTextColor = state.secondaryTextColor
 
         Box(
             modifier = Modifier
-                .background(namedColor.color.toComposeColor())
+                .background(state.color.toComposeColor())
                 .padding(16.dp)
                 .fillMaxWidth()
                 .fillMaxHeight()
@@ -78,10 +67,16 @@ class ColorDetailScreen(private val namedColor: NamedColor) :
             CollapsingToolbarLayout(toolbar = {
                 Box(modifier = Modifier.height(240.dp).fillMaxWidth())
             }) {
-                val color: Color = namedColor.color
+                val color: Color = state.color
 
-                ContentRow(header = "Name", headerTextColor = secondaryTextColor) {
-                    TextContent(text = namedColor.name() ?: "", textColor = textColor)
+                item {
+                    Box(modifier = Modifier.fillMaxWidth()) {
+                        Button(
+                            modifier = Modifier.align(Alignment.Center),
+                            onClick = { intent(RandomColorIntent.GetRandomColor) }) {
+                            Text("Generate Next")
+                        }
+                    }
                 }
 
                 ContentRow(header = "CSS Value", headerTextColor = secondaryTextColor) {
@@ -115,7 +110,7 @@ class ColorDetailScreen(private val namedColor: NamedColor) :
                     )
                 }
 
-                if (namedColor.color.colorSpace.model == ColorModel.RGB && color is RgbaColor) {
+                if (state.color.colorSpace.model == ColorModel.RGB && color is RgbaColor) {
                     (0 until 4).forEach { index ->
                         ComponentRowRgbaColor(
                             color = color,
