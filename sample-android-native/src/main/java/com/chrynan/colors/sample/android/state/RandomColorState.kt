@@ -8,8 +8,11 @@ import com.chrynan.presentation.State
 sealed class RandomColorState : State {
 
     data class DisplayingColor(
-        val color: Color, val textColor: Color,
-        val secondaryTextColor: Color
+        val color: Color,
+        val contentColor: Color,
+        val secondaryContentColor: Color,
+        val colorVariant: Color,
+        val colorVariantContentColor: Color
     ) : RandomColorState()
 
     data class DisplayingError(val message: String) : RandomColorState()
@@ -27,8 +30,10 @@ sealed class RandomColorChange : Change {
 
     data class RetrievedColor(
         val color: Color,
-        val textColor: Color,
-        val secondaryTextColor: Color
+        val contentColor: Color,
+        val secondaryContentColor: Color,
+        val colorVariant: Color,
+        val colorVariantContentColor: Color
     ) : RandomColorChange()
 
     data class EncounteredError(val message: String) : RandomColorChange()

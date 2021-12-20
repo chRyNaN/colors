@@ -2,6 +2,7 @@ package com.chrynan.colors.sample.android.action
 
 import com.chrynan.colors.Color
 import com.chrynan.colors.contrast
+import com.chrynan.colors.darker
 import com.chrynan.colors.nextColor
 import com.chrynan.colors.sample.android.state.RandomColorChange
 import com.chrynan.colors.sample.android.state.RandomColorIntent
@@ -22,18 +23,18 @@ class GetRandomColorAction :
     ): Flow<RandomColorChange> = flow {
         try {
             val color = random.nextColor()
-            val textColor = if (color.contrast(Color.White) > 0.5f) {
-                Color.White
-            } else {
-                Color.Black
-            }
+            val textColor = color.toContentColor()
             val secondaryTextColor = textColor.copy(component4 = textColor.alpha / 2)
+
+            val colorVariant = color.toRgbaColor().darker()
 
             emit(
                 RandomColorChange.RetrievedColor(
                     color = color,
-                    textColor = textColor,
-                    secondaryTextColor = secondaryTextColor
+                    contentColor = textColor,
+                    secondaryContentColor = secondaryTextColor,
+                    colorVariant = colorVariant,
+                    colorVariantContentColor = colorVariant.toContentColor(),
                 )
             )
         } catch (e: Exception) {
@@ -44,4 +45,11 @@ class GetRandomColorAction :
             )
         }
     }
+
+    private fun Color.toContentColor(): Color =
+        if (contrast(Color.White) > 0.5f) {
+            Color.White
+        } else {
+            Color.Black
+        }
 }

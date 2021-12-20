@@ -26,7 +26,7 @@ internal class BaseXyzColor(
         if (this === other) return true
         if (other == null || this::class != other::class) return false
 
-        other as BaseHexadecimalColor
+        other as BaseXyzColor
 
         if (value != other.value) return false
 

@@ -192,7 +192,8 @@ fun Color(
     blue: Int,
     alpha: Int = Color.OPAQUE_INT_OPACITY,
     colorSpace: ColorSpace = ColorSpaces.SRGB
-): RgbaColor = RgbaColor(red = red, green = green, blue = blue, alpha = alpha, colorSpace = colorSpace)
+): RgbaColor =
+    RgbaColor(red = red, green = green, blue = blue, alpha = alpha, colorSpace = colorSpace)
 
 /**
  * Create a [RgbaColor] by passing individual [red], [green], [blue], [alpha], and [colorSpace]
@@ -305,6 +306,65 @@ fun RgbaColor(
         alpha = newA,
         colorSpace = colorSpace
     )
+}
+
+/**
+ * Creates a [Color] from the provided HSL components.
+ *
+ * **Note:** This was adapted from the open source Jetpack Compose library.
+ *
+ * [hue] The color value in the range (0..360), where 0 is red, 120 is green, and 240 is blue
+ * [saturation] The amount of hue represented in the color in the range (0..1), where 0 has no color
+ * and 1 is fully saturated.
+ * [lightness] A range of (0..1) where 0 is black, 0.5 is fully colored, and 1 is white.
+ * [colorSpace] The RGB color space used to calculate the Color from the HSL values.
+ */
+fun HslColor(
+    hue: Float,
+    saturation: Float,
+    lightness: Float,
+    alpha: Float = 1f,
+    colorSpace: ColorSpace = ColorSpaces.SRGB
+): Color {
+    require(hue in 0f..360f && saturation in 0f..1f && lightness in 0f..1f) {
+        "HSL ($hue, $saturation, $lightness) must be in range (0..360, 0..1, 0..1)"
+    }
+
+    val red = hslToRgbComponent(0, hue, saturation, lightness)
+    val green = hslToRgbComponent(8, hue, saturation, lightness)
+    val blue = hslToRgbComponent(4, hue, saturation, lightness)
+
+    return Color(red, green, blue, alpha, colorSpace)
+}
+
+/**
+ * Creates a [Color] from the provided HSV components.
+ *
+ * **Note:** This was adapted from the open source Jetpack Compose library.
+ *
+ * @param hue The color value in the range (0..360), where 0 is red, 120 is green, and
+ * 240 is blue
+ * @param saturation The amount of [hue] represented in the color in the range (0..1),
+ * where 0 has no color and 1 is fully saturated.
+ * @param value The strength of the color, where 0 is black.
+ * @param colorSpace The RGB color space used to calculate the Color from the HSV values.
+ */
+fun HsvColor(
+    hue: Float,
+    saturation: Float,
+    value: Float,
+    alpha: Float = 1f,
+    colorSpace: ColorSpace = ColorSpaces.SRGB
+): Color {
+    require(hue in 0f..360f && saturation in 0f..1f && value in 0f..1f) {
+        "HSV ($hue, $saturation, $value) must be in range (0..360, 0..1, 0..1)"
+    }
+
+    val red = hsvToRgbComponent(5, hue, saturation, value)
+    val green = hsvToRgbComponent(3, hue, saturation, value)
+    val blue = hsvToRgbComponent(1, hue, saturation, value)
+
+    return Color(red, green, blue, alpha, colorSpace)
 }
 
 /**

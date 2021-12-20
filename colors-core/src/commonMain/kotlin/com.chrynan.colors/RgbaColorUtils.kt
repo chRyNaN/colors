@@ -3,10 +3,7 @@
 package com.chrynan.colors
 
 import com.chrynan.colors.space.ColorModel
-import kotlin.math.abs
-import kotlin.math.max
-import kotlin.math.min
-import kotlin.math.round
+import kotlin.math.*
 
 /**
  * Retrieves the SRGB Color [Int] value for this color component. This returns a color [Int] value
@@ -256,6 +253,45 @@ fun RgbaColor.toHexString(
     }
 
     return if (uppercase) result.uppercase() else result.lowercase()
+}
+
+/**
+ * "Lightens" this [RgbaColor] by converting it to HSL components, increasing the Lightness by the
+ * absolute value of the provided [by] value, converting back to an [RgbaColor], and returning the
+ * result.
+ */
+fun RgbaColor.lighter(by: Float = 0.1f): RgbaColor {
+    val (h, s, l) = toHslComponents()
+
+    val newL = l + (by.absoluteValue).coerceIn(0.0f, 1.0f)
+
+    return floatArrayOf(h, s, newL).convertHslComponentsToColor()
+}
+
+/**
+ * "Darkens" this [RgbaColor] by converting it to HSL components, decreasing the Lightness by the
+ * absolute value of the provided [by] value, converting back to an [RgbaColor], and returning the
+ * result.
+ */
+fun RgbaColor.darker(by: Float = 0.1f): RgbaColor {
+    val (h, s, l) = toHslComponents()
+
+    val newL = (l - by.absoluteValue).coerceIn(0.0f, 1.0f)
+
+    return floatArrayOf(h, s, newL).convertHslComponentsToColor()
+}
+
+internal fun hslToRgbComponent(n: Int, h: Float, s: Float, l: Float): Float {
+    val k = (n.toFloat() + h / 30f) % 12f
+    val a = s * min(l, 1f - l)
+
+    return l - a * max(-1f, minOf(k - 3, 9 - k, 1f))
+}
+
+internal fun hsvToRgbComponent(n: Int, h: Float, s: Float, v: Float): Float {
+    val k = (n.toFloat() + h / 60f) % 6f
+
+    return v - (v * s * max(0f, minOf(k, 4 - k, 1f)))
 }
 
 private fun componentToHexString(component: Int): String {

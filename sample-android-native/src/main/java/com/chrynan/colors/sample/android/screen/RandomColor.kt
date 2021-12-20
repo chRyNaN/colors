@@ -1,12 +1,18 @@
 package com.chrynan.colors.sample.android.screen
 
 import android.annotation.SuppressLint
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyListScope
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material.Button
+import androidx.compose.material.ButtonDefaults
+import androidx.compose.material.Icon
 import androidx.compose.material.Text
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Casino
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -54,12 +60,13 @@ class RandomColorScreen : Layout<RandomColorIntent, RandomColorState, RandomColo
     @SuppressLint("ComposableNaming")
     @Composable
     private fun renderColor(state: RandomColorState.DisplayingColor) {
-        val textColor = state.textColor
-        val secondaryTextColor = state.secondaryTextColor
+        val color = state.color
+        val textColor = state.contentColor
+        val secondaryTextColor = state.secondaryContentColor
 
         Box(
             modifier = Modifier
-                .background(state.color.toComposeColor())
+                .background(color.toComposeColor())
                 .padding(16.dp)
                 .fillMaxWidth()
                 .fillMaxHeight()
@@ -67,14 +74,30 @@ class RandomColorScreen : Layout<RandomColorIntent, RandomColorState, RandomColo
             CollapsingToolbarLayout(toolbar = {
                 Box(modifier = Modifier.height(240.dp).fillMaxWidth())
             }) {
-                val color: Color = state.color
 
                 item {
                     Box(modifier = Modifier.fillMaxWidth()) {
                         Button(
                             modifier = Modifier.align(Alignment.Center),
-                            onClick = { intent(RandomColorIntent.GetRandomColor) }) {
-                            Text("Generate Next")
+                            colors = ButtonDefaults.buttonColors(
+                                backgroundColor = state.colorVariant.toComposeColor(),
+                                contentColor = state.colorVariantContentColor.toComposeColor()
+                            ),
+                            shape = RoundedCornerShape(50),
+                            onClick = { intent(RandomColorIntent.GetRandomColor) }
+                        ) {
+                            Row {
+                                Icon(
+                                    Icons.Filled.Casino,
+                                    contentDescription = null,
+                                    tint = state.colorVariantContentColor.toComposeColor()
+                                )
+
+                                Text(
+                                    modifier = Modifier.padding(start = 8.dp),
+                                    text = "Generate Next"
+                                )
+                            }
                         }
                     }
                 }

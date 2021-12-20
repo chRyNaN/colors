@@ -13,8 +13,10 @@ class RandomColorReducer : Reducer<RandomColorState, RandomColorChange> {
         when (change) {
             is RandomColorChange.RetrievedColor -> RandomColorState.DisplayingColor(
                 color = change.color,
-                textColor = change.textColor,
-                secondaryTextColor = change.secondaryTextColor
+                contentColor = change.contentColor,
+                secondaryContentColor = change.secondaryContentColor,
+                colorVariant = change.colorVariant,
+                colorVariantContentColor = change.colorVariantContentColor
             )
             is RandomColorChange.EncounteredError -> RandomColorState.DisplayingError(message = change.message)
         }
