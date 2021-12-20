@@ -81,26 +81,26 @@ class ColorDetailScreen(private val namedColor: NamedColor) :
                 val color: Color = namedColor.color
 
                 ContentRow(header = "Name", headerTextColor = secondaryTextColor) {
-                    TextContent(text = namedColor.name() ?: "", textColor = textColor)
+                    NamedColorTextContent(text = namedColor.name() ?: "", textColor = textColor)
                 }
 
                 ContentRow(header = "CSS Value", headerTextColor = secondaryTextColor) {
-                    TextContent(text = color.cssValue, textColor = textColor)
+                    NamedColorTextContent(text = color.cssValue, textColor = textColor)
                 }
 
                 ContentRow(header = "Hex String", headerTextColor = secondaryTextColor) {
-                    TextContent(text = color.toHexString(), textColor = textColor)
+                    NamedColorTextContent(text = color.toHexString(), textColor = textColor)
                 }
 
                 ContentRow(header = "Color Int", headerTextColor = secondaryTextColor) {
-                    TextContent(
+                    NamedColorTextContent(
                         text = color.colorInt.value.toString(),
                         textColor = textColor
                     )
                 }
 
                 ContentRow(header = "Color Long", headerTextColor = secondaryTextColor) {
-                    TextContent(
+                    NamedColorTextContent(
                         text = color.colorLong.value.toString(),
                         textColor = textColor
                     )
@@ -126,28 +126,28 @@ class ColorDetailScreen(private val namedColor: NamedColor) :
                     }
 
                     ContentRow(header = "Hue", headerTextColor = secondaryTextColor) {
-                        TextContent(text = color.hue.toString(), textColor = textColor)
+                        NamedColorTextContent(text = color.hue.toString(), textColor = textColor)
                     }
 
                     ContentRow(header = "Saturation", headerTextColor = secondaryTextColor) {
-                        TextContent(text = color.saturation.toString(), textColor = textColor)
+                        NamedColorTextContent(text = color.saturation.toString(), textColor = textColor)
                     }
 
                     ContentRow(header = "Lightness", headerTextColor = secondaryTextColor) {
-                        TextContent(text = color.lightness.toString(), textColor = textColor)
+                        NamedColorTextContent(text = color.lightness.toString(), textColor = textColor)
                     }
                 }
 
                 ContentRow(header = "Luminance", headerTextColor = secondaryTextColor) {
-                    TextContent(text = color.luminance().toString(), textColor = textColor)
+                    NamedColorTextContent(text = color.luminance().toString(), textColor = textColor)
                 }
 
                 ContentRow(header = "Color Model", headerTextColor = secondaryTextColor) {
-                    TextContent(text = color.colorSpace.model.toString(), textColor = textColor)
+                    NamedColorTextContent(text = color.colorSpace.model.toString(), textColor = textColor)
                 }
 
                 ContentRow(header = "Color Space", headerTextColor = secondaryTextColor) {
-                    TextContent(text = color.colorSpace.toString(), textColor = textColor)
+                    NamedColorTextContent(text = color.colorSpace.toString(), textColor = textColor)
                 }
 
                 item {
@@ -191,7 +191,7 @@ private fun LazyListScope.ContentRow(
 }
 
 @Composable
-private fun TextContent(
+private fun NamedColorTextContent(
     text: String,
     textColor: Color
 ) {
@@ -241,7 +241,7 @@ private fun LazyListScope.ComponentRow(
     }
 
     ContentRow(header = headerText, headerTextColor = headerTextColor) {
-        TextContent(
+        NamedColorTextContent(
             text = componentValue.toString(),
             textColor = textColor
         )
@@ -284,7 +284,7 @@ private fun LazyListScope.ComponentRowRgbaColor(
     }
 
     ContentRow(header = headerText, headerTextColor = headerTextColor) {
-        TextContent(
+        NamedColorTextContent(
             text = componentValue.toString(),
             textColor = textColor
         )

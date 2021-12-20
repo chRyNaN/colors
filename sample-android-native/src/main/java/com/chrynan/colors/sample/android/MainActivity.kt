@@ -10,10 +10,13 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.res.stringResource
-import com.chrynan.colors.Color
-import com.chrynan.colors.extension.Red
+import androidx.compose.ui.unit.dp
 import com.chrynan.colors.compose.toComposeColor
+import com.chrynan.colors.sample.android.data.ColorData
 import com.chrynan.colors.sample.android.navigation.ScreenIntent
 import com.chrynan.colors.sample.android.screen.ColorDetailScreen
 import com.chrynan.colors.sample.android.screen.ColorListScreen
@@ -28,12 +31,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
+            var colors by remember { mutableStateOf(ColorData()) }
+
             val navigator = rememberNavigatorByIntent<ScreenIntent>(ScreenIntent.ColorList) { key ->
                 when (key) {
                     ScreenIntent.ColorList -> {
-                        +ColorListScreen(onColorSelected = {
-                            navigator.goTo(ScreenIntent.ColorDetail(namedColor = it))
-                        })
+                        +ColorListScreen(
+                            onColorSelected = {
+                                navigator.goTo(ScreenIntent.ColorDetail(namedColor = it))
+                            },
+                            onChangeColorData = { colors = it })
                     }
                     is ScreenIntent.ColorDetail -> {
                         +ColorDetailScreen(namedColor = key.namedColor)
@@ -42,7 +49,7 @@ class MainActivity : AppCompatActivity() {
                         PaletteScreen()
                     }
                     ScreenIntent.RandomColor -> {
-                        +RandomColorScreen()
+                        +RandomColorScreen(onChangeColorData = { colors = it })
                     }
                 }
             }
@@ -53,7 +60,7 @@ class MainActivity : AppCompatActivity() {
 
             Scaffold(
                 bottomBar = {
-                    BottomBar(navigator)
+                    BottomBar(navigator = navigator, colors = colors)
                 }
             ) {
                 Column {
@@ -64,15 +71,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     @Composable
-    private fun BottomBar(navigator: ComposeNavigatorByKey<ScreenIntent>) {
+    private fun BottomBar(
+        navigator: ComposeNavigatorByKey<ScreenIntent>,
+        colors: ColorData
+    ) {
         val currentKey by navigator.currentKeyAsState()
 
-        BottomNavigation {
+        BottomNavigation(backgroundColor = colors.background.toComposeColor(), elevation = 16.dp) {
             listOf(ScreenIntent.ColorList, ScreenIntent.RandomColor, ScreenIntent.Palette).forEach {
                 BottomNavigationItem(
                     selected = currentKey == it,
-                    selectedContentColor = Color.Red.toComposeColor(),
-                    unselectedContentColor = Color.White.toComposeColor(),
+                    selectedContentColor = colors.foregroundAccent.toComposeColor(),
+                    unselectedContentColor = colors.foreground.toComposeColor(),
                     icon = {
                         Icon(it.icon, contentDescription = "")
                     },

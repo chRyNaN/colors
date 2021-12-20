@@ -1,12 +1,12 @@
 package com.chrynan.colors.sample.android.action
 
-import com.chrynan.colors.Color
-import com.chrynan.colors.contrast
 import com.chrynan.colors.darker
 import com.chrynan.colors.nextColor
 import com.chrynan.colors.sample.android.state.RandomColorChange
 import com.chrynan.colors.sample.android.state.RandomColorIntent
 import com.chrynan.colors.sample.android.state.RandomColorState
+import com.chrynan.colors.sample.android.util.contentColor
+import com.chrynan.colors.sample.android.util.normalize
 import com.chrynan.presentation.Action
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -22,11 +22,11 @@ class GetRandomColorAction :
         state: RandomColorState?
     ): Flow<RandomColorChange> = flow {
         try {
-            val color = random.nextColor()
-            val textColor = color.toContentColor()
+            val color = random.nextColor().normalize()
+            val textColor = color.contentColor()
             val secondaryTextColor = textColor.copy(component4 = textColor.alpha / 2)
-
-            val colorVariant = color.toRgbaColor().darker()
+            val colorVariant = color.toRgbaColor().darker(by = 0.25f)
+            val colorVariantContentColor = colorVariant.contentColor()
 
             emit(
                 RandomColorChange.RetrievedColor(
@@ -34,7 +34,7 @@ class GetRandomColorAction :
                     contentColor = textColor,
                     secondaryContentColor = secondaryTextColor,
                     colorVariant = colorVariant,
-                    colorVariantContentColor = colorVariant.toContentColor(),
+                    colorVariantContentColor = colorVariantContentColor,
                 )
             )
         } catch (e: Exception) {
@@ -45,11 +45,4 @@ class GetRandomColorAction :
             )
         }
     }
-
-    private fun Color.toContentColor(): Color =
-        if (contrast(Color.White) > 0.5f) {
-            Color.White
-        } else {
-            Color.Black
-        }
 }
