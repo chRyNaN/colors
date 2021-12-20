@@ -13,8 +13,12 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import coil.compose.LocalImageLoader
+import com.chrynan.colors.NamedColor
 import com.chrynan.colors.compose.toComposeColor
 import com.chrynan.colors.sample.android.data.ColorData
 import com.chrynan.colors.sample.android.navigation.ScreenIntent
@@ -32,6 +36,8 @@ class MainActivity : AppCompatActivity() {
 
         setContent {
             var colors by remember { mutableStateOf(ColorData()) }
+            val context = LocalContext.current
+            val imageLoader = LocalImageLoader.current
 
             val navigator = rememberNavigatorByIntent<ScreenIntent>(ScreenIntent.ColorList) { key ->
                 when (key) {
@@ -43,10 +49,22 @@ class MainActivity : AppCompatActivity() {
                             onChangeColorData = { colors = it })
                     }
                     is ScreenIntent.ColorDetail -> {
-                        +ColorDetailScreen(namedColor = key.namedColor)
+                        +ColorDetailScreen(
+                            namedColor = key.namedColor,
+                            onChangeColorData = { colors = it })
                     }
                     ScreenIntent.Palette -> {
-                        PaletteScreen()
+                        +PaletteScreen(
+                            context = context,
+                            imageLoader = imageLoader,
+                            onSwatchSelected = {
+                                navigator.goTo(
+                                    ScreenIntent.ColorDetail(
+                                        namedColor = NamedColor(name = "", color = it.color)
+                                    )
+                                )
+                            },
+                            onChangeColorData = { colors = it })
                     }
                     ScreenIntent.RandomColor -> {
                         +RandomColorScreen(onChangeColorData = { colors = it })
@@ -63,7 +81,7 @@ class MainActivity : AppCompatActivity() {
                     BottomBar(navigator = navigator, colors = colors)
                 }
             ) {
-                Column {
+                Column(modifier = Modifier.padding(bottom = 48.dp)) {
                     NavContainer(navigator)
                 }
             }

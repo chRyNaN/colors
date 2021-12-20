@@ -2,6 +2,7 @@ package com.chrynan.colors.sample.android.state
 
 import com.chrynan.colors.Color
 import com.chrynan.colors.NamedColor
+import com.chrynan.colors.sample.android.data.ColorData
 import com.chrynan.presentation.Change
 import com.chrynan.presentation.Intent
 import com.chrynan.presentation.State
@@ -12,6 +13,7 @@ sealed class ColorDetailState : State {
 
     data class DisplayingColor(
         val namedColor: NamedColor,
+        val colorData: ColorData,
         val textColor: Color,
         val secondaryTextColor: Color,
         val cssValue: String,
@@ -41,8 +43,7 @@ sealed class ColorDetailChange : Change {
 
     data class Loaded(
         val namedColor: NamedColor,
-        val textColor: Color,
-        val secondaryTextColor: Color
+        val colorData: ColorData
     ) : ColorDetailChange()
 
     data class EncounteredError(

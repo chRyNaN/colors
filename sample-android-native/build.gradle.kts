@@ -64,6 +64,7 @@ dependencies {
 
     implementation("com.chrynan.presentation:presentation-compose:0.6.0")
     implementation("com.chrynan.navigation:navigation-compose:0.2.2")
+    implementation("com.chrynan.ui-components:ui-components-image:0.1.3")
 
     implementation(project(":colors-compose"))
     implementation(project(":colors-palette"))

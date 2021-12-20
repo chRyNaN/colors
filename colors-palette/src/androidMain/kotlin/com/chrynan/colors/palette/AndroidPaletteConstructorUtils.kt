@@ -7,9 +7,20 @@ import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Rect
+import android.graphics.drawable.BitmapDrawable
 import kotlin.math.ceil
 import kotlin.math.max
 import kotlin.math.sqrt
+
+suspend fun Palette.Companion.generate(
+    bitmapDrawable: BitmapDrawable,
+    resizeArea: Int = 112 * 112,
+    maxColorCount: Int = 16
+): Palette = generate(
+    bitmap = bitmapDrawable.bitmap,
+    resizeArea = resizeArea,
+    maxColorCount = maxColorCount
+)
 
 suspend fun Palette.Companion.generate(
     bitmap: Bitmap,

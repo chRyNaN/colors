@@ -18,8 +18,9 @@ class ColorDetailReducer : Reducer<ColorDetailState, ColorDetailChange> {
             is ColorDetailChange.StartedLoading -> ColorDetailState.Loading(change.namedColor)
             is ColorDetailChange.Loaded -> ColorDetailState.DisplayingColor(
                 namedColor = change.namedColor,
-                textColor = change.textColor,
-                secondaryTextColor = change.secondaryTextColor,
+                colorData = change.colorData,
+                textColor = change.colorData.foreground,
+                secondaryTextColor = change.colorData.foregroundSecondary,
                 cssValue = change.namedColor.color.cssValue,
                 colorInt = change.namedColor.color.colorInt.toString(),
                 colorLong = change.namedColor.color.colorLong.toString(),

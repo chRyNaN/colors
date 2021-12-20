@@ -18,7 +18,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.runtime.getValue
 import com.chrynan.colors.NamedColor
 import com.chrynan.colors.compose.toComposeColor
-import com.chrynan.colors.darker
 import com.chrynan.colors.sample.android.action.LoadColorsAction
 import com.chrynan.colors.sample.android.data.ColorData
 import com.chrynan.colors.sample.android.presenter.ColorListPresenter
@@ -34,8 +33,7 @@ import com.chrynan.colors.sample.android.composable.*
 class ColorListScreen(
     private val onColorSelected: (NamedColor) -> Unit,
     private val onChangeColorData: (ColorData) -> Unit
-) :
-    Layout<ColorListIntent, ColorListState, ColorListChange>() {
+) : Layout<ColorListIntent, ColorListState, ColorListChange>() {
 
     override val presenterFactory: PresenterFactory<ColorListIntent, ColorListState, ColorListChange> =
         PresenterFactory { view ->
@@ -80,9 +78,9 @@ class ColorListScreen(
             }
         }
 
-        val toolbarBackgroundColor by remember {
+        val toolbarColorData by remember {
             derivedStateOf {
-                state.colors[listState.firstVisibleItemIndex].color.normalize()
+                state.colors[listState.firstVisibleItemIndex].color.toColorData()
             }
         }
 
@@ -91,17 +89,7 @@ class ColorListScreen(
                 val lastIndex = listState.layoutInfo.visibleItemsInfo.lastOrNull()?.index
 
                 if (lastIndex != null) {
-                    val backgroundColor = state.colors[lastIndex].color.normalize()
-                    val foregroundColor = backgroundColor.contentColor()
-                    val foregroundSecondaryColor = foregroundColor.secondary()
-                    val foregroundAccentColor = backgroundColor.toRgbaColor().darker(by = 0.25f)
-
-                    ColorData(
-                        background = backgroundColor,
-                        foreground = foregroundColor,
-                        foregroundSecondary = foregroundSecondaryColor,
-                        foregroundAccent = foregroundAccentColor
-                    )
+                    state.colors[lastIndex].color.toColorData()
                 } else {
                     null
                 }
@@ -111,11 +99,12 @@ class ColorListScreen(
         bottomBarColorData?.let { onChangeColorData.invoke(it) }
 
         Box {
-            LazyColumn(state = listState) {
+            LazyColumn(modifier = Modifier.padding(top = 48.dp), state = listState) {
                 items(items = state.colors, key = { it.color.colorLong.value }) {
-                    val contentColor = it.color.normalize()
-                    val textColor = contentColor.contentColor()
-                    val secondaryTextColor = textColor.secondary()
+                    val colorData = it.color.toColorData()
+                    val contentColor = colorData.background
+                    val textColor = colorData.foreground
+                    val secondaryTextColor = colorData.foregroundSecondary
 
                     Box(
                         modifier = Modifier
@@ -136,8 +125,8 @@ class ColorListScreen(
 
             Toolbar(
                 titleText = toolbarColorName ?: "Colors",
-                backgroundColor = toolbarBackgroundColor,
-                textColor = toolbarBackgroundColor.contentColor()
+                backgroundColor = toolbarColorData.background,
+                textColor = toolbarColorData.foreground
             )
         }
     }
