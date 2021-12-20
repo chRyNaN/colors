@@ -8,6 +8,39 @@ import kotlin.math.abs
 import com.chrynan.colors.space.RenderIntent
 
 /**
+ * Determines whether this [Color] is completely transparent, meaning that it has a [Color.alpha]
+ * value of 0.0f.
+ *
+ * **Note:** Translucent is different than transparent. Translucency means that the alpha value is
+ * not completely opaque or completely transparent. Transparency means that the alpha value is
+ * 0.0f, or completely invisible.
+ */
+val Color.isTransparent: Boolean
+    get() = alpha == 0.0f
+
+/**
+ * Determines whether this [Color] is completely opaque, meaning that it has a [Color.alpha] value
+ * of 1.0f.
+ */
+val Color.isOpaque: Boolean
+    get() = alpha == 1.0f
+
+/**
+ * Determines whether this [Color] is translucent, meaning that it has a [Color.alpha] value
+ * between, but not including, 0.0f and 1.0f.
+ *
+ * **Note:** Translucent is different than transparent. Translucency means that the alpha value is
+ * not completely opaque or completely transparent. Transparency means that the alpha value is
+ * 0.0f, or completely invisible.
+ */
+val Color.isTranslucent: Boolean
+    get() {
+        val a = alpha
+
+        return a != 0.0f && a != 1.0f && a in 0.0f..1.0f
+    }
+
+/**
  * Creates a [ColorInt] from this [Int] value.
  */
 fun Int.toColorInt(): ColorInt = ColorInt(value = this)
