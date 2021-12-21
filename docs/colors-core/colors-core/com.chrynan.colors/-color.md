@@ -82,12 +82,27 @@ common
 | [com.chrynan.colors.ColorLong](-color-long/index.md) |  |
 
 [common]\
-fun [Color](-color.md)(hexadecimalString: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [HexadecimalColor](-hexadecimal-color/index.md)
+fun [Color](-color.md)(hex: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [HexadecimalColor](-hexadecimal-color/index.md)
 
-Retrieves a [HexadecimalColor](-hexadecimal-color/index.md) from the provided [hexadecimalString](-color.md). The provided [hexadecimalString](-color.md) must be in a valid Hex Color format, with or without the preceeding '#' character.
+Retrieves a [HexadecimalColor](-hexadecimal-color/index.md) from the provided [hex](-color.md). The provided [hex](-color.md) must be in a valid Hex Color format, with or without the preceeding '#' character.
 
 ## Throws
 
 | | |
 |---|---|
-| [kotlin.IllegalArgumentException](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-illegal-argument-exception/index.html) | if the provided [hexadecimalString](-color.md) is not in a valid Hex Color format. |
+| [kotlin.IllegalArgumentException](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-illegal-argument-exception/index.html) | if the provided [hex](-color.md) is not in a valid Hex Color format. |
+
+[common]\
+fun [Color](-color.md)(red: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html), green: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html), blue: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html), alpha: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) = Color.OPAQUE_INT_OPACITY, colorSpace: [ColorSpace](../com.chrynan.colors.space/-color-space/index.md) = ColorSpaces.SRGB): [RgbaColor](-rgba-color/index.md)
+
+Retrieves a [RgbaColor](-rgba-color/index.md) from the provided color values.
+
+Note that the provided values will be coerced into the SRGB Color Range.
+
+## See also
+
+common
+
+| | |
+|---|---|
+| [com.chrynan.colors.RgbaColor](-rgba-color/index.md) |  |

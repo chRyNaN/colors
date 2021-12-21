@@ -4,6 +4,9 @@
 
 [android, common]\
 [android]\
+suspend fun [Palette.Companion](-palette/-companion/index.md#-995211170%2FExtensions%2F-1998288446).[generate](generate.md)(bitmapDrawable: [BitmapDrawable](https://developer.android.com/reference/kotlin/android/graphics/drawable/BitmapDrawable.html), resizeArea: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) = 112 * 112, maxColorCount: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) = 16): [Palette](../../../colors-palette/colors-palette/com.chrynan.colors.palette/-palette/index.md)
+
+[android]\
 suspend fun [Palette.Companion](-palette/-companion/index.md#-995211170%2FExtensions%2F-1998288446).[generate](generate.md)(bitmap: [Bitmap](https://developer.android.com/reference/kotlin/android/graphics/Bitmap.html), resizeArea: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) = 112 * 112, maxColorCount: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) = 16): [Palette](../../../colors-palette/colors-palette/com.chrynan.colors.palette/-palette/index.md)
 
 [android]\

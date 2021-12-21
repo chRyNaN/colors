@@ -9,20 +9,20 @@ data class [SimpleColors](index.md) : [Colors](../-colors/index.md)
 
 | Name | Summary |
 |---|---|
-| [colorBackgroundPrimary](color-background-primary.md) | [common]<br>open override val [colorBackgroundPrimary](color-background-primary.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
-| [colorBackgroundSecondary](color-background-secondary.md) | [common]<br>open override val [colorBackgroundSecondary](color-background-secondary.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
-| [colorError](color-error.md) | [common]<br>open override val [colorError](color-error.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
-| [colorOnBackgroundPrimary](color-on-background-primary.md) | [common]<br>open override val [colorOnBackgroundPrimary](color-on-background-primary.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
-| [colorOnBackgroundSecondary](color-on-background-secondary.md) | [common]<br>open override val [colorOnBackgroundSecondary](color-on-background-secondary.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
-| [colorOnError](color-on-error.md) | [common]<br>open override val [colorOnError](color-on-error.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
-| [colorOnPrimary](color-on-primary.md) | [common]<br>open override val [colorOnPrimary](color-on-primary.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
-| [colorOnSecondary](color-on-secondary.md) | [common]<br>open override val [colorOnSecondary](color-on-secondary.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
-| [colorPrimary](color-primary.md) | [common]<br>open override val [colorPrimary](color-primary.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
-| [colorPrimaryVariant](color-primary-variant.md) | [common]<br>open override val [colorPrimaryVariant](color-primary-variant.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
-| [colorSecondary](color-secondary.md) | [common]<br>open override val [colorSecondary](color-secondary.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
-| [colorSecondaryVariant](color-secondary-variant.md) | [common]<br>open override val [colorSecondaryVariant](color-secondary-variant.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
-| [colorTextError](color-text-error.md) | [common]<br>open override val [colorTextError](color-text-error.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
-| [colorTextPrimary](color-text-primary.md) | [common]<br>open override val [colorTextPrimary](color-text-primary.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
-| [colorTextSecondary](color-text-secondary.md) | [common]<br>open override val [colorTextSecondary](color-text-secondary.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
-| [colorTextTertiary](color-text-tertiary.md) | [common]<br>open override val [colorTextTertiary](color-text-tertiary.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
+| [backgroundPrimary](background-primary.md) | [common]<br>open override val [backgroundPrimary](background-primary.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
+| [backgroundSecondary](background-secondary.md) | [common]<br>open override val [backgroundSecondary](background-secondary.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
+| [error](error.md) | [common]<br>open override val [error](error.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
 | [isLight](is-light.md) | [common]<br>open override val [isLight](is-light.md): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [onBackgroundPrimary](on-background-primary.md) | [common]<br>open override val [onBackgroundPrimary](on-background-primary.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
+| [onBackgroundSecondary](on-background-secondary.md) | [common]<br>open override val [onBackgroundSecondary](on-background-secondary.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
+| [onError](on-error.md) | [common]<br>open override val [onError](on-error.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
+| [onPrimary](on-primary.md) | [common]<br>open override val [onPrimary](on-primary.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
+| [onSecondary](on-secondary.md) | [common]<br>open override val [onSecondary](on-secondary.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
+| [primary](primary.md) | [common]<br>open override val [primary](primary.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
+| [primaryVariant](primary-variant.md) | [common]<br>open override val [primaryVariant](primary-variant.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
+| [secondary](secondary.md) | [common]<br>open override val [secondary](secondary.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
+| [secondaryVariant](secondary-variant.md) | [common]<br>open override val [secondaryVariant](secondary-variant.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
+| [textError](text-error.md) | [common]<br>open override val [textError](text-error.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
+| [textPrimary](text-primary.md) | [common]<br>open override val [textPrimary](text-primary.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
+| [textSecondary](text-secondary.md) | [common]<br>open override val [textSecondary](text-secondary.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |
+| [textTertiary](text-tertiary.md) | [common]<br>open override val [textTertiary](text-tertiary.md): [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md) |

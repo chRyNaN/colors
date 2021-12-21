@@ -9,17 +9,17 @@ object [Companion](index.md)
 
 | Name | Summary |
 |---|---|
-| [BLACK](-b-l-a-c-k.md) | [common]<br>val [BLACK](-b-l-a-c-k.md): [Color](../index.md) |
+| [Black](-black.md) | [common]<br>val [Black](-black.md): [Color](../index.md) |
 | [MAX_ALPHA](-m-a-x_-a-l-p-h-a.md) | [common]<br>const val [MAX_ALPHA](-m-a-x_-a-l-p-h-a.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) = 1f |
 | [MAX_INT_OPACITY](-m-a-x_-i-n-t_-o-p-a-c-i-t-y.md) | [common]<br>const val [MAX_INT_OPACITY](-m-a-x_-i-n-t_-o-p-a-c-i-t-y.md): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) = 255 |
 | [MIN_ALPHA](-m-i-n_-a-l-p-h-a.md) | [common]<br>const val [MIN_ALPHA](-m-i-n_-a-l-p-h-a.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) = 0f |
 | [MIN_INT_OPACITY](-m-i-n_-i-n-t_-o-p-a-c-i-t-y.md) | [common]<br>const val [MIN_INT_OPACITY](-m-i-n_-i-n-t_-o-p-a-c-i-t-y.md): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) = 0 |
 | [OPAQUE_ALPHA](-o-p-a-q-u-e_-a-l-p-h-a.md) | [common]<br>const val [OPAQUE_ALPHA](-o-p-a-q-u-e_-a-l-p-h-a.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) |
 | [OPAQUE_INT_OPACITY](-o-p-a-q-u-e_-i-n-t_-o-p-a-c-i-t-y.md) | [common]<br>const val [OPAQUE_INT_OPACITY](-o-p-a-q-u-e_-i-n-t_-o-p-a-c-i-t-y.md): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
-| [TRANSPARENT](-t-r-a-n-s-p-a-r-e-n-t.md) | [common]<br>val [TRANSPARENT](-t-r-a-n-s-p-a-r-e-n-t.md): [Color](../index.md) |
+| [Transparent](-transparent.md) | [common]<br>val [Transparent](-transparent.md): [Color](../index.md) |
 | [TRANSPARENT_ALPHA](-t-r-a-n-s-p-a-r-e-n-t_-a-l-p-h-a.md) | [common]<br>const val [TRANSPARENT_ALPHA](-t-r-a-n-s-p-a-r-e-n-t_-a-l-p-h-a.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) |
 | [TRANSPARENT_INT_OPACITY](-t-r-a-n-s-p-a-r-e-n-t_-i-n-t_-o-p-a-c-i-t-y.md) | [common]<br>const val [TRANSPARENT_INT_OPACITY](-t-r-a-n-s-p-a-r-e-n-t_-i-n-t_-o-p-a-c-i-t-y.md): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
-| [WHITE](-w-h-i-t-e.md) | [common]<br>val [WHITE](-w-h-i-t-e.md): [Color](../index.md) |
+| [White](-white.md) | [common]<br>val [White](-white.md): [Color](../index.md) |
 
 ## Extensions
 

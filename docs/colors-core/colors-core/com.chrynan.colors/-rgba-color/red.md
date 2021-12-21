@@ -7,4 +7,12 @@ open val [red](red.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kot
 
 This is the first component in a [Color](../-color/index.md) with a [ColorSpace](../../com.chrynan.colors.space/-color-space/index.md) that has a [ColorModel.RGB](../../com.chrynan.colors.space/-color-model/-r-g-b/index.md) color model. This should be the same as calling [component1](../../../../colors-core/com.chrynan.colors/-rgba-color/component1.md).
 
-Note: Refer to the [colorSpace](../../../../colors-core/com.chrynan.colors/-rgba-color/color-space.md) value to determine if a [Color](../-color/index.md) is really an RGB [Color](../-color/index.md).
+*Note:* this value should be in the range defined by the [ColorSpace](../../com.chrynan.colors.space/-color-space/index.md) and is different from the [redInt](../red-int.md) value.
+
+## See also
+
+common
+
+| | |
+|---|---|
+| [redInt](../red-int.md) |  |

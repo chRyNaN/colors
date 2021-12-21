@@ -3,7 +3,7 @@
 # convertHslComponentsToColor
 
 [common]\
-fun [convertHslComponentsToColor](convert-hsl-components-to-color.md)(hsl: [FloatArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html)): [RgbaColor](-rgba-color/index.md)
+fun [FloatArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html).[convertHslComponentsToColor](convert-hsl-components-to-color.md)(): [RgbaColor](-rgba-color/index.md)
 
 Converts the provided [FloatArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html) of HSL Color Components to an [RgbaColor](-rgba-color/index.md).
 
