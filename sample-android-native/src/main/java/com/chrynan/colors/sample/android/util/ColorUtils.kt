@@ -1,10 +1,7 @@
 package com.chrynan.colors.sample.android.util
 
-import com.chrynan.colors.Color
-import com.chrynan.colors.HslColor
-import com.chrynan.colors.contrast
+import com.chrynan.colors.*
 import com.chrynan.colors.sample.android.data.ColorData
-import com.chrynan.colors.toHslComponents
 
 /**
  * Converts a transparent color to [Color.White].
@@ -28,15 +25,20 @@ internal fun Color.secondary(): Color = copy(component4 = alpha / 2)
 
 internal fun Color.accent(): Color {
     val rgbaColor = toRgbaColor()
-    val (h, s, l) = rgbaColor.toHslComponents()
 
-    var newH = h + 180
-    if (newH > 360) {
-        newH -= 360
+    val newRed = (255 - rgbaColor.redInt).coerceIn(0, 255)
+    val newGreen = (255 - rgbaColor.greenInt).coerceIn(0, 255)
+    val newBlue = (255 - rgbaColor.blueInt).coerceIn(0, 255)
+
+    val newColor = Color(newRed, newGreen, newBlue)
+
+    val contrast = this.contrast(newColor)
+
+    if (contrast < 0.5f) {
+        return newColor.toRgbaColor().darker(by = (0.6f - contrast) / 2)
     }
-    newH /= 360f
 
-    return HslColor(newH.coerceIn(0f, 360f), s.coerceIn(0f, 1f), l.coerceIn(0f, 1f))
+    return newColor
 }
 
 internal fun Color.toColorData(): ColorData {
