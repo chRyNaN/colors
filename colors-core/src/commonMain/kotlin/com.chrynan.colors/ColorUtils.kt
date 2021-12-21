@@ -124,6 +124,36 @@ fun Color.contrast(other: Color): Float =
     abs(luminance() - other.luminance()).coerceIn(0.0f, 1.0f)
 
 /**
+ * Retrieves the most contrasting [Color] with this [Color] from the provided values.
+ *
+ * If the [Color.contrast] value with [this] [Color] and the [conditional] [Color] is greater than
+ * [factor], then the [conditional] [Color] is returned. Otherwise, the [default] [Color] is
+ * returned.
+ *
+ * This function could be useful for getting a [Color] to overlay over [this] color that has enough
+ * contrast.
+ *
+ * @param [factor] The value that the contrast has to be greater than, for the [conditional] color
+ * to be used. This defaults to 0.5f.
+ * @param [conditional] The [Color] to return if it has a higher contrast value with [this] color
+ * than [factor]. This defaults to [Color.White].
+ * @param [default] The [Color] to return if the conditional statement is not met. This defaults to
+ * [Color.Black].
+ *
+ * @see [Color.contrast]
+ */
+fun Color.contrasting(
+    factor: Float = 0.5f,
+    conditional: Color = Color.White,
+    default: Color = Color.Black
+): Color =
+    if (contrast(conditional) > factor) {
+        conditional
+    } else {
+        default
+    }
+
+/**
  * Converts this [Color] to a Hexadecimal [String] representation. For example, the Color
  * White, RgbaColor(red = 255, green = 255, blue = 255, alpha = 255), would return a [String]
  * representation similar to the following: '#FFFFFF'.

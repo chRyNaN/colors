@@ -281,6 +281,20 @@ fun RgbaColor.darker(by: Float = 0.1f): RgbaColor {
     return floatArrayOf(h, s, newL).convertHslComponentsToColor()
 }
 
+/**
+ * "Inverses" this [RgbaColor] by subtracting each component [Int] value from the max [Int] value
+ * of 255, then returning a new [RgbaColor] with those new component values.
+ *
+ * **Note:** That this does not change [RgbaColor.alpha] value.
+ */
+fun RgbaColor.inverse(): RgbaColor {
+    val newRed = (255 - redInt).coerceIn(0, 255)
+    val newGreen = (255 - greenInt).coerceIn(0, 255)
+    val newBlue = (255 - blueInt).coerceIn(0, 255)
+
+    return Color(red = newRed, green = newGreen, blue = newBlue)
+}
+
 internal fun hslToRgbComponent(n: Int, h: Float, s: Float, l: Float): Float {
     val k = (n.toFloat() + h / 30f) % 12f
     val a = s * min(l, 1f - l)
