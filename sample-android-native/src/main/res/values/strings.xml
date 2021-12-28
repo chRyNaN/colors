@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="app_name">Sample</string>
+    <string name="app_name">Colors</string>
 
     <string name="screen_name_color_list">Color List</string>
     <string name="screen_name_color_details">Color Details</string>
