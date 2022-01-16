@@ -1,4 +1,4 @@
-package com.chrynan.compose.web
+package com.chrynan.colors.compose.web
 
 import com.chrynan.colors.Color
 

@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package com.chrynan.compose.web
+package com.chrynan.colors.compose.web
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.ReadOnlyComposable

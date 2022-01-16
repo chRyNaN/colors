@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package com.chrynan.compose.web
+package com.chrynan.colors.compose.web
 
 import com.chrynan.colors.*
 import com.chrynan.colors.space.ColorSpace
