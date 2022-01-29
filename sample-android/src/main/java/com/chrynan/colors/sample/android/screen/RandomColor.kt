@@ -25,24 +25,24 @@ import com.chrynan.colors.sample.android.state.RandomColorChange
 import com.chrynan.colors.sample.android.state.RandomColorIntent
 import com.chrynan.colors.sample.android.state.RandomColorState
 import com.chrynan.colors.space.ColorModel
-import com.chrynan.presentation.PresenterFactory
 import com.chrynan.presentation.compose.layout.Layout
 import com.chrynan.colors.sample.android.composable.*
+import com.chrynan.presentation.Presenter
+import com.chrynan.presentation.presenterFactory
 
 class RandomColorScreen(private val onChangeColorData: (ColorData) -> Unit) :
     Layout<RandomColorIntent, RandomColorState, RandomColorChange>() {
 
-    override val presenterFactory: PresenterFactory<RandomColorIntent, RandomColorState, RandomColorChange> =
-        PresenterFactory { view ->
-            RandomColorPresenter(
-                view = view,
-                reducer = RandomColorReducer(),
-                getRandomColor = GetRandomColorAction()
-            )
-        }
+    override val presenter: Presenter<RandomColorIntent, RandomColorState, RandomColorChange> by presenterFactory { intents ->
+        RandomColorPresenter(
+            intents = intents,
+            reducer = RandomColorReducer(),
+            getRandomColor = GetRandomColorAction()
+        )
+    }
 
     @Composable
-    override fun OnLayout(state: RandomColorState) {
+    override fun Content(state: RandomColorState) {
         when (state) {
             is RandomColorState.DisplayingColor -> renderColor(state)
             is RandomColorState.DisplayingError -> Text(state.message)

@@ -11,6 +11,7 @@ import kotlinx.serialization.descriptors.buildClassSerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 
+@OptIn(ExperimentalSerializationApi::class)
 class SwatchSerializer(private val colorSerializer: KSerializer<Color>) :
     KSerializer<Swatch> {
 
@@ -21,7 +22,6 @@ class SwatchSerializer(private val colorSerializer: KSerializer<Color>) :
         element("population", Int.serializer().nullable.descriptor)
     }
 
-    @ExperimentalSerializationApi
     override fun serialize(encoder: Encoder, value: Swatch) {
         val compositeEncoder = encoder.beginStructure(descriptor)
 
@@ -48,7 +48,6 @@ class SwatchSerializer(private val colorSerializer: KSerializer<Color>) :
         compositeEncoder.endStructure(descriptor)
     }
 
-    @ExperimentalSerializationApi
     override fun deserialize(decoder: Decoder): Swatch {
         val compositeDecoder = decoder.beginStructure(descriptor)
 

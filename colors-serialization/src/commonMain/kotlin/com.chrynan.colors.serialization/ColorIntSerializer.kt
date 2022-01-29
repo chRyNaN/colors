@@ -10,7 +10,7 @@ import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 
-@ExperimentalSerializationApi
+@OptIn(ExperimentalSerializationApi::class)
 object ColorIntSerializer : KSerializer<ColorInt> {
 
     override val descriptor: SerialDescriptor = Int.serializer().descriptor
@@ -23,5 +23,5 @@ object ColorIntSerializer : KSerializer<ColorInt> {
         ColorInt(decoder.decodeInline(descriptor).decodeInt())
 }
 
-@ExperimentalSerializationApi
+@OptIn(ExperimentalSerializationApi::class)
 inline fun ColorInt.Companion.serializer(): KSerializer<ColorInt> = ColorIntSerializer

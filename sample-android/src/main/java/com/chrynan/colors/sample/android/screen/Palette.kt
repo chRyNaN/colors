@@ -23,8 +23,9 @@ import com.chrynan.colors.sample.android.state.PaletteChange
 import com.chrynan.colors.sample.android.state.PaletteIntent
 import com.chrynan.colors.sample.android.state.PaletteState
 import com.chrynan.colors.sample.android.util.toColorData
-import com.chrynan.presentation.PresenterFactory
+import com.chrynan.presentation.Presenter
 import com.chrynan.presentation.compose.layout.Layout
+import com.chrynan.presentation.presenterFactory
 import com.chrynan.ui.components.image.Image
 
 class PaletteScreen(
@@ -34,23 +35,22 @@ class PaletteScreen(
     private val onChangeColorData: (ColorData) -> Unit
 ) : Layout<PaletteIntent, PaletteState, PaletteChange>() {
 
-    override val presenterFactory: PresenterFactory<PaletteIntent, PaletteState, PaletteChange> =
-        PresenterFactory { view ->
-            PalettePresenter(
-                view = view,
-                reducer = PaletteReducer(),
-                generatePaletteFromResources = GeneratePaletteFromResourceAction(context = context),
-                generatePaletteFromUri = GeneratePaletteFromUriAction(
-                    context = context,
-                    imageLoader = imageLoader
-                )
+    override val presenter: Presenter<PaletteIntent, PaletteState, PaletteChange> by presenterFactory { intents ->
+        PalettePresenter(
+            intents = intents,
+            reducer = PaletteReducer(),
+            generatePaletteFromResources = GeneratePaletteFromResourceAction(context = context),
+            generatePaletteFromUri = GeneratePaletteFromUriAction(
+                context = context,
+                imageLoader = imageLoader
             )
-        }
+        )
+    }
 
     private val resourceId = R.drawable.palette_test_tertiary
 
     @Composable
-    override fun OnLayout(state: PaletteState) {
+    override fun Content(state: PaletteState) {
         Column {
             Image(data = painterResource(resourceId))
 

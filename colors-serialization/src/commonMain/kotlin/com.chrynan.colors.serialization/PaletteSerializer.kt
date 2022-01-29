@@ -11,6 +11,7 @@ import kotlinx.serialization.descriptors.nullable
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 
+@OptIn(ExperimentalSerializationApi::class)
 class PaletteSerializer(private val swatchSerializer: KSerializer<Swatch>) :
     KSerializer<Palette> {
 
@@ -24,7 +25,6 @@ class PaletteSerializer(private val swatchSerializer: KSerializer<Swatch>) :
         element("mutedLightSwatch", swatchSerializer.descriptor.nullable)
     }
 
-    @ExperimentalSerializationApi
     override fun serialize(encoder: Encoder, value: Palette) {
         val compositeEncoder = encoder.beginStructure(descriptor)
 
@@ -74,7 +74,6 @@ class PaletteSerializer(private val swatchSerializer: KSerializer<Swatch>) :
         compositeEncoder.endStructure(descriptor)
     }
 
-    @ExperimentalSerializationApi
     override fun deserialize(decoder: Decoder): Palette {
         val compositeDecoder = decoder.beginStructure(descriptor)
 

@@ -10,7 +10,7 @@ import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 
-@ExperimentalSerializationApi
+@OptIn(ExperimentalSerializationApi::class)
 object ColorLongSerializer : KSerializer<ColorLong> {
 
     override val descriptor: SerialDescriptor = Long.serializer().descriptor
@@ -23,5 +23,5 @@ object ColorLongSerializer : KSerializer<ColorLong> {
         ColorLong(decoder.decodeInline(descriptor).decodeLong())
 }
 
-@ExperimentalSerializationApi
+@OptIn(ExperimentalSerializationApi::class)
 inline fun ColorLong.Companion.serializer(): KSerializer<ColorLong> = ColorLongSerializer

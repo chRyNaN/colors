@@ -6,13 +6,13 @@ import com.chrynan.colors.sample.android.state.ColorListChange
 import com.chrynan.colors.sample.android.state.ColorListIntent
 import com.chrynan.colors.sample.android.state.ColorListState
 import com.chrynan.presentation.BasePresenter
-import com.chrynan.presentation.View
 import com.chrynan.presentation.invoke
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.launchIn
 
 class ColorListPresenter(
-    override val view: View<ColorListIntent, ColorListState>,
+    override val intents: Flow<ColorListIntent>,
     private val reducer: ColorListReducer,
     private val loadColors: LoadColorsAction
 ) : BasePresenter<ColorListIntent, ColorListState, ColorListChange>() {
@@ -20,7 +20,7 @@ class ColorListPresenter(
     override fun onBind() {
         super.onBind()
 
-        view.intents()
+        this.intents
             .perform { intent, state ->
                 when (intent) {
                     is ColorListIntent.Load -> loadColors(intent, state)

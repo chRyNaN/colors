@@ -12,6 +12,7 @@ import kotlinx.serialization.descriptors.buildClassSerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 
+@OptIn(ExperimentalSerializationApi::class)
 class ColorsSerializer(private val colorSerializer: KSerializer<Color>) :
     KSerializer<Colors> {
 
@@ -35,7 +36,6 @@ class ColorsSerializer(private val colorSerializer: KSerializer<Color>) :
         element("isLight", Boolean.serializer().descriptor)
     }
 
-    @ExperimentalSerializationApi
     override fun serialize(encoder: Encoder, value: Colors) {
         val compositeEncoder = encoder.beginStructure(descriptor)
 
@@ -135,7 +135,6 @@ class ColorsSerializer(private val colorSerializer: KSerializer<Color>) :
         compositeEncoder.endStructure(descriptor)
     }
 
-    @ExperimentalSerializationApi
     override fun deserialize(decoder: Decoder): Colors {
         val compositeDecoder = decoder.beginStructure(descriptor)
 

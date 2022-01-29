@@ -20,27 +20,27 @@ import com.chrynan.colors.sample.android.state.ColorDetailChange
 import com.chrynan.colors.sample.android.state.ColorDetailIntent
 import com.chrynan.colors.sample.android.state.ColorDetailState
 import com.chrynan.colors.space.ColorModel
-import com.chrynan.presentation.PresenterFactory
 import com.chrynan.presentation.compose.layout.Layout
 import com.chrynan.colors.sample.android.composable.*
 import com.chrynan.colors.sample.android.data.ColorData
+import com.chrynan.presentation.Presenter
+import com.chrynan.presentation.presenterFactory
 
 class ColorDetailScreen(
     private val namedColor: NamedColor,
     private val onChangeColorData: (ColorData) -> Unit
 ) : Layout<ColorDetailIntent, ColorDetailState, ColorDetailChange>() {
 
-    override val presenterFactory: PresenterFactory<ColorDetailIntent, ColorDetailState, ColorDetailChange> =
-        PresenterFactory { view ->
-            ColorDetailPresenter(
-                view = view,
-                reducer = ColorDetailReducer(),
-                loadDetail = LoadColorDetailAction()
-            )
-        }
+    override val presenter: Presenter<ColorDetailIntent, ColorDetailState, ColorDetailChange> by presenterFactory { intents ->
+        ColorDetailPresenter(
+            intents = intents,
+            reducer = ColorDetailReducer(),
+            loadDetail = LoadColorDetailAction()
+        )
+    }
 
     @Composable
-    override fun OnLayout(state: ColorDetailState) {
+    override fun Content(state: ColorDetailState) {
         when (state) {
             is ColorDetailState.Loading -> renderLoading()
             is ColorDetailState.DisplayingColor -> renderDisplayingColor(state = state)

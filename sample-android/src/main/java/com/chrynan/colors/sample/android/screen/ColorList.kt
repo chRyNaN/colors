@@ -29,23 +29,24 @@ import com.chrynan.presentation.PresenterFactory
 import com.chrynan.presentation.compose.layout.Layout
 import com.chrynan.colors.sample.android.util.*
 import com.chrynan.colors.sample.android.composable.*
+import com.chrynan.presentation.Presenter
+import com.chrynan.presentation.presenterFactory
 
 class ColorListScreen(
     private val onColorSelected: (NamedColor) -> Unit,
     private val onChangeColorData: (ColorData) -> Unit
 ) : Layout<ColorListIntent, ColorListState, ColorListChange>() {
 
-    override val presenterFactory: PresenterFactory<ColorListIntent, ColorListState, ColorListChange> =
-        PresenterFactory { view ->
-            ColorListPresenter(
-                view = view,
-                reducer = ColorListReducer(),
-                loadColors = LoadColorsAction()
-            )
-        }
+    override val presenter: Presenter<ColorListIntent, ColorListState, ColorListChange> by presenterFactory { intents ->
+        ColorListPresenter(
+            intents = intents,
+            reducer = ColorListReducer(),
+            loadColors = LoadColorsAction()
+        )
+    }
 
     @Composable
-    override fun OnLayout(state: ColorListState) {
+    override fun Content(state: ColorListState) {
         when (state) {
             is ColorListState.Loading -> renderLoading()
             is ColorListState.DisplayingColors -> renderColors(state = state)

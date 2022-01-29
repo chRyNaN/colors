@@ -7,13 +7,13 @@ import com.chrynan.colors.sample.android.state.PaletteChange
 import com.chrynan.colors.sample.android.state.PaletteIntent
 import com.chrynan.colors.sample.android.state.PaletteState
 import com.chrynan.presentation.BasePresenter
-import com.chrynan.presentation.View
 import com.chrynan.presentation.invoke
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.launchIn
 
 class PalettePresenter(
-    override val view: View<PaletteIntent, PaletteState>,
+    override val intents: Flow<PaletteIntent>,
     private val reducer: PaletteReducer,
     private val generatePaletteFromResources: GeneratePaletteFromResourceAction,
     private val generatePaletteFromUri: GeneratePaletteFromUriAction
@@ -22,7 +22,7 @@ class PalettePresenter(
     override fun onBind() {
         super.onBind()
 
-        view.intents()
+        this.intents
             .perform { intent, state ->
                 when (intent) {
                     is PaletteIntent.LoadResource -> generatePaletteFromResources(intent, state)
