@@ -23,6 +23,7 @@ kotlin {
             nodejs()
         }
         ios()
+        iosSimulatorArm64()
     }
     sourceSets {
         val commonMain by getting {
@@ -33,6 +34,9 @@ kotlin {
                 api(project(":colors-extension"))
             }
         }
+        val iosMain by sourceSets.getting
+        val iosSimulatorArm64Main by sourceSets.getting
+        iosSimulatorArm64Main.dependsOn(iosMain)
     }
 }
 
