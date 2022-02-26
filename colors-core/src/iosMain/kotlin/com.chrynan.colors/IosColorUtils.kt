@@ -7,6 +7,9 @@ import com.chrynan.colors.space.ColorSpaces
 import com.chrynan.colors.space.RenderIntent
 import platform.UIKit.UIColor
 
+/**
+ * Converts this [Color] instance into a [UIColor] from UIKit.
+ */
 fun Color.toUIColor(
     destinationColorSpace: ColorSpace = ColorSpaces.SRGB,
     renderIntent: RenderIntent = RenderIntent.PERCEPTUAL
