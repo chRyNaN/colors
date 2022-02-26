@@ -4,6 +4,9 @@ package com.chrynan.colors.theme
 
 import com.chrynan.colors.Color
 
+/**
+ * Constructs a [Colors] instance where the [Colors.isLight] value returns `true`.
+ */
 fun lightColors(
     primary: Color = Color("#6200EE"),
     primaryVariant: Color = Color("#3700B3"),
@@ -49,6 +52,9 @@ fun lightColors(
     isLight = true
 )
 
+/**
+ * Constructs a [Colors] instance where the [Colors.isLight] value returns `false`.
+ */
 fun darkColors(
     primary: Color = Color("#BB86FC"),
     primaryVariant: Color = Color("#3700B3"),
@@ -94,12 +100,25 @@ fun darkColors(
     isLight = false
 )
 
+/**
+ * A convenience property delegating to the [Colors.backgroundSecondary] property. This is to be inline with the
+ * Jetpack Compose Material Design Colors instance.
+ */
 val Colors.surface: Color
     get() = backgroundSecondary
 
+/**
+ * A convenience property delegating to the [Colors.onBackgroundSecondary] property. This is to be inline with the
+ * Jetpack Compose Material Design Colors instance.
+ */
 val Colors.onSurface: Color
     get() = onBackgroundSecondary
 
+/**
+ * Creates a shallow copy of this [Colors] instance overriding the provided parameter values. This is similar to
+ * performing a copy on a data class. If a parameter value is not provided, this [Colors] corresponding value will be
+ * used instead.
+ */
 fun Colors.copy(
     primary: Color = this.primary,
     primaryVariant: Color = this.primaryVariant,
