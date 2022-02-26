@@ -3,7 +3,7 @@
 # CMYK
 
 [common]\
-[CMYK](index.md)(componentCount, 4, typeName, "cmyk")
+[CMYK](index.md)(4, "cmyk")
 
 The CMYK model is a color model with 4 components that refer to four inks used in color printing: cyan, magenta, yellow and black (or key). CMYK is a subtractive color model.
 

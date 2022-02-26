@@ -3,7 +3,7 @@
 # RELATIVE
 
 [common]\
-[RELATIVE](index.md)(typeName, "relative")
+[RELATIVE](index.md)("relative")
 
 Similar to the [ABSOLUTE](../-a-b-s-o-l-u-t-e/index.md) render intent, this render intent matches the closest color in the destination gamut but makes adjustments for the destination white point.
 

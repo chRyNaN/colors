@@ -3,7 +3,7 @@
 # SATURATION
 
 [common]\
-[SATURATION](index.md)(typeName, "saturation")
+[SATURATION](index.md)("saturation")
 
 Attempts to maintain the relative saturation of colors from the source gamut to the destination gamut, to keep highly saturated colors as saturated as possible.
 

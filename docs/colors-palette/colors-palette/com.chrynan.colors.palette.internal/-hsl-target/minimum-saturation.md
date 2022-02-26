@@ -3,4 +3,4 @@
 # minimumSaturation
 
 [common]\
-open override val [minimumSaturation](minimum-saturation.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) = 0f
+open override val [minimumSaturation](minimum-saturation.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) = 0.0f

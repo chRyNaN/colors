@@ -3,7 +3,7 @@
 # PERCEPTUAL
 
 [common]\
-[PERCEPTUAL](index.md)(typeName, "perceptual")
+[PERCEPTUAL](index.md)("perceptual")
 
 Compresses the source gamut into the destination gamut. This render intent affects all colors, inside and outside of destination gamut. The goal of this render intent is to preserve the visual relationship between colors.
 

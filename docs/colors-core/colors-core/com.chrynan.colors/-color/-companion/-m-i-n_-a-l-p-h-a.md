@@ -3,4 +3,4 @@
 # MIN_ALPHA
 
 [common]\
-const val [MIN_ALPHA](-m-i-n_-a-l-p-h-a.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) = 0f
+const val [MIN_ALPHA](-m-i-n_-a-l-p-h-a.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) = 0.0f

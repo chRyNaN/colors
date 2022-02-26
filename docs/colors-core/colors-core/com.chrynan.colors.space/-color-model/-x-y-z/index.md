@@ -3,7 +3,7 @@
 # XYZ
 
 [common]\
-[XYZ](index.md)(componentCount, 3, typeName, "xyz")
+[XYZ](index.md)(3, "xyz")
 
 The XYZ model is a color model with 3 components that are used to model human color vision on a basic sensory level.
 

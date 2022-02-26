@@ -3,7 +3,7 @@
 # HsvColor
 
 [common]\
-fun [HsvColor](-hsv-color.md)(hue: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html), saturation: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html), value: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html), alpha: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) = 1f, colorSpace: [ColorSpace](../com.chrynan.colors.space/-color-space/index.md) = ColorSpaces.SRGB): [Color](-color/index.md)
+fun [HsvColor](-hsv-color.md)(hue: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html), saturation: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html), value: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html), alpha: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) = 1.0f, colorSpace: [ColorSpace](../com.chrynan.colors.space/-color-space/index.md) = ColorSpaces.SRGB): [Color](-color/index.md)
 
 Creates a [Color](-color/index.md) from the provided HSV components.
 

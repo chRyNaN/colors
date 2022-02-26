@@ -11,10 +11,10 @@ A color model is required by a [ColorSpace](../-color-space/index.md) to describ
 
 | | |
 |---|---|
-| [CMYK](-c-m-y-k/index.md) | [common]<br>[CMYK](-c-m-y-k/index.md)(componentCount, 4, typeName, "cmyk")<br>The CMYK model is a color model with 4 components that refer to four inks used in color printing: cyan, magenta, yellow and black (or key). CMYK is a subtractive color model. |
-| [LAB](-l-a-b/index.md) | [common]<br>[LAB](-l-a-b/index.md)(componentCount, 3, typeName, "lab")<br>The Lab model is a color model with 3 components used to describe a color space that is more perceptually uniform than XYZ. |
-| [XYZ](-x-y-z/index.md) | [common]<br>[XYZ](-x-y-z/index.md)(componentCount, 3, typeName, "xyz")<br>The XYZ model is a color model with 3 components that are used to model human color vision on a basic sensory level. |
-| [RGB](-r-g-b/index.md) | [common]<br>[RGB](-r-g-b/index.md)(componentCount, 3, typeName, "rgb")<br>The RGB model is a color model with 3 components that refer to the three additive primiaries: red, green and blue. |
+| [CMYK](-c-m-y-k/index.md) | [common]<br>[CMYK](-c-m-y-k/index.md)(4, "cmyk")<br>The CMYK model is a color model with 4 components that refer to four inks used in color printing: cyan, magenta, yellow and black (or key). CMYK is a subtractive color model. |
+| [LAB](-l-a-b/index.md) | [common]<br>[LAB](-l-a-b/index.md)(3, "lab")<br>The Lab model is a color model with 3 components used to describe a color space that is more perceptually uniform than XYZ. |
+| [XYZ](-x-y-z/index.md) | [common]<br>[XYZ](-x-y-z/index.md)(3, "xyz")<br>The XYZ model is a color model with 3 components that are used to model human color vision on a basic sensory level. |
+| [RGB](-r-g-b/index.md) | [common]<br>[RGB](-r-g-b/index.md)(3, "rgb")<br>The RGB model is a color model with 3 components that refer to the three additive primiaries: red, green and blue. |
 
 ## Types
 

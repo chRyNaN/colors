@@ -13,7 +13,14 @@ The corresponding OETF is simply the inverse function.
 
 The parameters defined by this class form a valid transfer function only if all the following conditions are met:
 
-<ul><li>No parameter is a [Not-a-Number](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/index.html)</li><li>d is in the range [0..1]</li><li>The function is not constant</li><li>The function is positive and increasing</li></ul>
+- 
+   No parameter is a [Not-a-Number](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/index.html)
+- 
+   d is in the range [0..1]
+- 
+   The function is not constant
+- 
+   The function is positive and increasing
 
 ## Parameters
 

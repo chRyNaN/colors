@@ -3,4 +3,4 @@
 # MAX_ALPHA
 
 [common]\
-const val [MAX_ALPHA](-m-a-x_-a-l-p-h-a.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) = 1f
+const val [MAX_ALPHA](-m-a-x_-a-l-p-h-a.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) = 1.0f

@@ -3,11 +3,11 @@
 # CIECAT02
 
 [common]\
-[CIECAT02](index.md)(transform, floatArrayOf(
+[CIECAT02](index.md)(floatArrayOf(
             0.7328f, -0.7036f, 0.0030f,
             0.4296f, 1.6975f, 0.0136f,
             -0.1624f, 0.0061f, 0.9834f
-        ), typeName, "ciecat02")
+        ), "ciecat02")
 
 CIECAT02 chromatic adaption transform, as defined in the CIECAM02 color appearance model.
 

@@ -3,7 +3,7 @@
 # RGB
 
 [common]\
-[RGB](index.md)(componentCount, 3, typeName, "rgb")
+[RGB](index.md)(3, "rgb")
 
 The RGB model is a color model with 3 components that refer to the three additive primiaries: red, green and blue.
 

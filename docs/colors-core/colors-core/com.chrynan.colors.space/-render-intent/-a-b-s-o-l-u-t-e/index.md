@@ -3,7 +3,7 @@
 # ABSOLUTE
 
 [common]\
-[ABSOLUTE](index.md)(typeName, "absolute")
+[ABSOLUTE](index.md)("absolute")
 
 Colors that are in the destination gamut are left unchanged. Colors that fall outside of the destination gamut are mapped to the closest possible color within the gamut of the destination color space (they are clipped).
 

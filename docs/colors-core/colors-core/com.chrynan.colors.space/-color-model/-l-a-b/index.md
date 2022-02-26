@@ -3,7 +3,7 @@
 # LAB
 
 [common]\
-[LAB](index.md)(componentCount, 3, typeName, "lab")
+[LAB](index.md)(3, "lab")
 
 The Lab model is a color model with 3 components used to describe a color space that is more perceptually uniform than XYZ.
 

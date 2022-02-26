@@ -3,4 +3,4 @@
 # minimumLightness
 
 [common]\
-open override val [minimumLightness](minimum-lightness.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) = 0f
+open override val [minimumLightness](minimum-lightness.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) = 0.0f

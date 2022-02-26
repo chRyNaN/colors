@@ -3,11 +3,11 @@
 # VON_KRIES
 
 [common]\
-[VON_KRIES](index.md)(transform, floatArrayOf(
+[VON_KRIES](index.md)(floatArrayOf(
             0.40024f, -0.22630f, 0.00000f,
             0.70760f, 1.16532f, 0.00000f,
             -0.08081f, 0.04570f, 0.91822f
-        ), typeName, "von_kries")
+        ), "von_kries")
 
 von Kries chromatic adaptation transform.
 

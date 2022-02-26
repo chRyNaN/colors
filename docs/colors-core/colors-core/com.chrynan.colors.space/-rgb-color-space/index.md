@@ -9,7 +9,16 @@ An RGB color space is an additive color space using the [RGB](../-color-model/-r
 
 A specific RGB color space is defined by the following properties:
 
-<ul><li>Three chromaticities of the red, green and blue primaries, which define the gamut of the color space.</li><li>A white point chromaticity that defines the stimulus to which color space values are normalized (also just called "white").</li><li>An opto-electronic transfer function, also called opto-electronic conversion function or often, and approximately, gamma function.</li><li>An electro-optical transfer function, also called electo-optical conversion function or often, and approximately, gamma function.</li><li>A range of valid RGB values (most commonly [0..1]).</li></ul>
+- 
+   Three chromaticities of the red, green and blue primaries, which define the gamut of the color space.
+- 
+   A white point chromaticity that defines the stimulus to which color space values are normalized (also just called "white").
+- 
+   An opto-electronic transfer function, also called opto-electronic conversion function or often, and approximately, gamma function.
+- 
+   An electro-optical transfer function, also called electo-optical conversion function or often, and approximately, gamma function.
+- 
+   A range of valid RGB values (most commonly [0..1]).
 
 The most commonly used RGB color space is [sRGB](../-color-spaces/-s-r-g-b.md).
 

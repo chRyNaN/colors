@@ -1,5 +1,12 @@
 $dokka.format:gfm-v1
 $dokka.linkExtension:md
+$dokka.location:com.chrynan.colors.compose.web////PointingToDeclaration/colors-compose-web/colors-compose-web/com.chrynan.colors.compose.web/index.md
+$dokka.location:com.chrynan.colors.compose.web//LocalColors/#/PointingToDeclaration/colors-compose-web/colors-compose-web/com.chrynan.colors.compose.web/-local-colors.md
+$dokka.location:com.chrynan.colors.compose.web//isSystemInDarkTheme/#/PointingToDeclaration/colors-compose-web/colors-compose-web/com.chrynan.colors.compose.web/is-system-in-dark-theme.md
+$dokka.location:com.chrynan.colors.compose.web//systemBasedColors/com.chrynan.colors.theme.LightDarkColorTheme#/PointingToDeclaration/colors-compose-web/colors-compose-web/com.chrynan.colors.compose.web/system-based-colors.md
+$dokka.location:com.chrynan.colors.compose.web//toCSSColorValue/com.chrynan.colors.Color#com.chrynan.colors.space.ColorSpace#com.chrynan.colors.space.RenderIntent/PointingToDeclaration/colors-compose-web/colors-compose-web/com.chrynan.colors.compose.web/to-c-s-s-color-value.md
+$dokka.location:com.chrynan.colors.compose.web//toComposeColor/com.chrynan.colors.Color#/PointingToDeclaration/colors-compose-web/colors-compose-web/com.chrynan.colors.compose.web/to-compose-color.md
+$dokka.location:com.chrynan.colors.compose.web/ComposeColor///PointingToDeclaration/colors-compose-web/colors-compose-web/com.chrynan.colors.compose.web/-compose-color/index.md
 $dokka.location:com.chrynan.colors.compose////PointingToDeclaration/colors-compose/colors-compose/com.chrynan.colors.compose/index.md
 $dokka.location:com.chrynan.colors.compose//MaterialTheme/#com.chrynan.colors.theme.ColorTheme#androidx.compose.material.Typography#androidx.compose.material.Shapes#kotlin.Function0[kotlin.Unit]/PointingToDeclaration/colors-compose/colors-compose/com.chrynan.colors.compose/-material-theme.md
 $dokka.location:com.chrynan.colors.compose//MaterialTheme/#com.chrynan.colors.theme.Colors#androidx.compose.material.Typography#androidx.compose.material.Shapes#kotlin.Function0[kotlin.Unit]/PointingToDeclaration/colors-compose/colors-compose/com.chrynan.colors.compose/-material-theme.md
@@ -449,21 +456,27 @@ $dokka.location:com.chrynan.colors.space/XyzColorSpace/isWideGamut/#/PointingToD
 $dokka.location:com.chrynan.colors.space/XyzColorSpace/toXyz/#kotlin.FloatArray/PointingToDeclaration/colors-core/colors-core/com.chrynan.colors.space/-xyz-color-space/to-xyz.md
 $dokka.location:com.chrynan.colors.theme////PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/index.md
 $dokka.location:com.chrynan.colors.theme//colors/com.chrynan.colors.theme.LightDarkColorTheme#kotlin.Boolean/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/colors.md
-$dokka.location:com.chrynan.colors.theme//darkColors/#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/dark-colors.md
-$dokka.location:com.chrynan.colors.theme//lightColors/#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/light-colors.md
+$dokka.location:com.chrynan.colors.theme//copy/com.chrynan.colors.theme.Colors#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#kotlin.Boolean/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/copy.md
+$dokka.location:com.chrynan.colors.theme//darkColors/#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/dark-colors.md
+$dokka.location:com.chrynan.colors.theme//lightColors/#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color#com.chrynan.colors.Color/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/light-colors.md
 $dokka.location:com.chrynan.colors.theme//onSurface/com.chrynan.colors.theme.Colors#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/on-surface.md
 $dokka.location:com.chrynan.colors.theme//surface/com.chrynan.colors.theme.Colors#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/surface.md
 $dokka.location:com.chrynan.colors.theme//themes/com.chrynan.colors.theme.Colors.Companion#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/themes.md
+$dokka.location:com.chrynan.colors.theme/ColorTheme.Companion///PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-color-theme/-companion/index.md
 $dokka.location:com.chrynan.colors.theme/ColorTheme///PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-color-theme/index.md
 $dokka.location:com.chrynan.colors.theme/ColorTheme/colors/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-color-theme/colors.md
 $dokka.location:com.chrynan.colors.theme/ColorThemes.Companion///PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-color-themes/-companion/index.md
 $dokka.location:com.chrynan.colors.theme/ColorThemes///PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-color-themes/index.md
 $dokka.location:com.chrynan.colors.theme/Colors.Companion///PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-colors/-companion/index.md
 $dokka.location:com.chrynan.colors.theme/Colors///PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-colors/index.md
+$dokka.location:com.chrynan.colors.theme/Colors/accentPrimary/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-colors/accent-primary.md
+$dokka.location:com.chrynan.colors.theme/Colors/accentSecondary/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-colors/accent-secondary.md
 $dokka.location:com.chrynan.colors.theme/Colors/backgroundPrimary/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-colors/background-primary.md
 $dokka.location:com.chrynan.colors.theme/Colors/backgroundSecondary/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-colors/background-secondary.md
 $dokka.location:com.chrynan.colors.theme/Colors/error/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-colors/error.md
 $dokka.location:com.chrynan.colors.theme/Colors/isLight/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-colors/is-light.md
+$dokka.location:com.chrynan.colors.theme/Colors/onAccentPrimary/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-colors/on-accent-primary.md
+$dokka.location:com.chrynan.colors.theme/Colors/onAccentSecondary/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-colors/on-accent-secondary.md
 $dokka.location:com.chrynan.colors.theme/Colors/onBackgroundPrimary/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-colors/on-background-primary.md
 $dokka.location:com.chrynan.colors.theme/Colors/onBackgroundSecondary/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-colors/on-background-secondary.md
 $dokka.location:com.chrynan.colors.theme/Colors/onError/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-colors/on-error.md
@@ -477,34 +490,19 @@ $dokka.location:com.chrynan.colors.theme/Colors/textError/#/PointingToDeclaratio
 $dokka.location:com.chrynan.colors.theme/Colors/textPrimary/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-colors/text-primary.md
 $dokka.location:com.chrynan.colors.theme/Colors/textSecondary/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-colors/text-secondary.md
 $dokka.location:com.chrynan.colors.theme/Colors/textTertiary/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-colors/text-tertiary.md
+$dokka.location:com.chrynan.colors.theme/DarkColorTheme.Companion///PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-dark-color-theme/-companion/index.md
 $dokka.location:com.chrynan.colors.theme/DarkColorTheme///PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-dark-color-theme/index.md
 $dokka.location:com.chrynan.colors.theme/DarkColorTheme/colors/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-dark-color-theme/colors.md
 $dokka.location:com.chrynan.colors.theme/DarkColorTheme/dark/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-dark-color-theme/dark.md
+$dokka.location:com.chrynan.colors.theme/LightColorTheme.Companion///PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-light-color-theme/-companion/index.md
 $dokka.location:com.chrynan.colors.theme/LightColorTheme///PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-light-color-theme/index.md
 $dokka.location:com.chrynan.colors.theme/LightColorTheme/colors/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-light-color-theme/colors.md
 $dokka.location:com.chrynan.colors.theme/LightColorTheme/light/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-light-color-theme/light.md
+$dokka.location:com.chrynan.colors.theme/LightDarkColorTheme.Companion///PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-light-dark-color-theme/-companion/index.md
 $dokka.location:com.chrynan.colors.theme/LightDarkColorTheme///PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-light-dark-color-theme/index.md
 $dokka.location:com.chrynan.colors.theme/LightDarkColorTheme/colors/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-light-dark-color-theme/colors.md
 $dokka.location:com.chrynan.colors.theme/LightDarkColorTheme/dark/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-light-dark-color-theme/dark.md
 $dokka.location:com.chrynan.colors.theme/LightDarkColorTheme/light/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-light-dark-color-theme/light.md
-$dokka.location:com.chrynan.colors.theme/SimpleColors///PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-simple-colors/index.md
-$dokka.location:com.chrynan.colors.theme/SimpleColors/backgroundPrimary/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-simple-colors/background-primary.md
-$dokka.location:com.chrynan.colors.theme/SimpleColors/backgroundSecondary/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-simple-colors/background-secondary.md
-$dokka.location:com.chrynan.colors.theme/SimpleColors/error/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-simple-colors/error.md
-$dokka.location:com.chrynan.colors.theme/SimpleColors/isLight/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-simple-colors/is-light.md
-$dokka.location:com.chrynan.colors.theme/SimpleColors/onBackgroundPrimary/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-simple-colors/on-background-primary.md
-$dokka.location:com.chrynan.colors.theme/SimpleColors/onBackgroundSecondary/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-simple-colors/on-background-secondary.md
-$dokka.location:com.chrynan.colors.theme/SimpleColors/onError/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-simple-colors/on-error.md
-$dokka.location:com.chrynan.colors.theme/SimpleColors/onPrimary/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-simple-colors/on-primary.md
-$dokka.location:com.chrynan.colors.theme/SimpleColors/onSecondary/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-simple-colors/on-secondary.md
-$dokka.location:com.chrynan.colors.theme/SimpleColors/primary/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-simple-colors/primary.md
-$dokka.location:com.chrynan.colors.theme/SimpleColors/primaryVariant/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-simple-colors/primary-variant.md
-$dokka.location:com.chrynan.colors.theme/SimpleColors/secondary/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-simple-colors/secondary.md
-$dokka.location:com.chrynan.colors.theme/SimpleColors/secondaryVariant/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-simple-colors/secondary-variant.md
-$dokka.location:com.chrynan.colors.theme/SimpleColors/textError/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-simple-colors/text-error.md
-$dokka.location:com.chrynan.colors.theme/SimpleColors/textPrimary/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-simple-colors/text-primary.md
-$dokka.location:com.chrynan.colors.theme/SimpleColors/textSecondary/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-simple-colors/text-secondary.md
-$dokka.location:com.chrynan.colors.theme/SimpleColors/textTertiary/#/PointingToDeclaration/colors-theme/colors-theme/com.chrynan.colors.theme/-simple-colors/text-tertiary.md
 $dokka.location:com.chrynan.colors////PointingToDeclaration/colors-core/colors-core/com.chrynan.colors/index.md
 $dokka.location:com.chrynan.colors//Color/#com.chrynan.colors.ColorInt/PointingToDeclaration/colors-core/colors-core/com.chrynan.colors/-color.md
 $dokka.location:com.chrynan.colors//Color/#com.chrynan.colors.ColorLong/PointingToDeclaration/colors-core/colors-core/com.chrynan.colors/-color.md
@@ -650,17 +648,10 @@ $dokka.location:com.chrynan.colors/XyzColor///PointingToDeclaration/colors-core
 $dokka.location:com.chrynan.colors/XyzColor/x/#/PointingToDeclaration/colors-core/colors-core/com.chrynan.colors/-xyz-color/x.md
 $dokka.location:com.chrynan.colors/XyzColor/y/#/PointingToDeclaration/colors-core/colors-core/com.chrynan.colors/-xyz-color/y.md
 $dokka.location:com.chrynan.colors/XyzColor/z/#/PointingToDeclaration/colors-core/colors-core/com.chrynan.colors/-xyz-color/z.md
-$dokka.location:com.chrynan.compose.web////PointingToDeclaration/colors-compose-web/colors-compose-web/com.chrynan.compose.web/index.md
-$dokka.location:com.chrynan.compose.web//LocalColors/#/PointingToDeclaration/colors-compose-web/colors-compose-web/com.chrynan.compose.web/-local-colors.md
-$dokka.location:com.chrynan.compose.web//isSystemInDarkTheme/#/PointingToDeclaration/colors-compose-web/colors-compose-web/com.chrynan.compose.web/is-system-in-dark-theme.md
-$dokka.location:com.chrynan.compose.web//systemBasedColors/com.chrynan.colors.theme.LightDarkColorTheme#/PointingToDeclaration/colors-compose-web/colors-compose-web/com.chrynan.compose.web/system-based-colors.md
-$dokka.location:com.chrynan.compose.web//toCSSColorValue/Color#ColorSpace#RenderIntent/PointingToDeclaration/colors-compose-web/colors-compose-web/com.chrynan.compose.web/to-c-s-s-color-value.md
-$dokka.location:com.chrynan.compose.web//toComposeColor/com.chrynan.colors.Color#/PointingToDeclaration/colors-compose-web/colors-compose-web/com.chrynan.compose.web/to-compose-color.md
-$dokka.location:com.chrynan.compose.web/ComposeColor///PointingToDeclaration/colors-compose-web/colors-compose-web/com.chrynan.compose.web/-compose-color/index.md
 module:colors-compose
 com.chrynan.colors.compose
 module:colors-compose-web
-com.chrynan.compose.web
+com.chrynan.colors.compose.web
 module:colors-core
 com.chrynan.colors
 com.chrynan.colors.space

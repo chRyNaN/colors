@@ -9,15 +9,24 @@ Indicates whether this color space is the sRGB color space or equivalent to the 
 
 A color space is considered sRGB if it meets all the following conditions:
 
-<ul><li>Its color model is [ColorModel.RGB](../-color-model/-r-g-b/index.md).</li><li></li></ul>
+- 
+   Its color model is [ColorModel.RGB](../-color-model/-r-g-b/index.md).
+- 
 
 Its primaries are within 1e-3 of the true [sRGB](../-color-spaces/-s-r-g-b.md) primaries.
 
-<ul><li></li></ul>
+- 
 
 Its white point is within 1e-3 of the CIE standard illuminant [D65](../-illuminant/-d65.md).
 
-<ul><li>Its opto-electronic transfer function is not linear.</li><li>Its electro-optical transfer function is not linear.</li><li>Its transfer functions yield values within 1e-3 of [ColorSpaces.SRGB](../-color-spaces/-s-r-g-b.md).</li><li>Its range is [0..1].</li></ul>
+- 
+   Its opto-electronic transfer function is not linear.
+- 
+   Its electro-optical transfer function is not linear.
+- 
+   Its transfer functions yield values within 1e-3 of [ColorSpaces.SRGB](../-color-spaces/-s-r-g-b.md).
+- 
+   Its range is [0..1].
 
 This method always returns true for [ColorSpaces.SRGB](../-color-spaces/-s-r-g-b.md).
 

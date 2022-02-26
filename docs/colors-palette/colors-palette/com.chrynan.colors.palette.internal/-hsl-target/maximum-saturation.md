@@ -3,4 +3,4 @@
 # maximumSaturation
 
 [common]\
-open override val [maximumSaturation](maximum-saturation.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) = 1f
+open override val [maximumSaturation](maximum-saturation.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) = 1.0f

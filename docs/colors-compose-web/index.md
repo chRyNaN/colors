@@ -6,4 +6,4 @@
 
 | Name |
 |---|
-| [com.chrynan.compose.web](colors-compose-web/com.chrynan.compose.web/index.md) |
+| [com.chrynan.colors.compose.web](colors-compose-web/com.chrynan.colors.compose.web/index.md) |

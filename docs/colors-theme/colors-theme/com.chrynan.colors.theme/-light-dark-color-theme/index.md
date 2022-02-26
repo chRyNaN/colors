@@ -7,6 +7,12 @@ interface [LightDarkColorTheme](index.md) : [LightColorTheme](../-light-color-th
 
 A [ColorTheme](../-color-theme/index.md) that contains both light and dark [Colors](../-colors/index.md).
 
+## Types
+
+| Name | Summary |
+|---|---|
+| [Companion](-companion/index.md) | [common]<br>object [Companion](-companion/index.md) |
+
 ## Functions
 
 | Name | Summary |

@@ -7,6 +7,12 @@ interface [LightColorTheme](index.md) : [ColorTheme](../-color-theme/index.md)
 
 A [ColorTheme](../-color-theme/index.md) that is represented by [lightColors](../light-colors.md).
 
+## Types
+
+| Name | Summary |
+|---|---|
+| [Companion](-companion/index.md) | [common]<br>object [Companion](-companion/index.md) |
+
 ## Functions
 
 | Name | Summary |
