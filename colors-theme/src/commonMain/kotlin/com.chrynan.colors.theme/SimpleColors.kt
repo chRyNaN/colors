@@ -2,7 +2,7 @@ package com.chrynan.colors.theme
 
 import com.chrynan.colors.Color
 
-data class SimpleColors internal constructor(
+internal data class SimpleColors(
     override val primary: Color,
     override val primaryVariant: Color,
     override val secondary: Color,

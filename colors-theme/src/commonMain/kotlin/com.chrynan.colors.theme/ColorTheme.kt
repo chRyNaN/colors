@@ -11,6 +11,8 @@ interface ColorTheme {
      * Obtains the [Colors] for this [ColorTheme].
      */
     fun colors(): Colors
+
+    companion object
 }
 
 /**
@@ -33,6 +35,8 @@ interface LightColorTheme : ColorTheme {
      * [Colors.isLight] set to true. Undefined behaviour if this is not implemented correctly.
      */
     override fun colors(): Colors = light
+
+    companion object
 }
 
 /**
@@ -55,6 +59,8 @@ interface DarkColorTheme : ColorTheme {
      * [Colors.isLight] set to false. Undefined behaviour if this is not implemented correctly.
      */
     override fun colors(): Colors = dark
+
+    companion object
 }
 
 /**
@@ -84,6 +90,8 @@ interface LightDarkColorTheme : LightColorTheme,
      * [Colors].
      */
     override fun colors(): Colors = colors(isLight = true)
+
+    companion object
 }
 
 /**
