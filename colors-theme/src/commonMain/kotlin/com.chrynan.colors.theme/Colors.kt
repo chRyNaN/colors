@@ -36,6 +36,14 @@ interface Colors {
 
     val textError: Color
 
+    val accentPrimary: Color
+
+    val accentSecondary: Color
+
+    val onAccentPrimary: Color
+
+    val onAccentSecondary: Color
+
     val isLight: Boolean
 
     companion object

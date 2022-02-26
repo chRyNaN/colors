@@ -19,5 +19,9 @@ internal data class SimpleColors(
     override val textSecondary: Color = onSecondary,
     override val textTertiary: Color,
     override val textError: Color = onError,
+    override val accentPrimary: Color,
+    override val accentSecondary: Color,
+    override val onAccentPrimary: Color,
+    override val onAccentSecondary: Color,
     override val isLight: Boolean
 ) : Colors

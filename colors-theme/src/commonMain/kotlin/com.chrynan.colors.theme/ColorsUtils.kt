@@ -20,7 +20,11 @@ fun lightColors(
     textPrimary: Color = onPrimary,
     textSecondary: Color = onSecondary,
     textTertiary: Color = Color.Black,
-    textError: Color = onError
+    textError: Color = onError,
+    accentPrimary: Color = secondary,
+    accentSecondary: Color = secondaryVariant,
+    onAccentPrimary: Color = onSecondary,
+    onAccentSecondary: Color = onSecondary
 ): Colors = SimpleColors(
     primary = primary,
     primaryVariant = primaryVariant,
@@ -38,6 +42,10 @@ fun lightColors(
     textSecondary = textSecondary,
     textTertiary = textTertiary,
     textError = textError,
+    accentPrimary = accentPrimary,
+    accentSecondary = accentSecondary,
+    onAccentPrimary = onAccentPrimary,
+    onAccentSecondary = onAccentSecondary,
     isLight = true
 )
 
@@ -57,7 +65,11 @@ fun darkColors(
     textPrimary: Color = onPrimary,
     textSecondary: Color = onSecondary,
     textTertiary: Color = Color.White,
-    textError: Color = onError
+    textError: Color = onError,
+    accentPrimary: Color = secondary,
+    accentSecondary: Color = secondaryVariant,
+    onAccentPrimary: Color = onSecondary,
+    onAccentSecondary: Color = onSecondary
 ): Colors = SimpleColors(
     primary = primary,
     primaryVariant = primaryVariant,
@@ -75,6 +87,10 @@ fun darkColors(
     textSecondary = textSecondary,
     textTertiary = textTertiary,
     textError = textError,
+    accentPrimary = accentPrimary,
+    accentSecondary = accentSecondary,
+    onAccentPrimary = onAccentPrimary,
+    onAccentSecondary = onAccentSecondary,
     isLight = false
 )
 
@@ -101,6 +117,10 @@ fun Colors.copy(
     textSecondary: Color = this.textSecondary,
     textTertiary: Color = this.textTertiary,
     textError: Color = this.textError,
+    accentPrimary: Color = this.accentPrimary,
+    accentSecondary: Color = this.accentSecondary,
+    onAccentPrimary: Color = this.onAccentPrimary,
+    onAccentSecondary: Color = this.onAccentSecondary,
     isLight: Boolean = this.isLight
 ): Colors = SimpleColors(
     primary = primary,
@@ -119,5 +139,9 @@ fun Colors.copy(
     textSecondary = textSecondary,
     textTertiary = textTertiary,
     textError = textError,
+    accentPrimary = accentPrimary,
+    accentSecondary = accentSecondary,
+    onAccentPrimary = onAccentPrimary,
+    onAccentSecondary = onAccentSecondary,
     isLight = isLight
 )
