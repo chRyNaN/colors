@@ -79,7 +79,7 @@ fun Long.toColor(): RgbaColor = Color(long = this)
 fun ColorLong.toColor(): Color = Color(colorLong = this)
 
 /**
- * Linear interpolate between two [Colors][Color], [start] and [stop] with [fraction] fraction
+ * Linear interpolate between two [Color]s, [start] and [stop] with [fraction]
  * between the two. The [ColorSpace] of the result is always the [ColorSpace][Color.colorSpace]
  * of [stop]. [fraction] should be between 0 and 1, inclusive.
  */
@@ -100,11 +100,11 @@ fun lerp(start: Color, stop: Color, fraction: Float): Color {
     val endA = endColor.component2()
     val endB = endColor.component2()
 
-    val interpolated = RgbaColor(
+    val interpolated = LabColor(
         alpha = lerp(startAlpha, endAlpha, fraction),
-        red = lerp(startL, endL, fraction),
-        green = lerp(startA, endA, fraction),
-        blue = lerp(startB, endB, fraction),
+        l = lerp(startL, endL, fraction),
+        a = lerp(startA, endA, fraction),
+        b = lerp(startB, endB, fraction),
         colorSpace = colorSpace
     )
 

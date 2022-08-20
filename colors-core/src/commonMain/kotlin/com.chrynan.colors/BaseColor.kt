@@ -3,7 +3,6 @@ package com.chrynan.colors
 import com.chrynan.colors.space.*
 import com.chrynan.colors.space.Float16
 
-@OptIn(ExperimentalUnsignedTypes::class)
 sealed interface BaseColor : Color {
 
     val value: ULong
@@ -99,7 +98,7 @@ sealed interface BaseColor : Color {
         }
 
     override fun convert(colorSpace: ColorSpace, renderIntent: RenderIntent): Color {
-        if (colorSpace == this.colorSpace) return this
+        if (colorSpace == this.colorSpace) return this.copy()
 
         val connector = this.colorSpace.connect(colorSpace, renderIntent)
         val result = connector.transform(components)
