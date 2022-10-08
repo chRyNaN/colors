@@ -3,7 +3,7 @@
 # LabColorSpace
 
 [common]\
-class [LabColorSpace](index.md)(name: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), id: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)) : [ColorSpace](../-color-space/index.md)
+class [LabColorSpace](index.md)(val name: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), val id: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)) : [ColorSpace](../-color-space/index.md)
 
 Implementation of the CIE L*a*b* color space. Its PCS is CIE XYZ with a white point of D50.
 

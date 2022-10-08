@@ -7,17 +7,19 @@ open class [Connector](index.md)
 
 A connector transforms colors from a source color space to a destination color space.
 
-A source color space is connected to a destination color space using the color transform C computed from their respective transforms noted Tsrc and Tdst in the following equation:
+A source color space is connected to a destination color space using the color transform `C` computed from their respective transforms noted `Tsrc` and `Tdst` in the following equation:
 
 [See equation](https://developer.android.com/reference/android/graphics/ColorSpace.Connector)
 
-The transform C shown above is only valid when the source and destination color spaces have the same profile connection space (PCS). We know that instances of [ColorSpace](../-color-space/index.md) always use CIE XYZ as their PCS but their white points might differ. When they do, we must perform a chromatic adaptation of the color spaces' transforms. To do so, we use the von Kries method described in the documentation of [Adaptation](../-adaptation/index.md), using the CIE standard illuminant [D50](../-illuminant/-d50.md) as the target white point.
+The transform `C` shown above is only valid when the source and destination color spaces have the same profile connection space (PCS). We know that instances of [ColorSpace](../-color-space/index.md) always use CIE XYZ as their PCS but their white points might differ. When they do, we must perform a chromatic adaptation of the color spaces' transforms. To do so, we use the von Kries method described in the documentation of [Adaptation](../-adaptation/index.md), using the CIE standard illuminant [D50](../-illuminant/-d50.md) as the target white point.
 
 Example of conversion from [sRGB](../-color-spaces/-s-r-g-b.md) to [DCI-P3](../-color-spaces/-d-c-i_-p3.md):
 
+```kotlin
     val connector = ColorSpaces.Srgb.connect(ColorSpaces.DciP3);
     val p3 = connector.transform(1.0f, 0.0f, 0.0f);
     // p3 contains { 0.9473, 0.2740, 0.2076 }
+```
 
 ## See also
 

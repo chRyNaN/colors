@@ -5,6 +5,12 @@
 [common]\
 class [PaletteSerializer](index.md)(swatchSerializer: KSerializer&lt;[Swatch](../../../../colors-palette/colors-palette/com.chrynan.colors.palette/-swatch/index.md)&gt;) : KSerializer&lt;[Palette](../../../../colors-palette/colors-palette/com.chrynan.colors.palette/-palette/index.md)&gt;
 
+## Constructors
+
+| | |
+|---|---|
+| [PaletteSerializer](-palette-serializer.md) | [common]<br>fun [PaletteSerializer](-palette-serializer.md)(swatchSerializer: KSerializer&lt;[Swatch](../../../../colors-palette/colors-palette/com.chrynan.colors.palette/-swatch/index.md)&gt;) |
+
 ## Functions
 
 | Name | Summary |

@@ -5,9 +5,9 @@
 [common]\
 @[JvmInline](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-inline/index.html)
 
-value class [ColorInt](index.md)(value: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html))
+value class [ColorInt](index.md)(val value: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html))
 
-An inline class wrapping an [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) that is meant to represent a [Color](../-color/index.md) value in an [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) form. This [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) should have all of the necessary color information encoded into it. The [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) should be a packed color value, in the SRGB Color Space, in the form AARRGGBB. This is similar to the "ColorInt" native representation on the Android platform.
+An inline class wrapping an [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) that is meant to represent a [Color](../-color/index.md) value in an [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) form. This [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) should have all of the necessary color information encoded into it. The [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) should be a packed color value, in the SRGB Color Space, in the form `AARRGGBB`. This is similar to the &quot;ColorInt&quot; native representation on the Android platform.
 
 ##  ColorInt Components:
 
@@ -18,7 +18,7 @@ An inline class wrapping an [Int](https://kotlinlang.org/api/latest/jvm/stdlib/k
 | G | Green | 8 Bits | 0...255 |
 | B | Blue | 8 Bits | 0...255 |
 
-The components in the above table are listed in encoding order, which is why [ColorInt](index.md)s are called "ARGB" colors.
+The components in the above table are listed in encoding order, which is why [ColorInt](index.md)s are called &quot;ARGB&quot; colors.
 
 ## Constructors
 

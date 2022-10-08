@@ -4,3 +4,11 @@
 
 [common]\
 val [gamma](gamma.md): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)
+
+## Parameters
+
+common
+
+| | |
+|---|---|
+| gamma | Value g in the equation of the EOTF described above. |

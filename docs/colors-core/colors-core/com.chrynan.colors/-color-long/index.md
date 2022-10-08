@@ -5,11 +5,11 @@
 [common]\
 @[JvmInline](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-inline/index.html)
 
-value class [ColorLong](index.md)(value: [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html))
+value class [ColorLong](index.md)(val value: [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html))
 
 An inline class wrapping a [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html) that is meant to represent a [Color](../-color/index.md) value in a [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html) form. This is very similar to a [ColorInt](../-color-int/index.md) but allows for more precision. A common color model is the [ColorModel.RGB](../../com.chrynan.colors.space/-color-model/-r-g-b/index.md) in which the components represent red, green and blue values.
 
-This is similar to the "ColorLong" native representation on the Android platform.
+This is similar to the &quot;ColorLong&quot; native representation on the Android platform.
 
 Note that where [ColorInt](../-color-int/index.md)s always contain ARGB components, a [ColorLong](index.md) always has four components that depend on the Color Space Model. One of these components is always alpha, but the other three components depend on the Color Space Model.
 

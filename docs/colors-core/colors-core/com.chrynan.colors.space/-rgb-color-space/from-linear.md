@@ -5,7 +5,7 @@
 [common]\
 fun [fromLinear](from-linear.md)(r: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html), g: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html), b: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)): [FloatArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html)
 
-Encodes an RGB value from linear space to this color space's "gamma space". This is achieved by applying this color space's opto-electronic transfer function to the supplied values.
+Encodes an RGB value from linear space to this color space's &quot;gamma space&quot;. This is achieved by applying this color space's opto-electronic transfer function to the supplied values.
 
 Refer to the documentation of [RgbColorSpace](index.md) for more information about transfer functions and their use for encoding and decoding RGB values.
 
@@ -34,7 +34,7 @@ common
 [common]\
 fun [fromLinear](from-linear.md)(v: [FloatArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html)): [FloatArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html)
 
-Encodes an RGB value from linear space to this color space's "gamma space". This is achieved by applying this color space's opto-electronic transfer function to the first 3 values of the supplied array. The result is stored back in the input array.
+Encodes an RGB value from linear space to this color space's &quot;gamma space&quot;. This is achieved by applying this color space's opto-electronic transfer function to the first 3 values of the supplied array. The result is stored back in the input array.
 
 Refer to the documentation of [RgbColorSpace](index.md) for more information about transfer functions and their use for encoding and decoding RGB values.
 

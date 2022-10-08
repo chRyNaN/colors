@@ -7,7 +7,7 @@ abstract class [ColorSpace](index.md)
 
 A [ColorSpace](index.md) is used to identify a specific organization of colors. Each color space is characterized by a [color model](../-color-model/index.md) that defines how a color value is represented (for instance the [RGB](../-color-model/-r-g-b/index.md) color model defines a color value as a triplet of numbers).
 
-Each component of a color must fall within a valid range, specific to each color space, defined by [getMinValue](get-min-value.md) and [getMaxValue](get-max-value.md) This range is commonly [0..1]. While it is recommended to use values in the valid range, a color space always clamps input and output values when performing operations such as converting to a different color space.
+Each component of a color must fall within a valid range, specific to each color space, defined by [getMinValue](get-min-value.md) and [getMaxValue](get-max-value.md) This range is commonly `[0..1]`. While it is recommended to use values in the valid range, a color space always clamps input and output values when performing operations such as converting to a different color space.
 
 ###  Using color spaces
 
@@ -25,22 +25,28 @@ Since the white point of the PCS is not defined for RGB color space, it is highl
 
 Here is an example of how to convert from a color space to another:
 
+```kotlin
     // Convert from DCI-P3 to Rec.2020
     val connector = ColorSpaces.DciP3.connect(ColorSpaces.BT2020)
 
     val bt2020Values = connector.transform(p3r, p3g, p3b);
+```
 
 You can easily convert to [sRGB](../-color-spaces/-s-r-g-b.md) by omitting the color space parameter:
 
+```kotlin
     // Convert from DCI-P3 to sRGB
     val connector = ColorSpaces.DciP3.connect()
 
     val sRGBValues = connector.transform(p3r, p3g, p3b);
+```
 
 Conversions also work between color spaces with different color models:
 
+```kotlin
     // Convert from CIE L*a*b* (color model Lab) to Rec.709 (color model RGB)
     val connector = ColorSpaces.CieLab.connect(ColorSpaces.Bt709)
+```
 
 ###  Color spaces and multi-threading
 

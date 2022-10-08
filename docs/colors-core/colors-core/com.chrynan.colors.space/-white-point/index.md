@@ -3,7 +3,7 @@
 # WhitePoint
 
 [common]\
-data class [WhitePoint](index.md)(x: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html), y: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html))
+data class [WhitePoint](index.md)(val x: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html), val y: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html))
 
 Class for constructing white points used in [RGB](../-rgb-color-space/index.md) color space. The value is stored in the CIE xyY color space. The Y component of the white point is assumed to be 1.
 

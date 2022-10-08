@@ -3,7 +3,7 @@
 # ColorTheme
 
 [common]\
-interface [ColorTheme](index.md)
+fun interface [ColorTheme](index.md)
 
 A color theme for an application. It provides a way structure the [Colors](../-colors/index.md) for an application.
 

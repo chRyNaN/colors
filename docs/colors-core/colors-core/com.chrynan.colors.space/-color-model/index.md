@@ -11,10 +11,10 @@ A color model is required by a [ColorSpace](../-color-space/index.md) to describ
 
 | | |
 |---|---|
-| [CMYK](-c-m-y-k/index.md) | [common]<br>[CMYK](-c-m-y-k/index.md)(4, "cmyk")<br>The CMYK model is a color model with 4 components that refer to four inks used in color printing: cyan, magenta, yellow and black (or key). CMYK is a subtractive color model. |
-| [LAB](-l-a-b/index.md) | [common]<br>[LAB](-l-a-b/index.md)(3, "lab")<br>The Lab model is a color model with 3 components used to describe a color space that is more perceptually uniform than XYZ. |
-| [XYZ](-x-y-z/index.md) | [common]<br>[XYZ](-x-y-z/index.md)(3, "xyz")<br>The XYZ model is a color model with 3 components that are used to model human color vision on a basic sensory level. |
-| [RGB](-r-g-b/index.md) | [common]<br>[RGB](-r-g-b/index.md)(3, "rgb")<br>The RGB model is a color model with 3 components that refer to the three additive primiaries: red, green and blue. |
+| [RGB](-r-g-b/index.md) | [common]<br>[RGB](-r-g-b/index.md)<br>The RGB model is a color model with 3 components that refer to the three additive primiaries: red, green and blue. |
+| [XYZ](-x-y-z/index.md) | [common]<br>[XYZ](-x-y-z/index.md)<br>The XYZ model is a color model with 3 components that are used to model human color vision on a basic sensory level. |
+| [LAB](-l-a-b/index.md) | [common]<br>[LAB](-l-a-b/index.md)<br>The Lab model is a color model with 3 components used to describe a color space that is more perceptually uniform than XYZ. |
+| [CMYK](-c-m-y-k/index.md) | [common]<br>[CMYK](-c-m-y-k/index.md)<br>The CMYK model is a color model with 4 components that refer to four inks used in color printing: cyan, magenta, yellow and black (or key). CMYK is a subtractive color model. |
 
 ## Types
 
@@ -27,6 +27,6 @@ A color model is required by a [ColorSpace](../-color-space/index.md) to describ
 | Name | Summary |
 |---|---|
 | [componentCount](component-count.md) | [common]<br>val [componentCount](component-count.md): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)<br>The number of components for this color model. An integer between 1 and 4 |
-| [name](../-render-intent/-p-e-r-c-e-p-t-u-a-l/index.md#-372974862%2FProperties%2F1346026436) | [common]<br>val [name](../-render-intent/-p-e-r-c-e-p-t-u-a-l/index.md#-372974862%2FProperties%2F1346026436): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
-| [ordinal](../-render-intent/-p-e-r-c-e-p-t-u-a-l/index.md#-739389684%2FProperties%2F1346026436) | [common]<br>val [ordinal](../-render-intent/-p-e-r-c-e-p-t-u-a-l/index.md#-739389684%2FProperties%2F1346026436): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
+| [name](../-render-intent/-a-b-s-o-l-u-t-e/index.md#-372974862%2FProperties%2F1346026436) | [common]<br>val [name](../-render-intent/-a-b-s-o-l-u-t-e/index.md#-372974862%2FProperties%2F1346026436): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
+| [ordinal](../-render-intent/-a-b-s-o-l-u-t-e/index.md#-739389684%2FProperties%2F1346026436) | [common]<br>val [ordinal](../-render-intent/-a-b-s-o-l-u-t-e/index.md#-739389684%2FProperties%2F1346026436): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
 | [typeName](type-name.md) | [common]<br>val [typeName](type-name.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

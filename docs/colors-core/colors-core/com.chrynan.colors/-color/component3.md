@@ -11,4 +11,6 @@ For a [ColorModel.RGB](../../com.chrynan.colors.space/-color-space/index.md), th
 
 This is used for destructuring the [Color](index.md) into it's color components. For example, for an RGB Color:
 
+```kotlin
 val (red, green, blue, alpha) = color
+```

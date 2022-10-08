@@ -44,7 +44,9 @@ fun [Color](-color.md)(long: [Long](https://kotlinlang.org/api/latest/jvm/stdlib
 
 Creates a new [RgbaColor](-rgba-color/index.md) instance from an ARGB color int. The resulting color is in the [sRGB](../com.chrynan.colors.space/-color-spaces/-s-r-g-b.md) color space. This is useful for specifying colors with alpha greater than 0x80 in numeric form without using [Long.toInt](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/to-int.html):
 
+```kotlin
     val color = Color(0xFF000080)
+```
 
 ## Parameters
 

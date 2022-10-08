@@ -29,4 +29,4 @@ A [ColorTheme](../-color-theme/index.md) that is represented by [darkColors](../
 
 | Name |
 |---|
-| [LightDarkColorTheme](../-light-dark-color-theme/index.md) |
+| [LightOrDarkColorTheme](../-light-or-dark-color-theme/index.md) |

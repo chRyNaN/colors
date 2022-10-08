@@ -26,4 +26,4 @@ common
 
 | | |
 |---|---|
-| component | The index of the component, from 0 to 3, inclusive. |
+| component | The index of the component, from `0` to `3`, inclusive. |

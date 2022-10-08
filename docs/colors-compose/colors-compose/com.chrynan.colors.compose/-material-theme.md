@@ -4,19 +4,19 @@
 
 [common]\
 
-@Composable
+@[Composable](https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html)
 
-fun [MaterialTheme](-material-theme.md)(colors: [Colors](../../../colors-theme/colors-theme/com.chrynan.colors.theme/-colors/index.md), typography: Typography = MaterialTheme.typography, shapes: Shapes = MaterialTheme.shapes, content: @Composable() -&gt; [Unit](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html))
+fun [MaterialTheme](-material-theme.md)(colors: [Colors](../../../colors-theme/colors-theme/com.chrynan.colors.theme/-colors/index.md), typography: [Typography](https://developer.android.com/reference/kotlin/androidx/compose/material/Typography.html) = MaterialTheme.typography, shapes: [Shapes](https://developer.android.com/reference/kotlin/androidx/compose/material/Shapes.html) = MaterialTheme.shapes, content: @[Composable](https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html)() -&gt; [Unit](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html))
 
-@Composable
+@[Composable](https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html)
 
-fun [MaterialTheme](-material-theme.md)(colorTheme: [ColorTheme](../../../colors-theme/colors-theme/com.chrynan.colors.theme/-color-theme/index.md), typography: Typography = MaterialTheme.typography, shapes: Shapes = MaterialTheme.shapes, content: @Composable() -&gt; [Unit](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html))
+fun [MaterialTheme](-material-theme.md)(colorTheme: [ColorTheme](../../../colors-theme/colors-theme/com.chrynan.colors.theme/-color-theme/index.md), typography: [Typography](https://developer.android.com/reference/kotlin/androidx/compose/material/Typography.html) = MaterialTheme.typography, shapes: [Shapes](https://developer.android.com/reference/kotlin/androidx/compose/material/Shapes.html) = MaterialTheme.shapes, content: @[Composable](https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html)() -&gt; [Unit](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html))
 
-@Composable
+@[Composable](https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html)
 
-fun [MaterialTheme](-material-theme.md)(colorTheme: [LightDarkColorTheme](../../../colors-theme/colors-theme/com.chrynan.colors.theme/-light-dark-color-theme/index.md), typography: Typography = MaterialTheme.typography, shapes: Shapes = MaterialTheme.shapes, content: @Composable() -&gt; [Unit](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html))
+fun [MaterialTheme](-material-theme.md)(colorTheme: [LightOrDarkColorTheme](../../../colors-theme/colors-theme/com.chrynan.colors.theme/-light-or-dark-color-theme/index.md), typography: [Typography](https://developer.android.com/reference/kotlin/androidx/compose/material/Typography.html) = MaterialTheme.typography, shapes: [Shapes](https://developer.android.com/reference/kotlin/androidx/compose/material/Shapes.html) = MaterialTheme.shapes, content: @[Composable](https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html)() -&gt; [Unit](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html))
 
-A Composable function to create a MaterialTheme with the provided [Colors](../../../colors-theme/colors-theme/com.chrynan.colors.theme/-colors/index.md) class.
+A Composable function to create a [MaterialTheme](https://developer.android.com/reference/kotlin/androidx/compose/material/MaterialTheme.html) with the provided [Colors](../../../colors-theme/colors-theme/com.chrynan.colors.theme/-colors/index.md) class.
 
 ## See also
 
@@ -24,4 +24,4 @@ common
 
 | | |
 |---|---|
-| androidx.compose.material.MaterialTheme |  |
+| [androidx.compose.material.MaterialTheme](https://developer.android.com/reference/kotlin/androidx/compose/material/MaterialTheme.html) |  |

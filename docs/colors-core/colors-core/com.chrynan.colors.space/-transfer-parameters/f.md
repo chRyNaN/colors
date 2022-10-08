@@ -4,3 +4,11 @@
 
 [common]\
 val [f](f.md): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html) = 0.0
+
+## Parameters
+
+common
+
+| | |
+|---|---|
+| f | Value f in the equation of the EOTF described above. |

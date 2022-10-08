@@ -5,4 +5,4 @@
 [common]\
 fun [ComposeColor](index.md#781753649%2FClasslikes%2F-1963877457).[toMultiplatformColor](to-multiplatform-color.md)(): [Color](../../../colors-core/colors-core/com.chrynan.colors/-color/index.md)
 
-Converts this androidx.compose.ui.graphics.Color to a Kotlin Multiplatform compatible [Color](../../../colors-core/colors-core/com.chrynan.colors/-color/index.md).
+Converts this [androidx.compose.ui.graphics.Color](https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html) to a Kotlin Multiplatform compatible [Color](../../../colors-core/colors-core/com.chrynan.colors/-color/index.md).

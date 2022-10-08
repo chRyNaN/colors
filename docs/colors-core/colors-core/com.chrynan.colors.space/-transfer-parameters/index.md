@@ -3,7 +3,7 @@
 # TransferParameters
 
 [common]\
-data class [TransferParameters](index.md)(gamma: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), a: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), b: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), c: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), d: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), e: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), f: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html))
+data class [TransferParameters](index.md)(val gamma: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), val a: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), val b: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), val c: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), val d: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), val e: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html) = 0.0, val f: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html) = 0.0)
 
 Defines the parameters for the ICC parametric curve type 4, as defined in ICC.1:2004-10, section 10.15.
 
@@ -16,7 +16,7 @@ The parameters defined by this class form a valid transfer function only if all 
 - 
    No parameter is a [Not-a-Number](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/index.html)
 - 
-   d is in the range [0..1]
+   `d` is in the range `[0..1]`
 - 
    The function is not constant
 - 

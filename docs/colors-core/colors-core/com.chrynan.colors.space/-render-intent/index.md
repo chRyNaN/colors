@@ -22,10 +22,10 @@ common
 
 | | |
 |---|---|
-| [ABSOLUTE](-a-b-s-o-l-u-t-e/index.md) | [common]<br>[ABSOLUTE](-a-b-s-o-l-u-t-e/index.md)("absolute")<br>Colors that are in the destination gamut are left unchanged. Colors that fall outside of the destination gamut are mapped to the closest possible color within the gamut of the destination color space (they are clipped). |
-| [SATURATION](-s-a-t-u-r-a-t-i-o-n/index.md) | [common]<br>[SATURATION](-s-a-t-u-r-a-t-i-o-n/index.md)("saturation")<br>Attempts to maintain the relative saturation of colors from the source gamut to the destination gamut, to keep highly saturated colors as saturated as possible. |
-| [RELATIVE](-r-e-l-a-t-i-v-e/index.md) | [common]<br>[RELATIVE](-r-e-l-a-t-i-v-e/index.md)("relative")<br>Similar to the [ABSOLUTE](-a-b-s-o-l-u-t-e/index.md) render intent, this render intent matches the closest color in the destination gamut but makes adjustments for the destination white point. |
-| [PERCEPTUAL](-p-e-r-c-e-p-t-u-a-l/index.md) | [common]<br>[PERCEPTUAL](-p-e-r-c-e-p-t-u-a-l/index.md)("perceptual")<br>Compresses the source gamut into the destination gamut. This render intent affects all colors, inside and outside of destination gamut. The goal of this render intent is to preserve the visual relationship between colors. |
+| [PERCEPTUAL](-p-e-r-c-e-p-t-u-a-l/index.md) | [common]<br>[PERCEPTUAL](-p-e-r-c-e-p-t-u-a-l/index.md)<br>Compresses the source gamut into the destination gamut. This render intent affects all colors, inside and outside of destination gamut. The goal of this render intent is to preserve the visual relationship between colors. |
+| [RELATIVE](-r-e-l-a-t-i-v-e/index.md) | [common]<br>[RELATIVE](-r-e-l-a-t-i-v-e/index.md)<br>Similar to the [ABSOLUTE](-a-b-s-o-l-u-t-e/index.md) render intent, this render intent matches the closest color in the destination gamut but makes adjustments for the destination white point. |
+| [SATURATION](-s-a-t-u-r-a-t-i-o-n/index.md) | [common]<br>[SATURATION](-s-a-t-u-r-a-t-i-o-n/index.md)<br>Attempts to maintain the relative saturation of colors from the source gamut to the destination gamut, to keep highly saturated colors as saturated as possible. |
+| [ABSOLUTE](-a-b-s-o-l-u-t-e/index.md) | [common]<br>[ABSOLUTE](-a-b-s-o-l-u-t-e/index.md)<br>Colors that are in the destination gamut are left unchanged. Colors that fall outside of the destination gamut are mapped to the closest possible color within the gamut of the destination color space (they are clipped). |
 
 ## Types
 
@@ -37,6 +37,6 @@ common
 
 | Name | Summary |
 |---|---|
-| [name](-p-e-r-c-e-p-t-u-a-l/index.md#-372974862%2FProperties%2F1346026436) | [common]<br>val [name](-p-e-r-c-e-p-t-u-a-l/index.md#-372974862%2FProperties%2F1346026436): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
-| [ordinal](-p-e-r-c-e-p-t-u-a-l/index.md#-739389684%2FProperties%2F1346026436) | [common]<br>val [ordinal](-p-e-r-c-e-p-t-u-a-l/index.md#-739389684%2FProperties%2F1346026436): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
+| [name](-a-b-s-o-l-u-t-e/index.md#-372974862%2FProperties%2F1346026436) | [common]<br>val [name](-a-b-s-o-l-u-t-e/index.md#-372974862%2FProperties%2F1346026436): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
+| [ordinal](-a-b-s-o-l-u-t-e/index.md#-739389684%2FProperties%2F1346026436) | [common]<br>val [ordinal](-a-b-s-o-l-u-t-e/index.md#-739389684%2FProperties%2F1346026436): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
 | [typeName](type-name.md) | [common]<br>val [typeName](type-name.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

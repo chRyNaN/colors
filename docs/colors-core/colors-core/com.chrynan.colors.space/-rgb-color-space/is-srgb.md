@@ -26,7 +26,7 @@ Its white point is within 1e-3 of the CIE standard illuminant [D65](../-illumina
 - 
    Its transfer functions yield values within 1e-3 of [ColorSpaces.SRGB](../-color-spaces/-s-r-g-b.md).
 - 
-   Its range is [0..1].
+   Its range is `[0..1]`.
 
 This method always returns true for [ColorSpaces.SRGB](../-color-spaces/-s-r-g-b.md).
 

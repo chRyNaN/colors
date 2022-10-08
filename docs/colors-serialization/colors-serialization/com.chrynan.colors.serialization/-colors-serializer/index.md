@@ -5,6 +5,12 @@
 [common]\
 class [ColorsSerializer](index.md)(colorSerializer: KSerializer&lt;[Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md)&gt;) : KSerializer&lt;[Colors](../../../../colors-theme/colors-theme/com.chrynan.colors.theme/-colors/index.md)&gt;
 
+## Constructors
+
+| | |
+|---|---|
+| [ColorsSerializer](-colors-serializer.md) | [common]<br>fun [ColorsSerializer](-colors-serializer.md)(colorSerializer: KSerializer&lt;[Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md)&gt;) |
+
 ## Functions
 
 | Name | Summary |

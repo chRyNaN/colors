@@ -7,7 +7,7 @@ fun [RgbColorSpace](-rgb-color-space.md)(name: [String](https://kotlinlang.org/a
 
 Creates a new RGB color space using a 3x3 column-major transform matrix. The transform matrix must convert from the RGB space to the profile connection space CIE XYZ.
 
-The range of the color space is imposed to be [0..1].
+The range of the color space is imposed to be `[0..1]`.
 
 ## Parameters
 
@@ -33,10 +33,12 @@ Creates a new RGB color space using a specified set of primaries and a specified
 
 The primaries and white point can be specified in the CIE xyY space or in CIE XYZ. The length of the arrays depends on the chosen space:
 
-| Spaces | Primaries length | White point length |\
-|--------|------------------|--------------------|\
-| xyY    | 6                | 2                  |\
+```kotlin
+| Spaces | Primaries length | White point length |
+|--------|------------------|--------------------|
+| xyY    | 6                | 2                  |
 | XYZ    | 9                | 3                  |
+```
 
 When the primaries and/or white point are specified in xyY, the Y component does not need to be specified and is assumed to be 1.0. Only the xy components are required.
 
@@ -65,7 +67,7 @@ fun [RgbColorSpace](-rgb-color-space.md)(name: [String](https://kotlinlang.org/a
 
 Creates a new RGB color space using a 3x3 column-major transform matrix. The transform matrix must convert from the RGB space to the profile connection space CIE XYZ.
 
-The range of the color space is imposed to be [0..1].
+The range of the color space is imposed to be `[0..1]`.
 
 ## Parameters
 
@@ -90,10 +92,12 @@ Creates a new RGB color space using a specified set of primaries and a specified
 
 The primaries and white point can be specified in the CIE xyY space or in CIE XYZ. The length of the arrays depends on the chosen space:
 
-| Spaces | Primaries length | White point length |\
-|--------|------------------|--------------------|\
-| xyY    | 6                | 2                  |\
+```kotlin
+| Spaces | Primaries length | White point length |
+|--------|------------------|--------------------|
+| xyY    | 6                | 2                  |
 | XYZ    | 9                | 3                  |
+```
 
 When the primaries and/or white point are specified in xyY, the Y component does not need to be specified and is assumed to be 1.0. Only the xy components are required.
 
@@ -119,7 +123,7 @@ fun [RgbColorSpace](-rgb-color-space.md)(name: [String](https://kotlinlang.org/a
 
 Creates a new RGB color space using a 3x3 column-major transform matrix. The transform matrix must convert from the RGB space to the profile connection space CIE XYZ.
 
-The range of the color space is imposed to be [0..1].
+The range of the color space is imposed to be `[0..1]`.
 
 ## See also
 
@@ -152,10 +156,12 @@ Creates a new RGB color space using a specified set of primaries and a specified
 
 The primaries and white point can be specified in the CIE xyY space or in CIE XYZ. The length of the arrays depends on the chosen space:
 
-| Spaces | Primaries length | White point length |\
-|--------|------------------|--------------------|\
-| xyY    | 6                | 2                  |\
+```kotlin
+| Spaces | Primaries length | White point length |
+|--------|------------------|--------------------|
+| xyY    | 6                | 2                  |
 | XYZ    | 9                | 3                  |
+```
 
 When the primaries and/or white point are specified in xyY, the Y component does not need to be specified and is assumed to be 1.0. Only the xy components are required.
 

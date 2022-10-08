@@ -3,7 +3,7 @@
 # Swatch
 
 [common]\
-data class [Swatch](index.md)(color: [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md), primaryOnColor: [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md), secondaryOnColor: [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md), population: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)?)
+data class [Swatch](index.md)(val color: [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md), val primaryOnColor: [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md), val secondaryOnColor: [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md), val population: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)? = null)
 
 Represents a color swatch which contains a [color](color.md) and the related [primaryOnColor](primary-on-color.md) and [secondaryOnColor](secondary-on-color.md) which can be used to overlap the [color](color.md) with enough contrast. A color [Swatch](index.md) is typically extracted from an image by looking at it's pixel data.
 
