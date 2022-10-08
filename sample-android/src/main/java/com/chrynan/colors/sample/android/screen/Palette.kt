@@ -23,10 +23,12 @@ import com.chrynan.colors.sample.android.state.PaletteChange
 import com.chrynan.colors.sample.android.state.PaletteIntent
 import com.chrynan.colors.sample.android.state.PaletteState
 import com.chrynan.colors.sample.android.util.toColorData
-import com.chrynan.presentation.Presenter
+import com.chrynan.presentation.ViewModel
 import com.chrynan.presentation.compose.layout.Layout
-import com.chrynan.presentation.presenterFactory
-import com.chrynan.ui.components.image.Image
+import com.chrynan.presentation.compose.stateChanges
+import com.chrynan.presentation.intent
+import com.chrynan.presentation.viewModelFactory
+import com.chrynan.ui.components.image.AsyncImage
 
 class PaletteScreen(
     private val context: Context,
@@ -35,9 +37,8 @@ class PaletteScreen(
     private val onChangeColorData: (ColorData) -> Unit
 ) : Layout<PaletteIntent, PaletteState, PaletteChange>() {
 
-    override val presenter: Presenter<PaletteIntent, PaletteState, PaletteChange> by presenterFactory { intents ->
+    override val viewModel: ViewModel<PaletteIntent, PaletteState, PaletteChange> by viewModelFactory {
         PalettePresenter(
-            intents = intents,
             reducer = PaletteReducer(),
             generatePaletteFromResources = GeneratePaletteFromResourceAction(context = context),
             generatePaletteFromUri = GeneratePaletteFromUriAction(
@@ -50,14 +51,17 @@ class PaletteScreen(
     private val resourceId = R.drawable.palette_test_tertiary
 
     @Composable
-    override fun Content(state: PaletteState) {
-        Column {
-            Image(data = painterResource(resourceId))
+    override fun Content() {
+        val state: PaletteState? by stateChanges()
 
-            when (state) {
+        Column {
+            AsyncImage(data = painterResource(resourceId))
+
+            when (val state = state) {
                 is PaletteState.Loading -> renderLoading()
                 is PaletteState.DisplayingLoaded -> renderLoaded(state = state)
                 is PaletteState.DisplayingError -> Text(state.message)
+                else -> {}
             }
         }
     }

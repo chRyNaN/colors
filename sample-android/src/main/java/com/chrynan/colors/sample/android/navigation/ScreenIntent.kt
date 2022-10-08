@@ -9,12 +9,11 @@ import androidx.compose.material.icons.filled.Shuffle
 import androidx.compose.ui.graphics.vector.ImageVector
 import com.chrynan.colors.NamedColor
 import com.chrynan.colors.sample.android.R
-import com.chrynan.navigation.NavigationIntent
 
 sealed class ScreenIntent(
     @StringRes val title: Int,
     val icon: ImageVector
-) : NavigationIntent {
+) {
 
     object ColorList : ScreenIntent(
         title = R.string.screen_name_color_list,

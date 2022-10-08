@@ -11,6 +11,7 @@ import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Casino
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -27,25 +28,29 @@ import com.chrynan.colors.sample.android.state.RandomColorState
 import com.chrynan.colors.space.ColorModel
 import com.chrynan.presentation.compose.layout.Layout
 import com.chrynan.colors.sample.android.composable.*
-import com.chrynan.presentation.Presenter
-import com.chrynan.presentation.presenterFactory
+import com.chrynan.presentation.ViewModel
+import com.chrynan.presentation.compose.stateChanges
+import com.chrynan.presentation.intent
+import com.chrynan.presentation.viewModelFactory
 
 class RandomColorScreen(private val onChangeColorData: (ColorData) -> Unit) :
     Layout<RandomColorIntent, RandomColorState, RandomColorChange>() {
 
-    override val presenter: Presenter<RandomColorIntent, RandomColorState, RandomColorChange> by presenterFactory { intents ->
+    override val viewModel: ViewModel<RandomColorIntent, RandomColorState, RandomColorChange> by viewModelFactory {
         RandomColorPresenter(
-            intents = intents,
             reducer = RandomColorReducer(),
             getRandomColor = GetRandomColorAction()
         )
     }
 
     @Composable
-    override fun Content(state: RandomColorState) {
-        when (state) {
+    override fun Content() {
+        val state by stateChanges()
+
+        when (val state = state) {
             is RandomColorState.DisplayingColor -> renderColor(state)
             is RandomColorState.DisplayingError -> Text(state.message)
+            else -> {}
         }
     }
 

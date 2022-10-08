@@ -6,19 +6,19 @@ import com.chrynan.colors.sample.android.reducer.PaletteReducer
 import com.chrynan.colors.sample.android.state.PaletteChange
 import com.chrynan.colors.sample.android.state.PaletteIntent
 import com.chrynan.colors.sample.android.state.PaletteState
-import com.chrynan.presentation.BasePresenter
+import com.chrynan.presentation.ViewModel
 import com.chrynan.presentation.invoke
-import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.launchIn
 
 class PalettePresenter(
-    override val intents: Flow<PaletteIntent>,
     private val reducer: PaletteReducer,
     private val generatePaletteFromResources: GeneratePaletteFromResourceAction,
     private val generatePaletteFromUri: GeneratePaletteFromUriAction
-) : BasePresenter<PaletteIntent, PaletteState, PaletteChange>() {
+) : ViewModel<PaletteIntent, PaletteState, PaletteChange>() {
 
+    @OptIn(FlowPreview::class)
     override fun onBind() {
         super.onBind()
 

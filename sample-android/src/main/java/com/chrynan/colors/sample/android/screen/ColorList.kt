@@ -25,32 +25,33 @@ import com.chrynan.colors.sample.android.reducer.ColorListReducer
 import com.chrynan.colors.sample.android.state.ColorListChange
 import com.chrynan.colors.sample.android.state.ColorListIntent
 import com.chrynan.colors.sample.android.state.ColorListState
-import com.chrynan.presentation.PresenterFactory
 import com.chrynan.presentation.compose.layout.Layout
 import com.chrynan.colors.sample.android.util.*
 import com.chrynan.colors.sample.android.composable.*
-import com.chrynan.presentation.Presenter
-import com.chrynan.presentation.presenterFactory
+import com.chrynan.presentation.*
+import com.chrynan.presentation.compose.stateChanges
 
 class ColorListScreen(
     private val onColorSelected: (NamedColor) -> Unit,
     private val onChangeColorData: (ColorData) -> Unit
 ) : Layout<ColorListIntent, ColorListState, ColorListChange>() {
 
-    override val presenter: Presenter<ColorListIntent, ColorListState, ColorListChange> by presenterFactory { intents ->
+    override val viewModel: ViewModel<ColorListIntent, ColorListState, ColorListChange> by viewModelFactory {
         ColorListPresenter(
-            intents = intents,
             reducer = ColorListReducer(),
             loadColors = LoadColorsAction()
         )
     }
 
     @Composable
-    override fun Content(state: ColorListState) {
-        when (state) {
+    override fun Content() {
+        val state: ColorListState? by stateChanges()
+
+        when (val state = state) {
             is ColorListState.Loading -> renderLoading()
             is ColorListState.DisplayingColors -> renderColors(state = state)
             is ColorListState.DisplayingError -> Text(state.message)
+            else -> {}
         }
     }
 

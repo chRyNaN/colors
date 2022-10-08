@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -23,28 +24,30 @@ import com.chrynan.colors.space.ColorModel
 import com.chrynan.presentation.compose.layout.Layout
 import com.chrynan.colors.sample.android.composable.*
 import com.chrynan.colors.sample.android.data.ColorData
-import com.chrynan.presentation.Presenter
-import com.chrynan.presentation.presenterFactory
+import com.chrynan.presentation.*
+import com.chrynan.presentation.compose.stateChanges
 
 class ColorDetailScreen(
     private val namedColor: NamedColor,
     private val onChangeColorData: (ColorData) -> Unit
 ) : Layout<ColorDetailIntent, ColorDetailState, ColorDetailChange>() {
 
-    override val presenter: Presenter<ColorDetailIntent, ColorDetailState, ColorDetailChange> by presenterFactory { intents ->
+    override val viewModel: ViewModel<ColorDetailIntent, ColorDetailState, ColorDetailChange> by viewModelFactory {
         ColorDetailPresenter(
-            intents = intents,
             reducer = ColorDetailReducer(),
             loadDetail = LoadColorDetailAction()
         )
     }
 
     @Composable
-    override fun Content(state: ColorDetailState) {
-        when (state) {
+    override fun Content() {
+        val state: ColorDetailState? by stateChanges()
+
+        when (val state = state) {
             is ColorDetailState.Loading -> renderLoading()
             is ColorDetailState.DisplayingColor -> renderDisplayingColor(state = state)
             is ColorDetailState.DisplayingError -> Text(state.message)
+            else -> {}
         }
     }
 

@@ -5,19 +5,18 @@ import com.chrynan.colors.sample.android.reducer.RandomColorReducer
 import com.chrynan.colors.sample.android.state.RandomColorChange
 import com.chrynan.colors.sample.android.state.RandomColorIntent
 import com.chrynan.colors.sample.android.state.RandomColorState
-import com.chrynan.presentation.BasePresenter
+import com.chrynan.presentation.ViewModel
 import com.chrynan.presentation.invoke
-import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.launchIn
 
 class RandomColorPresenter(
-    override val intents: Flow<RandomColorIntent>,
     private val reducer: RandomColorReducer,
     private val getRandomColor: GetRandomColorAction
-) :
-    BasePresenter<RandomColorIntent, RandomColorState, RandomColorChange>() {
+) : ViewModel<RandomColorIntent, RandomColorState, RandomColorChange>() {
 
+    @OptIn(FlowPreview::class)
     override fun onBind() {
         super.onBind()
 
