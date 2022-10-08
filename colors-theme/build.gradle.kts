@@ -31,7 +31,6 @@ kotlin {
                 implementation("org.jetbrains.kotlin:kotlin-stdlib-common")
 
                 api(project(":colors-core"))
-                api(project(":colors-extension"))
             }
         }
         val iosMain by sourceSets.getting
