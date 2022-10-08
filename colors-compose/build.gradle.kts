@@ -19,6 +19,11 @@ kotlin {
     targets {
         android()
         jvm()
+        ios()
+        iosSimulatorArm64()
+        js(IR) {
+            browser()
+        }
     }
     sourceSets {
         all {
@@ -27,13 +32,16 @@ kotlin {
         }
         val commonMain by getting {
             dependencies {
+                api(project(":colors-core"))
                 api(project(":colors-theme"))
 
-                implementation(compose.runtime)
-                implementation(compose.ui)
-                implementation(compose.material)
+                api(compose.ui)
+                api(compose.material)
             }
         }
+        val iosMain by sourceSets.getting
+        val iosSimulatorArm64Main by sourceSets.getting
+        iosSimulatorArm64Main.dependsOn(iosMain)
     }
 }
 
@@ -62,7 +70,7 @@ android {
             jvmTarget = "1.8"
             // Opt-in to experimental compose APIs
             freeCompilerArgs = listOf(
-                    "-Xopt-in=kotlin.RequiresOptIn"
+                "-Xopt-in=kotlin.RequiresOptIn"
             )
         }
     }
