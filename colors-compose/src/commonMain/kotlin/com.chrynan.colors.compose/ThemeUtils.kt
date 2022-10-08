@@ -6,13 +6,18 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Shapes
 import androidx.compose.material.Typography
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.ReadOnlyComposable
+import androidx.compose.foundation.isSystemInDarkTheme
 import com.chrynan.colors.theme.*
+
+/**
+ * typealias to [androidx.compose.material.Colors].
+ */
+typealias ComposeColors = androidx.compose.material.Colors
 
 /**
  * Converts this [Colors] value to a Jetpack Compose [androidx.compose.material.Colors] value.
  */
-fun Colors.toComposeColors(): androidx.compose.material.Colors =
+fun Colors.toComposeColors(): ComposeColors =
     if (isLight) {
         androidx.compose.material.lightColors(
             primary = primary.toComposeColor(),
@@ -47,7 +52,7 @@ fun Colors.toComposeColors(): androidx.compose.material.Colors =
 /**
  * Converts this [androidx.compose.material.Colors] value to a Kotlin Multiplatform [Colors] value.
  */
-fun androidx.compose.material.Colors.toMultiplatformColors(): Colors =
+fun ComposeColors.toMultiplatformColors(): Colors =
     if (isLight) {
         lightColors(
             primary = primary.toMultiplatformColor(),
@@ -87,15 +92,8 @@ fun androidx.compose.material.Colors.toMultiplatformColors(): Colors =
  * [Colors] will be returned.
  */
 @Composable
-fun LightOrDarkColorTheme.systemBasedColors(): Colors = if (isSystemInDarkTheme()) dark else light
-
-@Composable
-@ReadOnlyComposable
-fun isSystemInDarkTheme(): Boolean = internalIsSystemInDarkTheme()
-
-@Composable
-@ReadOnlyComposable
-internal fun internalIsSystemInDarkTheme(): Boolean = androidx.compose.foundation.isSystemInDarkTheme()
+fun LightOrDarkColorTheme.systemBasedColors(): Colors =
+    if (isSystemInDarkTheme()) dark else light
 
 /**
  * A Composable function to create a [MaterialTheme] with the provided [Colors] class.

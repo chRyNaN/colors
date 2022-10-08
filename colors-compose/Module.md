@@ -6,3 +6,5 @@ Interoperability utilities for Jetpack Compose.
 
 `JVM`
 `Android`
+`iOS`
+`JS (Browser - IR)`

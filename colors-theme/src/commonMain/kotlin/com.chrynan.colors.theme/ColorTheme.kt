@@ -5,7 +5,7 @@ package com.chrynan.colors.theme
 /**
  * A color theme for an application. It provides a way structure the [Colors] for an application.
  */
-interface ColorTheme {
+fun interface ColorTheme {
 
     /**
      * Obtains the [Colors] for this [ColorTheme].
@@ -125,3 +125,4 @@ class ColorThemes internal constructor() {
  */
 val Colors.Companion.themes: ColorThemes
     get() = ColorThemes.singleton
+
