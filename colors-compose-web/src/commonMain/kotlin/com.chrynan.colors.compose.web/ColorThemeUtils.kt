@@ -7,7 +7,7 @@ import androidx.compose.runtime.ProvidableCompositionLocal
 import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.staticCompositionLocalOf
 import com.chrynan.colors.theme.Colors
-import com.chrynan.colors.theme.LightDarkColorTheme
+import com.chrynan.colors.theme.LightOrDarkColorTheme
 import com.chrynan.colors.theme.lightColors
 
 /**
@@ -30,13 +30,13 @@ val LocalColors: ProvidableCompositionLocal<Colors> = staticCompositionLocalOf {
 }
 
 /**
- * Obtains the appropriate [Colors] instance of this [LightDarkColorTheme] depending on the result
+ * Obtains the appropriate [Colors] instance of this [LightOrDarkColorTheme] depending on the result
  * of the [isSystemInDarkTheme] function. If [isSystemInDarkTheme] returns true, then the
- * [LightDarkColorTheme.dark] [Colors] will be returned. Otherwise, the [LightDarkColorTheme.light]
+ * [LightOrDarkColorTheme.dark] [Colors] will be returned. Otherwise, the [LightOrDarkColorTheme.light]
  * [Colors] will be returned.
  */
 @Composable
-fun LightDarkColorTheme.systemBasedColors(): Colors = if (isSystemInDarkTheme()) dark else light
+fun LightOrDarkColorTheme.systemBasedColors(): Colors = if (isSystemInDarkTheme()) dark else light
 
 /**
  * Determines whether the current system theme is set to dark mode.

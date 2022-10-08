@@ -66,7 +66,7 @@ interface DarkColorTheme : ColorTheme {
 /**
  * A [ColorTheme] that contains both light and dark [Colors].
  */
-interface LightDarkColorTheme : LightColorTheme,
+interface LightOrDarkColorTheme : LightColorTheme,
     DarkColorTheme {
 
     /**
@@ -96,10 +96,10 @@ interface LightDarkColorTheme : LightColorTheme,
 
 /**
  * Obtains the appropriate [Colors] instance depending on the provided [isLight] parameter value.
- * If the [isLight] parameter equals true, then [LightDarkColorTheme.light] [Colors] will be
- * returned. Otherwise, the [LightDarkColorTheme.dark] will be returned.
+ * If the [isLight] parameter equals true, then [LightOrDarkColorTheme.light] [Colors] will be
+ * returned. Otherwise, the [LightOrDarkColorTheme.dark] will be returned.
  */
-fun LightDarkColorTheme.colors(isLight: Boolean): Colors = if (isLight) light else dark
+fun LightOrDarkColorTheme.colors(isLight: Boolean): Colors = if (isLight) light else dark
 
 /**
  * A class that can be used to place [ColorTheme]s on to as extension properties. This allows for
