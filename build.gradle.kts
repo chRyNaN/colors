@@ -11,7 +11,7 @@ plugins {
     id("com.android.application") version "8.1.0" apply false
     id("org.jetbrains.compose") version "1.5.10" apply false
     id("org.jetbrains.dokka") version "1.9.10"
-    //id("org.jetbrains.kotlinx.binary-compatibility-validator") version "0.13.2"
+    id("org.jetbrains.kotlinx.binary-compatibility-validator") version "0.13.2"
     id("com.mikepenz.aboutlibraries.plugin") version "10.8.3" apply false
 }
 

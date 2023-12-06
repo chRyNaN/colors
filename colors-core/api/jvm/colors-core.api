@@ -1,0 +1,675 @@
+public abstract interface class com/chrynan/colors/BaseColor : com/chrynan/colors/Color {
+	public abstract fun component1 ()F
+	public abstract fun component2 ()F
+	public abstract fun component3 ()F
+	public abstract fun component4 ()F
+	public abstract fun convert (Lcom/chrynan/colors/space/ColorSpace;Lcom/chrynan/colors/space/RenderIntent;)Lcom/chrynan/colors/Color;
+	public abstract fun copy (F)Lcom/chrynan/colors/Color;
+	public abstract fun copy (FFFF)Lcom/chrynan/colors/Color;
+	public abstract fun getAlpha ()F
+	public abstract fun getColorInt-m68YjSM ()I
+	public abstract fun getColorLong-HPBS0so ()J
+	public abstract fun getColorSpace ()Lcom/chrynan/colors/space/ColorSpace;
+	public abstract fun getComponents ()[F
+	public abstract fun getValue-s-VKNKU ()J
+	public abstract fun luminance ()F
+	public abstract fun toRgbaColor (Lcom/chrynan/colors/space/ColorSpace;Lcom/chrynan/colors/space/RenderIntent;)Lcom/chrynan/colors/RgbaColor;
+}
+
+public final class com/chrynan/colors/BaseColor$DefaultImpls {
+	public static fun component1 (Lcom/chrynan/colors/BaseColor;)F
+	public static fun component2 (Lcom/chrynan/colors/BaseColor;)F
+	public static fun component3 (Lcom/chrynan/colors/BaseColor;)F
+	public static fun component4 (Lcom/chrynan/colors/BaseColor;)F
+	public static fun convert (Lcom/chrynan/colors/BaseColor;Lcom/chrynan/colors/space/ColorSpace;Lcom/chrynan/colors/space/RenderIntent;)Lcom/chrynan/colors/Color;
+	public static fun copy (Lcom/chrynan/colors/BaseColor;F)Lcom/chrynan/colors/Color;
+	public static fun copy (Lcom/chrynan/colors/BaseColor;FFFF)Lcom/chrynan/colors/Color;
+	public static fun getAlpha (Lcom/chrynan/colors/BaseColor;)F
+	public static fun getColorInt-m68YjSM (Lcom/chrynan/colors/BaseColor;)I
+	public static fun getColorLong-HPBS0so (Lcom/chrynan/colors/BaseColor;)J
+	public static fun getColorSpace (Lcom/chrynan/colors/BaseColor;)Lcom/chrynan/colors/space/ColorSpace;
+	public static fun getComponents (Lcom/chrynan/colors/BaseColor;)[F
+	public static fun luminance (Lcom/chrynan/colors/BaseColor;)F
+	public static fun toRgbaColor (Lcom/chrynan/colors/BaseColor;Lcom/chrynan/colors/space/ColorSpace;Lcom/chrynan/colors/space/RenderIntent;)Lcom/chrynan/colors/RgbaColor;
+}
+
+public abstract interface class com/chrynan/colors/Color {
+	public static final field Companion Lcom/chrynan/colors/Color$Companion;
+	public static final field MAX_ALPHA F
+	public static final field MAX_INT_OPACITY I
+	public static final field MIN_ALPHA F
+	public static final field MIN_INT_OPACITY I
+	public static final field OPAQUE_ALPHA F
+	public static final field OPAQUE_INT_OPACITY I
+	public static final field TRANSPARENT_ALPHA F
+	public static final field TRANSPARENT_INT_OPACITY I
+	public abstract fun component1 ()F
+	public abstract fun component2 ()F
+	public abstract fun component3 ()F
+	public abstract fun component4 ()F
+	public abstract fun convert (Lcom/chrynan/colors/space/ColorSpace;Lcom/chrynan/colors/space/RenderIntent;)Lcom/chrynan/colors/Color;
+	public abstract fun copy (F)Lcom/chrynan/colors/Color;
+	public abstract fun copy (FFFF)Lcom/chrynan/colors/Color;
+	public abstract fun getAlpha ()F
+	public abstract fun getColorInt-m68YjSM ()I
+	public abstract fun getColorLong-HPBS0so ()J
+	public abstract fun getColorSpace ()Lcom/chrynan/colors/space/ColorSpace;
+	public abstract fun getComponents ()[F
+	public abstract fun getCssValue ()Ljava/lang/String;
+	public abstract fun luminance ()F
+	public abstract fun toRgbaColor (Lcom/chrynan/colors/space/ColorSpace;Lcom/chrynan/colors/space/RenderIntent;)Lcom/chrynan/colors/RgbaColor;
+}
+
+public final class com/chrynan/colors/Color$Companion {
+	public static final field MAX_ALPHA F
+	public static final field MAX_INT_OPACITY I
+	public static final field MIN_ALPHA F
+	public static final field MIN_INT_OPACITY I
+	public static final field OPAQUE_ALPHA F
+	public static final field OPAQUE_INT_OPACITY I
+	public static final field TRANSPARENT_ALPHA F
+	public static final field TRANSPARENT_INT_OPACITY I
+	public final fun getBlack ()Lcom/chrynan/colors/Color;
+	public final fun getTransparent ()Lcom/chrynan/colors/Color;
+	public final fun getWhite ()Lcom/chrynan/colors/Color;
+}
+
+public final class com/chrynan/colors/Color$DefaultImpls {
+	public static synthetic fun convert$default (Lcom/chrynan/colors/Color;Lcom/chrynan/colors/space/ColorSpace;Lcom/chrynan/colors/space/RenderIntent;ILjava/lang/Object;)Lcom/chrynan/colors/Color;
+	public static synthetic fun copy$default (Lcom/chrynan/colors/Color;FFFFILjava/lang/Object;)Lcom/chrynan/colors/Color;
+	public static synthetic fun copy$default (Lcom/chrynan/colors/Color;FILjava/lang/Object;)Lcom/chrynan/colors/Color;
+	public static synthetic fun toRgbaColor$default (Lcom/chrynan/colors/Color;Lcom/chrynan/colors/space/ColorSpace;Lcom/chrynan/colors/space/RenderIntent;ILjava/lang/Object;)Lcom/chrynan/colors/RgbaColor;
+}
+
+public final class com/chrynan/colors/ColorConstructorUtilsKt {
+	public static final fun Color (FFFFLcom/chrynan/colors/space/ColorSpace;)Lcom/chrynan/colors/Color;
+	public static final fun Color (I)Lcom/chrynan/colors/RgbaColor;
+	public static final fun Color (IIIILcom/chrynan/colors/space/ColorSpace;)Lcom/chrynan/colors/RgbaColor;
+	public static final fun Color (J)Lcom/chrynan/colors/RgbaColor;
+	public static final fun Color (Ljava/lang/String;)Lcom/chrynan/colors/HexadecimalColor;
+	public static synthetic fun Color$default (IIIILcom/chrynan/colors/space/ColorSpace;ILjava/lang/Object;)Lcom/chrynan/colors/RgbaColor;
+	public static final fun Color-VKZWuLQ (J)Lcom/chrynan/colors/Color;
+	public static final fun Color-Y-njEI0 (I)Lcom/chrynan/colors/RgbaColor;
+	public static final fun Color-qw8K9m8 (J)Lcom/chrynan/colors/Color;
+	public static final fun HslColor (FFFFLcom/chrynan/colors/space/ColorSpace;)Lcom/chrynan/colors/Color;
+	public static synthetic fun HslColor$default (FFFFLcom/chrynan/colors/space/ColorSpace;ILjava/lang/Object;)Lcom/chrynan/colors/Color;
+	public static final fun HsvColor (FFFFLcom/chrynan/colors/space/ColorSpace;)Lcom/chrynan/colors/Color;
+	public static synthetic fun HsvColor$default (FFFFLcom/chrynan/colors/space/ColorSpace;ILjava/lang/Object;)Lcom/chrynan/colors/Color;
+	public static final fun LabColor (FFFFLcom/chrynan/colors/space/ColorSpace;)Lcom/chrynan/colors/LabColor;
+	public static synthetic fun LabColor$default (FFFFLcom/chrynan/colors/space/ColorSpace;ILjava/lang/Object;)Lcom/chrynan/colors/LabColor;
+	public static final fun RgbaColor (FFFFLcom/chrynan/colors/space/ColorSpace;)Lcom/chrynan/colors/RgbaColor;
+	public static final fun RgbaColor (IIIILcom/chrynan/colors/space/ColorSpace;)Lcom/chrynan/colors/RgbaColor;
+	public static synthetic fun RgbaColor$default (FFFFLcom/chrynan/colors/space/ColorSpace;ILjava/lang/Object;)Lcom/chrynan/colors/RgbaColor;
+	public static synthetic fun RgbaColor$default (IIIILcom/chrynan/colors/space/ColorSpace;ILjava/lang/Object;)Lcom/chrynan/colors/RgbaColor;
+	public static final fun XyzColor (FFFFLcom/chrynan/colors/space/ColorSpace;)Lcom/chrynan/colors/XyzColor;
+	public static synthetic fun XyzColor$default (FFFFLcom/chrynan/colors/space/ColorSpace;ILjava/lang/Object;)Lcom/chrynan/colors/XyzColor;
+}
+
+public final class com/chrynan/colors/ColorInt {
+	public static final field Companion Lcom/chrynan/colors/ColorInt$Companion;
+	public static final synthetic fun box-impl (I)Lcom/chrynan/colors/ColorInt;
+	public static fun constructor-impl (I)I
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (ILjava/lang/Object;)Z
+	public static final fun equals-impl0 (II)Z
+	public final fun getValue ()I
+	public fun hashCode ()I
+	public static fun hashCode-impl (I)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (I)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()I
+}
+
+public final class com/chrynan/colors/ColorInt$Companion {
+}
+
+public final class com/chrynan/colors/ColorLong {
+	public static final field Companion Lcom/chrynan/colors/ColorLong$Companion;
+	public static final synthetic fun box-impl (J)Lcom/chrynan/colors/ColorLong;
+	public static fun constructor-impl (J)J
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (JLjava/lang/Object;)Z
+	public static final fun equals-impl0 (JJ)Z
+	public final fun getValue ()J
+	public fun hashCode ()I
+	public static fun hashCode-impl (J)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (J)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()J
+}
+
+public final class com/chrynan/colors/ColorLong$Companion {
+}
+
+public final class com/chrynan/colors/ColorLongKt {
+	public static final fun ColorLong-VKZWuLQ (J)J
+}
+
+public final class com/chrynan/colors/ColorRandomUtilsKt {
+	public static final fun nextColor (Lkotlin/random/Random;)Lcom/chrynan/colors/Color;
+}
+
+public final class com/chrynan/colors/ColorUtilsKt {
+	public static final fun compositeOver (Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;)Lcom/chrynan/colors/Color;
+	public static final fun contrast (Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;)F
+	public static final fun contrasting (Lcom/chrynan/colors/Color;FLcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;)Lcom/chrynan/colors/Color;
+	public static synthetic fun contrasting$default (Lcom/chrynan/colors/Color;FLcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;ILjava/lang/Object;)Lcom/chrynan/colors/Color;
+	public static final fun isOpaque (Lcom/chrynan/colors/Color;)Z
+	public static final fun isTranslucent (Lcom/chrynan/colors/Color;)Z
+	public static final fun isTransparent (Lcom/chrynan/colors/Color;)Z
+	public static final fun lerp (Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;F)Lcom/chrynan/colors/Color;
+	public static final fun toColor (I)Lcom/chrynan/colors/RgbaColor;
+	public static final fun toColor (J)Lcom/chrynan/colors/RgbaColor;
+	public static final fun toColor-Y-njEI0 (I)Lcom/chrynan/colors/RgbaColor;
+	public static final fun toColor-qw8K9m8 (J)Lcom/chrynan/colors/Color;
+	public static final fun toColorInt (I)I
+	public static final fun toColorLong (J)J
+	public static final fun toHexString (Lcom/chrynan/colors/Color;ZZZLcom/chrynan/colors/space/ColorSpace;Lcom/chrynan/colors/space/RenderIntent;)Ljava/lang/String;
+	public static synthetic fun toHexString$default (Lcom/chrynan/colors/Color;ZZZLcom/chrynan/colors/space/ColorSpace;Lcom/chrynan/colors/space/RenderIntent;ILjava/lang/Object;)Ljava/lang/String;
+}
+
+public abstract interface class com/chrynan/colors/HexadecimalColor : com/chrynan/colors/Color, com/chrynan/colors/RgbaColor {
+	public static final field BIT_COUNT I
+	public static final field Companion Lcom/chrynan/colors/HexadecimalColor$Companion;
+	public static final field HEX_CHAR C
+	public static final field HEX_CHAR_LOCATION I
+	public static final field LENGTH_WITHOUT_ALPHA I
+	public static final field LENGTH_WITH_ALPHA I
+	public abstract fun getHexString ()Ljava/lang/String;
+	public abstract fun getHexStringWithoutPrefix ()Ljava/lang/String;
+}
+
+public final class com/chrynan/colors/HexadecimalColor$Companion {
+	public static final field BIT_COUNT I
+	public static final field HEX_CHAR C
+	public static final field HEX_CHAR_LOCATION I
+	public static final field LENGTH_WITHOUT_ALPHA I
+	public static final field LENGTH_WITH_ALPHA I
+	public final fun getREGEX ()Lkotlin/text/Regex;
+}
+
+public final class com/chrynan/colors/HexadecimalColor$DefaultImpls {
+	public static fun getBlue (Lcom/chrynan/colors/HexadecimalColor;)F
+	public static fun getGreen (Lcom/chrynan/colors/HexadecimalColor;)F
+	public static fun getRed (Lcom/chrynan/colors/HexadecimalColor;)F
+}
+
+public abstract interface class com/chrynan/colors/LabColor : com/chrynan/colors/Color {
+	public static final field Companion Lcom/chrynan/colors/LabColor$Companion;
+	public abstract fun getA ()F
+	public abstract fun getB ()F
+	public abstract fun getL ()F
+}
+
+public final class com/chrynan/colors/LabColor$Companion {
+}
+
+public final class com/chrynan/colors/LabColor$DefaultImpls {
+	public static fun getA (Lcom/chrynan/colors/LabColor;)F
+	public static fun getB (Lcom/chrynan/colors/LabColor;)F
+	public static fun getL (Lcom/chrynan/colors/LabColor;)F
+}
+
+public final class com/chrynan/colors/LabColorKt {
+	public static final fun getBlueYellow (Lcom/chrynan/colors/LabColor;)F
+	public static final fun getGreenRed (Lcom/chrynan/colors/LabColor;)F
+	public static final fun getLightness (Lcom/chrynan/colors/LabColor;)F
+}
+
+public final class com/chrynan/colors/LocalizedText {
+	public static final field Companion Lcom/chrynan/colors/LocalizedText$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;)Lcom/chrynan/colors/LocalizedText;
+	public static synthetic fun copy$default (Lcom/chrynan/colors/LocalizedText;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcom/chrynan/colors/LocalizedText;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getLanguageCode ()Ljava/lang/String;
+	public final fun getValue ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/chrynan/colors/LocalizedText$Companion {
+}
+
+public final class com/chrynan/colors/NamedColor {
+	public static final field Companion Lcom/chrynan/colors/NamedColor$Companion;
+	public fun <init> (Ljava/util/Set;Lcom/chrynan/colors/Color;)V
+	public final fun component1 ()Ljava/util/Set;
+	public final fun component2 ()Lcom/chrynan/colors/Color;
+	public final fun copy (Ljava/util/Set;Lcom/chrynan/colors/Color;)Lcom/chrynan/colors/NamedColor;
+	public static synthetic fun copy$default (Lcom/chrynan/colors/NamedColor;Ljava/util/Set;Lcom/chrynan/colors/Color;ILjava/lang/Object;)Lcom/chrynan/colors/NamedColor;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getColor ()Lcom/chrynan/colors/Color;
+	public final fun getNames ()Ljava/util/Set;
+	public fun hashCode ()I
+	public final fun name (Ljava/lang/String;)Ljava/lang/String;
+	public static synthetic fun name$default (Lcom/chrynan/colors/NamedColor;Ljava/lang/String;ILjava/lang/Object;)Ljava/lang/String;
+	public final fun namesForLanguageCode (Ljava/lang/String;)Ljava/util/Set;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/chrynan/colors/NamedColor$Companion {
+}
+
+public final class com/chrynan/colors/NamedColorKt {
+	public static final fun NamedColor (Ljava/lang/String;Lcom/chrynan/colors/Color;Ljava/lang/String;)Lcom/chrynan/colors/NamedColor;
+	public static synthetic fun NamedColor$default (Ljava/lang/String;Lcom/chrynan/colors/Color;Ljava/lang/String;ILjava/lang/Object;)Lcom/chrynan/colors/NamedColor;
+}
+
+public abstract interface class com/chrynan/colors/RgbaColor : com/chrynan/colors/Color {
+	public static final field Companion Lcom/chrynan/colors/RgbaColor$Companion;
+	public abstract fun getBlue ()F
+	public abstract fun getGreen ()F
+	public abstract fun getRed ()F
+}
+
+public final class com/chrynan/colors/RgbaColor$Companion {
+}
+
+public final class com/chrynan/colors/RgbaColor$DefaultImpls {
+	public static fun getBlue (Lcom/chrynan/colors/RgbaColor;)F
+	public static fun getGreen (Lcom/chrynan/colors/RgbaColor;)F
+	public static fun getRed (Lcom/chrynan/colors/RgbaColor;)F
+}
+
+public final class com/chrynan/colors/RgbaColorUtilsKt {
+	public static final fun convertHslComponentsToColor ([F)Lcom/chrynan/colors/RgbaColor;
+	public static final fun darker (Lcom/chrynan/colors/RgbaColor;F)Lcom/chrynan/colors/RgbaColor;
+	public static synthetic fun darker$default (Lcom/chrynan/colors/RgbaColor;FILjava/lang/Object;)Lcom/chrynan/colors/RgbaColor;
+	public static final fun getAlphaInt (Lcom/chrynan/colors/RgbaColor;)I
+	public static final fun getBlueInt (Lcom/chrynan/colors/RgbaColor;)I
+	public static final fun getGreenInt (Lcom/chrynan/colors/RgbaColor;)I
+	public static final fun getHue (Lcom/chrynan/colors/RgbaColor;)F
+	public static final fun getLightness (Lcom/chrynan/colors/RgbaColor;)F
+	public static final fun getRedInt (Lcom/chrynan/colors/RgbaColor;)I
+	public static final fun getSaturation (Lcom/chrynan/colors/RgbaColor;)F
+	public static final fun inverse (Lcom/chrynan/colors/RgbaColor;)Lcom/chrynan/colors/RgbaColor;
+	public static final fun lighter (Lcom/chrynan/colors/RgbaColor;F)Lcom/chrynan/colors/RgbaColor;
+	public static synthetic fun lighter$default (Lcom/chrynan/colors/RgbaColor;FILjava/lang/Object;)Lcom/chrynan/colors/RgbaColor;
+	public static final fun toHexString (Lcom/chrynan/colors/RgbaColor;ZZZ)Ljava/lang/String;
+	public static synthetic fun toHexString$default (Lcom/chrynan/colors/RgbaColor;ZZZILjava/lang/Object;)Ljava/lang/String;
+	public static final fun toHslComponents (Lcom/chrynan/colors/RgbaColor;)[F
+}
+
+public abstract interface class com/chrynan/colors/XyzColor : com/chrynan/colors/Color {
+	public static final field Companion Lcom/chrynan/colors/XyzColor$Companion;
+	public abstract fun getX ()F
+	public abstract fun getY ()F
+	public abstract fun getZ ()F
+}
+
+public final class com/chrynan/colors/XyzColor$Companion {
+}
+
+public final class com/chrynan/colors/XyzColor$DefaultImpls {
+	public static fun getX (Lcom/chrynan/colors/XyzColor;)F
+	public static fun getY (Lcom/chrynan/colors/XyzColor;)F
+	public static fun getZ (Lcom/chrynan/colors/XyzColor;)F
+}
+
+public final class com/chrynan/colors/XyzColorKt {
+	public static final fun getBlueYellow (Lcom/chrynan/colors/XyzColor;)F
+	public static final fun getGreenRed (Lcom/chrynan/colors/XyzColor;)F
+	public static final fun getLightness (Lcom/chrynan/colors/XyzColor;)F
+}
+
+public final class com/chrynan/colors/serialization/ColorComponentSerializer : kotlinx/serialization/KSerializer {
+	public static final field INSTANCE Lcom/chrynan/colors/serialization/ColorComponentSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/chrynan/colors/Color;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/chrynan/colors/Color;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class com/chrynan/colors/serialization/ColorHslSerializer : kotlinx/serialization/KSerializer {
+	public static final field INSTANCE Lcom/chrynan/colors/serialization/ColorHslSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/chrynan/colors/Color;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/chrynan/colors/Color;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class com/chrynan/colors/serialization/ColorIntSerializer : kotlinx/serialization/KSerializer {
+	public static final field INSTANCE Lcom/chrynan/colors/serialization/ColorIntSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun deserialize-kZqdWeU (Lkotlinx/serialization/encoding/Decoder;)I
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun serialize-h0GtXjc (Lkotlinx/serialization/encoding/Encoder;I)V
+}
+
+public final class com/chrynan/colors/serialization/ColorIntSerializerKt {
+	public static final fun serializer (Lcom/chrynan/colors/ColorInt$Companion;)Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/chrynan/colors/serialization/ColorLongSerializer : kotlinx/serialization/KSerializer {
+	public static final field INSTANCE Lcom/chrynan/colors/serialization/ColorLongSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun deserialize-IqFJroQ (Lkotlinx/serialization/encoding/Decoder;)J
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun serialize-kYRPy3U (Lkotlinx/serialization/encoding/Encoder;J)V
+}
+
+public final class com/chrynan/colors/serialization/ColorLongSerializerKt {
+	public static final fun serializer (Lcom/chrynan/colors/ColorLong$Companion;)Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/chrynan/colors/serialization/ColorModelTypeNameSerializer : kotlinx/serialization/KSerializer {
+	public static final field INSTANCE Lcom/chrynan/colors/serialization/ColorModelTypeNameSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/chrynan/colors/space/ColorModel;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/chrynan/colors/space/ColorModel;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class com/chrynan/colors/serialization/ColorRgbaFloatSerializer : kotlinx/serialization/KSerializer {
+	public static final field INSTANCE Lcom/chrynan/colors/serialization/ColorRgbaFloatSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/chrynan/colors/Color;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/chrynan/colors/Color;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class com/chrynan/colors/serialization/ColorRgbaIntSerializer : kotlinx/serialization/KSerializer {
+	public static final field INSTANCE Lcom/chrynan/colors/serialization/ColorRgbaIntSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/chrynan/colors/Color;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/chrynan/colors/Color;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class com/chrynan/colors/serialization/ColorSpaceSerializer : kotlinx/serialization/KSerializer {
+	public static final field INSTANCE Lcom/chrynan/colors/serialization/ColorSpaceSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/chrynan/colors/space/ColorSpace;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/chrynan/colors/space/ColorSpace;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class com/chrynan/colors/serialization/HexadecimalColorWithPrefixSerializer : kotlinx/serialization/KSerializer {
+	public static final field INSTANCE Lcom/chrynan/colors/serialization/HexadecimalColorWithPrefixSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/chrynan/colors/HexadecimalColor;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/chrynan/colors/HexadecimalColor;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class com/chrynan/colors/serialization/HexadecimalColorWithoutPrefixSerializer : kotlinx/serialization/KSerializer {
+	public static final field INSTANCE Lcom/chrynan/colors/serialization/HexadecimalColorWithoutPrefixSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/chrynan/colors/HexadecimalColor;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/chrynan/colors/HexadecimalColor;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class com/chrynan/colors/serialization/LocalizedTextSerializer : kotlinx/serialization/KSerializer {
+	public static final field INSTANCE Lcom/chrynan/colors/serialization/LocalizedTextSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/chrynan/colors/LocalizedText;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/chrynan/colors/LocalizedText;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class com/chrynan/colors/serialization/LocalizedTextSerializerKt {
+	public static final fun serializer (Lcom/chrynan/colors/LocalizedText$Companion;)Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/chrynan/colors/space/Adaptation : java/lang/Enum {
+	public static final field BRADFORD Lcom/chrynan/colors/space/Adaptation;
+	public static final field CIECAT02 Lcom/chrynan/colors/space/Adaptation;
+	public static final field Companion Lcom/chrynan/colors/space/Adaptation$Companion;
+	public static final field VON_KRIES Lcom/chrynan/colors/space/Adaptation;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getTransform ()[F
+	public final fun getTypeName ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lcom/chrynan/colors/space/Adaptation;
+	public static fun values ()[Lcom/chrynan/colors/space/Adaptation;
+}
+
+public final class com/chrynan/colors/space/Adaptation$Companion {
+	public final fun getByTypeName (Ljava/lang/String;Z)Lcom/chrynan/colors/space/Adaptation;
+	public static synthetic fun getByTypeName$default (Lcom/chrynan/colors/space/Adaptation$Companion;Ljava/lang/String;ZILjava/lang/Object;)Lcom/chrynan/colors/space/Adaptation;
+}
+
+public final class com/chrynan/colors/space/ColorModel : java/lang/Enum {
+	public static final field CMYK Lcom/chrynan/colors/space/ColorModel;
+	public static final field Companion Lcom/chrynan/colors/space/ColorModel$Companion;
+	public static final field LAB Lcom/chrynan/colors/space/ColorModel;
+	public static final field RGB Lcom/chrynan/colors/space/ColorModel;
+	public static final field XYZ Lcom/chrynan/colors/space/ColorModel;
+	public final fun getComponentCount ()I
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getTypeName ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lcom/chrynan/colors/space/ColorModel;
+	public static fun values ()[Lcom/chrynan/colors/space/ColorModel;
+}
+
+public final class com/chrynan/colors/space/ColorModel$Companion {
+	public final fun getByTypeName (Ljava/lang/String;Z)Lcom/chrynan/colors/space/ColorModel;
+	public static synthetic fun getByTypeName$default (Lcom/chrynan/colors/space/ColorModel$Companion;Ljava/lang/String;ZILjava/lang/Object;)Lcom/chrynan/colors/space/ColorModel;
+}
+
+public abstract class com/chrynan/colors/space/ColorSpace {
+	public static final field Companion Lcom/chrynan/colors/space/ColorSpace$Companion;
+	public static final field MAX_ID I
+	public static final field MIN_ID I
+	public fun <init> (Ljava/lang/String;Lcom/chrynan/colors/space/ColorModel;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun fromXyz (FFF)[F
+	public abstract fun fromXyz ([F)[F
+	public final fun getComponentCount ()I
+	public final fun getId ()I
+	public abstract fun getMaxValue (I)F
+	public abstract fun getMinValue (I)F
+	public final fun getModel ()Lcom/chrynan/colors/space/ColorModel;
+	public final fun getName ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun isSrgb ()Z
+	public abstract fun isWideGamut ()Z
+	public fun toString ()Ljava/lang/String;
+	public final fun toXyz (FFF)[F
+	public abstract fun toXyz ([F)[F
+}
+
+public final class com/chrynan/colors/space/ColorSpace$Companion {
+}
+
+public final class com/chrynan/colors/space/ColorSpaceKt {
+	public static final fun adapt (Lcom/chrynan/colors/space/ColorSpace;Lcom/chrynan/colors/space/WhitePoint;)Lcom/chrynan/colors/space/ColorSpace;
+	public static final fun adapt (Lcom/chrynan/colors/space/ColorSpace;Lcom/chrynan/colors/space/WhitePoint;Lcom/chrynan/colors/space/Adaptation;)Lcom/chrynan/colors/space/ColorSpace;
+	public static synthetic fun adapt$default (Lcom/chrynan/colors/space/ColorSpace;Lcom/chrynan/colors/space/WhitePoint;Lcom/chrynan/colors/space/Adaptation;ILjava/lang/Object;)Lcom/chrynan/colors/space/ColorSpace;
+	public static final fun coerceComponentInRange (Lcom/chrynan/colors/space/ColorSpace;IF)F
+	public static final fun connect (Lcom/chrynan/colors/space/ColorSpace;Lcom/chrynan/colors/space/ColorSpace;Lcom/chrynan/colors/space/RenderIntent;)Lcom/chrynan/colors/space/Connector;
+	public static synthetic fun connect$default (Lcom/chrynan/colors/space/ColorSpace;Lcom/chrynan/colors/space/ColorSpace;Lcom/chrynan/colors/space/RenderIntent;ILjava/lang/Object;)Lcom/chrynan/colors/space/Connector;
+	public static final fun getComponentRange (Lcom/chrynan/colors/space/ColorSpace;I)Lkotlin/ranges/ClosedFloatingPointRange;
+}
+
+public final class com/chrynan/colors/space/ColorSpaces {
+	public static final field INSTANCE Lcom/chrynan/colors/space/ColorSpaces;
+	public final fun getACES ()Lcom/chrynan/colors/space/RgbColorSpace;
+	public final fun getACES_CG ()Lcom/chrynan/colors/space/RgbColorSpace;
+	public final fun getADOBE_RGB ()Lcom/chrynan/colors/space/RgbColorSpace;
+	public final fun getBT_2020 ()Lcom/chrynan/colors/space/RgbColorSpace;
+	public final fun getBT_709 ()Lcom/chrynan/colors/space/RgbColorSpace;
+	public final fun getCIE_LAB ()Lcom/chrynan/colors/space/ColorSpace;
+	public final fun getCIE_XYZ ()Lcom/chrynan/colors/space/ColorSpace;
+	public final fun getColorSpaceById (I)Lcom/chrynan/colors/space/ColorSpace;
+	public final fun getDCI_P3 ()Lcom/chrynan/colors/space/RgbColorSpace;
+	public final fun getDISPLAY_P3 ()Lcom/chrynan/colors/space/RgbColorSpace;
+	public final fun getEXTENDED_SRGB ()Lcom/chrynan/colors/space/RgbColorSpace;
+	public final fun getLINEAR_EXTENDED_SRGB ()Lcom/chrynan/colors/space/RgbColorSpace;
+	public final fun getLINEAR_SRGB ()Lcom/chrynan/colors/space/RgbColorSpace;
+	public final fun getNTSC_1953 ()Lcom/chrynan/colors/space/RgbColorSpace;
+	public final fun getOK_LAB ()Lcom/chrynan/colors/space/ColorSpace;
+	public final fun getPRO_PHOTO_RGB ()Lcom/chrynan/colors/space/RgbColorSpace;
+	public final fun getSMPTE_C ()Lcom/chrynan/colors/space/RgbColorSpace;
+	public final fun getSRGB ()Lcom/chrynan/colors/space/RgbColorSpace;
+	public final fun getUNSPECIFIED ()Lcom/chrynan/colors/space/RgbColorSpace;
+	public final fun match ([FLcom/chrynan/colors/space/TransferParameters;)Lcom/chrynan/colors/space/ColorSpace;
+}
+
+public class com/chrynan/colors/space/Connector {
+	public final fun getDestination ()Lcom/chrynan/colors/space/ColorSpace;
+	public final fun getRenderIntent ()Lcom/chrynan/colors/space/RenderIntent;
+	public final fun getSource ()Lcom/chrynan/colors/space/ColorSpace;
+	public final fun transform (FFF)[F
+	public fun transform ([F)[F
+}
+
+public final class com/chrynan/colors/space/Illuminant {
+	public static final field INSTANCE Lcom/chrynan/colors/space/Illuminant;
+	public final fun getA ()Lcom/chrynan/colors/space/WhitePoint;
+	public final fun getB ()Lcom/chrynan/colors/space/WhitePoint;
+	public final fun getC ()Lcom/chrynan/colors/space/WhitePoint;
+	public final fun getD50 ()Lcom/chrynan/colors/space/WhitePoint;
+	public final fun getD50Xyz ()[F
+	public final fun getD55 ()Lcom/chrynan/colors/space/WhitePoint;
+	public final fun getD60 ()Lcom/chrynan/colors/space/WhitePoint;
+	public final fun getD65 ()Lcom/chrynan/colors/space/WhitePoint;
+	public final fun getD75 ()Lcom/chrynan/colors/space/WhitePoint;
+	public final fun getE ()Lcom/chrynan/colors/space/WhitePoint;
+}
+
+public final class com/chrynan/colors/space/LabColorSpace : com/chrynan/colors/space/ColorSpace {
+	public static final field Companion Lcom/chrynan/colors/space/LabColorSpace$Companion;
+	public fun <init> (Ljava/lang/String;I)V
+	public fun fromXyz ([F)[F
+	public fun getMaxValue (I)F
+	public fun getMinValue (I)F
+	public fun isWideGamut ()Z
+	public fun toXyz ([F)[F
+}
+
+public final class com/chrynan/colors/space/LabColorSpace$Companion {
+}
+
+public final class com/chrynan/colors/space/OkLabColorSpace : com/chrynan/colors/space/ColorSpace {
+	public static final field Companion Lcom/chrynan/colors/space/OkLabColorSpace$Companion;
+	public fun <init> (Ljava/lang/String;I)V
+	public fun fromXyz ([F)[F
+	public fun getMaxValue (I)F
+	public fun getMinValue (I)F
+	public fun isWideGamut ()Z
+	public fun toXyz ([F)[F
+}
+
+public final class com/chrynan/colors/space/OkLabColorSpace$Companion {
+}
+
+public final class com/chrynan/colors/space/RenderIntent : java/lang/Enum {
+	public static final field ABSOLUTE Lcom/chrynan/colors/space/RenderIntent;
+	public static final field Companion Lcom/chrynan/colors/space/RenderIntent$Companion;
+	public static final field PERCEPTUAL Lcom/chrynan/colors/space/RenderIntent;
+	public static final field RELATIVE Lcom/chrynan/colors/space/RenderIntent;
+	public static final field SATURATION Lcom/chrynan/colors/space/RenderIntent;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getTypeName ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lcom/chrynan/colors/space/RenderIntent;
+	public static fun values ()[Lcom/chrynan/colors/space/RenderIntent;
+}
+
+public final class com/chrynan/colors/space/RenderIntent$Companion {
+	public final fun getByTypeName (Ljava/lang/String;Z)Lcom/chrynan/colors/space/RenderIntent;
+	public static synthetic fun getByTypeName$default (Lcom/chrynan/colors/space/RenderIntent$Companion;Ljava/lang/String;ZILjava/lang/Object;)Lcom/chrynan/colors/space/RenderIntent;
+}
+
+public final class com/chrynan/colors/space/RgbColorSpace : com/chrynan/colors/space/ColorSpace {
+	public static final field Companion Lcom/chrynan/colors/space/RgbColorSpace$Companion;
+	public fun <init> (Ljava/lang/String;[FD)V
+	public fun <init> (Ljava/lang/String;[FLcom/chrynan/colors/space/TransferParameters;)V
+	public fun <init> (Ljava/lang/String;[FLcom/chrynan/colors/space/WhitePoint;D)V
+	public fun <init> (Ljava/lang/String;[FLcom/chrynan/colors/space/WhitePoint;Lcom/chrynan/colors/space/TransferParameters;)V
+	public fun <init> (Ljava/lang/String;[FLcom/chrynan/colors/space/WhitePoint;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;FF)V
+	public fun <init> (Ljava/lang/String;[FLkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun fromLinear (FFF)[F
+	public final fun fromLinear ([F)[F
+	public fun fromXyz ([F)[F
+	public final fun getEotf ()Lkotlin/jvm/functions/Function1;
+	public final fun getInverseTransform ()[F
+	public final fun getInverseTransform ([F)[F
+	public fun getMaxValue (I)F
+	public fun getMinValue (I)F
+	public final fun getOetf ()Lkotlin/jvm/functions/Function1;
+	public final fun getPrimaries ()[F
+	public final fun getPrimaries ([F)[F
+	public final fun getTransferParameters ()Lcom/chrynan/colors/space/TransferParameters;
+	public final fun getTransform ()[F
+	public final fun getTransform ([F)[F
+	public final fun getWhitePoint ()Lcom/chrynan/colors/space/WhitePoint;
+	public fun hashCode ()I
+	public fun isSrgb ()Z
+	public fun isWideGamut ()Z
+	public final fun toLinear (FFF)[F
+	public final fun toLinear ([F)[F
+	public fun toXyz ([F)[F
+}
+
+public final class com/chrynan/colors/space/RgbColorSpace$Companion {
+}
+
+public final class com/chrynan/colors/space/TransferParameters {
+	public fun <init> (DDDDDDD)V
+	public synthetic fun <init> (DDDDDDDILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()D
+	public final fun component2 ()D
+	public final fun component3 ()D
+	public final fun component4 ()D
+	public final fun component5 ()D
+	public final fun component6 ()D
+	public final fun component7 ()D
+	public final fun copy (DDDDDDD)Lcom/chrynan/colors/space/TransferParameters;
+	public static synthetic fun copy$default (Lcom/chrynan/colors/space/TransferParameters;DDDDDDDILjava/lang/Object;)Lcom/chrynan/colors/space/TransferParameters;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getA ()D
+	public final fun getB ()D
+	public final fun getC ()D
+	public final fun getD ()D
+	public final fun getE ()D
+	public final fun getF ()D
+	public final fun getGamma ()D
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/chrynan/colors/space/WhitePoint {
+	public fun <init> (FF)V
+	public fun <init> (FFF)V
+	public final fun component1 ()F
+	public final fun component2 ()F
+	public final fun copy (FF)Lcom/chrynan/colors/space/WhitePoint;
+	public static synthetic fun copy$default (Lcom/chrynan/colors/space/WhitePoint;FFILjava/lang/Object;)Lcom/chrynan/colors/space/WhitePoint;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getX ()F
+	public final fun getY ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+	public final fun toXyz ()[F
+}
+
+public final class com/chrynan/colors/space/XyzColorSpace : com/chrynan/colors/space/ColorSpace {
+	public static final field Companion Lcom/chrynan/colors/space/XyzColorSpace$Companion;
+	public fun <init> (Ljava/lang/String;I)V
+	public fun fromXyz ([F)[F
+	public fun getMaxValue (I)F
+	public fun getMinValue (I)F
+	public fun isWideGamut ()Z
+	public fun toXyz ([F)[F
+}
+
+public final class com/chrynan/colors/space/XyzColorSpace$Companion {
+}
+

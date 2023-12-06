@@ -1,0 +1,14 @@
+public final class com/chrynan/colors/compose/ComposeMultiplatformColorKt {
+	public static final fun toComposeColor (Lcom/chrynan/colors/Color;)J
+	public static final fun toMultiplatformColor-8_81llA (J)Lcom/chrynan/colors/Color;
+}
+
+public final class com/chrynan/colors/compose/ThemeUtilsKt {
+	public static final fun MaterialTheme (Lcom/chrynan/colors/theme/ColorTheme;Landroidx/compose/material/Typography;Landroidx/compose/material/Shapes;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+	public static final fun MaterialTheme (Lcom/chrynan/colors/theme/Colors;Landroidx/compose/material/Typography;Landroidx/compose/material/Shapes;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+	public static final fun MaterialTheme (Lcom/chrynan/colors/theme/LightOrDarkColorTheme;Landroidx/compose/material/Typography;Landroidx/compose/material/Shapes;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+	public static final fun systemBasedColors (Lcom/chrynan/colors/theme/LightOrDarkColorTheme;Landroidx/compose/runtime/Composer;I)Lcom/chrynan/colors/theme/Colors;
+	public static final fun toComposeColors (Lcom/chrynan/colors/theme/Colors;)Landroidx/compose/material/Colors;
+	public static final fun toMultiplatformColors (Landroidx/compose/material/Colors;)Lcom/chrynan/colors/theme/Colors;
+}
+

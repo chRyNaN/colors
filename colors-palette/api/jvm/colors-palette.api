@@ -1,0 +1,153 @@
+public abstract interface class com/chrynan/colors/palette/Palette {
+	public static final field Companion Lcom/chrynan/colors/palette/Palette$Companion;
+	public abstract fun getDominantSwatch ()Lcom/chrynan/colors/palette/Swatch;
+	public abstract fun getMutedDarkSwatch ()Lcom/chrynan/colors/palette/Swatch;
+	public abstract fun getMutedLightSwatch ()Lcom/chrynan/colors/palette/Swatch;
+	public abstract fun getMutedSwatch ()Lcom/chrynan/colors/palette/Swatch;
+	public abstract fun getVibrantDarkSwatch ()Lcom/chrynan/colors/palette/Swatch;
+	public abstract fun getVibrantLightSwatch ()Lcom/chrynan/colors/palette/Swatch;
+	public abstract fun getVibrantSwatch ()Lcom/chrynan/colors/palette/Swatch;
+}
+
+public final class com/chrynan/colors/palette/Palette$Companion {
+}
+
+public final class com/chrynan/colors/palette/PaletteConstructorUtilsKt {
+	public static final fun generate (Lcom/chrynan/colors/palette/Palette$Companion;[IILkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun generate$default (Lcom/chrynan/colors/palette/Palette$Companion;[IILkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+}
+
+public final class com/chrynan/colors/palette/PaletteUtilsKt {
+	public static final fun getPrimarySwatch (Lcom/chrynan/colors/palette/Palette;)Lcom/chrynan/colors/palette/Swatch;
+	public static final fun getSwatches (Lcom/chrynan/colors/palette/Palette;)Ljava/util/List;
+	public static final fun isEmpty (Lcom/chrynan/colors/palette/Palette;)Z
+	public static final fun isNotEmpty (Lcom/chrynan/colors/palette/Palette;)Z
+}
+
+public final class com/chrynan/colors/palette/SimplePalette : com/chrynan/colors/palette/Palette {
+	public fun <init> ()V
+	public final fun component1 ()Lcom/chrynan/colors/palette/Swatch;
+	public final fun component2 ()Lcom/chrynan/colors/palette/Swatch;
+	public final fun component3 ()Lcom/chrynan/colors/palette/Swatch;
+	public final fun component4 ()Lcom/chrynan/colors/palette/Swatch;
+	public final fun component5 ()Lcom/chrynan/colors/palette/Swatch;
+	public final fun component6 ()Lcom/chrynan/colors/palette/Swatch;
+	public final fun component7 ()Lcom/chrynan/colors/palette/Swatch;
+	public final fun copy (Lcom/chrynan/colors/palette/Swatch;Lcom/chrynan/colors/palette/Swatch;Lcom/chrynan/colors/palette/Swatch;Lcom/chrynan/colors/palette/Swatch;Lcom/chrynan/colors/palette/Swatch;Lcom/chrynan/colors/palette/Swatch;Lcom/chrynan/colors/palette/Swatch;)Lcom/chrynan/colors/palette/SimplePalette;
+	public static synthetic fun copy$default (Lcom/chrynan/colors/palette/SimplePalette;Lcom/chrynan/colors/palette/Swatch;Lcom/chrynan/colors/palette/Swatch;Lcom/chrynan/colors/palette/Swatch;Lcom/chrynan/colors/palette/Swatch;Lcom/chrynan/colors/palette/Swatch;Lcom/chrynan/colors/palette/Swatch;Lcom/chrynan/colors/palette/Swatch;ILjava/lang/Object;)Lcom/chrynan/colors/palette/SimplePalette;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getDominantSwatch ()Lcom/chrynan/colors/palette/Swatch;
+	public fun getMutedDarkSwatch ()Lcom/chrynan/colors/palette/Swatch;
+	public fun getMutedLightSwatch ()Lcom/chrynan/colors/palette/Swatch;
+	public fun getMutedSwatch ()Lcom/chrynan/colors/palette/Swatch;
+	public fun getVibrantDarkSwatch ()Lcom/chrynan/colors/palette/Swatch;
+	public fun getVibrantLightSwatch ()Lcom/chrynan/colors/palette/Swatch;
+	public fun getVibrantSwatch ()Lcom/chrynan/colors/palette/Swatch;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/chrynan/colors/palette/SimplePaletteKt {
+	public static final fun Palette (Lcom/chrynan/colors/palette/Swatch;Lcom/chrynan/colors/palette/Swatch;Lcom/chrynan/colors/palette/Swatch;Lcom/chrynan/colors/palette/Swatch;Lcom/chrynan/colors/palette/Swatch;Lcom/chrynan/colors/palette/Swatch;Lcom/chrynan/colors/palette/Swatch;)Lcom/chrynan/colors/palette/Palette;
+	public static synthetic fun Palette$default (Lcom/chrynan/colors/palette/Swatch;Lcom/chrynan/colors/palette/Swatch;Lcom/chrynan/colors/palette/Swatch;Lcom/chrynan/colors/palette/Swatch;Lcom/chrynan/colors/palette/Swatch;Lcom/chrynan/colors/palette/Swatch;Lcom/chrynan/colors/palette/Swatch;ILjava/lang/Object;)Lcom/chrynan/colors/palette/Palette;
+}
+
+public final class com/chrynan/colors/palette/Swatch {
+	public static final field Companion Lcom/chrynan/colors/palette/Swatch$Companion;
+	public fun <init> (Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Ljava/lang/Integer;)V
+	public synthetic fun <init> (Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lcom/chrynan/colors/Color;
+	public final fun component2 ()Lcom/chrynan/colors/Color;
+	public final fun component3 ()Lcom/chrynan/colors/Color;
+	public final fun component4 ()Ljava/lang/Integer;
+	public final fun copy (Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Ljava/lang/Integer;)Lcom/chrynan/colors/palette/Swatch;
+	public static synthetic fun copy$default (Lcom/chrynan/colors/palette/Swatch;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Ljava/lang/Integer;ILjava/lang/Object;)Lcom/chrynan/colors/palette/Swatch;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getColor ()Lcom/chrynan/colors/Color;
+	public final fun getPopulation ()Ljava/lang/Integer;
+	public final fun getPrimaryOnColor ()Lcom/chrynan/colors/Color;
+	public final fun getSecondaryOnColor ()Lcom/chrynan/colors/Color;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/chrynan/colors/palette/Swatch$Companion {
+}
+
+public final class com/chrynan/colors/palette/internal/HslTarget : com/chrynan/colors/palette/internal/Target {
+	public fun <init> ()V
+	public final fun component1 ()F
+	public final fun component10 ()Z
+	public final fun component2 ()F
+	public final fun component3 ()F
+	public final fun component4 ()F
+	public final fun component5 ()F
+	public final fun component6 ()F
+	public final fun copy (FFFFFFFFFZ)Lcom/chrynan/colors/palette/internal/HslTarget;
+	public static synthetic fun copy$default (Lcom/chrynan/colors/palette/internal/HslTarget;FFFFFFFFFZILjava/lang/Object;)Lcom/chrynan/colors/palette/internal/HslTarget;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getLightnessWeight ()F
+	public fun getMaximumLightness ()F
+	public fun getMaximumSaturation ()F
+	public fun getMinimumLightness ()F
+	public fun getMinimumSaturation ()F
+	public fun getPopulationWeight ()F
+	public fun getSaturationWeight ()F
+	public fun getTargetLightness ()F
+	public fun getTargetSaturation ()F
+	public fun hashCode ()I
+	public fun isExclusive ()Z
+	public fun matchesSwatch (Lcom/chrynan/colors/palette/Swatch;)Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/chrynan/colors/palette/internal/Target {
+	public static final field Companion Lcom/chrynan/colors/palette/internal/Target$Companion;
+	public abstract fun getLightnessWeight ()F
+	public abstract fun getMaximumLightness ()F
+	public abstract fun getMaximumSaturation ()F
+	public abstract fun getMinimumLightness ()F
+	public abstract fun getMinimumSaturation ()F
+	public abstract fun getPopulationWeight ()F
+	public abstract fun getSaturationWeight ()F
+	public abstract fun getTargetLightness ()F
+	public abstract fun getTargetSaturation ()F
+	public abstract fun isExclusive ()Z
+	public abstract fun matchesSwatch (Lcom/chrynan/colors/palette/Swatch;)Z
+}
+
+public final class com/chrynan/colors/palette/internal/Target$Companion {
+	public final fun getDARK_MUTED ()Lcom/chrynan/colors/palette/internal/Target;
+	public final fun getDARK_VIBRANT ()Lcom/chrynan/colors/palette/internal/Target;
+	public final fun getLIGHT_MUTED ()Lcom/chrynan/colors/palette/internal/Target;
+	public final fun getLIGHT_VIBRANT ()Lcom/chrynan/colors/palette/internal/Target;
+	public final fun getMUTED ()Lcom/chrynan/colors/palette/internal/Target;
+	public final fun getVIBRANT ()Lcom/chrynan/colors/palette/internal/Target;
+}
+
+public final class com/chrynan/colors/palette/serialization/PaletteSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> (Lkotlinx/serialization/KSerializer;)V
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/chrynan/colors/palette/Palette;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/chrynan/colors/palette/Palette;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class com/chrynan/colors/palette/serialization/PaletteSerializerKt {
+	public static final fun serializer (Lcom/chrynan/colors/palette/Palette$Companion;Lkotlinx/serialization/KSerializer;)Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/chrynan/colors/palette/serialization/SwatchSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> (Lkotlinx/serialization/KSerializer;)V
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/chrynan/colors/palette/Swatch;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/chrynan/colors/palette/Swatch;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class com/chrynan/colors/palette/serialization/SwatchSerializerKt {
+	public static final fun serializer (Lcom/chrynan/colors/palette/Swatch$Companion;Lkotlinx/serialization/KSerializer;)Lkotlinx/serialization/KSerializer;
+}
+

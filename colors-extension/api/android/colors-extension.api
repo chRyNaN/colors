@@ -1,0 +1,159 @@
+public final class com/chrynan/colors/extension/ColorExtensionsKt {
+	public static final fun getAliceBlue (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getAntiqueWhite (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getAquaBlue (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getAquamarine (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getAzure (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getBeige (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getBisque (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getBlanchedAlmond (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getBlue (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getBlueViolet (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getBrown (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getBurlyWood (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getCadetBlue (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getChartreuse (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getChocolate (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getCoral (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getCornflowerBlue (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getCornsilk (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getCrimson (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getCyan (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getDarkBlue (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getDarkCyan (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getDarkGoldenRod (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getDarkGray (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getDarkGreen (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getDarkKhaki (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getDarkMagenta (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getDarkOliveGreen (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getDarkOrange (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getDarkOrchid (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getDarkRed (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getDarkSalmon (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getDarkSeaGreen (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getDarkSlateBlue (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getDarkSlateGray (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getDarkTurquoise (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getDarkViolet (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getDeepPink (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getDeepSkyBlue (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getDimGray (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getDodgerBlue (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getFireBrick (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getFloralWhite (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getForestGreen (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getFuchsia (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getGainsboro (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getGhostWhite (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getGold (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getGoldenRod (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getGray (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getGreen (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getGreenYellow (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getHoneyDew (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getHotPink (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getIndianRed (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getIndigo (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getIvory (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getKhaki (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getLavender (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getLavenderBlush (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getLawnGreen (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getLemonChiffon (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getLightBlue (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getLightCoral (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getLightCyan (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getLightGoldenRodYellow (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getLightGray (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getLightGreen (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getLightPink (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getLightSalmon (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getLightSeaGreen (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getLightSkyBlue (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getLightSlateGray (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getLightSteelBlue (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getLightYellow (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getLime (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getLimeGreen (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getLinen (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getMagenta (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getMaroon (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getMediumAquaMarine (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getMediumBlue (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getMediumOrchid (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getMediumPurple (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getMediumSeaGreen (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getMediumSlateBlue (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getMediumSpringGreen (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getMediumTurquoise (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getMediumVioletRed (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getMidnightBlue (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getMintCream (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getMistyRose (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getMoccasin (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getNavajoWhite (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getNavy (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getOldLace (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getOlive (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getOliveDrab (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getOrange (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getOrangeRed (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getOrchid (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getPaleGoldenRod (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getPaleGreen (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getPaleTurquoise (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getPaleVioletRed (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getPapayaWhip (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getPeachPuff (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getPeru (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getPink (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getPlum (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getPowderBlue (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getPurple (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getRebeccaPurple (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getRed (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getRosyBrown (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getRoyalBlue (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getSaddleBrown (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getSalmon (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getSandyBrown (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getSeaGreen (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getSeaShell (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getSienna (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getSilver (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getSkyBlue (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getSlateBlue (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getSlateGray (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getSnow (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getSpringGreen (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getSteelBlue (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getTan (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getTeal (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getThistle (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getTomato (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getTurquoise (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getViolet (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getWheat (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getWhiteSmoke (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getYellow (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+	public static final fun getYellowGreen (Lcom/chrynan/colors/Color$Companion;)Lcom/chrynan/colors/HexadecimalColor;
+}
+
+public final class com/chrynan/colors/extension/NamedColorsKt {
+	public static final fun getNamedColors (Lcom/chrynan/colors/Color$Companion;)Ljava/util/Set;
+}
+
+public final class com/chrynan/colors/extension/serialization/NamedColorSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> (Lkotlinx/serialization/KSerializer;)V
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/chrynan/colors/NamedColor;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/chrynan/colors/NamedColor;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class com/chrynan/colors/extension/serialization/NamedColorSerializerKt {
+	public static final fun serializer (Lcom/chrynan/colors/NamedColor$Companion;Lkotlinx/serialization/KSerializer;)Lkotlinx/serialization/KSerializer;
+}
+

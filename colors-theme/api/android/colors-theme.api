@@ -1,0 +1,112 @@
+public abstract interface class com/chrynan/colors/theme/ColorTheme {
+	public static final field Companion Lcom/chrynan/colors/theme/ColorTheme$Companion;
+	public abstract fun colors ()Lcom/chrynan/colors/theme/Colors;
+}
+
+public final class com/chrynan/colors/theme/ColorTheme$Companion {
+}
+
+public final class com/chrynan/colors/theme/ColorThemeKt {
+	public static final fun colors (Lcom/chrynan/colors/theme/LightOrDarkColorTheme;Z)Lcom/chrynan/colors/theme/Colors;
+	public static final fun getThemes (Lcom/chrynan/colors/theme/Colors$Companion;)Lcom/chrynan/colors/theme/ColorThemes;
+}
+
+public final class com/chrynan/colors/theme/ColorThemes {
+	public static final field Companion Lcom/chrynan/colors/theme/ColorThemes$Companion;
+}
+
+public final class com/chrynan/colors/theme/ColorThemes$Companion {
+}
+
+public abstract interface class com/chrynan/colors/theme/Colors {
+	public static final field Companion Lcom/chrynan/colors/theme/Colors$Companion;
+	public abstract fun getAccentPrimary ()Lcom/chrynan/colors/Color;
+	public abstract fun getAccentSecondary ()Lcom/chrynan/colors/Color;
+	public abstract fun getBackgroundPrimary ()Lcom/chrynan/colors/Color;
+	public abstract fun getBackgroundSecondary ()Lcom/chrynan/colors/Color;
+	public abstract fun getError ()Lcom/chrynan/colors/Color;
+	public abstract fun getOnAccentPrimary ()Lcom/chrynan/colors/Color;
+	public abstract fun getOnAccentSecondary ()Lcom/chrynan/colors/Color;
+	public abstract fun getOnBackgroundPrimary ()Lcom/chrynan/colors/Color;
+	public abstract fun getOnBackgroundSecondary ()Lcom/chrynan/colors/Color;
+	public abstract fun getOnError ()Lcom/chrynan/colors/Color;
+	public abstract fun getOnPrimary ()Lcom/chrynan/colors/Color;
+	public abstract fun getOnSecondary ()Lcom/chrynan/colors/Color;
+	public abstract fun getPrimary ()Lcom/chrynan/colors/Color;
+	public abstract fun getPrimaryVariant ()Lcom/chrynan/colors/Color;
+	public abstract fun getSecondary ()Lcom/chrynan/colors/Color;
+	public abstract fun getSecondaryVariant ()Lcom/chrynan/colors/Color;
+	public abstract fun getTextError ()Lcom/chrynan/colors/Color;
+	public abstract fun getTextPrimary ()Lcom/chrynan/colors/Color;
+	public abstract fun getTextSecondary ()Lcom/chrynan/colors/Color;
+	public abstract fun getTextTertiary ()Lcom/chrynan/colors/Color;
+	public abstract fun isLight ()Z
+}
+
+public final class com/chrynan/colors/theme/Colors$Companion {
+}
+
+public final class com/chrynan/colors/theme/ColorsUtilsKt {
+	public static final fun copy (Lcom/chrynan/colors/theme/Colors;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Z)Lcom/chrynan/colors/theme/Colors;
+	public static synthetic fun copy$default (Lcom/chrynan/colors/theme/Colors;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;ZILjava/lang/Object;)Lcom/chrynan/colors/theme/Colors;
+	public static final fun darkColors (Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;)Lcom/chrynan/colors/theme/Colors;
+	public static synthetic fun darkColors$default (Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;ILjava/lang/Object;)Lcom/chrynan/colors/theme/Colors;
+	public static final fun getOnSurface (Lcom/chrynan/colors/theme/Colors;)Lcom/chrynan/colors/Color;
+	public static final fun getSurface (Lcom/chrynan/colors/theme/Colors;)Lcom/chrynan/colors/Color;
+	public static final fun lightColors (Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;)Lcom/chrynan/colors/theme/Colors;
+	public static synthetic fun lightColors$default (Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;Lcom/chrynan/colors/Color;ILjava/lang/Object;)Lcom/chrynan/colors/theme/Colors;
+}
+
+public abstract interface class com/chrynan/colors/theme/DarkColorTheme : com/chrynan/colors/theme/ColorTheme {
+	public static final field Companion Lcom/chrynan/colors/theme/DarkColorTheme$Companion;
+	public abstract fun colors ()Lcom/chrynan/colors/theme/Colors;
+	public abstract fun getDark ()Lcom/chrynan/colors/theme/Colors;
+}
+
+public final class com/chrynan/colors/theme/DarkColorTheme$Companion {
+}
+
+public final class com/chrynan/colors/theme/DarkColorTheme$DefaultImpls {
+	public static fun colors (Lcom/chrynan/colors/theme/DarkColorTheme;)Lcom/chrynan/colors/theme/Colors;
+}
+
+public abstract interface class com/chrynan/colors/theme/LightColorTheme : com/chrynan/colors/theme/ColorTheme {
+	public static final field Companion Lcom/chrynan/colors/theme/LightColorTheme$Companion;
+	public abstract fun colors ()Lcom/chrynan/colors/theme/Colors;
+	public abstract fun getLight ()Lcom/chrynan/colors/theme/Colors;
+}
+
+public final class com/chrynan/colors/theme/LightColorTheme$Companion {
+}
+
+public final class com/chrynan/colors/theme/LightColorTheme$DefaultImpls {
+	public static fun colors (Lcom/chrynan/colors/theme/LightColorTheme;)Lcom/chrynan/colors/theme/Colors;
+}
+
+public abstract interface class com/chrynan/colors/theme/LightOrDarkColorTheme : com/chrynan/colors/theme/DarkColorTheme, com/chrynan/colors/theme/LightColorTheme {
+	public static final field Companion Lcom/chrynan/colors/theme/LightOrDarkColorTheme$Companion;
+	public abstract fun colors ()Lcom/chrynan/colors/theme/Colors;
+	public abstract fun getDark ()Lcom/chrynan/colors/theme/Colors;
+	public abstract fun getLight ()Lcom/chrynan/colors/theme/Colors;
+}
+
+public final class com/chrynan/colors/theme/LightOrDarkColorTheme$Companion {
+}
+
+public final class com/chrynan/colors/theme/LightOrDarkColorTheme$DefaultImpls {
+	public static fun colors (Lcom/chrynan/colors/theme/LightOrDarkColorTheme;)Lcom/chrynan/colors/theme/Colors;
+}
+
+public final class com/chrynan/colors/theme/serialization/ColorsSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> (Lkotlinx/serialization/KSerializer;)V
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/chrynan/colors/theme/Colors;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/chrynan/colors/theme/Colors;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class com/chrynan/colors/theme/serialization/ColorsSerializerKt {
+	public static final fun serializer (Lcom/chrynan/colors/theme/Colors$Companion;Lkotlinx/serialization/KSerializer;)Lkotlinx/serialization/KSerializer;
+}
+
