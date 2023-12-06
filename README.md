@@ -89,10 +89,10 @@ implementation "com.chrynan.colors:colors-extension:$VERSION"
 implementation "com.chrynan.colors:colors-theme:$VERSION"
 ```
 
-**Serialization:**
+**Palette:**
 
 ```groovy
-implementation "com.chrynan.colors:colors-serialization:$VERSION"
+implementation "com.chrynan.colors:colors-palette:$VERSION"
 ```
 
 **Jetpack Compose:**
