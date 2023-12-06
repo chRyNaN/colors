@@ -3,32 +3,25 @@ import com.chrynan.colors.buildSrc.LibraryConstants
 group = LibraryConstants.group
 version = LibraryConstants.versionName
 
-buildscript {
-    repositories {
-        google()
-        jcenter()
-        maven { url = uri("https://repo.repsy.io/mvn/chrynan/public") }
-        maven { url = uri("https://maven.pkg.jetbrains.space/public/p/compose/dev") }
-    }
-    dependencies {
-        classpath("com.android.tools.build:gradle:4.2.2")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10")
-        classpath("org.jetbrains.dokka:dokka-gradle-plugin:1.7.10")
-        classpath("org.jetbrains.kotlin:kotlin-serialization:1.7.10")
-        classpath("org.jetbrains.compose:compose-gradle-plugin:1.2.0-beta02")
-    }
+plugins {
+    kotlin("jvm") version "1.9.20" apply false
+    kotlin("multiplatform") version "1.9.20" apply false
+    kotlin("plugin.serialization") version "1.9.20" apply false
+    id("com.android.library") version "8.1.0" apply false
+    id("com.android.application") version "8.1.0" apply false
+    id("org.jetbrains.compose") version "1.5.10" apply false
+    id("org.jetbrains.dokka") version "1.9.10"
+    //id("org.jetbrains.kotlinx.binary-compatibility-validator") version "0.13.2"
+    id("com.mikepenz.aboutlibraries.plugin") version "10.8.3" apply false
 }
-
-apply(plugin = "org.jetbrains.dokka")
 
 allprojects {
     repositories {
-        google()
-        jcenter()
+        // NOTE: Order matters here, as the first listed repository will be checked for dependencies first.
         mavenCentral()
-        maven { url = uri("https://jitpack.io") }
-        maven { url = uri("https://repo.repsy.io/mvn/chrynan/public") }
-        maven { url = uri("https://maven.pkg.jetbrains.space/public/p/compose/dev") }
+        google()
+        maven("https://repo.repsy.io/mvn/chrynan/public")
+        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 }
 

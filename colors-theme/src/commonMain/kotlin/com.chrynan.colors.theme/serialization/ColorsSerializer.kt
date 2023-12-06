@@ -1,4 +1,4 @@
-package com.chrynan.colors.serialization
+package com.chrynan.colors.theme.serialization
 
 import com.chrynan.colors.Color
 import com.chrynan.colors.theme.Colors

@@ -1,9 +1,10 @@
 @file:Suppress("unused")
 
-package com.chrynan.colors.serialization
+package com.chrynan.colors.extension.serialization
 
 import com.chrynan.colors.Color
 import com.chrynan.colors.NamedColor
+import com.chrynan.colors.serialization.LocalizedTextSerializer
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.builtins.SetSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor

@@ -1,4 +1,5 @@
 import com.chrynan.colors.buildSrc.LibraryConstants
+import com.chrynan.colors.buildSrc.*
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -13,40 +14,49 @@ group = LibraryConstants.group
 version = LibraryConstants.versionName
 
 kotlin {
-    android {
+    // Enable the default target hierarchy:
+    applyDefaultHierarchyTemplate()
+
+    androidTarget {
         publishAllLibraryVariants()
     }
-    targets {
-        android()
-        jvm()
-        ios()
-        iosSimulatorArm64()
-        js(IR) {
-            browser()
-        }
+
+    jvm()
+    js(IR) {
+        browser()
     }
+
+    if (isBuildingOnOSX()) {
+        iosX64()
+        iosArm64()
+        iosSimulatorArm64()
+        tvosX64()
+        tvosArm64()
+        watchosX64()
+        watchosArm32()
+        macosX64()
+        macosArm64()
+    }
+
     sourceSets {
         all {
             languageSettings.optIn("kotlin.RequiresOptIn")
-            languageSettings.enableLanguageFeature("InlineClasses")
         }
         val commonMain by getting {
             dependencies {
                 api(project(":colors-core"))
                 api(project(":colors-theme"))
 
-                api(compose.ui)
-                api(compose.material)
+                implementation(compose.ui)
+                implementation(compose.material)
             }
         }
-        val iosMain by sourceSets.getting
-        val iosSimulatorArm64Main by sourceSets.getting
-        iosSimulatorArm64Main.dependsOn(iosMain)
     }
 }
 
 android {
     compileSdk = LibraryConstants.Android.compileSdkVersion
+    namespace = "com.chrynan.colors.compose"
 
     defaultConfig {
         minSdk = LibraryConstants.Android.minSdkVersion
@@ -84,9 +94,6 @@ android {
 }
 
 tasks.withType<Jar> { duplicatesStrategy = DuplicatesStrategy.INHERIT }
-
-dependencies {
-}
 
 afterEvaluate {
     publishing {
