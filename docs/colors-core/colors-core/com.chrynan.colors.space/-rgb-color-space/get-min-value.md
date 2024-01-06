@@ -11,19 +11,17 @@ Returns the minimum valid value for the specified component of this color space'
 
 A floating point value less than [getMaxValue](get-max-value.md)
 
-## See also
-
-common
-
-| | |
-|---|---|
-| [com.chrynan.colors.space.RgbColorSpace](get-max-value.md) |  |
-| [com.chrynan.colors.space.ColorModel](../-color-model/component-count.md) |  |
-
-## Parameters
+#### Parameters
 
 common
 
 | | |
 |---|---|
 | component | The index of the component, from `0` to `3`, inclusive. |
+
+#### See also
+
+| |
+|---|
+| [RgbColorSpace.getMaxValue](get-max-value.md) |
+| [ColorModel.componentCount](../-color-model/component-count.md) |

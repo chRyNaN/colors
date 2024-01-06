@@ -11,15 +11,7 @@ Transforms the specified color from the source color space to a color in the des
 
 A new array of 3 floats containing the specified color transformed from the source space to the destination space
 
-## See also
-
-common
-
-| | |
-|---|---|
-| [com.chrynan.colors.space.Connector](transform.md) |  |
-
-## Parameters
+#### Parameters
 
 common
 
@@ -28,6 +20,12 @@ common
 | componentOne | The first component in the [ColorModel](../-color-model/index.md). For [ColorModel.RGB](../-color-model/-r-g-b/index.md) this would be the red component of the color to transform |
 | componentTwo | The second component in the [ColorModel](../-color-model/index.md). For [ColorModel.RGB](../-color-model/-r-g-b/index.md) this would be the green component of the color to transform |
 | componentThree | The third component in the [ColorModel](../-color-model/index.md). For [ColorModel.RGB](../-color-model/-r-g-b/index.md) this would be the blue component of the color to transform |
+
+#### See also
+
+| |
+|---|
+| [Connector.transform](transform.md) |
 
 [common]\
 open fun [transform](transform.md)(v: [FloatArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html)): [FloatArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html)
@@ -38,18 +36,16 @@ Transforms the specified color from the source color space to a color in the des
 
 The [v](transform.md) array passed as a parameter, containing the specified color transformed from the source space to the destination space
 
-## See also
-
-common
-
-| | |
-|---|---|
-| [com.chrynan.colors.space.Connector](transform.md) |  |
-
-## Parameters
+#### Parameters
 
 common
 
 | | |
 |---|---|
 | v | A non-null array of 3 floats containing the value to transform and that will hold the result of the transform |
+
+#### See also
+
+| |
+|---|
+| [Connector.transform](transform.md) |

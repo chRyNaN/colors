@@ -9,7 +9,7 @@ Creates a [Color](-color/index.md) from the provided HSV components.
 
 **Note:** This was adapted from the open source Jetpack Compose library.
 
-## Parameters
+#### Parameters
 
 common
 

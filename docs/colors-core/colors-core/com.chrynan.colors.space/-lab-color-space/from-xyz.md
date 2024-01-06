@@ -13,18 +13,17 @@ The specified array's length  must be at least equal to to the number of color c
 
 The array passed in parameter [v](from-xyz.md).
 
-## See also
-
-common
-
-| | |
-|---|---|
-| [com.chrynan.colors.space.LabColorSpace](to-xyz.md) |  |
-
-## Parameters
+#### Parameters
 
 common
 
 | | |
 |---|---|
 | v | An array of color components containing the XYZ values to convert from, and large enough to hold the number of components of this color space's model. The minimum size is 3, but most color spaces have 4 components. |
+
+#### See also
+
+| |
+|---|
+| [LabColorSpace.fromXyz](from-xyz.md) |
+| [LabColorSpace.toXyz](to-xyz.md) |

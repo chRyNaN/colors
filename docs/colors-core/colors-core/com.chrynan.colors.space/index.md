@@ -1,6 +1,6 @@
 //[colors-core](../../index.md)/[com.chrynan.colors.space](index.md)
 
-# Package com.chrynan.colors.space
+# Package-level declarations
 
 ## Types
 

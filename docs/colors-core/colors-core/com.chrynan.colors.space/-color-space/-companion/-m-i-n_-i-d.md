@@ -7,10 +7,8 @@ const val [MIN_ID](-m-i-n_-i-d.md): [Int](https://kotlinlang.org/api/latest/jvm/
 
 The minimum ID value a color space can have.
 
-## See also
+#### See also
 
-common
-
-| | |
-|---|---|
-| [com.chrynan.colors.space.ColorSpace](../id.md) |  |
+| |
+|---|
+| [ColorSpace.id](../id.md) |

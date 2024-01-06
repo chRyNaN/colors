@@ -1,6 +1,6 @@
 //[colors-extension](../../index.md)/[com.chrynan.colors.extension](index.md)
 
-# Package com.chrynan.colors.extension
+# Package-level declarations
 
 ## Properties
 

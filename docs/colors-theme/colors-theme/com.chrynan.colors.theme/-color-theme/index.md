@@ -2,10 +2,16 @@
 
 # ColorTheme
 
-[common]\
 fun interface [ColorTheme](index.md)
 
 A color theme for an application. It provides a way structure the [Colors](../-colors/index.md) for an application.
+
+#### Inheritors
+
+| |
+|---|
+| [LightColorTheme](../-light-color-theme/index.md) |
+| [DarkColorTheme](../-dark-color-theme/index.md) |
 
 ## Types
 
@@ -18,10 +24,3 @@ A color theme for an application. It provides a way structure the [Colors](../-c
 | Name | Summary |
 |---|---|
 | [colors](colors.md) | [common]<br>abstract fun [colors](colors.md)(): [Colors](../-colors/index.md)<br>Obtains the [Colors](../-colors/index.md) for this [ColorTheme](index.md). |
-
-## Inheritors
-
-| Name |
-|---|
-| [LightColorTheme](../-light-color-theme/index.md) |
-| [DarkColorTheme](../-dark-color-theme/index.md) |

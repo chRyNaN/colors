@@ -7,10 +7,8 @@ val [RgbaColor](-rgba-color/index.md).[greenInt](green-int.md): [Int](https://ko
 
 Retrieves the SRGB Color [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) value for this color component. This returns a color [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) value between 0 and 255.
 
-## See also
+#### See also
 
-common
-
-| | |
-|---|---|
-| [com.chrynan.colors.RgbaColor](-rgba-color/green.md) |  |
+| |
+|---|
+| [RgbaColor.green](-rgba-color/green.md) |

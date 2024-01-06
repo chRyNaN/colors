@@ -21,8 +21,8 @@ object [Companion](index.md)
 | [TRANSPARENT_INT_OPACITY](-t-r-a-n-s-p-a-r-e-n-t_-i-n-t_-o-p-a-c-i-t-y.md) | [common]<br>const val [TRANSPARENT_INT_OPACITY](-t-r-a-n-s-p-a-r-e-n-t_-i-n-t_-o-p-a-c-i-t-y.md): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
 | [White](-white.md) | [common]<br>val [White](-white.md): [Color](../index.md) |
 
-## Extensions
+## Functions
 
 | Name | Summary |
 |---|---|
-| [fromResource](../../from-resource.md) | [android]<br>fun [Color.Companion](index.md#-1554372637%2FExtensions%2F747183510).[fromResource](../../from-resource.md)(context: [Context](https://developer.android.com/reference/kotlin/android/content/Context.html), id: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html), theme: [Resources.Theme](https://developer.android.com/reference/kotlin/android/content/res/Resources.Theme.html)? = null): [Color](../index.md#-1744101215%2FExtensions%2F747183510)<br>Retrieves a [Color](../index.md#-1744101215%2FExtensions%2F747183510) from the provided resource [id](../../from-resource.md) and [theme](../../from-resource.md) using the provided [context](../../from-resource.md). |
+| [fromResource](../../from-resource.md) | [android]<br>fun [Color.Companion](index.md).[fromResource](../../from-resource.md)(context: [Context](https://developer.android.com/reference/kotlin/android/content/Context.html), id: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html), theme: [Resources.Theme](https://developer.android.com/reference/kotlin/android/content/res/Resources.Theme.html)? = null): [Color](../index.md)<br>Retrieves a [Color](../index.md) from the provided resource [id](../../from-resource.md) and [theme](../../from-resource.md) using the provided [context](../../from-resource.md). |

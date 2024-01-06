@@ -8,3 +8,4 @@
 |---|
 | [com.chrynan.colors.palette](colors-palette/com.chrynan.colors.palette/index.md) |
 | [com.chrynan.colors.palette.internal](colors-palette/com.chrynan.colors.palette.internal/index.md) |
+| [com.chrynan.colors.palette.serialization](colors-palette/com.chrynan.colors.palette.serialization/index.md) |

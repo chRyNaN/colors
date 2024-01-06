@@ -15,8 +15,8 @@ Note that if this color's color space's model is not [ColorModel.XYZ](../../com.
 
 A value between 0.0f (darkest black) and 1.0f (lightest white).
 
-## Throws
+#### Throws
 
 | | |
 |---|---|
-| [kotlin.IllegalArgumentException](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-illegal-argument-exception/index.html) | If the this color's color space does not support luminance. |
+| [IllegalArgumentException](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-illegal-argument-exception/index.html) | If the this color's color space does not support luminance. |

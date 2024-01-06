@@ -2,7 +2,6 @@
 
 # ColorLong
 
-[common]\
 @[JvmInline](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-inline/index.html)
 
 value class [ColorLong](index.md)(val value: [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html))
@@ -19,9 +18,7 @@ Note that for compatibility reasons and ease of use, color longs encoding sRGB c
 
 Note that the [ColorModel.CMYK](../../com.chrynan.colors.space/-color-model/-c-m-y-k/index.md) is unsupported for [ColorLong](index.md)s. The [ColorModel.CMYK](../../com.chrynan.colors.space/-color-model/-c-m-y-k/index.md) is typically used for printing.
 
-## See also
-
-common
+#### See also
 
 | | |
 |---|---|
@@ -31,7 +28,7 @@ common
 
 | | |
 |---|---|
-| [ColorLong](-color-long.md) | [common]<br>fun [ColorLong](-color-long.md)(value: [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)) |
+| [ColorLong](-color-long.md) | [common]<br>constructor(value: [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)) |
 
 ## Types
 
@@ -45,7 +42,7 @@ common
 |---|---|
 | [value](value.md) | [common]<br>val [value](value.md): [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html) |
 
-## Extensions
+## Functions
 
 | Name | Summary |
 |---|---|

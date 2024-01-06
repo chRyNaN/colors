@@ -13,12 +13,6 @@ A [ColorTheme](../-color-theme/index.md) that contains both light and dark [Colo
 |---|---|
 | [Companion](-companion/index.md) | [common]<br>object [Companion](-companion/index.md) |
 
-## Functions
-
-| Name | Summary |
-|---|---|
-| [colors](colors.md) | [common]<br>open override fun [colors](colors.md)(): [Colors](../-colors/index.md)<br>Obtains the default [Colors](../-colors/index.md) for this [ColorTheme](../-color-theme/index.md). This defaults to returning the [light](../-colors/index.md). |
-
 ## Properties
 
 | Name | Summary |
@@ -26,8 +20,9 @@ A [ColorTheme](../-color-theme/index.md) that contains both light and dark [Colo
 | [dark](dark.md) | [common]<br>abstract override val [dark](dark.md): [Colors](../-colors/index.md)<br>Obtains the dark [Colors](../-colors/index.md) for this [ColorTheme](../-color-theme/index.md). |
 | [light](light.md) | [common]<br>abstract override val [light](light.md): [Colors](../-colors/index.md)<br>Obtains the light [Colors](../-colors/index.md) for this [ColorTheme](../-color-theme/index.md). |
 
-## Extensions
+## Functions
 
 | Name | Summary |
 |---|---|
+| [colors](colors.md) | [common]<br>open override fun [colors](colors.md)(): [Colors](../-colors/index.md)<br>Obtains the default [Colors](../-colors/index.md) for this [ColorTheme](../-color-theme/index.md). This defaults to returning the [light](../-colors/index.md). |
 | [colors](../colors.md) | [common]<br>fun [LightOrDarkColorTheme](index.md).[colors](../colors.md)(isLight: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)): [Colors](../-colors/index.md)<br>Obtains the appropriate [Colors](../-colors/index.md) instance depending on the provided [isLight](../colors.md) parameter value. If the [isLight](../colors.md) parameter equals true, then [LightOrDarkColorTheme.light](../-colors/index.md) will be returned. Otherwise, the [LightOrDarkColorTheme.dark](dark.md) will be returned. |

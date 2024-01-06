@@ -16,15 +16,7 @@ The chromatic adaptation is performed using the von Kries method described in th
 
 A new color space if the specified color space has an RGB model and a white point different from the specified white point; the specified color space otherwise
 
-## See also
-
-common
-
-| | |
-|---|---|
-| [com.chrynan.colors.space.Adaptation](-adaptation/index.md) |  |
-
-## Parameters
+#### Parameters
 
 common
 
@@ -32,3 +24,9 @@ common
 |---|---|
 | whitePoint | The new white point |
 | adaptation | The adaptation matrix |
+
+#### See also
+
+| |
+|---|
+| [Adaptation](-adaptation/index.md) |

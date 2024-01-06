@@ -7,10 +7,8 @@ const val [MAX_ID](-m-a-x_-i-d.md): [Int](https://kotlinlang.org/api/latest/jvm/
 
 The maximum ID value a color space can have.
 
-## See also
+#### See also
 
-common
-
-| | |
-|---|---|
-| [com.chrynan.colors.space.ColorSpace](../id.md) |  |
+| |
+|---|
+| [ColorSpace.id](../id.md) |

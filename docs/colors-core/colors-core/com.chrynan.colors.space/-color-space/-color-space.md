@@ -3,4 +3,4 @@
 # ColorSpace
 
 [common]\
-fun [ColorSpace](-color-space.md)(name: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), model: [ColorModel](../-color-model/index.md))
+constructor(name: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), model: [ColorModel](../-color-model/index.md))

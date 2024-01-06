@@ -2,9 +2,5 @@
 
 # toComposeColor
 
-[common, js]\
 [common]\
-expect fun [Color](../../../colors-core/colors-core/com.chrynan.colors/-color/index.md).[toComposeColor](to-compose-color.md)(): [ComposeColor](-compose-color/index.md)
-
-[js]\
-actual fun [Color](../../../colors-core/colors-core/com.chrynan.colors/-color/index.md).[toComposeColor](to-compose-color.md)(): [ComposeColor](-compose-color/index.md)
+expect fun <!---  GfmCommand {"@class":"org.jetbrains.dokka.gfm.ResolveLinkGfmCommand","dri":{"packageName":"","classNames":"<Error class: unknown class>","callable":null,"target":{"@class":"org.jetbrains.dokka.links.PointingToDeclaration"},"extra":null}} --->&lt;Error class: unknown class&gt;<!--- --->.[toComposeColor](to-compose-color.md)(): [ComposeColor](-compose-color/index.md)

@@ -13,15 +13,7 @@ This method is a convenience for color spaces with a model of 3 components ([RGB
 
 A new array of 3 floats, containing tristimulus XYZ values
 
-## See also
-
-common
-
-| | |
-|---|---|
-| [com.chrynan.colors.space.ColorSpace](from-xyz.md) |  |
-
-## Parameters
+#### Parameters
 
 common
 
@@ -30,6 +22,13 @@ common
 | r | The first component of the value to convert from (typically R in RGB) |
 | g | The second component of the value to convert from (typically G in RGB) |
 | b | The third component of the value to convert from (typically B in RGB) |
+
+#### See also
+
+| |
+|---|
+| [ColorSpace.toXyz](to-xyz.md) |
+| [ColorSpace.fromXyz](from-xyz.md) |
 
 [common]\
 abstract fun [toXyz](to-xyz.md)(v: [FloatArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html)): [FloatArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html)
@@ -42,18 +41,17 @@ The specified array's length  must be at least equal to to the number of color c
 
 The array passed in parameter [v](to-xyz.md).
 
-## See also
-
-common
-
-| | |
-|---|---|
-| [com.chrynan.colors.space.ColorSpace](from-xyz.md) |  |
-
-## Parameters
+#### Parameters
 
 common
 
 | | |
 |---|---|
 | v | An array of color components containing the color space's color value to convert to XYZ, and large enough to hold the resulting tristimulus XYZ values, at least 3 values. |
+
+#### See also
+
+| |
+|---|
+| [ColorSpace.toXyz](to-xyz.md) |
+| [ColorSpace.fromXyz](from-xyz.md) |

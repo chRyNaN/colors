@@ -18,10 +18,8 @@ fun [MaterialTheme](-material-theme.md)(colorTheme: [LightOrDarkColorTheme](../.
 
 A Composable function to create a [MaterialTheme](https://developer.android.com/reference/kotlin/androidx/compose/material/MaterialTheme.html) with the provided [Colors](../../../colors-theme/colors-theme/com.chrynan.colors.theme/-colors/index.md) class.
 
-## See also
+#### See also
 
-common
-
-| | |
-|---|---|
-| [androidx.compose.material.MaterialTheme](https://developer.android.com/reference/kotlin/androidx/compose/material/MaterialTheme.html) |  |
+| |
+|---|
+| [MaterialTheme](https://developer.android.com/reference/kotlin/androidx/compose/material/MaterialTheme.html) |

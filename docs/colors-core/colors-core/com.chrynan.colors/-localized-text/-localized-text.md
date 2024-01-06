@@ -3,4 +3,4 @@
 # LocalizedText
 
 [common]\
-fun [LocalizedText](-localized-text.md)(languageCode: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) = &quot;en&quot;, value: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html))
+constructor(languageCode: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) = &quot;en&quot;, value: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html))

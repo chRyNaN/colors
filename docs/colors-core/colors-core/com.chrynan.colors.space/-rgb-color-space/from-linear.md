@@ -13,15 +13,7 @@ Refer to the documentation of [RgbColorSpace](index.md) for more information abo
 
 A new array of 3 floats containing non-linear RGB values
 
-## See also
-
-common
-
-| | |
-|---|---|
-| [com.chrynan.colors.space.RgbColorSpace](to-linear.md) |  |
-
-## Parameters
+#### Parameters
 
 common
 
@@ -30,6 +22,13 @@ common
 | r | The red component to encode from linear space |
 | g | The green component to encode from linear space |
 | b | The blue component to encode from linear space |
+
+#### See also
+
+| |
+|---|
+| [RgbColorSpace.fromLinear](from-linear.md) |
+| [RgbColorSpace.toLinear](to-linear.md) |
 
 [common]\
 fun [fromLinear](from-linear.md)(v: [FloatArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html)): [FloatArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html)
@@ -42,18 +41,17 @@ Refer to the documentation of [RgbColorSpace](index.md) for more information abo
 
 [v](from-linear.md), containing non-linear RGB values
 
-## See also
-
-common
-
-| | |
-|---|---|
-| [com.chrynan.colors.space.RgbColorSpace](to-linear.md) |  |
-
-## Parameters
+#### Parameters
 
 common
 
 | | |
 |---|---|
 | v | A non-null array of linear RGB values, its length must be at least 3 |
+
+#### See also
+
+| |
+|---|
+| [RgbColorSpace.fromLinear](from-linear.md) |
+| [RgbColorSpace.toLinear](to-linear.md) |

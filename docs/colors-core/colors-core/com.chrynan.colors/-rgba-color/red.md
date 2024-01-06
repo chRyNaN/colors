@@ -9,10 +9,8 @@ This is the first component in a [Color](../-color/index.md) with a [ColorSpace]
 
 *Note:* this value should be in the range defined by the [ColorSpace](../../com.chrynan.colors.space/-color-space/index.md) and is different from the [redInt](../red-int.md) value.
 
-## See also
+#### See also
 
-common
-
-| | |
-|---|---|
-| [redInt](../red-int.md) |  |
+| |
+|---|
+| [redInt](../red-int.md) |

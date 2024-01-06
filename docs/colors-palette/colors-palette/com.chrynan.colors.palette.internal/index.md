@@ -1,6 +1,6 @@
 //[colors-palette](../../index.md)/[com.chrynan.colors.palette.internal](index.md)
 
-# Package com.chrynan.colors.palette.internal
+# Package-level declarations
 
 ## Types
 

@@ -5,13 +5,6 @@
 [common]\
 object [ColorSpaces](index.md)
 
-## Functions
-
-| Name | Summary |
-|---|---|
-| [getColorSpaceById](get-color-space-by-id.md) | [common]<br>fun [getColorSpaceById](get-color-space-by-id.md)(id: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)): [ColorSpace](../-color-space/index.md) |
-| [match](match.md) | [common]<br>fun [match](match.md)(toXYZD50: [FloatArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html), function: [TransferParameters](../-transfer-parameters/index.md)): [ColorSpace](../-color-space/index.md)?<br>Returns a [ColorSpaces](index.md) instance of [ColorSpace](../-color-space/index.md) that matches the specified RGB to CIE XYZ transform and transfer functions. If no instance can be found, this method returns null. |
-
 ## Properties
 
 | Name | Summary |
@@ -34,3 +27,10 @@ object [ColorSpaces](index.md)
 | [SMPTE_C](-s-m-p-t-e_-c.md) | [common]<br>val [SMPTE_C](-s-m-p-t-e_-c.md): [RgbColorSpace](../-rgb-color-space/index.md)<br>[RGB](../-rgb-color-space/index.md) color space SMPTE C. [See details on SMPTE C color space](https://d.android.com/reference/android/graphics/ColorSpace.Named.html#SMPTE_C) |
 | [SRGB](-s-r-g-b.md) | [common]<br>val [SRGB](-s-r-g-b.md): [RgbColorSpace](../-rgb-color-space/index.md)<br>[RGB](../-rgb-color-space/index.md) color space sRGB standardized as IEC 61966-2.1:1999. [See details on sRGB color space](https://d.android.com/reference/android/graphics/ColorSpace.Named.html#SRGB) |
 | [UNSPECIFIED](-u-n-s-p-e-c-i-f-i-e-d.md) | [common]<br>val [UNSPECIFIED](-u-n-s-p-e-c-i-f-i-e-d.md): [RgbColorSpace](../-rgb-color-space/index.md)<br>This identifies the 'None' color. |
+
+## Functions
+
+| Name | Summary |
+|---|---|
+| [getColorSpaceById](get-color-space-by-id.md) | [common]<br>fun [getColorSpaceById](get-color-space-by-id.md)(id: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)): [ColorSpace](../-color-space/index.md) |
+| [match](match.md) | [common]<br>fun [match](match.md)(toXYZD50: [FloatArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html), function: [TransferParameters](../-transfer-parameters/index.md)): [ColorSpace](../-color-space/index.md)?<br>Returns a [ColorSpaces](index.md) instance of [ColorSpace](../-color-space/index.md) that matches the specified RGB to CIE XYZ transform and transfer functions. If no instance can be found, this method returns null. |

@@ -11,13 +11,11 @@ Returns the primaries of this color space as a new array of 6 floats. The Y comp
 
 A new non-null array of 2 floats
 
-## See also
+#### See also
 
-common
-
-| | |
-|---|---|
-| [com.chrynan.colors.space.RgbColorSpace](white-point.md) |  |
+| |
+|---|
+| [RgbColorSpace.whitePoint](white-point.md) |
 
 [common]\
 fun [getPrimaries](get-primaries.md)(primaries: [FloatArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html)): [FloatArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html)
@@ -28,18 +26,16 @@ Copies the primaries of this color space in specified array. The Y component is 
 
 [primaries](get-primaries.md) array, modified to contain the primaries of this color space.
 
-## See also
-
-common
-
-| | |
-|---|---|
-| [com.chrynan.colors.space.RgbColorSpace](get-primaries.md) |  |
-
-## Parameters
+#### Parameters
 
 common
 
 | | |
 |---|---|
 | primaries | The destination array, cannot be null, its length must be >= 6 |
+
+#### See also
+
+| |
+|---|
+| [RgbColorSpace.getPrimaries](get-primaries.md) |

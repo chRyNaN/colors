@@ -13,18 +13,17 @@ The specified array's length  must be at least equal to to the number of color c
 
 The array passed in parameter [v](to-xyz.md).
 
-## See also
-
-common
-
-| | |
-|---|---|
-| [com.chrynan.colors.space.RgbColorSpace](from-xyz.md) |  |
-
-## Parameters
+#### Parameters
 
 common
 
 | | |
 |---|---|
 | v | An array of color components containing the color space's color value to convert to XYZ, and large enough to hold the resulting tristimulus XYZ values, at least 3 values. |
+
+#### See also
+
+| |
+|---|
+| [RgbColorSpace.toXyz](to-xyz.md) |
+| [RgbColorSpace.fromXyz](from-xyz.md) |

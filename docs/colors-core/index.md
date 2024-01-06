@@ -7,4 +7,5 @@
 | Name |
 |---|
 | [com.chrynan.colors](colors-core/com.chrynan.colors/index.md) |
+| [com.chrynan.colors.serialization](colors-core/com.chrynan.colors.serialization/index.md) |
 | [com.chrynan.colors.space](colors-core/com.chrynan.colors.space/index.md) |

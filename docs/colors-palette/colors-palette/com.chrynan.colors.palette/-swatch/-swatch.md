@@ -3,4 +3,4 @@
 # Swatch
 
 [common]\
-fun [Swatch](-swatch.md)(color: [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md), primaryOnColor: [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md), secondaryOnColor: [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md), population: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)? = null)
+constructor(color: [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md), primaryOnColor: [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md), secondaryOnColor: [Color](../../../../colors-core/colors-core/com.chrynan.colors/-color/index.md), population: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)? = null)

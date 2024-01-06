@@ -5,12 +5,6 @@
 [common]\
 data class [HslTarget](index.md) : [Target](../-target/index.md)
 
-## Functions
-
-| Name | Summary |
-|---|---|
-| [matchesSwatch](matches-swatch.md) | [common]<br>open override fun [matchesSwatch](matches-swatch.md)(swatch: [Swatch](../../com.chrynan.colors.palette/-swatch/index.md)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
-
 ## Properties
 
 | Name | Summary |
@@ -25,3 +19,9 @@ data class [HslTarget](index.md) : [Target](../-target/index.md)
 | [saturationWeight](saturation-weight.md) | [common]<br>open override var [saturationWeight](saturation-weight.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) |
 | [targetLightness](target-lightness.md) | [common]<br>open override val [targetLightness](target-lightness.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) = 0.5f |
 | [targetSaturation](target-saturation.md) | [common]<br>open override val [targetSaturation](target-saturation.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) = 0.5f |
+
+## Functions
+
+| Name | Summary |
+|---|---|
+| [matchesSwatch](matches-swatch.md) | [common]<br>open override fun [matchesSwatch](matches-swatch.md)(swatch: [Swatch](../../com.chrynan.colors.palette/-swatch/index.md)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |

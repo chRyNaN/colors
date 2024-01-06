@@ -2,20 +2,19 @@
 
 # Target
 
-[common]\
 interface [Target](index.md)
+
+#### Inheritors
+
+| |
+|---|
+| [HslTarget](../-hsl-target/index.md) |
 
 ## Types
 
 | Name | Summary |
 |---|---|
 | [Companion](-companion/index.md) | [common]<br>object [Companion](-companion/index.md) |
-
-## Functions
-
-| Name | Summary |
-|---|---|
-| [matchesSwatch](matches-swatch.md) | [common]<br>abstract fun [matchesSwatch](matches-swatch.md)(swatch: [Swatch](../../com.chrynan.colors.palette/-swatch/index.md)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
 
 ## Properties
 
@@ -32,8 +31,8 @@ interface [Target](index.md)
 | [targetLightness](target-lightness.md) | [common]<br>abstract val [targetLightness](target-lightness.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) |
 | [targetSaturation](target-saturation.md) | [common]<br>abstract val [targetSaturation](target-saturation.md): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) |
 
-## Inheritors
+## Functions
 
-| Name |
-|---|
-| [HslTarget](../-hsl-target/index.md) |
+| Name | Summary |
+|---|---|
+| [matchesSwatch](matches-swatch.md) | [common]<br>abstract fun [matchesSwatch](matches-swatch.md)(swatch: [Swatch](../../com.chrynan.colors.palette/-swatch/index.md)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |

@@ -3,9 +3,9 @@
 # LocalColors
 
 [common]\
-val [LocalColors](-local-colors.md): ProvidableCompositionLocal&lt;[Colors](../../../colors-theme/colors-theme/com.chrynan.colors.theme/-colors/index.md)&gt;
+val [LocalColors](-local-colors.md): <!---  GfmCommand {"@class":"org.jetbrains.dokka.gfm.ResolveLinkGfmCommand","dri":{"packageName":"","classNames":"<Error class: unknown class>","callable":null,"target":{"@class":"org.jetbrains.dokka.links.PointingToDeclaration"},"extra":null}} --->&lt;Error class: unknown class&gt;<!--- --->&lt;<!---  GfmCommand {"@class":"org.jetbrains.dokka.gfm.ResolveLinkGfmCommand","dri":{"packageName":"","classNames":"<Error class: unknown class>","callable":null,"target":{"@class":"org.jetbrains.dokka.links.PointingToDeclaration"},"extra":null}} --->&lt;Error class: unknown class&gt;<!--- --->&gt;
 
-A ProvidableCompositionLocal of the [Colors](../../../colors-theme/colors-theme/com.chrynan.colors.theme/-colors/index.md) interface.
+A ProvidableCompositionLocal of the Colors interface.
 
 To access this value in a Composable function, simply access the `current` value:
 

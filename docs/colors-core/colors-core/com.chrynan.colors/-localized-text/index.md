@@ -11,7 +11,7 @@ Represents a [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-strin
 
 | | |
 |---|---|
-| [LocalizedText](-localized-text.md) | [common]<br>fun [LocalizedText](-localized-text.md)(languageCode: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) = &quot;en&quot;, value: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)) |
+| [LocalizedText](-localized-text.md) | [common]<br>constructor(languageCode: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) = &quot;en&quot;, value: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)) |
 
 ## Types
 

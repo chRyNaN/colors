@@ -8,13 +8,13 @@ open override fun [toString](to-string.md)(): [String](https://kotlinlang.org/ap
 Returns a string representation of the object. This method returns a string equal to the value of:
 
 ```kotlin
-    "$name "(id=$id, model=$model)"
+"$name "(id=$id, model=$model)"
 ```
 
 For instance, the string representation of the [sRGB](../-color-spaces/-s-r-g-b.md) color space is equal to the following value:
 
 ```kotlin
-    sRGB IEC61966-2.1 (id=0, model=RGB)
+sRGB IEC61966-2.1 (id=0, model=RGB)
 ```
 
 #### Return

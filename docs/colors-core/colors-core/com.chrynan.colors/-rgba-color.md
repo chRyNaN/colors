@@ -16,10 +16,8 @@ Retrieves a [RgbaColor](-rgba-color/index.md) from the provided color values.
 
 Note that the provided values will be coerced into the SRGB Color Range.
 
-## See also
+#### See also
 
-common
-
-| | |
-|---|---|
-| [com.chrynan.colors.RgbaColor](-rgba-color/index.md) |  |
+| |
+|---|
+| [RgbaColor](-rgba-color/index.md) |

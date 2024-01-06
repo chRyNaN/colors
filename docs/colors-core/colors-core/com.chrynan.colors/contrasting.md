@@ -11,15 +11,7 @@ If the [Color.contrast](contrast.md) value with [this](-color/index.md) and the 
 
 This function could be useful for getting a [Color](-color/index.md) to overlay over [this](../../../colors-core/com.chrynan.colors/index.md) color that has enough contrast.
 
-## See also
-
-common
-
-| | |
-|---|---|
-| [Color.contrast](contrast.md) |  |
-
-## Parameters
+#### Parameters
 
 common
 
@@ -28,3 +20,9 @@ common
 | factor | The value that the contrast has to be greater than, for the [conditional](contrasting.md) color to be used. This defaults to 0.5f. |
 | conditional | The [Color](-color/index.md) to return if it has a higher contrast value with [this](../../../colors-core/com.chrynan.colors/index.md) color than [factor](contrasting.md). This defaults to [Color.White](-color/-companion/-white.md). |
 | default | The [Color](-color/index.md) to return if the conditional statement is not met. This defaults to [Color.Black](-color/-companion/-black.md). |
+
+#### See also
+
+| |
+|---|
+| [contrast](contrast.md) |

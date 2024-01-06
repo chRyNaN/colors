@@ -7,10 +7,8 @@ val [Palette](-palette/index.md).[isNotEmpty](is-not-empty.md): [Boolean](https:
 
 The inverse operation of [isEmpty](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/index.html).
 
-## See also
+#### See also
 
-common
-
-| | |
-|---|---|
-| [isEmpty](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/index.html) |  |
+| |
+|---|
+| [isEmpty](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/index.html) |

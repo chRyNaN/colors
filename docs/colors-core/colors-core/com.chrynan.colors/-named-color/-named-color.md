@@ -3,4 +3,4 @@
 # NamedColor
 
 [common]\
-fun [NamedColor](-named-color.md)(names: [Set](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html)&lt;[LocalizedText](../-localized-text/index.md)&gt;, color: [Color](../-color/index.md))
+constructor(names: [Set](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html)&lt;[LocalizedText](../-localized-text/index.md)&gt;, color: [Color](../-color/index.md))

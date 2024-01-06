@@ -7,7 +7,7 @@ abstract fun [toRgbaColor](to-rgba-color.md)(destinationColorSpace: [ColorSpace]
 
 Converts this [Color](index.md) instance into a [RgbaColor](../-rgba-color/index.md). If this [Color](index.md) instance is already an [RgbaColor](../-rgba-color/index.md), then it should simply be returned.
 
-## Parameters
+#### Parameters
 
 common
 

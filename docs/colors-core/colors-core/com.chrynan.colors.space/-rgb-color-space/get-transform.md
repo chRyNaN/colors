@@ -13,13 +13,11 @@ It is recommended to use [ColorSpace.connect](../connect.md) to convert between 
 
 A new array of 9 floats
 
-## See also
+#### See also
 
-common
-
-| | |
-|---|---|
-| [com.chrynan.colors.space.RgbColorSpace](get-inverse-transform.md) |  |
+| |
+|---|
+| [RgbColorSpace.getInverseTransform](get-inverse-transform.md) |
 
 [common]\
 fun [getTransform](get-transform.md)(transform: [FloatArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html)): [FloatArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html)
@@ -32,18 +30,16 @@ It is recommended to use [ColorSpace.connect](../connect.md) to convert between 
 
 [transform](get-transform.md), modified to contain the transform for this color space.
 
-## See also
-
-common
-
-| | |
-|---|---|
-| [com.chrynan.colors.space.RgbColorSpace](get-inverse-transform.md) |  |
-
-## Parameters
+#### Parameters
 
 common
 
 | | |
 |---|---|
 | transform | The destination array, cannot be null, its length must be >= 9 |
+
+#### See also
+
+| |
+|---|
+| [RgbColorSpace.getInverseTransform](get-inverse-transform.md) |

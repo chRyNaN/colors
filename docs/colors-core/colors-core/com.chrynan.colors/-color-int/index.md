@@ -24,7 +24,7 @@ The components in the above table are listed in encoding order, which is why [Co
 
 | | |
 |---|---|
-| [ColorInt](-color-int.md) | [common]<br>fun [ColorInt](-color-int.md)(value: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)) |
+| [ColorInt](-color-int.md) | [common]<br>constructor(value: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)) |
 
 ## Types
 
@@ -38,7 +38,7 @@ The components in the above table are listed in encoding order, which is why [Co
 |---|---|
 | [value](value.md) | [common]<br>val [value](value.md): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
 
-## Extensions
+## Functions
 
 | Name | Summary |
 |---|---|

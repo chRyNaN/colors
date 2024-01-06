@@ -11,11 +11,9 @@ Returns the number of components that form a color value according to this color
 
 An integer between 1 and 4
 
-## See also
+#### See also
 
-common
-
-| | |
-|---|---|
-| [com.chrynan.colors.space.ColorModel](../-color-model/index.md) |  |
-| [com.chrynan.colors.space.ColorSpace](model.md) |  |
+| |
+|---|
+| [ColorModel](../-color-model/index.md) |
+| [ColorSpace.model](model.md) |

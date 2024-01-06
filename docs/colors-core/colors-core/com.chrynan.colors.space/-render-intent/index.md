@@ -2,21 +2,18 @@
 
 # RenderIntent
 
-[common]\
 enum [RenderIntent](index.md) : [Enum](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html)&lt;[RenderIntent](index.md)&gt; 
 
 A render intent determines how a [connector](../-connector/index.md) maps colors from one color space to another. The choice of mapping is important when the source color space has a larger color gamut than the destination color space.
 
 A [RenderIntent](index.md) is used in the conversion process between different Color Spaces. It's the approach used when calculating new color values that within the new Color Space.
 
-## See also
-
-common
+#### See also
 
 | | |
 |---|---|
 |  | [Render Intent Definition](http://colorwiki.com/wiki/Rendering_Intent) |
-| [ColorSpace.connect](../connect.md) |  |
+| [connect](../connect.md) |
 
 ## Entries
 
@@ -37,6 +34,14 @@ common
 
 | Name | Summary |
 |---|---|
+| [entries](entries.md) | [common]<br>val [entries](entries.md): [EnumEntries](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.enums/-enum-entries/index.html)&lt;[RenderIntent](index.md)&gt;<br>Returns a representation of an immutable list of all enum entries, in the order they're declared. |
 | [name](-a-b-s-o-l-u-t-e/index.md#-372974862%2FProperties%2F1346026436) | [common]<br>val [name](-a-b-s-o-l-u-t-e/index.md#-372974862%2FProperties%2F1346026436): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
 | [ordinal](-a-b-s-o-l-u-t-e/index.md#-739389684%2FProperties%2F1346026436) | [common]<br>val [ordinal](-a-b-s-o-l-u-t-e/index.md#-739389684%2FProperties%2F1346026436): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
 | [typeName](type-name.md) | [common]<br>val [typeName](type-name.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
+
+## Functions
+
+| Name | Summary |
+|---|---|
+| [valueOf](value-of.md) | [common]<br>fun [valueOf](value-of.md)(value: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [RenderIntent](index.md)<br>Returns the enum constant of this type with the specified name. The string must match exactly an identifier used to declare an enum constant in this type. (Extraneous whitespace characters are not permitted.) |
+| [values](values.md) | [common]<br>fun [values](values.md)(): [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)&lt;[RenderIntent](index.md)&gt;<br>Returns an array containing the constants of this enum type, in the order they're declared. |

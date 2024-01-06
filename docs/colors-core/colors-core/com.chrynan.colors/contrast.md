@@ -9,10 +9,8 @@ Retrieves a [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/i
 
 Note that this compares the [Color.luminance](-color/luminance.md) values of the [Color](-color/index.md)s.
 
-## See also
+#### See also
 
-common
-
-| | |
-|---|---|
-| [com.chrynan.colors.Color](-color/luminance.md) |  |
+| |
+|---|
+| [Color.luminance](-color/luminance.md) |

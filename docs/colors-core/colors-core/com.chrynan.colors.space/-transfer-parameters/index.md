@@ -2,7 +2,6 @@
 
 # TransferParameters
 
-[common]\
 data class [TransferParameters](index.md)(val gamma: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), val a: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), val b: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), val c: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), val d: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), val e: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html) = 0.0, val f: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html) = 0.0)
 
 Defines the parameters for the ICC parametric curve type 4, as defined in ICC.1:2004-10, section 10.15.
@@ -22,7 +21,7 @@ The parameters defined by this class form a valid transfer function only if all 
 - 
    The function is positive and increasing
 
-## Parameters
+#### Parameters
 
 common
 
@@ -40,7 +39,7 @@ common
 
 | | |
 |---|---|
-| [TransferParameters](-transfer-parameters.md) | [common]<br>fun [TransferParameters](-transfer-parameters.md)(gamma: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), a: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), b: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), c: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), d: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), e: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html) = 0.0, f: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html) = 0.0) |
+| [TransferParameters](-transfer-parameters.md) | [common]<br>constructor(gamma: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), a: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), b: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), c: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), d: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), e: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html) = 0.0, f: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html) = 0.0) |
 
 ## Properties
 

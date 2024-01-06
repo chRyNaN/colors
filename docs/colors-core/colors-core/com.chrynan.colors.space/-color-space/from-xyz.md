@@ -11,15 +11,7 @@ Converts tristimulus values from the CIE XYZ space to this color space's color m
 
 A new array whose size is equal to the number of color components as returned by [ColorModel.componentCount](../-color-model/component-count.md).
 
-## See also
-
-common
-
-| | |
-|---|---|
-| [com.chrynan.colors.space.ColorSpace](to-xyz.md) |  |
-
-## Parameters
+#### Parameters
 
 common
 
@@ -28,6 +20,13 @@ common
 | x | The X component of the color value |
 | y | The Y component of the color value |
 | z | The Z component of the color value |
+
+#### See also
+
+| |
+|---|
+| [ColorSpace.fromXyz](from-xyz.md) |
+| [ColorSpace.toXyz](to-xyz.md) |
 
 [common]\
 abstract fun [fromXyz](from-xyz.md)(v: [FloatArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html)): [FloatArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html)
@@ -40,18 +39,17 @@ The specified array's length  must be at least equal to to the number of color c
 
 The array passed in parameter [v](from-xyz.md).
 
-## See also
-
-common
-
-| | |
-|---|---|
-| [com.chrynan.colors.space.ColorSpace](to-xyz.md) |  |
-
-## Parameters
+#### Parameters
 
 common
 
 | | |
 |---|---|
 | v | An array of color components containing the XYZ values to convert from, and large enough to hold the number of components of this color space's model. The minimum size is 3, but most color spaces have 4 components. |
+
+#### See also
+
+| |
+|---|
+| [ColorSpace.fromXyz](from-xyz.md) |
+| [ColorSpace.toXyz](to-xyz.md) |

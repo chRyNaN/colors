@@ -3,4 +3,4 @@
 # ColorLong
 
 [common]\
-fun [ColorLong](-color-long.md)(value: [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html))
+constructor(value: [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html))
