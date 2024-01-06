@@ -1,7 +1,7 @@
 # colors
 
-Kotlin Multi-platform Color Support. This allows using Colors in multi-platform presentation code
-like View Data classes and Mappers. Compatible with Jetpack Compose. <br/>
+Kotlin Multi-platform Color Support. This allows using Colors in multi-platform code. Compatible with Jetpack
+Compose/Multi-platform. Serialization and Palette Generation Support. <br/>
 <img alt="GitHub tag (latest by date)" src="https://img.shields.io/github/v/tag/chRyNaN/colors">
 
 ```kotlin
@@ -63,42 +63,48 @@ The library is provided through [Repsy.io](https://repsy.io). Checkout the
 
 ### Repository
 
-```groovy
+```kotlin
 repositories {
-    maven { url = "https://repo.repsy.io/mvn/chrynan/public" }
+    maven { url = uri("https://repo.repsy.io/mvn/chrynan/public") }
 }
 ```
 
 ### Dependencies
 
-**Core:**
+#### Core:
 
-```groovy
-implementation "com.chrynan.colors:colors-core:$VERSION"
+```kotlin
+implementation("com.chrynan.colors:colors-core:$VERSION")
 ```
 
-**Extensions:**
+#### Extensions:
 
-```groovy
-implementation "com.chrynan.colors:colors-extension:$VERSION"
+```kotlin
+implementation("com.chrynan.colors:colors-extension:$VERSION")
 ```
 
-**Theme:**
+#### Theme:
 
-```groovy
-implementation "com.chrynan.colors:colors-theme:$VERSION"
+```kotlin
+implementation("com.chrynan.colors:colors-theme:$VERSION")
 ```
 
-**Palette:**
+#### Palette:
 
-```groovy
-implementation "com.chrynan.colors:colors-palette:$VERSION"
+```kotlin
+implementation("com.chrynan.colors:colors-palette:$VERSION")
 ```
 
-**Jetpack Compose:**
+#### Compose Multiplatform:**
 
-```groovy
-implementation "com.chrynan.colors:colors-compose:$VERSION"
+```kotlin
+implementation("com.chrynan.colors:colors-compose:$VERSION")
+```
+
+#### Compose HTML:
+
+```kotlin
+implementation("com.chrynan.colors:colors-compose-web:$VERSION")
 ```
 
 ## Documentation
