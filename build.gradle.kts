@@ -9,7 +9,7 @@ plugins {
     kotlin("plugin.serialization") version "1.9.21" apply false
     id("com.android.library") version "8.2.0" apply false
     id("com.android.application") version "8.2.0" apply false
-    id("org.jetbrains.compose") version "1.5.11" apply false
+    id("org.jetbrains.compose") version "1.6.0-dev1357" apply false
     id("org.jetbrains.dokka") version "1.9.10"
     id("org.jetbrains.kotlinx.binary-compatibility-validator") version "0.13.2"
     id("com.mikepenz.aboutlibraries.plugin") version "10.8.3" apply false
@@ -20,8 +20,8 @@ allprojects {
         // NOTE: Order matters here, as the first listed repository will be checked for dependencies first.
         mavenCentral()
         google()
-        maven("https://repo.repsy.io/mvn/chrynan/public")
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+        maven("https://repo.repsy.io/mvn/chrynan/public")
     }
 }
 
