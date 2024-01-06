@@ -1,5 +1,6 @@
 import com.chrynan.colors.buildSrc.LibraryConstants
 import com.chrynan.colors.buildSrc.*
+import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -19,11 +20,16 @@ kotlin {
     androidTarget {
         publishAllLibraryVariants()
     }
+
     jvm()
+
     js(IR) {
         browser()
         nodejs()
     }
+
+    @OptIn(ExperimentalWasmDsl::class)
+    wasmJs()
 
     if (isBuildingOnOSX()) {
         iosX64()
@@ -49,11 +55,13 @@ kotlin {
         all {
             languageSettings.optIn("kotlin.RequiresOptIn")
         }
+
         val commonMain by getting {
             dependencies {
                 implementation(KotlinX.serialization.core)
             }
         }
+
         val nativeMain by getting
     }
 }
