@@ -29,7 +29,10 @@ kotlin {
     }
 
     @OptIn(ExperimentalWasmDsl::class)
-    wasmJs()
+    wasmJs {
+        browser()
+        nodejs()
+    }
 
     if (isBuildingOnOSX()) {
         iosX64()
