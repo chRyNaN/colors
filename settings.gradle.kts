@@ -4,9 +4,9 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
         google()
-        maven("https://repo.repsy.io/mvn/chrynan/public")
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
         maven("https://maven.pkg.jetbrains.space/kotlin/p/wasm/experimental")
+        maven("https://repo.repsy.io/mvn/chrynan/public")
     }
 }
 
@@ -25,5 +25,5 @@ include(":colors-extension")
 include(":colors-theme")
 include(":colors-palette")
 include(":colors-compose")
-//include(":colors-compose-web")
+include(":colors-compose-web")
 //include(":sample-android")

@@ -15,21 +15,24 @@ kotlin {
         browser()
         binaries.executable()
     }
+
     sourceSets {
         all {
             languageSettings.optIn("kotlin.RequiresOptIn")
         }
+
         val commonMain by getting {
             dependencies {
                 implementation(compose.runtime)
 
-                implementation(project(":colors-core"))
-                implementation(project(":colors-theme"))
+                api(project(":colors-core"))
+                api(project(":colors-theme"))
             }
         }
+
         val jsMain by getting {
             dependencies {
-                implementation(compose.web.core)
+                implementation(compose.html.core)
             }
         }
     }
