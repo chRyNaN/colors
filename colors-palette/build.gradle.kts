@@ -1,5 +1,6 @@
 import com.chrynan.colors.buildSrc.LibraryConstants
 import com.chrynan.colors.buildSrc.*
+import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -21,10 +22,14 @@ kotlin {
     }
 
     jvm()
+
     js(IR) {
         browser()
         nodejs()
     }
+
+    @OptIn(ExperimentalWasmDsl::class)
+    wasmJs()
 
     if (isBuildingOnOSX()) {
         iosX64()
@@ -54,6 +59,7 @@ kotlin {
                 api(project(":colors-core"))
             }
         }
+
         val nativeMain by getting
     }
 }
