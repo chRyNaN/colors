@@ -114,7 +114,7 @@ documentation can be found [here](docs/index.md).
 
 ## Sample
 
-Checkout the [Android Sample Project](sample-android-native) for an example of using the library.
+Checkout the [Android Sample Project](sample-android) for an example of using the library.
 
 ## License
 
